@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Bad Pixel Search</string>
+    <string name="info">Scorri sullo schermo per cambiare colore</string>
+    <string name="version">Versione dell\'app:</string>
+    <string name="build">Costruisci</string>
+    <string name="dot">...</string>
+    <string name="get_started">INIZIA</string>
+    <string name="walkthrough_text_one">Pulisci con cura lo schermo del telefono o un tampone, uno straccio morbido o un tovagliolo da sporco, polvere, macchie di grasso e altro inquinamento.</string>
+    <string name="walkthrough_text_two">Avvia l\'applicazione.</string>
+    <string name="walkthrough_text_three">Scorri semplicemente verso sinistra o verso destra per passare al colore successivo o al colore precedente.</string>
+    <string name="walkthrough_text_four">Su ogni colore si osserva attentamente un monocromatismo dello schermo in tutti i punti. Durante il normale funzionamento tutti i pixel dello schermo saranno di un colore. Se il colore del pixel differisce da qualsiasi colore, significa che questo pixel è bruciato o difettoso.</string>
+</resources>
