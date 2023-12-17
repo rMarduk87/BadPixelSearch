@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Bad Pixel Search</string>
+    <string name="info">Swipe on screen to change color</string>
+    <string name="version">App Version:</string>
+    <string name="build">Build</string>
+    <string name="dot">...</string>
+    <string name="get_started">START</string>
+    <string name="walkthrough_text_one">Carefully wipe the screen of phone or a pad a soft rag, or a napkin from dirt, dust, spots of fat and other pollution.</string>
+    <string name="walkthrough_text_two">Start application.</string>
+    <string name="walkthrough_text_three">Simply swipe left or right to go to the next color or previous color.</string>
+    <string name="walkthrough_text_four">On every color you watch closely a screen monochromaticism in all points. By normal operation on all flowers all pixels of the screen shall be one color. If color of pixel differs on any color, this pixel beaten means.</string>
+</resources>
