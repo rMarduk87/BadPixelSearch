@@ -19,7 +19,6 @@ class BadPixelSearchFragment :
     BaseFragment<BadPixelSearchFragmentBinding>(BadPixelSearchFragmentBinding::inflate),
     View.OnClickListener {
 
-    private var mMaxBrightness: Boolean = false
     private lateinit var sharedPref: SharedPreferences
 
     var start = false
@@ -123,15 +122,5 @@ class BadPixelSearchFragment :
             }
             return false
         }
-
-        override fun onDoubleTap(e: MotionEvent): Boolean {
-            toggleMaxBrightness();
-            AppUtils.setFullBrightness(requireActivity().window, mMaxBrightness);
-            return true
-        }
-    }
-
-    private fun toggleMaxBrightness() {
-        mMaxBrightness = !mMaxBrightness;
     }
 }
