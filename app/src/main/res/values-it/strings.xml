@@ -9,4 +9,7 @@
     <string name="walkthrough_text_two">Avvia l\'applicazione.</string>
     <string name="walkthrough_text_three">Scorri semplicemente verso sinistra o verso destra per passare al colore successivo o al colore precedente.</string>
     <string name="walkthrough_text_four">Su ogni colore si osserva attentamente un monocromatismo dello schermo in tutti i punti. Durante il normale funzionamento tutti i pixel dello schermo saranno di un colore. Se il colore del pixel differisce da qualsiasi colore, significa che questo pixel è bruciato o difettoso.</string>
+    <string name="double_tap_info">Tocca due volte sullo schermo per avviare l\' utilità della schermata di correzione\nTi consigliamo di lasciare l\'applicazione attiva per almeno 30 minuti.\nScorri semplicemente verso sinistra o verso destra per passare al colore successivo o al colore precedente.</string>
+    <string name="button_close_fix">Chiudi</string>
+    <string name="click_me">Cliccami per mostrare le informazioni</string>
 </resources>

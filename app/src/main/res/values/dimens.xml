@@ -1,0 +1,4 @@
+<resources>
+    <dimen name="editBalloonOverlayPadding">6dp</dimen>
+    <dimen name="editBalloonOverlayRadius">11dp</dimen>
+</resources>

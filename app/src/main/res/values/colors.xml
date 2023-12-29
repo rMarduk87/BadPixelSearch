@@ -14,4 +14,7 @@
     <color name="magenta">#FF00FF</color>
     <color name="yellow">#FFFF00</color>
     <color name="white">#FFFFFF</color>
+    <color name="colorSkyBlue">#03BBFF</color>
+    <color name="white_87">#ddffffff</color>
+    <color name="overlay">#BF000000</color>
 </resources>
