@@ -5,9 +5,12 @@ class AppUtils {
     companion object {
 
 
-        const val USERS_SHARED_PREF = "user_pref"
+        const val USERS_SHARED_PREF : String = "user_pref"
         val PRIVATE_MODE = 0
-        const val FIRST_RUN_KEY = "firstrun"
+        const val FIRST_RUN_KEY : String = "firstrun"
+        const val COLOR_KEY : String = "color"
+        const val DELAY_KEY : String = "delay"
+        const val ACTION_KEY : String = "action"
 
     }
 }

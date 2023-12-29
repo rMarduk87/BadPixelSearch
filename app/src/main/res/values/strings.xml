@@ -9,4 +9,7 @@
     <string name="walkthrough_text_two">Start application.</string>
     <string name="walkthrough_text_three">Simply swipe left or right to go to the next color or previous color.</string>
     <string name="walkthrough_text_four">On every color you watch closely a screen monochromaticism in all points. By normal operation on all flowers all pixels of the screen shall be one color. If color of pixel differs on any color, this pixel beaten means.</string>
+    <string name="double_tap_info">Double tap on screen to to start the fix screen utilities\nWe recommend leaving the application on for at least 30 minutes.\nSimply swipe left or right to go to the next color or previous color.</string>
+    <string name="button_close_fix">Close</string>
+    <string name="click_me">Click me to show info</string>
 </resources>
