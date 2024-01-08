@@ -51,3 +51,8 @@ Please make sure to update tests as appropriate
 Icons was downloaded from [Flaticon](https://www.flaticon.com) and [Freepik](https://www.freepik.com)
 
 Animation was downloaded from [LottieFiles](https://lottiefiles.com)
+
+## Download
+[<img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png"
+      alt="Get it on Google Play"
+      height="80">](https://play.google.com/store/apps/details?id=rpt.tool.badpixelsearch)
