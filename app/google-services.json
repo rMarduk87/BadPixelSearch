@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "349591484350",
+    "project_id": "bad-pixel-search",
+    "storage_bucket": "bad-pixel-search.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:349591484350:android:3493d6e3161e55db3dabef",
+        "android_client_info": {
+          "package_name": "ppt.tool.badpixelsearch"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRihQGSq5VNJeB_Wisw_zCTip0zEsjQpI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:349591484350:android:8fe9149a7b76af223dabef",
+        "android_client_info": {
+          "package_name": "rpt.tool.badpixelsearch"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRihQGSq5VNJeB_Wisw_zCTip0zEsjQpI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

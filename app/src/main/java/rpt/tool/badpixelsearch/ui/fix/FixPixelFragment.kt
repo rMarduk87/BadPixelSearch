@@ -11,6 +11,7 @@ import android.view.View.GONE
 import android.view.View.OnTouchListener
 import android.view.WindowManager
 import rpt.tool.badpixelsearch.BaseFragment
+import rpt.tool.badpixelsearch.R
 import rpt.tool.badpixelsearch.databinding.FixPixelFragmentBinding
 import rpt.tool.badpixelsearch.utils.AppUtils
 import java.util.Random
@@ -49,6 +50,7 @@ class FixPixelFragment : BaseFragment<FixPixelFragmentBinding>(FixPixelFragmentB
             fixCancelled = true
             false
         }
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
