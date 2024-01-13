@@ -53,6 +53,15 @@ class BadPixelSearchFragment :
         }
         j = 1
 
+        binding.btnStartfix.setOnClickListener{
+            val editor = sharedPref.edit()
+            editor.putInt(AppUtils.COLOR_KEY,0)
+            editor.putInt(AppUtils.DELAY_KEY,100)
+            editor.putString(AppUtils.ACTION_KEY,"fix")
+            editor.apply()
+            safeNavController?.safeNavigate(BadPixelSearchFragmentDirections
+                .actionBadPixelSearchFragmentToFixPixelsFragment())
+        }
     }
 
     override fun onClick(v: View?) {
@@ -122,17 +131,6 @@ class BadPixelSearchFragment :
                 return true
             }
             return false
-        }
-
-        override fun onDoubleTap(e: MotionEvent): Boolean {
-            val editor = sharedPref.edit()
-            editor.putInt(AppUtils.COLOR_KEY,0)
-            editor.putInt(AppUtils.DELAY_KEY,100)
-            editor.putString(AppUtils.ACTION_KEY,"fix")
-            editor.apply()
-            safeNavController?.safeNavigate(BadPixelSearchFragmentDirections
-                .actionBadPixelSearchFragmentToFixPixelsFragment())
-            return super.onDoubleTap(e)
         }
     }
 }

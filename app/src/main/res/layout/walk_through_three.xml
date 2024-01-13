@@ -21,6 +21,7 @@
         app:lottie_rawRes="@raw/three" />
 
     <TextView
+        android:textColor="@color/black"
         android:text="@string/walkthrough_text_three"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
