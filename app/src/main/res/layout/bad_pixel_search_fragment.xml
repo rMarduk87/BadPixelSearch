@@ -26,7 +26,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:text="@string/click_me"
+            android:text="@string/double_tap_info"
             android:textAlignment="center"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@color/white" />
@@ -35,13 +35,5 @@
 
 
     </LinearLayout>
-
-    <Button
-        android:id="@+id/btn_startfix"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:text="@string/start_fix_tool" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

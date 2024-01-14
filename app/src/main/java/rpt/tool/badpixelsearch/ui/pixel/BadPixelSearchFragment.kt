@@ -7,14 +7,11 @@ import android.view.GestureDetector
 import android.view.GestureDetector.SimpleOnGestureListener
 import android.view.MotionEvent
 import android.view.View
-import com.skydoves.balloon.BalloonAlign
-import com.skydoves.balloon.balloon
 import rpt.tool.badpixelsearch.BaseFragment
 import rpt.tool.badpixelsearch.R
 import rpt.tool.badpixelsearch.WalkThroughActivity
 import rpt.tool.badpixelsearch.databinding.BadPixelSearchFragmentBinding
 import rpt.tool.badpixelsearch.utils.AppUtils
-import rpt.tool.badpixelsearch.utils.balloon.DoubleTapBalloonFactory
 import rpt.tool.badpixelsearch.utils.navigation.safeNavController
 import rpt.tool.badpixelsearch.utils.navigation.safeNavigate
 import kotlin.math.abs
@@ -25,7 +22,6 @@ class BadPixelSearchFragment :
     View.OnClickListener {
 
     private lateinit var sharedPref: SharedPreferences
-    private val firstHelpBalloon by balloon<DoubleTapBalloonFactory>()
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -38,13 +34,6 @@ class BadPixelSearchFragment :
         }
 
         val gestureDetector = GestureDetector(RptDetectGesture())
-        binding.appname.setOnClickListener {
-            firstHelpBalloon.showAlign(
-                align = BalloonAlign.BOTTOM,
-                mainAnchor = binding.appname as View,
-                subAnchorList = listOf(it),
-            )
-        }
 
         binding.mainBG.setOnClickListener(this)
         binding.mainBG.setOnTouchListener { _, event ->
@@ -52,16 +41,6 @@ class BadPixelSearchFragment :
             true
         }
         j = 1
-
-        binding.btnStartfix.setOnClickListener{
-            val editor = sharedPref.edit()
-            editor.putInt(AppUtils.COLOR_KEY,0)
-            editor.putInt(AppUtils.DELAY_KEY,100)
-            editor.putString(AppUtils.ACTION_KEY,"fix")
-            editor.apply()
-            safeNavController?.safeNavigate(BadPixelSearchFragmentDirections
-                .actionBadPixelSearchFragmentToFixPixelsFragment())
-        }
     }
 
     override fun onClick(v: View?) {
