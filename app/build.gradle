@@ -16,7 +16,7 @@ android {
         applicationId "rpt.tool.badpixelsearch"
         minSdk 26
         targetSdk 34
-        versionCode 3
+        versionCode 4
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -74,8 +74,6 @@ dependencies {
     implementation 'com.google.android.play:app-update:2.1.0'
     //Lottie
     implementation 'com.airbnb.android:lottie:6.1.0'
-    //Balloon
-    implementation("com.github.skydoves:balloon:1.6.3")
     //Firebase
     implementation platform('com.google.firebase:firebase-bom:32.3.1')
     implementation 'com.google.firebase:firebase-analytics-ktx'

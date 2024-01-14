@@ -10,15 +10,6 @@
         android:name="rpt.tool.badpixelsearch.ui.pixel.BadPixelSearchFragment"
         android:label="BadPixelSearchFragment"
         tools:layout="@layout/bad_pixel_search_fragment">
-        <action
-            android:id="@+id/action_badPixelSearchFragment_to_fixPixelsFragment"
-            app:destination="@id/fixPixelsFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/fixPixelsFragment"
-        android:name="rpt.tool.badpixelsearch.ui.fix.FixPixelFragment"
-        android:label="FixPixelsFragment"
-        tools:layout="@layout/fix_pixel_fragment">
     </fragment>
 
 </navigation>
