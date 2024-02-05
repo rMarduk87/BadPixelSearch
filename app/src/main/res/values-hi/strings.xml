@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Bad Pixel Search</string>
+    <string name="info">रंग बदलने के लिए स्क्रीन पर स्वाइप करें</string>
+    <string name="version">ऐप संस्करण:</string>
+    <string name="build">बिल्ड</string>
+    <string name="dot">...</string>
+    <string name="get_started">START</string>
+    <string name="walkthrough_text_one">फोन स्क्रीन या स्वैब, मुलायम कपड़े या नैपकिन को गंदगी, धूल, ग्रीस के दाग और अन्य प्रदूषण से सावधानीपूर्वक साफ करें।</string>
+    <string name="walkthrough_text_two">एप्लिकेशन लॉन्च करें।</string>
+    <string name="walkthrough_text_three">अगले या पिछले रंग पर जाने के लिए बस बाएं या दाएं स्वाइप करें।</string>
+    <string name="walkthrough_text_four">प्रत्येक रंग पर, सभी बिंदुओं पर स्क्रीन के एक रंग का ध्यानपूर्वक अवलोकन किया जाता है। सामान्य ऑपरेशन के दौरान स्क्रीन पर सभी पिक्सेल एक रंग के होंगे। यदि पिक्सेल का रंग किसी भी रंग से भिन्न है, तो इसका मतलब है कि यह पिक्सेल जल गया है या ख़राब है।</string>
+    <string name="double_tap_info">अगले या पिछले रंग पर जाने के लिए बस बाएं या दाएं स्वाइप करें।</string>
+    <string name="button_close_fix">बंद करें</string>
+    <string name="click_me">नई सुविधा के बारे में जानकारी दिखाने के लिए यहां क्लिक करें, या पिक्सेल चेकर शुरू करने के लिए स्वाइप करें</string>
+    <string name="start_fix_tool">पिक्सेल फिक्स उपयोगिता प्रारंभ करें</string>
+    <string name="restart">पुनः आरंभ करें</string>
+</resources>
