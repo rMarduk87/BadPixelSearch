@@ -14,4 +14,8 @@
     <string name="click_me">Haga clic aquí para mostrar información sobre la nueva característica, o deslice el dedo para iniciar el verificador de píxeles</string>
     <string name="start_fix_tool">Iniciar la utilidad de corrección de píxeles</string>
     <string name="restart">Reiniciar</string>
+    <string name="send">Haga clic en el botón a continuación para enviar una solicitud de localización en el idioma que desee</string>
+    <string name="send_req">ENVIAR SOLICITUD</string>
+    <string name="choose_mail_app">Elegir aplicación de correo</string>
+    <string name="to">riccardo.pezzolati@gmail.com</string>
 </resources>

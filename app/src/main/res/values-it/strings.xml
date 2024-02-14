@@ -14,4 +14,8 @@
     <string name="click_me">Clicca qui per mostrare le informazioni sulla nuova funzionalità, o scorri per iniziare il controllo pixel</string>
     <string name="start_fix_tool">Inizia l\'utility di correzione pixel</string>
     <string name="restart">Riparti</string>
+    <string name="send">Fai clic sul pulsante qui sotto per inviare una richiesta di localizzazione nella lingua desiderata</string>
+    <string name="send_req">INVIA RICHIESTA</string>
+    <string name="choose_mail_app">Scegli l\'app di posta</string>
+    <string name="to">riccardo.pezzolati@gmail.com</string>
 </resources>

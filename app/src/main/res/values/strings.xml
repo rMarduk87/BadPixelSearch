@@ -14,4 +14,8 @@
     <string name="click_me">Click here to show information about the new feature, or swipe to start the pixel checker</string>
     <string name="start_fix_tool">Start fix tool</string>
     <string name="restart">Restart</string>
+    <string name="send">Click on the button below to send a localization request in your desired language</string>
+    <string name="send_req">SEND REQUEST</string>
+    <string name="choose_mail_app">Choose Mail App</string>
+    <string name="to">riccardo.pezzolati@gmail.com</string>
 </resources>
