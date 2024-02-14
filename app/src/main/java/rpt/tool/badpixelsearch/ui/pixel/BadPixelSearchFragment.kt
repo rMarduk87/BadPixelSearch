@@ -1,19 +1,25 @@
 package rpt.tool.badpixelsearch.ui.pixel
 
+import android.app.Activity
+import android.app.AlertDialog
+import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.content.SharedPreferences
+import android.net.Uri
 import android.os.Bundle
 import android.view.GestureDetector
 import android.view.GestureDetector.SimpleOnGestureListener
+import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
+import android.widget.Button
+import android.widget.EditText
+import android.widget.Toast
 import rpt.tool.badpixelsearch.BaseFragment
 import rpt.tool.badpixelsearch.R
 import rpt.tool.badpixelsearch.WalkThroughActivity
 import rpt.tool.badpixelsearch.databinding.BadPixelSearchFragmentBinding
 import rpt.tool.badpixelsearch.utils.AppUtils
-import rpt.tool.badpixelsearch.utils.navigation.safeNavController
-import rpt.tool.badpixelsearch.utils.navigation.safeNavigate
 import kotlin.math.abs
 
 
@@ -41,6 +47,68 @@ class BadPixelSearchFragment :
             true
         }
         j = 1
+
+        binding.sendRequestBtn.setOnClickListener {
+            val li = LayoutInflater.from(requireContext())
+            val promptsView = li.inflate(R.layout.sender_dialog, null)
+
+            val alertDialogBuilder = AlertDialog.Builder(requireContext())
+            alertDialogBuilder.setView(promptsView)
+
+            val userInputTextSub = promptsView.findViewById(R.id.txtSub) as EditText
+
+            val userInputTxtMsg = promptsView.findViewById(R.id.txtMsg) as EditText
+
+            val userInputSendBtn = promptsView.findViewById(R.id.btnSend) as Button
+
+            userInputSendBtn.setOnClickListener {
+                val inputText = userInputTextSub.text.toString()
+                val inputTextMsg = userInputTxtMsg.text.toString()
+                sendMail(requireActivity(),
+                    arrayOf(resources.getString(R.string.to)), inputText, inputTextMsg)
+            }
+
+
+            alertDialogBuilder.setPositiveButton("OK") { _, _ ->
+
+            }.setNegativeButton("Cancel") { dialog, _ ->
+                dialog.cancel()
+            }
+
+            val alertDialog = alertDialogBuilder.create()
+            alertDialog.show()
+        }
+    }
+
+    private fun sendMail(
+        activity: Activity,
+        emailIds: Array<String>,
+        subject: String,
+        textMessage: String
+    ) {
+
+
+        val emailIntent = Intent(Intent.ACTION_SEND)
+        emailIntent.type = "text/plain"
+        emailIntent.setData(Uri.parse("mailto:"))
+        emailIntent.putExtra(Intent.EXTRA_EMAIL, emailIds)
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, subject)
+        emailIntent.putExtra(Intent.EXTRA_TEXT, textMessage)
+        emailIntent.setType("message/rfc822")
+        try {
+            activity.startActivity(
+                Intent.createChooser(
+                    emailIntent,
+                    resources.getString(R.string.choose_mail_app)
+                )
+            )
+        } catch (ex: ActivityNotFoundException) {
+            Toast.makeText(
+                activity,
+                ex.message,
+                Toast.LENGTH_SHORT
+            ).show()
+        }
     }
 
     override fun onClick(v: View?) {

@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Bad Pixel Search</string>
+    <string name="info">Deslize na tela para mudar de cor</string>
+    <string name="version">Versão do aplicativo:</string>
+    <string name="build">Construir</string>
+    <string name="dot">...</string>
+    <string name="get_started">INICIAR</string>
+    <string name="walkthrough_text_one">Limpe cuidadosamente a tela do telefone ou um pano macio ou guardanapo de sujeira, poeira, manchas de gordura e outras impurezas.</string>
+    <string name="walkthrough_text_two">Iniciar aplicativo.</string>
+    <string name="walkthrough_text_three">Basta deslizar para a esquerda ou para a direita para ir para a próxima cor ou para a cor anterior.</string>
+    <string name="walkthrough_text_four">Em cada cor você observa de perto um monocromatismo na tela em todos os pontos. Pela operação normal em todas as flores, todos os pixels da tela deverão ter uma cor. Se a cor do pixel for diferente em qualquer cor, esse pixel batido significa.</string>
+    <string name="double_tap_info">Basta deslizar para a esquerda ou para a direita para passar para a cor seguinte ou anterior.</string>
+    <string name="button_close_fix">Fechar</string>
+    <string name="click_me">Clique aqui para mostrar informações sobre o novo recurso ou deslize para iniciar o verificador de pixels</string>
+    <string name="start_fix_tool">Iniciar ferramenta de correção</string>
+    <string name="restart">Reiniciar</string>
+    <string name="send">Clique no botão abaixo para enviar uma solicitação de localização no idioma desejado</string>
+    <string name="send_req">PEDIDO DE ENVIO</string>
+    <string name="choose_mail_app">Escolha o aplicativo Mail</string>
+    <string name="to">riccardo.pezzolati@gmail.com</string>
+</resources>
