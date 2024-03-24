@@ -16,7 +16,7 @@ android {
         applicationId "rpt.tool.badpixelsearch"
         minSdk 26
         targetSdk 34
-        versionCode 8
+        versionCode 9
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -75,7 +75,7 @@ dependencies {
     //Lottie
     implementation 'com.airbnb.android:lottie:6.1.0'
     //Firebase
-    implementation platform('com.google.firebase:firebase-bom:32.3.1')
+    implementation platform('com.google.firebase:firebase-bom:32.8.0')
     implementation 'com.google.firebase:firebase-analytics-ktx'
     //CrashLytics
     implementation("com.google.firebase:firebase-crashlytics-ktx")

@@ -14,22 +14,19 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import rpt.tool.badpixelsearch.databinding.ActivityWalkThroughBinding
 import rpt.tool.badpixelsearch.utils.AppUtils
+import rpt.tool.badpixelsearch.utils.managers.SharedPreferencesManager
 
 class WalkThroughActivity : AppCompatActivity() {
 
 
     private var viewPagerAdapter: WalkThroughAdapter? = null
     private lateinit var binding: ActivityWalkThroughBinding
-    private lateinit var sharedPref: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         binding = ActivityWalkThroughBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        sharedPref = getSharedPreferences(
-            AppUtils.USERS_SHARED_PREF,
-            AppUtils.PRIVATE_MODE)
 
 
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
@@ -48,9 +45,7 @@ class WalkThroughActivity : AppCompatActivity() {
         super.onStart()
         binding.getStarted.setOnClickListener {
 
-            val edit = sharedPref.edit()
-            edit.putBoolean(AppUtils.FIRST_RUN_KEY,false)
-            edit.apply()
+            SharedPreferencesManager.firstRun = false
             startActivity(Intent(this, MainActivity::class.java))
             finish()
 

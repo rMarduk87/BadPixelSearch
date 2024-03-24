@@ -7,6 +7,7 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.net.Uri
 import android.os.Bundle
+import android.text.Editable
 import android.view.GestureDetector
 import android.view.GestureDetector.SimpleOnGestureListener
 import android.view.LayoutInflater
@@ -20,6 +21,7 @@ import rpt.tool.badpixelsearch.R
 import rpt.tool.badpixelsearch.WalkThroughActivity
 import rpt.tool.badpixelsearch.databinding.BadPixelSearchFragmentBinding
 import rpt.tool.badpixelsearch.utils.AppUtils
+import rpt.tool.badpixelsearch.utils.managers.SharedPreferencesManager
 import kotlin.math.abs
 
 
@@ -27,15 +29,10 @@ class BadPixelSearchFragment :
     BaseFragment<BadPixelSearchFragmentBinding>(BadPixelSearchFragmentBinding::inflate),
     View.OnClickListener {
 
-    private lateinit var sharedPref: SharedPreferences
-
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        sharedPref = requireActivity().getSharedPreferences(AppUtils.USERS_SHARED_PREF,
-            AppUtils.PRIVATE_MODE)
 
-        if (sharedPref.getBoolean(AppUtils.FIRST_RUN_KEY, true)) {
+        if (SharedPreferencesManager.firstRun) {
             startActivity(Intent(requireContext(), WalkThroughActivity::class.java))
         }
 
@@ -55,18 +52,20 @@ class BadPixelSearchFragment :
             val alertDialogBuilder = AlertDialog.Builder(requireContext())
             alertDialogBuilder.setView(promptsView)
 
-            val userInputTextSub = promptsView.findViewById(R.id.txtSub) as EditText
+            val userInputTextSub: EditText = promptsView.findViewById(R.id.txtSub)
 
-            val userInputTxtMsg = promptsView.findViewById(R.id.txtMsg) as EditText
+            val userInputTxtMsg: EditText = promptsView.findViewById(R.id.txtMsg)
 
-            val userInputSendBtn = promptsView.findViewById(R.id.btnSend) as Button
+            val userInputSendBtn: Button = promptsView.findViewById(R.id.btnSend)
 
             userInputSendBtn.setOnClickListener {
                 val inputText = userInputTextSub.text.toString()
                 val inputTextMsg = userInputTxtMsg.text.toString()
                 sendMail(requireActivity(),
                     arrayOf(resources.getString(R.string.to)), inputText, inputTextMsg)
+                userInputTxtMsg.text.clear()
             }
+
 
 
             alertDialogBuilder.setPositiveButton("OK") { _, _ ->
@@ -127,9 +126,11 @@ class BadPixelSearchFragment :
         if (i < 0) i = 7
         if (j > 0) {
             binding.appname.visibility = View.GONE
+            binding.sendTv.visibility = View.GONE
+            binding.sendRequestBtn.visibility = View.GONE
         }
         when (i) {
-            0 -> binding.mainBG.setBackgroundColor(resources.getColor(R.color.black))
+            0 -> start()
             1 -> binding.mainBG.setBackgroundColor(resources.getColor(R.color.red))
             2 -> binding.mainBG.setBackgroundColor(resources.getColor(R.color.green))
             3 -> binding.mainBG.setBackgroundColor(resources.getColor(R.color.blue))
@@ -139,6 +140,13 @@ class BadPixelSearchFragment :
             7 -> binding.mainBG.setBackgroundColor(resources.getColor(R.color.white))
             else -> {}
         }
+    }
+
+    private fun start() {
+        binding.mainBG.setBackgroundColor(resources.getColor(R.color.black))
+        binding.appname.visibility = View.VISIBLE
+        binding.sendTv.visibility = View.VISIBLE
+        binding.sendRequestBtn.visibility = View.VISIBLE
     }
 
     companion object{
@@ -163,16 +171,16 @@ class BadPixelSearchFragment :
                 i++
                 changeColor()
                 return true
-            } else if (e2.x - e1!!.x > SWIPE_MIN_DISTANCE && abs(velocityX) > SWIPE_THRESHOLD_VELOCITY) {
+            } else if (e2.x - e1.x > SWIPE_MIN_DISTANCE && abs(velocityX) > SWIPE_THRESHOLD_VELOCITY) {
                 i--
                 changeColor()
                 return true
             }
-            if (e1!!.y - e2.y > SWIPE_MIN_DISTANCE && abs(velocityY) > SWIPE_THRESHOLD_VELOCITY) {
+            if (e1.y - e2.y > SWIPE_MIN_DISTANCE && abs(velocityY) > SWIPE_THRESHOLD_VELOCITY) {
                 i++
                 changeColor()
                 return true
-            } else if (e2.y - e1!!.y > SWIPE_MIN_DISTANCE && abs(velocityY) > SWIPE_THRESHOLD_VELOCITY) {
+            } else if (e2.y - e1.y > SWIPE_MIN_DISTANCE && abs(velocityY) > SWIPE_THRESHOLD_VELOCITY) {
                 i--
                 changeColor()
                 return true
