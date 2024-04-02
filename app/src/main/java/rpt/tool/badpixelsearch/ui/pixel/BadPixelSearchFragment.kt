@@ -4,10 +4,11 @@ import android.app.Activity
 import android.app.AlertDialog
 import android.content.ActivityNotFoundException
 import android.content.Intent
-import android.content.SharedPreferences
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
-import android.text.Editable
+import android.os.Handler
+import android.os.Looper
 import android.view.GestureDetector
 import android.view.GestureDetector.SimpleOnGestureListener
 import android.view.LayoutInflater
@@ -16,18 +17,30 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.annotation.RequiresApi
+import com.skydoves.balloon.BalloonAlign
+import com.skydoves.balloon.balloon
 import rpt.tool.badpixelsearch.BaseFragment
 import rpt.tool.badpixelsearch.R
 import rpt.tool.badpixelsearch.WalkThroughActivity
 import rpt.tool.badpixelsearch.databinding.BadPixelSearchFragmentBinding
-import rpt.tool.badpixelsearch.utils.AppUtils
+import rpt.tool.badpixelsearch.utils.balloon.HelpBalloonFactory
 import rpt.tool.badpixelsearch.utils.managers.SharedPreferencesManager
+import rpt.tool.badpixelsearch.utils.navigation.safeNavController
+import rpt.tool.badpixelsearch.utils.navigation.safeNavigate
 import kotlin.math.abs
 
 
+@Suppress("DEPRECATION")
 class BadPixelSearchFragment :
     BaseFragment<BadPixelSearchFragmentBinding>(BadPixelSearchFragmentBinding::inflate),
     View.OnClickListener {
+
+    private var finalizer: Runnable? = null
+    private val timeoutHandler = Handler()
+    private var isRunning = false
+    private val helpBalloon by balloon<HelpBalloonFactory>()
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -38,12 +51,13 @@ class BadPixelSearchFragment :
 
         val gestureDetector = GestureDetector(RptDetectGesture())
 
+        j = 1
+
         binding.mainBG.setOnClickListener(this)
         binding.mainBG.setOnTouchListener { _, event ->
             gestureDetector.onTouchEvent(event)
             true
         }
-        j = 1
 
         binding.sendRequestBtn.setOnClickListener {
             val li = LayoutInflater.from(requireContext())
@@ -66,8 +80,6 @@ class BadPixelSearchFragment :
                 userInputTxtMsg.text.clear()
             }
 
-
-
             alertDialogBuilder.setPositiveButton("OK") { _, _ ->
 
             }.setNegativeButton("Cancel") { dialog, _ ->
@@ -77,6 +89,30 @@ class BadPixelSearchFragment :
             val alertDialog = alertDialogBuilder.create()
             alertDialog.show()
         }
+
+        binding.openSettingsMenuBtn.setOnClickListener {
+            safeNavController?.safeNavigate(
+                BadPixelSearchFragmentDirections.actionBadPixelSearchFragmentToSettingsFragment())
+        }
+
+        binding.appname.setOnClickListener{
+            Handler(Looper.getMainLooper()).postDelayed({
+                helpBalloon.showAlign(
+                    align = BalloonAlign.BOTTOM,
+                    mainAnchor = binding.appname as View,
+                    subAnchorList = listOf(it),
+                )
+            },1450)
+
+            Handler(Looper.getMainLooper()).postDelayed({
+                helpBalloon.dismiss()
+            }, 10000)
+        }
+    }
+
+    private fun scrolling() {
+        i++
+        changeColor()
     }
 
     private fun sendMail(
@@ -110,11 +146,13 @@ class BadPixelSearchFragment :
         }
     }
 
+    @RequiresApi(Build.VERSION_CODES.Q)
     override fun onClick(v: View?) {
         when (v!!.id) {
             R.id.mainBG -> {
-                i++
-                changeColor()
+                if(SharedPreferencesManager.mode == 0){
+                    scrolling()
+                }
             }
 
             else -> {}
@@ -122,12 +160,13 @@ class BadPixelSearchFragment :
     }
 
     fun changeColor() {
-        if (i > 7) i = 0
-        if (i < 0) i = 7
+        if (i > 8) i = 0
+        if (i < 0) i = 8
         if (j > 0) {
             binding.appname.visibility = View.GONE
             binding.sendTv.visibility = View.GONE
             binding.sendRequestBtn.visibility = View.GONE
+            binding.openSettingsMenuBtn.visibility = View.GONE
         }
         when (i) {
             0 -> start()
@@ -137,7 +176,11 @@ class BadPixelSearchFragment :
             4 -> binding.mainBG.setBackgroundColor(resources.getColor(R.color.cyan))
             5 -> binding.mainBG.setBackgroundColor(resources.getColor(R.color.magenta))
             6 -> binding.mainBG.setBackgroundColor(resources.getColor(R.color.yellow))
-            7 -> binding.mainBG.setBackgroundColor(resources.getColor(R.color.white))
+            7 -> binding.mainBG.setBackgroundColor(resources.getColor(R.color.grey))
+            8 -> {
+                    binding.mainBG.setBackgroundColor(resources.getColor(R.color.white))
+                    isRunning = false
+            }
             else -> {}
         }
     }
@@ -147,6 +190,10 @@ class BadPixelSearchFragment :
         binding.appname.visibility = View.VISIBLE
         binding.sendTv.visibility = View.VISIBLE
         binding.sendRequestBtn.visibility = View.VISIBLE
+        binding.openSettingsMenuBtn.visibility = View.VISIBLE
+        if(finalizer != null){
+            timeoutHandler.removeCallbacks(finalizer!!)
+        }
     }
 
     companion object{
@@ -168,24 +215,78 @@ class BadPixelSearchFragment :
             velocityY: Float
         ): Boolean {
             if (e1!!.x - e2.x > SWIPE_MIN_DISTANCE && abs(velocityX) > SWIPE_THRESHOLD_VELOCITY) {
-                i++
-                changeColor()
+                if(SharedPreferencesManager.mode == 0){
+                    i++
+                    changeColor()
+                }
+                else{
+                    isRunning = true
+                    automatic()
+                }
+
                 return true
             } else if (e2.x - e1.x > SWIPE_MIN_DISTANCE && abs(velocityX) > SWIPE_THRESHOLD_VELOCITY) {
-                i--
-                changeColor()
+                if(SharedPreferencesManager.mode == 0){
+                    i--
+                    changeColor()
+                }
+                else{
+                    isRunning = false
+                    timeoutHandler.removeCallbacks(finalizer!!)
+                    i=0
+                    changeColor()
+                }
+
                 return true
             }
             if (e1.y - e2.y > SWIPE_MIN_DISTANCE && abs(velocityY) > SWIPE_THRESHOLD_VELOCITY) {
-                i++
-                changeColor()
+                if(SharedPreferencesManager.mode == 0){
+                    i++
+                    changeColor()
+                }
+                else{
+                    isRunning = true
+                    automatic()
+                }
+
                 return true
             } else if (e2.y - e1.y > SWIPE_MIN_DISTANCE && abs(velocityY) > SWIPE_THRESHOLD_VELOCITY) {
-                i--
-                changeColor()
+                if(SharedPreferencesManager.mode == 0){
+                    i--
+                    changeColor()
+                }
+                else{
+                    isRunning = false
+                    timeoutHandler.removeCallbacks(finalizer!!)
+                    i=0
+                    changeColor()
+                }
+
                 return true
             }
+
             return false
         }
+    }
+
+    private fun automatic() {
+        var delay = (if (SharedPreferencesManager.velocity == 0) 3500 else 2500).toLong()
+
+        finalizer = object  : Runnable{
+            override fun run() {
+                if(isRunning){
+                    scrolling()
+                    timeoutHandler.postDelayed(this, delay)//1 sec delay
+                }
+                else{
+                    timeoutHandler.removeCallbacks(finalizer!!)
+                    i=0
+                    changeColor()
+                }
+            }
+        }
+
+        timeoutHandler.postDelayed(finalizer!!,0 )
+
     }
 }

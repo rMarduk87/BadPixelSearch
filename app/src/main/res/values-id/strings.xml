@@ -9,7 +9,7 @@
     <string name="walkthrough_text_two">Luncurkan aplikasi.</string>
     <string name="walkthrough_text_three">Cukup usap ke kiri atau kanan untuk berpindah ke warna berikutnya atau sebelumnya.</string>
     <string name="walkthrough_text_four">Pada setiap warna, monokromatisme layar diamati dengan cermat di semua titik. Selama pengoperasian normal, semua piksel pada layar akan memiliki satu warna. Jika warna piksel berbeda dari warna apa pun, berarti piksel tersebut terbakar atau rusak.</string>
-    <string name="double_tap_info">Cukup usap ke kiri atau kanan untuk berpindah ke warna berikutnya atau sebelumnya.</string>
+    <string name="double_tap_info">Cukup geser ke kiri atau kanan untuk berpindah ke warna berikutnya atau sebelumnya.\n Atau klik tombol pengaturan untuk mengubah mode pencarian (klik di sini untuk info)</string>
     <string name="button_close_fix">Tutup</string>
     <string name="click_me">Klik di sini untuk menampilkan informasi tentang fitur baru, atau geser untuk memulai pemeriksa piksel</string>
     <string name="start_fix_tool">Mulai utilitas perbaikan piksel</string>
@@ -18,4 +18,11 @@
     <string name="send_req">KIRIM PERMINTAAN</string>
     <string name="choose_mail_app">Pilih Aplikasi Email</string>
     <string name="to">riccardo.pezzolati@gmail.com</string>
+    <string name="automatic">Modal otomatis</string>
+    <string name="settings">BUKA MENU PENGATURAN</string>
+    <string name="settings_t">PENGATURAN</string>
+    <string name="speed">Pengguliran kecepatan</string>
+    <string name="normal">Normal</string>
+    <string name="fast">Kecepatan</string>
+    <string name="help">Dengan mengaktifkan mode otomatis, aplikasi akan menelusuri warna pengujian. Untuk mengaktifkannya, klik tombol di bagian bawah, pilih kecepatan pengguliran, kembali ke layar ini dan geser ke kanan untuk memulai.</string>
 </resources>
