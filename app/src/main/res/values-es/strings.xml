@@ -9,7 +9,7 @@
     <string name="walkthrough_text_two">Inicie la aplicación.</string>
     <string name="walkthrough_text_three">Simplemente deslice el dedo hacia la izquierda o hacia la derecha para pasar al color anterior o siguiente.</string>
     <string name="walkthrough_text_four">En cada color, se observa cuidadosamente un monocromatismo de la pantalla en todos los puntos. Durante el funcionamiento normal, todos los píxeles de la pantalla serán de un solo color. Si el color del píxel difiere de cualquier color, significa que este píxel está quemado o defectuoso.</string>
-    <string name="double_tap_info">Simplemente deslice el dedo hacia la izquierda o hacia la derecha para pasar al color anterior o siguiente.</string>
+    <string name="double_tap_info">Simplemente deslice el dedo hacia la izquierda o hacia la derecha para pasar al color anterior o siguiente.\n O haga clic en el botón de configuración para cambiar el modo de búsqueda (haga clic aquí para obtener información)</string>
     <string name="button_close_fix">Cerrar</string>
     <string name="click_me">Haga clic aquí para mostrar información sobre la nueva característica, o deslice el dedo para iniciar el verificador de píxeles</string>
     <string name="start_fix_tool">Iniciar la utilidad de corrección de píxeles</string>
@@ -18,4 +18,11 @@
     <string name="send_req">ENVIAR SOLICITUD</string>
     <string name="choose_mail_app">Elegir aplicación de correo</string>
     <string name="to">riccardo.pezzolati@gmail.com</string>
+    <string name="automatic">Modalità automatica</string>
+    <string name="settings">ABRIR MENÚ DE CONFIGURACIÓN</string>
+    <string name="settings_t">CONFIGURACIÓN</string>
+    <string name="speed">Velocidad de desplazamiento</string>
+    <string name="normal">Normal</string>
+    <string name="fast">Veloce</string>
+    <string name="help">Al activar el modo automático la aplicación se desplazará por los colores de prueba, para activarlo pulsa en el botón de la parte inferior, elige la velocidad de desplazamiento, vuelve a esta pantalla y desliza hacia la derecha para comenzar.</string>
 </resources>

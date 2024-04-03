@@ -10,6 +10,18 @@
         android:name="rpt.tool.badpixelsearch.ui.pixel.BadPixelSearchFragment"
         android:label="BadPixelSearchFragment"
         tools:layout="@layout/bad_pixel_search_fragment">
+        <action
+            android:id="@+id/action_badPixelSearchFragment_to_settingsFragment"
+            app:destination="@id/SettingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SettingsFragment"
+        android:name="rpt.tool.badpixelsearch.ui.settings.SettingsFragments"
+        android:label="SettingsFragment"
+        tools:layout="@layout/settings_fragments">
+        <action
+            android:id="@+id/action_settingsFragment_to_badPixelSearchFragment"
+            app:destination="@id/BadPixelSearchFragment" />
     </fragment>
 
 </navigation>
