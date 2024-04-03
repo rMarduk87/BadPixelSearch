@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Bad Pixel Search</string>
+    <string name="info">रंग बदलने के लिए स्क्रीन पर स्वाइप करें</string>
+    <string name="version">ऐप संस्करण:</string>
+    <string name="build">बिल्ड</string>
+    <string name="dot">...</string>
+    <string name="get_started">START</string>
+    <string name="walkthrough_text_one">फोन की स्क्रीन या पैड को मुलायम कपड़े या रुमाल से गंदगी, धूल, चर्बी के धब्बे और अन्य प्रदूषण से सावधानीपूर्वक पोंछें।</string>
+    <string name="walkthrough_text_two">एप्लिकेशन प्रारंभ करें।</string>
+    <string name="walkthrough_text_three">अगले रंग या पिछले रंग पर जाने के लिए बस बाएं या दाएं स्वाइप करें।</string>
+    <string name="walkthrough_text_four">प्रत्येक रंग पर आप सभी बिंदुओं पर एक स्क्रीन मोनोक्रोमैटिकिज्म को करीब से देखते हैं। सभी फूलों पर सामान्य ऑपरेशन से स्क्रीन के सभी पिक्सेल एक रंग के होंगे। यदि पिक्सेल का रंग किसी भी रंग पर भिन्न होता है, तो इस पिक्सेल का मतलब पीटा गया है।</string>
+    <string name="double_tap_info">अगले या पिछले रंग पर जाने के लिए बस बाएं या दाएं स्वाइप करें।\n या खोज मोड बदलने के लिए सेटिंग बटन पर क्लिक करें (जानकारी के लिए यहां क्लिक करें)</string>
+    <string name="button_close_fix">बंद करें</string>
+    <string name="click_me">नई सुविधा के बारे में जानकारी दिखाने के लिए यहां क्लिक करें, या पिक्सेल चेकर शुरू करने के लिए स्वाइप करें</string>
+    <string name="start_fix_tool">फ़िक्स टूल प्रारंभ करें</string>
+    <string name="restart">Restart</string>
+    <string name="send">अपनी इच्छित भाषा में स्थानीयकरण अनुरोध भेजने के लिए नीचे दिए गए बटन पर क्लिक करें</string>
+    <string name="send_req">अनुरोध भेजें</string>
+    <string name="choose_mail_app">मेल ऐप चुनें</string>
+    <string name="to">riccardo.pezzolati@gmail.com</string>
+    <string name="automatic">स्वचालित मोड</string>
+    <string name="settings">सेटिंग्स मेनू खोलें</string>
+    <string name="settings_t">सेटिंग्स</string>
+    <string name="speed">स्क्रॉलिंग स्पीड</string>
+    <string name="normal">सामान्य</string>
+    <string name="fast">तेज</string>
+    <string name="help">स्वचालित मोड को सक्रिय करने से ऐप परीक्षण रंगों के माध्यम से स्क्रॉल करेगा, इसे सक्रिय करने के लिए नीचे दिए गए बटन पर क्लिक करें, स्क्रॉलिंग गति चुनें, इस स्क्रीन पर वापस आएं और शुरू करने के लिए दाईं ओर स्वाइप करें। </string>
+</resources>
