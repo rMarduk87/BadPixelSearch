@@ -16,7 +16,7 @@ android {
         applicationId "rpt.tool.badpixelsearch"
         minSdk 26
         targetSdk 34
-        versionCode 11
+        versionCode 12
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -27,6 +27,7 @@ android {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             ndk { debugSymbolLevel = 'full' }
+            signingConfig signingConfigs.debug
         }
 
         debug {
