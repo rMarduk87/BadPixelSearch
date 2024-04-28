@@ -21,6 +21,8 @@ import androidx.annotation.RequiresApi
 import com.skydoves.balloon.BalloonAlign
 import com.skydoves.balloon.balloon
 import rpt.tool.badpixelsearch.BaseFragment
+import rpt.tool.badpixelsearch.FixPixelActivity
+import rpt.tool.badpixelsearch.MainActivity
 import rpt.tool.badpixelsearch.R
 import rpt.tool.badpixelsearch.WalkThroughActivity
 import rpt.tool.badpixelsearch.databinding.BadPixelSearchFragmentBinding
@@ -40,6 +42,8 @@ class BadPixelSearchFragment :
     private val timeoutHandler = Handler()
     private var isRunning = false
     private val helpBalloon by balloon<HelpBalloonFactory>()
+    var interval = 0
+    var count = 0
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -52,6 +56,7 @@ class BadPixelSearchFragment :
         val gestureDetector = GestureDetector(RptDetectGesture())
 
         j = 1
+        interval = SharedPreferencesManager.interval
 
         binding.mainBG.setOnClickListener(this)
         binding.mainBG.setOnTouchListener { _, event ->
@@ -108,6 +113,7 @@ class BadPixelSearchFragment :
                 helpBalloon.dismiss()
             }, 10000)
         }
+        count = 0
     }
 
     private fun scrolling() {
@@ -179,20 +185,22 @@ class BadPixelSearchFragment :
             7 -> binding.mainBG.setBackgroundColor(resources.getColor(R.color.grey))
             8 -> {
                     binding.mainBG.setBackgroundColor(resources.getColor(R.color.white))
-                    isRunning = false
+                    isRunning = count <= interval && SharedPreferencesManager.mode == 1
             }
             else -> {}
         }
     }
 
     private fun start() {
-        binding.mainBG.setBackgroundColor(resources.getColor(R.color.black))
-        binding.appname.visibility = View.VISIBLE
-        binding.sendTv.visibility = View.VISIBLE
-        binding.sendRequestBtn.visibility = View.VISIBLE
-        binding.openSettingsMenuBtn.visibility = View.VISIBLE
-        if(finalizer != null){
-            timeoutHandler.removeCallbacks(finalizer!!)
+        if(!isRunning){
+            binding.mainBG.setBackgroundColor(resources.getColor(R.color.black))
+            binding.appname.visibility = View.VISIBLE
+            binding.sendTv.visibility = View.VISIBLE
+            binding.sendRequestBtn.visibility = View.VISIBLE
+            binding.openSettingsMenuBtn.visibility = View.VISIBLE
+            if(finalizer != null){
+                timeoutHandler.removeCallbacks(finalizer!!)
+            }
         }
     }
 
@@ -219,6 +227,9 @@ class BadPixelSearchFragment :
                     i++
                     changeColor()
                 }
+                else if(SharedPreferencesManager.mode == 2){
+                    startActivity(Intent(requireContext(), FixPixelActivity::class.java))
+                }
                 else{
                     isRunning = true
                     automatic()
@@ -229,6 +240,9 @@ class BadPixelSearchFragment :
                 if(SharedPreferencesManager.mode == 0){
                     i--
                     changeColor()
+                }
+                else if(SharedPreferencesManager.mode == 2){
+                    startActivity(Intent(requireContext(), FixPixelActivity::class.java))
                 }
                 else{
                     isRunning = false
@@ -244,6 +258,9 @@ class BadPixelSearchFragment :
                     i++
                     changeColor()
                 }
+                else if(SharedPreferencesManager.mode == 2){
+                    startActivity(Intent(requireContext(), FixPixelActivity::class.java))
+                }
                 else{
                     isRunning = true
                     automatic()
@@ -254,6 +271,9 @@ class BadPixelSearchFragment :
                 if(SharedPreferencesManager.mode == 0){
                     i--
                     changeColor()
+                }
+                else if(SharedPreferencesManager.mode == 2){
+                    startActivity(Intent(requireContext(), FixPixelActivity::class.java))
                 }
                 else{
                     isRunning = false
@@ -270,13 +290,25 @@ class BadPixelSearchFragment :
     }
 
     private fun automatic() {
-        var delay = (if (SharedPreferencesManager.velocity == 0) 3500 else 2500).toLong()
+        var delay = (if (SharedPreferencesManager.velocity == 0) 3000 else 2000).toLong()
+
 
         finalizer = object  : Runnable{
             override fun run() {
                 if(isRunning){
-                    scrolling()
-                    timeoutHandler.postDelayed(this, delay)//1 sec delay
+                    count += delay.toInt()
+                    if(count<= interval){
+                        scrolling()
+                        timeoutHandler.postDelayed(this, delay)//1 sec delay
+                    }
+                    else{
+                        timeoutHandler.removeCallbacks(finalizer!!)
+                        i=0
+                        isRunning = false
+                        count = 0
+                        start()
+                    }
+
                 }
                 else{
                     timeoutHandler.removeCallbacks(finalizer!!)

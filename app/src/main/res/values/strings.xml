@@ -25,4 +25,11 @@
     <string name="normal">Normal</string>
     <string name="fast">Fast</string>
     <string name="help">By activating the automatic mode the app will scroll through the test colours, to activate it click on the button at the bottom, choose the scrolling speed, return to this screen and swipe to the right to start.</string>
+    <string name="interval">Automatic mode duration</string>
+    <string name="min">Mins</string>
+    <string name="hour">Hour</string>
+    <string name="fix">Fix Mode</string>
+    <string name="help_fix">By activating the fix mode we will manipulate the screen to try to restore the broken pixels, we recommend at least 10 minutes or even better several hours of using this mode.\nWarning, do not look at the screen during this mode.\nBattery consumption may increase, it is recommended to have the battery at 100% or connected to the charger\nTo interrupt this function close app or press the back button</string>
+    <string name="brightness">Brightness</string>
+    <string name="text_delay">Delay</string>
 </resources>

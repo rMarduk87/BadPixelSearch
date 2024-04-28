@@ -16,7 +16,7 @@ android {
         applicationId "rpt.tool.badpixelsearch"
         minSdk 26
         targetSdk 34
-        versionCode 12
+        versionCode 13
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -82,6 +82,7 @@ dependencies {
     implementation("com.google.firebase:firebase-crashlytics-ktx")
     //Balloon
     implementation("com.github.skydoves:balloon:1.6.3")
+    implementation 'androidx.activity:activity:1.8.0'
     //Test
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'

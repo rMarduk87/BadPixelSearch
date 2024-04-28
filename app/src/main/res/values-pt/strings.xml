@@ -25,4 +25,11 @@
     <string name="normal">Normal</string>
     <string name="fast">Veloce</string>
     <string name="help">Ao ativar o modo automático o aplicativo irá rolar pelas cores de teste, para ativá-lo clique no botão na parte inferior, escolha a velocidade de rolagem, retorne a esta tela e deslize para a direita para iniciar.</string>
+    <string name="interval">Duração do modo automático</string>
+    <string name="min">Minutos</string>
+    <string name="hour">Hora</string>
+    <string name="fix">Modo de correção</string>
+    <string name="help_fix">Ao ativar o modo de correção iremos manipular a tela para tentar restaurar os pixels quebrados, recomendamos pelo menos 10 minutos ou melhor ainda várias horas de uso deste modo.\nAtenção, não olhe para o tela durante este modo.\nO consumo da bateria pode aumentar, é recomendado ter a bateria em 100% ou conectada ao carregador\nPara interromper esta função feche o aplicativo ou pressione o botão Voltar</string>
+    <string name="brightness">Brilho</string>
+    <string name="text_delay">Atraso</string>
 </resources>

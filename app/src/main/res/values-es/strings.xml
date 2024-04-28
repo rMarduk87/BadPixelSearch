@@ -25,4 +25,11 @@
     <string name="normal">Normal</string>
     <string name="fast">Veloce</string>
     <string name="help">Al activar el modo automático la aplicación se desplazará por los colores de prueba, para activarlo pulsa en el botón de la parte inferior, elige la velocidad de desplazamiento, vuelve a esta pantalla y desliza hacia la derecha para comenzar.</string>
+    <string name="interval">Duración del modo automático</string>
+    <string name="min">Minutos</string>
+    <string name="hour">Hora</string>
+    <string name="fix">Modo de reparación</string>
+    <string name="help_fix">Al activar el modo de reparación manipularemos la pantalla para intentar restaurar los píxeles rotos, recomendamos al menos 10 minutos o incluso mejor varias horas de uso de este modo.\nAdvertencia, no mires el pantalla durante este modo.\nEl consumo de batería puede aumentar, se recomienda tener la batería al 100% o conectada al cargador\nPara interrumpir esta función cierre la aplicación o presione el botón Atrás</string>
+    <string name="brightness">Brillo</string>
+    <string name="text_delay">Retraso</string>
 </resources>
