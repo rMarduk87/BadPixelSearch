@@ -25,4 +25,11 @@
     <string name="normal">Normale</string>
     <string name="fast">Veloce</string>
     <string name="help">Attivando la modalità automatica l\'app eseguirà lo scorrimento dei colori di test, per attivarla clicca sul pulsante in basso, scegli la velocità di scorrimento, torna in questa schermata e swipe verso destra per iniziare.</string>
+    <string name="interval">Durata della modalità automatica</string>
+    <string name="min">Minuti</string>
+    <string name="hour">Ora</string>
+    <string name="fix">Modalità correzione</string>
+    <string name="help_fix">Attivando la modalità correzione, manipoleremo lo schermo per provare a ripristinare i pixel rotti, consigliamo almeno 10 minuti o meglio ancora diverse ore di utilizzo di questa modalità.\nAttenzione, non guardare lo schermo durante questa modalità.\nIl consumo della batteria potrebbe aumentare, si consiglia di avere la batteria al 100% o collegata al caricabatterie.\nPer interrompere questa funzione chiudi l\'app o premi il pulsante Indietro</string>
+    <string name="brightness">Luminosità</string>
+    <string name="text_delay">Ritardo</string>
 </resources>

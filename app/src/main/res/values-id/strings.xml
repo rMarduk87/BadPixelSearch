@@ -25,4 +25,11 @@
     <string name="normal">Normal</string>
     <string name="fast">Kecepatan</string>
     <string name="help">Dengan mengaktifkan mode otomatis, aplikasi akan menelusuri warna pengujian. Untuk mengaktifkannya, klik tombol di bagian bawah, pilih kecepatan pengguliran, kembali ke layar ini dan geser ke kanan untuk memulai.</string>
+    <string name="interval">Durasi mode otomatis</string>
+    <string name="min">Menit</string>
+    <string name="hour">Jam</string>
+    <string name="fix">Mode Perbaiki</string>
+    <string name="help_fix">Dengan mengaktifkan mode perbaikan kami akan memanipulasi layar untuk mencoba memulihkan piksel yang rusak, kami menyarankan setidaknya 10 menit atau bahkan lebih baik beberapa jam untuk menggunakan mode ini.\nPeringatan, jangan lihat layar selama mode ini.\nKonsumsi baterai dapat meningkat, disarankan untuk memiliki baterai 100% atau terhubung ke pengisi daya\nUntuk menghentikan fungsi ini, tutup aplikasi atau tekan tombol kembali</string>
+    <string name="brightness">Kecerahan</string>
+    <string name="text_delay">Penundaan</string>
 </resources>
