@@ -9,7 +9,7 @@
     <string name="walkthrough_text_two">Luncurkan aplikasi.</string>
     <string name="walkthrough_text_three">Cukup usap ke kiri atau kanan untuk berpindah ke warna berikutnya atau sebelumnya.</string>
     <string name="walkthrough_text_four">Pada setiap warna, monokromatisme layar diamati dengan cermat di semua titik. Selama pengoperasian normal, semua piksel pada layar akan memiliki satu warna. Jika warna piksel berbeda dari warna apa pun, berarti piksel tersebut terbakar atau rusak.</string>
-    <string name="double_tap_info">Cukup geser ke kiri atau kanan untuk berpindah ke warna berikutnya atau sebelumnya.\n Atau klik tombol pengaturan untuk mengubah mode pencarian (klik di sini untuk info)</string>
+    <string name="double_tap_info">Untuk informasi penggunaan klik di sini</string>
     <string name="button_close_fix">Tutup</string>
     <string name="click_me">Klik di sini untuk menampilkan informasi tentang fitur baru, atau geser untuk memulai pemeriksa piksel</string>
     <string name="start_fix_tool">Mulai utilitas perbaikan piksel</string>
@@ -32,4 +32,15 @@
     <string name="help_fix">Dengan mengaktifkan mode perbaikan kami akan memanipulasi layar untuk mencoba memulihkan piksel yang rusak, kami menyarankan setidaknya 10 menit atau bahkan lebih baik beberapa jam untuk menggunakan mode ini.\nPeringatan, jangan lihat layar selama mode ini.\nKonsumsi baterai dapat meningkat, disarankan untuk memiliki baterai 100% atau terhubung ke pengisi daya\nUntuk menghentikan fungsi ini, tutup aplikasi atau tekan tombol kembali</string>
     <string name="brightness">Kecerahan</string>
     <string name="text_delay">Penundaan</string>
+    <string name="faq">Faq</string>
+    <string name="faq_a">J:</string>
+    <string name="faq_q">T:</string>
+    <string name="faq_question_1">Bagaimana cara menggunakan aplikasi ini?</string>
+    <string name="faq_answer_1">Seka layar ponsel atau bantalan dengan lap lembut, atau serbet dengan hati-hati dari kotoran, debu, noda minyak, dan polusi lainnya.</string>
+    <string name="faq_question_2">Bagaimana cara mencari piksel mati atau rusak?</string>
+    <string name="faq_answer_2">Cukup usap ke kiri atau kanan untuk beralih ke warna berikutnya atau warna sebelumnya.</string>
+    <string name="faq_question_3">Apakah ada cara penggunaan lainnya? Jika ya, bagaimana cara mengaktifkannya?</string>
+    <string name="faq_answer_3">Klik tombol \"Pengaturan\", di menu baru Anda dapat memilih mode Otomatis atau FixPixel</string>
+    <string name="faq_question_4">Dapatkah saya menyetel kecepatan atau frekuensi dalam mode Otomatis?</string>
+    <string name="faq_answer_4">Ya, di menu \"Pengaturan\" Anda dapat mengubah parameter mode</string>
 </resources>

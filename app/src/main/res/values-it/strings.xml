@@ -9,7 +9,7 @@
     <string name="walkthrough_text_two">Avvia l\'applicazione.</string>
     <string name="walkthrough_text_three">Scorri semplicemente verso sinistra o verso destra per passare al colore successivo o al colore precedente.</string>
     <string name="walkthrough_text_four">Su ogni colore si osserva attentamente un monocromatismo dello schermo in tutti i punti. Durante il normale funzionamento tutti i pixel dello schermo saranno di un colore. Se il colore del pixel differisce da qualsiasi colore, significa che questo pixel è bruciato o difettoso.</string>
-    <string name="double_tap_info">E\' sufficente scorrere verso sinistra o verso destra per passare al colore successivo o precedente.\n Oppure fare clic sul pulsante delle impostazioni per modificare la modalità di ricerca (clicca qui per informazioni)</string>
+    <string name="double_tap_info">Clicca qui per avere info di utilizzo</string>
     <string name="button_close_fix">Chiudi</string>
     <string name="click_me">Clicca qui per mostrare le informazioni sulla nuova funzionalità, o scorri per iniziare il controllo pixel</string>
     <string name="start_fix_tool">Inizia l\'utility di correzione pixel</string>
@@ -32,4 +32,15 @@
     <string name="help_fix">Attivando la modalità correzione, manipoleremo lo schermo per provare a ripristinare i pixel rotti, consigliamo almeno 10 minuti o meglio ancora diverse ore di utilizzo di questa modalità.\nAttenzione, non guardare lo schermo durante questa modalità.\nIl consumo della batteria potrebbe aumentare, si consiglia di avere la batteria al 100% o collegata al caricabatterie.\nPer interrompere questa funzione chiudi l\'app o premi il pulsante Indietro</string>
     <string name="brightness">Luminosità</string>
     <string name="text_delay">Ritardo</string>
+    <string name="faq">Faq</string>
+    <string name="faq_a">R:</string>
+    <string name="faq_q">D:</string>
+    <string name="faq_question_1">Come utilizzare questa app?</string>
+    <string name="faq_answer_1">Pulisci con cura lo schermo del telefono con  un tampone, uno straccio morbido o un tovagliolo, da sporco, polvere, macchie di grasso e altro.</string>
+    <string name="faq_question_2">Come possop cercare pixel morti o rotti?</string>
+    <string name="faq_answer_2">Scorri semplicemente verso sinistra o verso destra per passare al colore successivo o precedente.</string>
+    <string name="faq_question_3">Esistono altre modalità di utilizzo? Se sì, come posso abilitarle?</string>
+    <string name="faq_answer_3">Fai clic sul pulsante \"Impostazioni\", nel nuovo menu puoi scegliere la modalità Automatica o FixPixel</string>
+    <string name="faq_question_4">Posso impostare la velocità o la frequenza in modalità automatica?</string>
+    <string name="faq_answer_4">Sì, nel menu \"Impostazioni\" puoi modificare i parametri della modalità</string>
 </resources>

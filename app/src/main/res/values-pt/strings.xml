@@ -9,7 +9,7 @@
     <string name="walkthrough_text_two">Iniciar aplicativo.</string>
     <string name="walkthrough_text_three">Basta deslizar para a esquerda ou para a direita para ir para a próxima cor ou para a cor anterior.</string>
     <string name="walkthrough_text_four">Em cada cor você observa de perto um monocromatismo na tela em todos os pontos. Pela operação normal em todas as flores, todos os pixels da tela deverão ter uma cor. Se a cor do pixel for diferente em qualquer cor, esse pixel batido significa.</string>
-    <string name="double_tap_info">Basta deslizar para a esquerda ou para a direita para passar para a cor seguinte ou anterior.\n Ou clicar no botão de configurações para alterar o modo de pesquisa (clique aqui para obter informações)</string>
+    <string name="double_tap_info">Para informações de uso clique aqui</string>
     <string name="button_close_fix">Fechar</string>
     <string name="click_me">Clique aqui para mostrar informações sobre o novo recurso ou deslize para iniciar o verificador de pixels</string>
     <string name="start_fix_tool">Iniciar ferramenta de correção</string>
@@ -32,4 +32,15 @@
     <string name="help_fix">Ao ativar o modo de correção iremos manipular a tela para tentar restaurar os pixels quebrados, recomendamos pelo menos 10 minutos ou melhor ainda várias horas de uso deste modo.\nAtenção, não olhe para o tela durante este modo.\nO consumo da bateria pode aumentar, é recomendado ter a bateria em 100% ou conectada ao carregador\nPara interromper esta função feche o aplicativo ou pressione o botão Voltar</string>
     <string name="brightness">Brilho</string>
     <string name="text_delay">Atraso</string>
+    <string name="faq">Faq</string>
+    <string name="faq_a">R:</string>
+    <string name="faq_q">S:</string>
+    <string name="faq_question_1">Como usar este aplicativo?</string>
+    <string name="faq_answer_1">Limpe cuidadosamente a tela do telefone ou um pano macio ou guardanapo de sujeira, poeira, manchas de gordura e outras impurezas.</string>
+    <string name="faq_question_2">Como pesquisar pixels mortos ou quebrados?</string>
+    <string name="faq_answer_2">Basta deslizar para a esquerda ou para a direita para ir para a próxima cor ou para a cor anterior.</string>
+    <string name="faq_question_3">Existem outros modos de uso? Se sim, como faço para ativá-los?</string>
+    <string name="faq_answer_3">Clique no botão \"Configurações\", no novo menu você pode escolher o modo Automático ou FixPixel</string>
+    <string name="faq_question_4">Posso definir velocidade ou frequência no modo Automático?</string>
+    <string name="faq_answer_4">Sim, no menu \"Configurações\" você pode alterar os parâmetros do modo</string>
 </resources>
