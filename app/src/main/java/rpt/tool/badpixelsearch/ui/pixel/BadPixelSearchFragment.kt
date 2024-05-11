@@ -8,7 +8,6 @@ import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.os.Handler
-import android.os.Looper
 import android.view.GestureDetector
 import android.view.GestureDetector.SimpleOnGestureListener
 import android.view.LayoutInflater
@@ -18,15 +17,10 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.annotation.RequiresApi
-import com.skydoves.balloon.BalloonAlign
-import com.skydoves.balloon.balloon
 import rpt.tool.badpixelsearch.BaseFragment
 import rpt.tool.badpixelsearch.FixPixelActivity
-import rpt.tool.badpixelsearch.MainActivity
 import rpt.tool.badpixelsearch.R
-import rpt.tool.badpixelsearch.WalkThroughActivity
 import rpt.tool.badpixelsearch.databinding.BadPixelSearchFragmentBinding
-import rpt.tool.badpixelsearch.utils.balloon.HelpBalloonFactory
 import rpt.tool.badpixelsearch.utils.managers.SharedPreferencesManager
 import rpt.tool.badpixelsearch.utils.navigation.safeNavController
 import rpt.tool.badpixelsearch.utils.navigation.safeNavigate
@@ -41,7 +35,6 @@ class BadPixelSearchFragment :
     private var finalizer: Runnable? = null
     private val timeoutHandler = Handler()
     private var isRunning = false
-    private val helpBalloon by balloon<HelpBalloonFactory>()
     var interval = 0
     var count = 0
 
@@ -49,9 +42,7 @@ class BadPixelSearchFragment :
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        if (SharedPreferencesManager.firstRun) {
-            startActivity(Intent(requireContext(), WalkThroughActivity::class.java))
-        }
+        SharedPreferencesManager.firstRun = false
 
         val gestureDetector = GestureDetector(RptDetectGesture())
 
@@ -101,17 +92,8 @@ class BadPixelSearchFragment :
         }
 
         binding.appname.setOnClickListener{
-            Handler(Looper.getMainLooper()).postDelayed({
-                helpBalloon.showAlign(
-                    align = BalloonAlign.BOTTOM,
-                    mainAnchor = binding.appname as View,
-                    subAnchorList = listOf(it),
-                )
-            },1450)
-
-            Handler(Looper.getMainLooper()).postDelayed({
-                helpBalloon.dismiss()
-            }, 10000)
+            safeNavController?.safeNavigate(
+                BadPixelSearchFragmentDirections.actionBadPixelSearchFragmentToFaqFragment())
         }
         count = 0
     }
@@ -223,63 +205,71 @@ class BadPixelSearchFragment :
             velocityY: Float
         ): Boolean {
             if (e1!!.x - e2.x > SWIPE_MIN_DISTANCE && abs(velocityX) > SWIPE_THRESHOLD_VELOCITY) {
-                if(SharedPreferencesManager.mode == 0){
-                    i++
-                    changeColor()
-                }
-                else if(SharedPreferencesManager.mode == 2){
-                    startActivity(Intent(requireContext(), FixPixelActivity::class.java))
-                }
-                else{
-                    isRunning = true
-                    automatic()
+                when (SharedPreferencesManager.mode) {
+                    0 -> {
+                        i++
+                        changeColor()
+                    }
+                    2 -> {
+                        startActivity(Intent(requireContext(), FixPixelActivity::class.java))
+                    }
+                    else -> {
+                        isRunning = true
+                        automatic()
+                    }
                 }
 
                 return true
             } else if (e2.x - e1.x > SWIPE_MIN_DISTANCE && abs(velocityX) > SWIPE_THRESHOLD_VELOCITY) {
-                if(SharedPreferencesManager.mode == 0){
-                    i--
-                    changeColor()
-                }
-                else if(SharedPreferencesManager.mode == 2){
-                    startActivity(Intent(requireContext(), FixPixelActivity::class.java))
-                }
-                else{
-                    isRunning = false
-                    timeoutHandler.removeCallbacks(finalizer!!)
-                    i=0
-                    changeColor()
+                when (SharedPreferencesManager.mode) {
+                    0 -> {
+                        i--
+                        changeColor()
+                    }
+                    2 -> {
+                        startActivity(Intent(requireContext(), FixPixelActivity::class.java))
+                    }
+                    else -> {
+                        isRunning = false
+                        timeoutHandler.removeCallbacks(finalizer!!)
+                        i=0
+                        changeColor()
+                    }
                 }
 
                 return true
             }
             if (e1.y - e2.y > SWIPE_MIN_DISTANCE && abs(velocityY) > SWIPE_THRESHOLD_VELOCITY) {
-                if(SharedPreferencesManager.mode == 0){
-                    i++
-                    changeColor()
-                }
-                else if(SharedPreferencesManager.mode == 2){
-                    startActivity(Intent(requireContext(), FixPixelActivity::class.java))
-                }
-                else{
-                    isRunning = true
-                    automatic()
+                when (SharedPreferencesManager.mode) {
+                    0 -> {
+                        i++
+                        changeColor()
+                    }
+                    2 -> {
+                        startActivity(Intent(requireContext(), FixPixelActivity::class.java))
+                    }
+                    else -> {
+                        isRunning = true
+                        automatic()
+                    }
                 }
 
                 return true
             } else if (e2.y - e1.y > SWIPE_MIN_DISTANCE && abs(velocityY) > SWIPE_THRESHOLD_VELOCITY) {
-                if(SharedPreferencesManager.mode == 0){
-                    i--
-                    changeColor()
-                }
-                else if(SharedPreferencesManager.mode == 2){
-                    startActivity(Intent(requireContext(), FixPixelActivity::class.java))
-                }
-                else{
-                    isRunning = false
-                    timeoutHandler.removeCallbacks(finalizer!!)
-                    i=0
-                    changeColor()
+                when (SharedPreferencesManager.mode) {
+                    0 -> {
+                        i--
+                        changeColor()
+                    }
+                    2 -> {
+                        startActivity(Intent(requireContext(), FixPixelActivity::class.java))
+                    }
+                    else -> {
+                        isRunning = false
+                        timeoutHandler.removeCallbacks(finalizer!!)
+                        i=0
+                        changeColor()
+                    }
                 }
 
                 return true

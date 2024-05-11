@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_badPixelSearchFragment_to_settingsFragment"
             app:destination="@id/SettingsFragment" />
+        <action
+            android:id="@+id/action_badPixelSearchFragment_to_faqFragment"
+            app:destination="@id/FaqFragment" />
     </fragment>
     <fragment
         android:id="@+id/SettingsFragment"
@@ -21,6 +24,15 @@
         tools:layout="@layout/settings_fragments">
         <action
             android:id="@+id/action_settingsFragment_to_badPixelSearchFragment"
+            app:destination="@id/BadPixelSearchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/FaqFragment"
+        android:name="rpt.tool.badpixelsearch.ui.faq.FaqFragment"
+        android:label="FaqFragment"
+        tools:layout="@layout/faq_fragment">
+        <action
+            android:id="@+id/action_faqFragment_to_badPixelSearchFragment"
             app:destination="@id/BadPixelSearchFragment" />
     </fragment>
 

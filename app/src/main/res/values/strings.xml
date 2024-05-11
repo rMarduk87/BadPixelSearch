@@ -9,7 +9,7 @@
     <string name="walkthrough_text_two">Start application.</string>
     <string name="walkthrough_text_three">Simply swipe left or right to go to the next color or previous color.</string>
     <string name="walkthrough_text_four">On every color you watch closely a screen monochromaticism in all points. By normal operation on all flowers all pixels of the screen shall be one color. If color of pixel differs on any color, this pixel beaten means.</string>
-    <string name="double_tap_info">Simply swipe left or right to move to the next or previous color.\n Or click on the settings button to change the search mode(click here for info)</string>
+    <string name="double_tap_info">For usage information click here</string>
     <string name="button_close_fix">Close</string>
     <string name="click_me">Click here to show information about the new feature, or swipe to start the pixel checker</string>
     <string name="start_fix_tool">Start fix tool</string>
@@ -32,4 +32,15 @@
     <string name="help_fix">By activating the fix mode we will manipulate the screen to try to restore the broken pixels, we recommend at least 10 minutes or even better several hours of using this mode.\nWarning, do not look at the screen during this mode.\nBattery consumption may increase, it is recommended to have the battery at 100% or connected to the charger\nTo interrupt this function close app or press the back button</string>
     <string name="brightness">Brightness</string>
     <string name="text_delay">Delay</string>
+    <string name="faq">Faq</string>
+    <string name="faq_a">A:</string>
+    <string name="faq_q">Q:</string>
+    <string name="faq_question_1">How to use this app?</string>
+    <string name="faq_answer_1">Carefully wipe the screen of phone or a pad a soft rag, or a napkin from dirt, dust, spots of fat and other pollution.</string>
+    <string name="faq_question_2">How to search dead or broken pixel?</string>
+    <string name="faq_answer_2">Simply swipe left or right to go to the next color or previous color.</string>
+    <string name="faq_question_3">Are there other modes of use? If so, how do I enable them?</string>
+    <string name="faq_answer_3">Click on the \"Settings\" button, in the new menu you can choose Automatic or FixPixel mode</string>
+    <string name="faq_question_4">Can I set speed or frequency in Automatic mode?</string>
+    <string name="faq_answer_4">Yes, in the \"Settings\" menu you can change the mode parameters</string>
 </resources>

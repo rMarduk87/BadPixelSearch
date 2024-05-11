@@ -19,4 +19,5 @@
     <color name="overlay">#BF000000</color>
     <color name="app_transparant">#0000</color>
     <color name="black_overlay">#66000000</color>
+    <color name="item_line">#E1E1E1</color>
 </resources>
