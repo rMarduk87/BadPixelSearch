@@ -19,7 +19,7 @@
     <string name="choose_mail_app">Scegli l\'app di posta</string>
     <string name="to">riccardo.pezzolati@gmail.com</string>
     <string name="automatic">Modalità automatica</string>
-    <string name="settings">APRI MENU IMPOSTAZIONI</string>
+    <string name="settings">IMPOSTAZIONI</string>
     <string name="settings_t">IMPOSTAZIONI</string>
     <string name="speed">Velocità scrolling</string>
     <string name="normal">Normale</string>
@@ -29,7 +29,6 @@
     <string name="min">Minuti</string>
     <string name="hour">Ora</string>
     <string name="fix">Modalità correzione</string>
-    <string name="help_fix">Attivando la modalità correzione, manipoleremo lo schermo per provare a ripristinare i pixel rotti, consigliamo almeno 10 minuti o meglio ancora diverse ore di utilizzo di questa modalità.\nAttenzione, non guardare lo schermo durante questa modalità.\nIl consumo della batteria potrebbe aumentare, si consiglia di avere la batteria al 100% o collegata al caricabatterie.\nPer interrompere questa funzione chiudi l\'app o premi il pulsante Indietro</string>
     <string name="brightness">Luminosità</string>
     <string name="text_delay">Ritardo</string>
     <string name="faq">Faq</string>
@@ -43,4 +42,9 @@
     <string name="faq_answer_3">Fai clic sul pulsante \"Impostazioni\", nel nuovo menu puoi scegliere la modalità Automatica o FixPixel</string>
     <string name="faq_question_4">Posso impostare la velocità o la frequenza in modalità automatica?</string>
     <string name="faq_answer_4">Sì, nel menu \"Impostazioni\" puoi modificare i parametri della modalità</string>
+    <string name="faq_question_5">How does the automatic bad pixel search work?</string>
+    <string name="faq_answer_5">By activating the fix mode we will manipulate the screen to try to restore the broken pixels, we recommend at least 10 minutes or even better several hours of using this mode.\nWarning, do not look at the screen during this mode.\nBattery consumption may increase, it is recommended to have the battery at 100% or connected to the charger\nTo interrupt this function close app or press the back button</string>
+    <string name="screen_info">SCREEN INFO</string>
+    <string name="touch">Press back button to stop tests</string>
+    <string name="slide">Slide left or right to start the desired test</string>
 </resources>

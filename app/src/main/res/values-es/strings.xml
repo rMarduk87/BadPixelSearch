@@ -19,7 +19,7 @@
     <string name="choose_mail_app">Elegir aplicación de correo</string>
     <string name="to">riccardo.pezzolati@gmail.com</string>
     <string name="automatic">Modalità automatica</string>
-    <string name="settings">ABRIR MENÚ DE CONFIGURACIÓN</string>
+    <string name="settings">CONFIGURACIÓN</string>
     <string name="settings_t">CONFIGURACIÓN</string>
     <string name="speed">Velocidad de desplazamiento</string>
     <string name="normal">Normal</string>
@@ -29,8 +29,7 @@
     <string name="min">Minutos</string>
     <string name="hour">Hora</string>
     <string name="fix">Modo de reparación</string>
-    <string name="help_fix">Al activar el modo de reparación manipularemos la pantalla para intentar restaurar los píxeles rotos, recomendamos al menos 10 minutos o incluso mejor varias horas de uso de este modo.\nAdvertencia, no mires el pantalla durante este modo.\nEl consumo de batería puede aumentar, se recomienda tener la batería al 100% o conectada al cargador\nPara interrumpir esta función cierre la aplicación o presione el botón Atrás</string>
-    <string name="brightness">Brillo</string>
+   <string name="brightness">Brillo</string>
     <string name="text_delay">Retraso</string>
     <string name="faq">Faq</string>
     <string name="faq_a">R:</string>
@@ -43,4 +42,9 @@
     <string name="faq_answer_3">Haga clic en el botón \"Configuración\", en el nuevo menú puede elegir el modo Automático o FixPixel</string>
     <string name="faq_question_4">¿Puedo configurar la velocidad o la frecuencia en el modo Automático?</string>
     <string name="faq_answer_4">Sí, en el menú \"Configuración\" puedes cambiar los parámetros del modo</string>
+    <string name="faq_question_5">How does the automatic bad pixel search work?</string>
+    <string name="faq_answer_5">By activating the fix mode we will manipulate the screen to try to restore the broken pixels, we recommend at least 10 minutes or even better several hours of using this mode.\nWarning, do not look at the screen during this mode.\nBattery consumption may increase, it is recommended to have the battery at 100% or connected to the charger\nTo interrupt this function close app or press the back button</string>
+    <string name="screen_info">SCREEN INFO</string>
+    <string name="touch">Press back button to stop tests</string>
+    <string name="slide">Slide left or right to start the desired test</string>
 </resources>

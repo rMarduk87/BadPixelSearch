@@ -19,7 +19,7 @@
     <string name="choose_mail_app">اختر تطبيق البريد</string>
     <string name="to">riccardo.pezzolati@gmail.com</string>
     <string name="automatic">الوضع التلقائي</string>
-    <string name="settings">فتح قائمة الإعدادات</string>
+    <string name="settings">الإعدادات</string>
     <string name="settings_t">إعدادات</string>
     <string name="speed">سرعة التمرير</string>
     <string name="normal">طبيعي</string>
@@ -29,7 +29,6 @@
     <string name="min">دقيقة</string>
     <string name="hour">ساعة</string>
     <string name="fix">وضع الإصلاح</string>
-    <string name="help_fix">من خلال تنشيط وضع الإصلاح، سنتلاعب بالشاشة لمحاولة استعادة وحدات البكسل المعطلة، ونوصي باستخدام هذا الوضع لمدة 10 دقائق على الأقل أو حتى عدة ساعات أفضل.\nتحذير، لا تنظر إلى الشاشة أثناء هذا الوضع.\nاستهلاك البطارية قد تزيد، فمن المستحسن أن تكون البطارية 100% أو متصلة بالشاحن\nلمقاطعة هذه الوظيفة، أغلق التطبيق أو اضغط على زر الرجوع</string>
     <string name="brightness">سطوع</string>
     <string name="text_delay">تأخير</string>
     <string name="faq">Faq</string>
@@ -43,4 +42,9 @@
     <string name="faq_answer_3">انقر على زر \"الإعدادات\"، وفي القائمة الجديدة يمكنك اختيار الوضع التلقائي أو الوضع FixPixel</string>
     <string name="faq_question_4">هل يمكنني ضبط السرعة أو التردد في الوضع التلقائي؟</string>
     <string name="faq_answer_4">نعم، في قائمة \"الإعدادات\" يمكنك تغيير معلمات الوضع</string>
+    <string name="faq_question_5">How does the automatic bad pixel search work?</string>
+    <string name="faq_answer_5">By activating the fix mode we will manipulate the screen to try to restore the broken pixels, we recommend at least 10 minutes or even better several hours of using this mode.\nWarning, do not look at the screen during this mode.\nBattery consumption may increase, it is recommended to have the battery at 100% or connected to the charger\nTo interrupt this function close app or press the back button</string>
+    <string name="screen_info">SCREEN INFO</string>
+    <string name="touch">Press back button to stop tests</string>
+    <string name="slide">Slide left or right to start the desired test</string>
 </resources>

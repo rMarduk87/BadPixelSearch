@@ -3,20 +3,14 @@ package rpt.tool.badpixelsearch.ui.settings
 import android.graphics.PorterDuff
 import android.os.Build
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import android.view.View
 import android.widget.FrameLayout
 import android.widget.PopupWindow
-import com.skydoves.balloon.BalloonAlign
-import com.skydoves.balloon.balloon
-import kotlinx.coroutines.delay
 import rpt.tool.badpixelsearch.BaseFragment
 import rpt.tool.badpixelsearch.R
 import rpt.tool.badpixelsearch.databinding.RowItemSpeedBinding
 import rpt.tool.badpixelsearch.databinding.SettingsFragmentsBinding
 import rpt.tool.badpixelsearch.utils.AppUtils
-import rpt.tool.badpixelsearch.utils.balloon.HelpBalloonFixFactory
 import rpt.tool.badpixelsearch.utils.managers.SharedPreferencesManager
 import rpt.tool.badpixelsearch.utils.navigation.safeNavController
 import rpt.tool.badpixelsearch.utils.navigation.safeNavigate
@@ -24,7 +18,7 @@ import rpt.tool.badpixelsearch.utils.navigation.safeNavigate
 class SettingsFragments : BaseFragment<SettingsFragmentsBinding>(SettingsFragmentsBinding::inflate) {
 
     var mDropdown: PopupWindow? = null
-    private val helpBalloon by balloon<HelpBalloonFixFactory>()
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -84,17 +78,6 @@ class SettingsFragments : BaseFragment<SettingsFragmentsBinding>(SettingsFragmen
                 binding.scrollView.visibility = View.GONE
                 binding.brightness.visibility = View.VISIBLE
                 binding.delayBlock.visibility = View.VISIBLE
-                Handler(Looper.getMainLooper()).postDelayed({
-                    helpBalloon.showAlign(
-                        align = BalloonAlign.BOTTOM,
-                        mainAnchor = binding.lblFix as View,
-                        subAnchorList = listOf(it as View),
-                    )
-                },1450)
-
-                Handler(Looper.getMainLooper()).postDelayed({
-                    helpBalloon.dismiss()
-                }, 10000)
             }
             else{
                 binding.brightness.visibility = View.GONE

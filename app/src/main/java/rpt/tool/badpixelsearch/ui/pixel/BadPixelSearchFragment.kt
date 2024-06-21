@@ -1,9 +1,12 @@
 package rpt.tool.badpixelsearch.ui.pixel
 
+import android.animation.ObjectAnimator
+import android.animation.ValueAnimator
 import android.app.Activity
 import android.app.AlertDialog
 import android.content.ActivityNotFoundException
 import android.content.Intent
+import android.graphics.Point
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
@@ -91,11 +94,63 @@ class BadPixelSearchFragment :
                 BadPixelSearchFragmentDirections.actionBadPixelSearchFragmentToSettingsFragment())
         }
 
-        binding.appname.setOnClickListener{
+        binding.openFaqMenuBtn.setOnClickListener{
             safeNavController?.safeNavigate(
                 BadPixelSearchFragmentDirections.actionBadPixelSearchFragmentToFaqFragment())
         }
+
+        binding.screenInfoBtn.setOnClickListener{
+            safeNavController?.safeNavigate(
+                BadPixelSearchFragmentDirections.actionBadPixelSearchFragmentToFaqFragment())
+        }
+
         count = 0
+
+        val finalizer = Runnable {
+            animateCenterToLeft()
+            animateCenterToRight()
+        }
+        Handler().postDelayed(finalizer, 0)
+    }
+
+    private fun animateCenterToLeft() {
+        binding.logoAnimated.post {
+            val point = Point()
+            requireActivity().windowManager.defaultDisplay.getSize(point)
+            val width = binding.logoAnimated.measuredWidth.toFloat()
+            val objectAnimator = ObjectAnimator.ofFloat(
+                binding.logoAnimated,
+                "translationX",
+                0f,
+                -(width - point.x)
+            )
+            objectAnimator.repeatMode = ValueAnimator.REVERSE
+            objectAnimator.repeatCount = 1
+            objectAnimator.setDuration(10000)
+            objectAnimator.start()
+        }
+    }
+
+    private fun animateCenterToRight() {
+        val finalizerL = Runnable {
+            binding.logoAnimated.post {
+                val point = Point()
+                requireActivity().windowManager.defaultDisplay.getSize(point)
+                val width = binding.logoAnimated.measuredWidth.toFloat()
+                val objectAnimator = ObjectAnimator.ofFloat(
+                    binding.logoAnimated,
+                    "translationX",
+                    0f,
+                    +(width - point.x)
+                )
+                objectAnimator.repeatMode = ValueAnimator.REVERSE
+                objectAnimator.repeatCount = 1
+                objectAnimator.setDuration(10000)
+                objectAnimator.start()
+            }
+        }
+        Handler().postDelayed(finalizerL, 500)
+
     }
 
     private fun scrolling() {
@@ -152,9 +207,12 @@ class BadPixelSearchFragment :
         if (i < 0) i = 8
         if (j > 0) {
             binding.appname.visibility = View.GONE
-            binding.sendTv.visibility = View.GONE
+            binding.use.visibility = View.GONE
+            binding.touchTv.visibility = View.GONE
             binding.sendRequestBtn.visibility = View.GONE
             binding.openSettingsMenuBtn.visibility = View.GONE
+            binding.openFaqMenuBtn.visibility = View.GONE
+            binding.screenInfoBtn.visibility = View.GONE
         }
         when (i) {
             0 -> start()
@@ -177,9 +235,12 @@ class BadPixelSearchFragment :
         if(!isRunning){
             binding.mainBG.setBackgroundColor(resources.getColor(R.color.black))
             binding.appname.visibility = View.VISIBLE
-            binding.sendTv.visibility = View.VISIBLE
+            binding.use.visibility = View.VISIBLE
+            binding.touchTv.visibility = View.VISIBLE
             binding.sendRequestBtn.visibility = View.VISIBLE
             binding.openSettingsMenuBtn.visibility = View.VISIBLE
+            binding.openFaqMenuBtn.visibility = View.VISIBLE
+            binding.screenInfoBtn.visibility = View.VISIBLE
             if(finalizer != null){
                 timeoutHandler.removeCallbacks(finalizer!!)
             }

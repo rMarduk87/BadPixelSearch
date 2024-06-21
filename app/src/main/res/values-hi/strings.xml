@@ -19,7 +19,7 @@
     <string name="choose_mail_app">मेल ऐप चुनें</string>
     <string name="to">riccardo.pezzolati@gmail.com</string>
     <string name="automatic">स्वचालित मोड</string>
-    <string name="settings">सेटिंग्स मेनू खोलें</string>
+    <string name="settings">सेटिंग्स</string>
     <string name="settings_t">सेटिंग्स</string>
     <string name="speed">स्क्रॉलिंग स्पीड</string>
     <string name="normal">सामान्य</string>
@@ -29,7 +29,6 @@
     <string name="min">मिनट</string>
     <string name="hour">घंटा</string>
     <string name="fix">फिक्स मोड</string>
-    <string name = "help_fix"> फिक्स मोड को सक्रिय करके हम टूटे हुए पिक्सेल को पुनर्स्थापित करने का प्रयास करने के लिए स्क्रीन में हेरफेर करेंगे, हम इस मोड का उपयोग करने के लिए कम से कम 10 मिनट या उससे भी बेहतर कई घंटों की सलाह देते हैं।\nचेतावनी, इसे न देखें इस मोड के दौरान स्क्रीन।\nबैटरी की खपत बढ़ सकती है, बैटरी को 100% पर रखने या चार्जर से कनेक्ट करने की अनुशंसा की जाती है\nइस फ़ंक्शन को बाधित करने के लिए ऐप को बंद करें या बैक बटन दबाएं</string>
     <string name="brightness">चमक</string>
     <string name="text_delay">देरी</string>
     <string name="faq">Faq</string>
@@ -43,4 +42,9 @@
     <string name = "faq_answer_3"> \"सेटिंग्स\" बटन पर क्लिक करें, नए मेनू में आप स्वचालित या फिक्सपिक्सेल मोड चुन सकते हैं</string>
     <string name='faq_question_4'>क्या मैं स्वचालित मोड में गति या आवृत्ति सेट कर सकता हूं?</string>
     <string name="faq_answer_4">हां, \"सेटिंग्स\" मेनू में आप मोड पैरामीटर बदल सकते हैं</string>
+    <string name="faq_question_5">How does the automatic bad pixel search work?</string>
+    <string name="faq_answer_5">By activating the fix mode we will manipulate the screen to try to restore the broken pixels, we recommend at least 10 minutes or even better several hours of using this mode.\nWarning, do not look at the screen during this mode.\nBattery consumption may increase, it is recommended to have the battery at 100% or connected to the charger\nTo interrupt this function close app or press the back button</string>
+    <string name="screen_info">SCREEN INFO</string>
+    <string name="touch">Press back button to stop tests</string>
+    <string name="slide">Slide left or right to start the desired test</string>
 </resources>

@@ -19,7 +19,7 @@
     <string name="choose_mail_app">メール アプリを選択してください</string>
     <string name="to">riccardo.pezzolati@gmail.com</string>
     <string name="automatic">自動モード</string>
-    <string name="settings">設定メニューを開く</string>
+    <string name="settings">設定</string>
     <string name="settings_t">設定</string>
     <string name="speed">スクロール速度</string>
     <string name="normal">通常</string>
@@ -29,8 +29,7 @@
     <string name="min">分</string>
     <string name="hour">時間</string>
     <string name="fix">修正モード</string>
-    <string name="help_fix">修正モードをアクティブにすることで、画面を操作して壊れたピクセルを復元しようとします。このモードを少なくとも 10 分、できれば数時間使用することをお勧めします。\n注意、 \nこのモード中はバッテリーの消費が増加する可能性があります。バッテリーを 100% にするか、充電器に接続することをお勧めします。\nこの機能を停止するには、アプリを閉じるか、戻るボタンを押してください。</string>
-    <string name="brightness">明るさ</string>
+   <string name="brightness">明るさ</string>
     <string name="text_delay">遅延</string>
     <string name="faq">よくある質問</string>
     <string name="faq_a">A:</string>
@@ -43,4 +42,9 @@
     <string name="faq_answer_3">「設定」ボタンをクリックすると、新しいメニューで自動モードまたは固定ピクセル モードを選択できます</string>
     <string name="faq_question_4">自動モードで速度や頻度を設定できますか?</string>
     <string name="faq_answer_4">はい、「設定」メニューでモードパラメータを変更できます</string>
+    <string name="faq_question_5">How does the automatic bad pixel search work?</string>
+    <string name="faq_answer_5">By activating the fix mode we will manipulate the screen to try to restore the broken pixels, we recommend at least 10 minutes or even better several hours of using this mode.\nWarning, do not look at the screen during this mode.\nBattery consumption may increase, it is recommended to have the battery at 100% or connected to the charger\nTo interrupt this function close app or press the back button</string>
+    <string name="screen_info">SCREEN INFO</string>
+    <string name="touch">Press back button to stop tests</string>
+    <string name="slide">Slide left or right to start the desired test</string>
 </resources>

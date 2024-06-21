@@ -19,7 +19,7 @@
     <string name="choose_mail_app">Escolha o aplicativo Mail</string>
     <string name="to">riccardo.pezzolati@gmail.com</string>
     <string name="automatic">Moda automática</string>
-    <string name="settings">ABRIR MENU DE CONFIGURAÇÕES</string>
+    <string name="settings">CONFIGURAÇÕES</string>
     <string name="settings_t">CONFIGURAÇÕES</string>
     <string name="speed">Velocidade de rolagem</string>
     <string name="normal">Normal</string>
@@ -29,7 +29,6 @@
     <string name="min">Minutos</string>
     <string name="hour">Hora</string>
     <string name="fix">Modo de correção</string>
-    <string name="help_fix">Ao ativar o modo de correção iremos manipular a tela para tentar restaurar os pixels quebrados, recomendamos pelo menos 10 minutos ou melhor ainda várias horas de uso deste modo.\nAtenção, não olhe para o tela durante este modo.\nO consumo da bateria pode aumentar, é recomendado ter a bateria em 100% ou conectada ao carregador\nPara interromper esta função feche o aplicativo ou pressione o botão Voltar</string>
     <string name="brightness">Brilho</string>
     <string name="text_delay">Atraso</string>
     <string name="faq">Faq</string>
@@ -43,4 +42,9 @@
     <string name="faq_answer_3">Clique no botão \"Configurações\", no novo menu você pode escolher o modo Automático ou FixPixel</string>
     <string name="faq_question_4">Posso definir velocidade ou frequência no modo Automático?</string>
     <string name="faq_answer_4">Sim, no menu \"Configurações\" você pode alterar os parâmetros do modo</string>
+    <string name="faq_question_5">How does the automatic bad pixel search work?</string>
+    <string name="faq_answer_5">By activating the fix mode we will manipulate the screen to try to restore the broken pixels, we recommend at least 10 minutes or even better several hours of using this mode.\nWarning, do not look at the screen during this mode.\nBattery consumption may increase, it is recommended to have the battery at 100% or connected to the charger\nTo interrupt this function close app or press the back button</string>
+    <string name="screen_info">SCREEN INFO</string>
+    <string name="touch">Press back button to stop tests</string>
+    <string name="slide">Slide left or right to start the desired test</string>
 </resources>
