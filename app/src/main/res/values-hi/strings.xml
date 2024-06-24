@@ -42,9 +42,33 @@
     <string name = "faq_answer_3"> \"सेटिंग्स\" बटन पर क्लिक करें, नए मेनू में आप स्वचालित या फिक्सपिक्सेल मोड चुन सकते हैं</string>
     <string name='faq_question_4'>क्या मैं स्वचालित मोड में गति या आवृत्ति सेट कर सकता हूं?</string>
     <string name="faq_answer_4">हां, \"सेटिंग्स\" मेनू में आप मोड पैरामीटर बदल सकते हैं</string>
-    <string name="faq_question_5">How does the automatic bad pixel search work?</string>
-    <string name="faq_answer_5">By activating the fix mode we will manipulate the screen to try to restore the broken pixels, we recommend at least 10 minutes or even better several hours of using this mode.\nWarning, do not look at the screen during this mode.\nBattery consumption may increase, it is recommended to have the battery at 100% or connected to the charger\nTo interrupt this function close app or press the back button</string>
-    <string name="screen_info">SCREEN INFO</string>
-    <string name="touch">Press back button to stop tests</string>
-    <string name="slide">Slide left or right to start the desired test</string>
+    <string name="faq_question_5">स्वचालित खराब पिक्सेल खोज कैसे काम करती है?</string>
+
+    <string name="faq_answer_5">फिक्स मोड को सक्रिय करके हम टूटे हुए पिक्सेल को पुनर्स्थापित करने के लिए स्क्रीन में हेरफेर करेंगे, हम इस मोड का उपयोग करने के कम से कम 10 मिनट या इससे भी बेहतर कई घंटे की सलाह देते हैं।\nचेतावनी, इस मोड के दौरान स्क्रीन को न देखें।\nबैटरी की खपत बढ़ सकती है, बैटरी को 100% पर रखने या चार्जर से कनेक्ट करने की सलाह दी जाती है।\nइस फ़ंक्शन को बाधित करने के लिए ऐप बंद करें या बैक बटन दबाएँ</string>
+
+    <string name="screen_info">स्क्रीन जानकारी</string>
+
+    <string name="touch">परीक्षण रोकने के लिए बैक बटन दबाएँ</string>
+
+    <string name="slide">वांछित परीक्षण शुरू करने के लिए बाएँ या दाएँ स्लाइड करें</string>
+
+    <string name="full_resolution">पूर्ण रिज़ॉल्यूशन</string>
+
+    <string name="current_resolution">वर्तमान रिज़ॉल्यूशन</string>
+    <string name="visual_resolution">विज़ुअल रिज़ॉल्यूशन</string>
+    <string name="screen_scale">स्क्रीन स्केल</string>
+    <string name="pixel_density">पिक्सेल घनत्व</string>
+    <string name="screen_size">स्क्रीन आकार</string>
+    <string name="refresh_rate">रिफ्रेश दर</string>
+    <string name="screen_type">स्क्रीन प्रकार</string>
+    <string name="aspect_ratio">आस्पेक्ट अनुपात</string>
+    <string name="screen_brightness">स्क्रीन ब्राइटनेस</string>
+    <string name="wide_color_gamut">वाइड कलर गैमट</string>
+    <string name="hdr_screen">HDR स्क्रीन</string>
+    <string name="pixel_format">पिक्सेल प्रारूप</string>
+    <string name="yes">हाँ</string>
+    <string name="no">नहीं</string>
+    <string name="unknown">अज्ञात पहलू अनुपात</string>
+    <string name="automaticMode">स्वचालित</string>
+    <string name="manualMode">मैनुअल</string>
 </resources>

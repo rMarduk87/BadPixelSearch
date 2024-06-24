@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_badPixelSearchFragment_to_faqFragment"
             app:destination="@id/FaqFragment" />
+        <action
+            android:id="@+id/action_badPixelSearchFragment_to_screenInfoFragment"
+            app:destination="@id/ScreenInfoFragment" />
     </fragment>
     <fragment
         android:id="@+id/SettingsFragment"
@@ -33,6 +36,15 @@
         tools:layout="@layout/faq_fragment">
         <action
             android:id="@+id/action_faqFragment_to_badPixelSearchFragment"
+            app:destination="@id/BadPixelSearchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ScreenInfoFragment"
+        android:name="rpt.tool.badpixelsearch.ui.screen.ScreenInfoFragment"
+        android:label="ScreenInfoFragment"
+        tools:layout="@layout/screen_info_fragment">
+        <action
+            android:id="@+id/action_screenInfoFragment_to_badPixelSearchFragment"
             app:destination="@id/BadPixelSearchFragment" />
     </fragment>
 

@@ -101,10 +101,11 @@ class BadPixelSearchFragment :
 
         binding.screenInfoBtn.setOnClickListener{
             safeNavController?.safeNavigate(
-                BadPixelSearchFragmentDirections.actionBadPixelSearchFragmentToFaqFragment())
+                BadPixelSearchFragmentDirections.actionBadPixelSearchFragmentToScreenInfoFragment())
         }
 
         count = 0
+
 
         val finalizer = Runnable {
             animateCenterToLeft()
@@ -114,21 +115,24 @@ class BadPixelSearchFragment :
     }
 
     private fun animateCenterToLeft() {
-        binding.logoAnimated.post {
-            val point = Point()
-            requireActivity().windowManager.defaultDisplay.getSize(point)
-            val width = binding.logoAnimated.measuredWidth.toFloat()
-            val objectAnimator = ObjectAnimator.ofFloat(
-                binding.logoAnimated,
-                "translationX",
-                0f,
-                -(width - point.x)
-            )
-            objectAnimator.repeatMode = ValueAnimator.REVERSE
-            objectAnimator.repeatCount = 1
-            objectAnimator.setDuration(10000)
-            objectAnimator.start()
+        val finalizerR = Runnable {
+            binding.logoAnimated.post {
+                val point = Point()
+                requireActivity().windowManager.defaultDisplay.getSize(point)
+                val width = binding.logoAnimated.measuredWidth.toFloat()
+                val objectAnimator = ObjectAnimator.ofFloat(
+                    binding.logoAnimated,
+                    "translationX",
+                    0f,
+                    -(width - point.x)
+                )
+                objectAnimator.repeatMode = ValueAnimator.REVERSE
+                objectAnimator.repeatCount = 1
+                objectAnimator.setDuration(10000)
+                objectAnimator.start()
+            }
         }
+        Handler().postDelayed(finalizerR, 500)
     }
 
     private fun animateCenterToRight() {

@@ -59,7 +59,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/openSettingsMenuBtn"
             android:layout_marginTop="@dimen/dp_215"
-            android:layout_marginLeft="@dimen/dp_9"
+            android:layout_marginLeft="@dimen/dp_25"
             android:alpha="0.25"
             android:textSize="14dp" />
 
@@ -81,7 +81,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/openFaqMenuBtn"
             android:layout_marginTop="@dimen/dp_265"
-            android:layout_marginLeft="@dimen/dp_9"
+            android:layout_marginLeft="@dimen/dp_25"
             android:alpha="0.25"
             android:textSize="14dp" />
 
