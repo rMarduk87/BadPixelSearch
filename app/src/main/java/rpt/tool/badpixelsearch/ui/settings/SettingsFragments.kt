@@ -110,20 +110,20 @@ class SettingsFragments : BaseFragment<SettingsFragmentsBinding>(SettingsFragmen
         binding.rdo30.setOnClickListener { saveInterval() }
         binding.rdo60.setOnClickListener { saveInterval() }
 
-        binding.rdo1.setChecked(SharedPreferencesManager.interval == AppUtils.one)
-        binding.rdo5.setChecked(SharedPreferencesManager.interval == AppUtils.five)
-        binding.rdo15.setChecked(SharedPreferencesManager.interval == AppUtils.fifthy)
-        binding.rdo30.setChecked(SharedPreferencesManager.interval == AppUtils.thirty)
-        binding.rdo60.setChecked(SharedPreferencesManager.interval == AppUtils.hour)
+        binding.rdo1.isChecked = SharedPreferencesManager.interval == AppUtils.one
+        binding.rdo5.isChecked = SharedPreferencesManager.interval == AppUtils.five
+        binding.rdo15.isChecked = SharedPreferencesManager.interval == AppUtils.fifthy
+        binding.rdo30.isChecked = SharedPreferencesManager.interval == AppUtils.thirty
+        binding.rdo60.isChecked = SharedPreferencesManager.interval == AppUtils.hour
 
         binding.delay.progress = SharedPreferencesManager.delay
-        binding.delay.progressDrawable.setColorFilter(requireContext().getColor(R.color.white), PorterDuff.Mode.MULTIPLY);
+        binding.delay.progressDrawable.setColorFilter(requireContext().getColor(R.color.white), PorterDuff.Mode.MULTIPLY)
     }
 
     private fun finish() {
         SharedPreferencesManager.delay = binding.delay.progress
         safeNavController?.safeNavigate(
-            SettingsFragmentsDirections.actionSettingsFragmentToBadPixelSearchFragment())
+            SettingsFragmentsDirections.actionSettingsFragmentToMenuFragment())
     }
 
     private fun initiateSpeedPopupWindow(v: View): PopupWindow {

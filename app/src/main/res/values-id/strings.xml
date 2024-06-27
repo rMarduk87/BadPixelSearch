@@ -46,7 +46,7 @@
     <string name="faq_answer_5">Dengan mengaktifkan mode perbaikan kami akan memanipulasi layar untuk mencoba memulihkan piksel yang rusak, kami menyarankan setidaknya 10 menit atau bahkan lebih baik beberapa jam untuk menggunakan mode ini.\nPeringatan, jangan lihat layar selama mode ini.\nKonsumsi baterai dapat meningkat, disarankan untuk memiliki baterai 100% atau terhubung ke pengisi daya\nUntuk menghentikan fungsi ini, tutup aplikasi atau tekan tombol kembali</string>
     <string name="screen_info">INFO LAYAR</string>
     <string name="touch">Tekan tombol kembali untuk menghentikan pengujian</string>
-    <string name="slide">Geser ke kiri atau kanan untuk memulai pengujian yang diinginkan</string>
+    <string name="choose">Di menu pengaturan, pilih opsi pencarian yang diinginkan, lalu pilih mulai untuk memulai</string>
     <string name="full_resolution">Resolusi Penuh</string>
     <string name="current_resolution">Resolusi Saat Ini</string>
     <string name="visual_resolution">Resolusi Visual</string>
@@ -65,4 +65,8 @@
     <string name="unknown">Rasio aspek tidak diketahui</string>
     <string name="automaticMode">Otomatis</string>
     <string name="manualMode">Manual</string>
+    <string name="start">MULAI</string>
+    <string name="back">Klik tombol untuk kembali ke menu</string>
+    <string name="goBack">KEMBALI</string>
+    <string name="slide">Geser ke kiri atau kanan untuk memulai pencarian Anda\nOpsi yang dipilih $1</string>
 </resources>

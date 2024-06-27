@@ -46,7 +46,7 @@
     <string name="faq_answer_5">Al activar el modo de reparación manipularemos la pantalla para intentar restaurar los píxeles rotos, recomendamos al menos 10 minutos o incluso mejor varias horas de uso de este modo.\nAdvertencia, no mires el pantalla durante este modo.\nEl consumo de batería puede aumentar, se recomienda tener la batería al 100% o conectada al cargador\nPara interrumpir esta función cierre la aplicación o presione el botón Atrás</string>
     <string name="screen_info">INFORMACIÓN DE PANTALLA</string>
     <string name="touch">Presione el botón Atrás para detener las pruebas</string>
-    <string name="slide">Deslícese hacia la izquierda o hacia la derecha para iniciar la prueba deseada</string>
+    <string name="choose">En el menú de configuración, elija la opción de búsqueda deseada, luego seleccione iniciar para comenzar</string>
     <string name="full_resolution">Resolución completa</string>
     <string name="current_resolution">Resolución actual</string>
     <string name="visual_resolution">Resolución visual</string>
@@ -65,4 +65,8 @@
     <string name="unknown">Proporción de espectro desconocida</string>
     <string name="automaticMode">Automático</string>
     <string name="manualMode">Manual</string>
+    <string name="start">INICIO</string>
+    <string name="back">Haga clic en el botón para volver al menú</string>
+    <string name="goBack">ATRÁS</string>
+    <string name="slide">Desliza hacia la izquierda o hacia la derecha para iniciar tu búsqueda\nOpción seleccionada $1</string>
 </resources>

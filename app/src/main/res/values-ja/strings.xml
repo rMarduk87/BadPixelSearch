@@ -46,7 +46,7 @@
     <string name="faq_answer_5">修正モードを有効にすると、画面を操作して壊れたピクセルを修復しようとします。このモードを少なくとも 10 分間、できれば数時間使用することをお勧めします。\n警告: このモード中は画面を見ないでください。\nバッテリー消費が増加する可能性があります。バッテリーを 100% にするか、充電器に接続しておくことをお勧めします。\nこの機能を中断するには、アプリを閉じるか、戻るボタンを押します</string>
     <string name="screen_info">画面情報</string>
     <string name="touch">テストを停止するには、戻るボタンを押します</string>
-    <string name="slide">目的のテストを開始するには、左または右にスライドします</string>
+    <string name="choose">設定メニューで、目的の検索オプションを選択し、[開始] を選択して開始します。</string>
     <string name="full_resolution">フル解像度</string>
     <string name="current_resolution">現在の解像度</string>
     <string name="visual_resolution">視覚解像度</string>
@@ -65,4 +65,8 @@
     <string name="unknown">不明なアスペクト比</string>
     <string name="automaticMode">自動</string>
     <string name="manualMode">手動</string>
+    <string name="start">開始</string>
+    <string name="back">ボタンをクリックしてメニューに戻ります</string>
+    <string name="goBack">戻る</string>
+    <string name="slide">左または右にスワイプして検索を開始します\n選択されたオプション $1</string>
 </resources>

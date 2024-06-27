@@ -46,7 +46,7 @@
     <string name="faq_answer_5">Attivando la modalità correzione manipoleremo lo schermo per provare a ripristinare i pixel rotti, consigliamo almeno 10 minuti o meglio ancora diverse ore di utilizzo di questa modalità.\nAttenzione, non guardare lo schermo durante questa modalità.\nIl consumo della batteria potrebbe aumentare, si consiglia di avere la batteria al 100% o collegata al caricabatterie\nPer interrompere questa funzione chiudi l\'app o premi il pulsante Indietro</string>
     <string name="screen_info">INFO SCHERMO</string>
     <string name="touch">Premi il pulsante Indietro per interrompere i test</string>
-    <string name="slide">Scorri verso sinistra o verso destra per avviare il test desiderato</string>
+    <string name="choose">Nel menu impostazioni scegliere l\'opzione di ricerca desiderata, poi seleziona start per iniziare</string>
     <string name="full_resolution">Risoluzione completa</string>
     <string name="current_resolution">Risoluzione corrente</string>
     <string name="visual_resolution">Risoluzione visiva</string>
@@ -65,4 +65,8 @@
     <string name="unknown">Proporzioni sconosciute</string>
     <string name="automaticMode">Automatico</string>
     <string name="manualMode">Manuale</string>
+    <string name="start">INIZIO</string>
+    <string name="back">Fai clic sul pulsante per tornare al menu</string>
+    <string name="goBack">INDIETRO</string>
+    <string name="slide">Scorri verso sinistra o destra per iniziare la ricerca\nOpzione selezionata $1</string>
 </resources>
