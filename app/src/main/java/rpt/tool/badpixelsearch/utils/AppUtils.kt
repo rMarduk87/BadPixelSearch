@@ -1,8 +1,29 @@
 package rpt.tool.badpixelsearch.utils
 
+import rpt.tool.badpixelsearch.utils.extensions.roundToString
+
 
 class AppUtils {
     companion object {
+        fun getAspectRatio(w: Int, h: Int): String {
+            return if( h/w >= (4/3)  ) { // 4:3
+                "4:3"
+            } else if( h/w >= (16/9)  ) { // 16:9
+                "16:9"
+            } else if( h/w >= (16/10) ) { // 16:10
+                "16:10"
+            } else if(h/w >= (21/9) ) { // 21:9
+                "21:9"
+            } else if(h/w >= (3/2) ) { // 3:2
+                "3:2"
+            }else {
+                "strings"
+            }
+        }
+
+        fun getScreenBrightness(brightness: Float): String {
+            return brightness.roundToString() + " (" + (brightness*100/250).roundToString() + " %, "
+        }
 
 
         const val USERS_SHARED_PREF : String = "user_pref"
@@ -19,6 +40,7 @@ class AppUtils {
         const val fifthy = 900000
         const val thirty = 1800000
         const val hour = 3600000
+
 
     }
 }

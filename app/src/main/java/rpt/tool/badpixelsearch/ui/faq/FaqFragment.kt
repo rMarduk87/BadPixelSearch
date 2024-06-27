@@ -54,6 +54,11 @@ class FaqFragment : BaseFragment<FaqFragmentBinding>(FaqFragmentBinding::inflate
         faqModel.answer = (requireContext().resources.getString(R.string.faq_answer_4))
         lst_faq.add(faqModel)
 
+        faqModel = FAQModel()
+        faqModel.question = (requireContext().resources.getString(R.string.faq_question_5))
+        faqModel.answer = (requireContext().resources.getString(R.string.faq_answer_5))
+        lst_faq.add(faqModel)
+
 
     }
 

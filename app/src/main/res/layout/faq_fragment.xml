@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/black">
+    android:background="@drawable/ic_background_search">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -31,7 +31,7 @@
                     android:layout_width="@dimen/dp_20"
                     android:layout_height="@dimen/dp_20"
                     android:src="@drawable/ic_back"
-                    app:tint="@color/purple_200"/>
+                    app:tint="@color/white"/>
 
             </LinearLayout>
 
@@ -44,7 +44,7 @@
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/lbl_toolbar_title"
                     style="@style/toolbar_main_title"
-                    android:textColor="@color/purple_200"
+                    android:textColor="@color/white"
                     android:text="@string/faq" />
 
             </LinearLayout>

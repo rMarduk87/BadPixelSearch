@@ -1,5 +1,7 @@
 package rpt.tool.badpixelsearch.ui.pixel
 
+import rpt.tool.badpixelsearch.BaseFragment
+import rpt.tool.badpixelsearch.databinding.BadPixelSearchFragmentBinding
 import android.app.Activity
 import android.app.AlertDialog
 import android.content.ActivityNotFoundException
@@ -17,17 +19,15 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.annotation.RequiresApi
-import rpt.tool.badpixelsearch.BaseFragment
 import rpt.tool.badpixelsearch.FixPixelActivity
 import rpt.tool.badpixelsearch.R
-import rpt.tool.badpixelsearch.databinding.BadPixelSearchFragmentBinding
+import rpt.tool.badpixelsearch.ui.menu.MenuFragmentDirections
+import rpt.tool.badpixelsearch.utils.extensions.modeToText
 import rpt.tool.badpixelsearch.utils.managers.SharedPreferencesManager
 import rpt.tool.badpixelsearch.utils.navigation.safeNavController
 import rpt.tool.badpixelsearch.utils.navigation.safeNavigate
 import kotlin.math.abs
 
-
-@Suppress("DEPRECATION")
 class BadPixelSearchFragment :
     BaseFragment<BadPixelSearchFragmentBinding>(BadPixelSearchFragmentBinding::inflate),
     View.OnClickListener {
@@ -55,83 +55,21 @@ class BadPixelSearchFragment :
             true
         }
 
-        binding.sendRequestBtn.setOnClickListener {
-            val li = LayoutInflater.from(requireContext())
-            val promptsView = li.inflate(R.layout.sender_dialog, null)
-
-            val alertDialogBuilder = AlertDialog.Builder(requireContext())
-            alertDialogBuilder.setView(promptsView)
-
-            val userInputTextSub: EditText = promptsView.findViewById(R.id.txtSub)
-
-            val userInputTxtMsg: EditText = promptsView.findViewById(R.id.txtMsg)
-
-            val userInputSendBtn: Button = promptsView.findViewById(R.id.btnSend)
-
-            userInputSendBtn.setOnClickListener {
-                val inputText = userInputTextSub.text.toString()
-                val inputTextMsg = userInputTxtMsg.text.toString()
-                sendMail(requireActivity(),
-                    arrayOf(resources.getString(R.string.to)), inputText, inputTextMsg)
-                userInputTxtMsg.text.clear()
-            }
-
-            alertDialogBuilder.setPositiveButton("OK") { _, _ ->
-
-            }.setNegativeButton("Cancel") { dialog, _ ->
-                dialog.cancel()
-            }
-
-            val alertDialog = alertDialogBuilder.create()
-            alertDialog.show()
-        }
-
-        binding.openSettingsMenuBtn.setOnClickListener {
+        binding.backToMenuBtn.setOnClickListener {
             safeNavController?.safeNavigate(
-                BadPixelSearchFragmentDirections.actionBadPixelSearchFragmentToSettingsFragment())
+                BadPixelSearchFragmentDirections.actionBadPixelSearchFragmentToMenuFragment())
         }
 
-        binding.appname.setOnClickListener{
-            safeNavController?.safeNavigate(
-                BadPixelSearchFragmentDirections.actionBadPixelSearchFragmentToFaqFragment())
-        }
+        binding.slideTv.text = requireContext().getString(R.string.slide).replace("$1",
+            requireContext().getString(SharedPreferencesManager.mode.modeToText()))
+
+
         count = 0
     }
 
     private fun scrolling() {
         i++
         changeColor()
-    }
-
-    private fun sendMail(
-        activity: Activity,
-        emailIds: Array<String>,
-        subject: String,
-        textMessage: String
-    ) {
-
-
-        val emailIntent = Intent(Intent.ACTION_SEND)
-        emailIntent.type = "text/plain"
-        emailIntent.setData(Uri.parse("mailto:"))
-        emailIntent.putExtra(Intent.EXTRA_EMAIL, emailIds)
-        emailIntent.putExtra(Intent.EXTRA_SUBJECT, subject)
-        emailIntent.putExtra(Intent.EXTRA_TEXT, textMessage)
-        emailIntent.setType("message/rfc822")
-        try {
-            activity.startActivity(
-                Intent.createChooser(
-                    emailIntent,
-                    resources.getString(R.string.choose_mail_app)
-                )
-            )
-        } catch (ex: ActivityNotFoundException) {
-            Toast.makeText(
-                activity,
-                ex.message,
-                Toast.LENGTH_SHORT
-            ).show()
-        }
     }
 
     @RequiresApi(Build.VERSION_CODES.Q)
@@ -152,9 +90,8 @@ class BadPixelSearchFragment :
         if (i < 0) i = 8
         if (j > 0) {
             binding.appname.visibility = View.GONE
-            binding.sendTv.visibility = View.GONE
-            binding.sendRequestBtn.visibility = View.GONE
-            binding.openSettingsMenuBtn.visibility = View.GONE
+            binding.slideTv.visibility = View.GONE
+            binding.backToMenuBtn.visibility = View.GONE
         }
         when (i) {
             0 -> start()
@@ -166,8 +103,8 @@ class BadPixelSearchFragment :
             6 -> binding.mainBG.setBackgroundColor(resources.getColor(R.color.yellow))
             7 -> binding.mainBG.setBackgroundColor(resources.getColor(R.color.grey))
             8 -> {
-                    binding.mainBG.setBackgroundColor(resources.getColor(R.color.white))
-                    isRunning = count <= interval && SharedPreferencesManager.mode == 1
+                binding.mainBG.setBackgroundColor(resources.getColor(R.color.white))
+                isRunning = count <= interval && SharedPreferencesManager.mode == 1
             }
             else -> {}
         }
@@ -177,9 +114,8 @@ class BadPixelSearchFragment :
         if(!isRunning){
             binding.mainBG.setBackgroundColor(resources.getColor(R.color.black))
             binding.appname.visibility = View.VISIBLE
-            binding.sendTv.visibility = View.VISIBLE
-            binding.sendRequestBtn.visibility = View.VISIBLE
-            binding.openSettingsMenuBtn.visibility = View.VISIBLE
+            binding.slideTv.visibility = View.VISIBLE
+            binding.backToMenuBtn.visibility = View.VISIBLE
             if(finalizer != null){
                 timeoutHandler.removeCallbacks(finalizer!!)
             }
@@ -190,8 +126,6 @@ class BadPixelSearchFragment :
         var i = 0
         var j = 0
     }
-
-
 
     private inner class RptDetectGesture : SimpleOnGestureListener() {
 

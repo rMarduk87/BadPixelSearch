@@ -1,0 +1,143 @@
+package rpt.tool.badpixelsearch.ui.screen
+
+import android.content.Context
+import android.os.Bundle
+import android.provider.Settings
+import android.provider.Settings.SettingNotFoundException
+import android.view.View
+import android.view.WindowManager
+import com.torrydo.screenez.ScreenEz
+import rpt.tool.badpixelsearch.BaseFragment
+import rpt.tool.badpixelsearch.R
+import rpt.tool.badpixelsearch.databinding.ScreenInfoFragmentBinding
+import rpt.tool.badpixelsearch.utils.AppUtils
+import rpt.tool.badpixelsearch.utils.extensions.roundToString
+import kotlin.math.sqrt
+
+
+class ScreenInfoFragment : BaseFragment<ScreenInfoFragmentBinding>(ScreenInfoFragmentBinding::inflate) {
+
+    private var fullResolution = ""
+    private var currentResolution = ""
+    private var visualResolution = ""
+    private var screenScale = ""
+    private var pixelDensity = ""
+    private var screenSize = ""
+    private var refreshRate = ""
+    private var screenType = ""
+    private var aspectRatio = ""
+    private var screenBrightness = ""
+    private var wideColorGamut = ""
+    private var hdrScreen = ""
+    private var pixelFormat = ""
+
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        ScreenEz.with(requireContext())
+
+        val wm = requireContext().getSystemService(Context.WINDOW_SERVICE) as WindowManager
+        val display = wm.defaultDisplay
+
+        fullResolution = getScreenResolution()
+        currentResolution = getScreenResolution()
+        visualResolution = getVisualResolution()
+        screenScale = getScreenScale()
+        pixelDensity = getPixelDensity()
+        screenSize = getScreenSize()
+        refreshRate = display.refreshRate.roundToString() + " Hz"
+        screenType = display.name
+        aspectRatio = getAspectRatio()
+        screenBrightness = getScreenBrightness()
+        wideColorGamut = if(display.isWideColorGamut) requireContext().getString(R.string.yes)
+        else requireContext().getString(R.string.no)
+        hdrScreen = if(display.isHdr) requireContext().getString(R.string.yes)
+        else requireContext().getString(R.string.no)
+        pixelFormat = "RGBA_8888"
+
+        binding.textView2.text = fullResolution
+        binding.textView22.text = currentResolution
+        binding.textView32.text = visualResolution
+        binding.textView42.text = screenScale
+        binding.textView52.text = pixelDensity
+        binding.textView62.text = screenSize
+        binding.textView72.text = refreshRate
+        binding.textView82.text = screenType
+        binding.textView92.text = aspectRatio
+        binding.textView102.text = screenBrightness
+        binding.textView112.text = wideColorGamut
+        binding.textView122.text = hdrScreen
+        binding.textView132.text = pixelFormat
+
+
+    }
+
+    private fun getScreenResolution(): String {
+        var w = ScreenEz.fullWidth
+        var h = ScreenEz.fullHeight
+        return "$w X $h px"
+    }
+
+    private fun getVisualResolution(): String {
+        var w = ScreenEz.safeWidth
+        var h = ScreenEz.safeHeight
+        return "$w X $h px"
+    }
+
+    private fun getScreenScale(): String {
+        val metrics = requireContext().resources.displayMetrics
+        val ratio = (metrics.heightPixels.toFloat() / metrics.widthPixels.toFloat())
+        return "%.2f".format(ratio)
+    }
+
+    private fun getPixelDensity(): String {
+        val metrics = resources.displayMetrics
+        val densityDpi = (metrics.density * 160f).toInt()
+        return "$densityDpi dpi"
+    }
+
+    private fun getScreenSize(): String {
+        try {
+            val displayMetrics = requireActivity().resources.displayMetrics
+
+            val yInches = displayMetrics.heightPixels / displayMetrics.ydpi
+            val xInches = displayMetrics.widthPixels / displayMetrics.xdpi
+            val diagonalInches = "%.2f".format(sqrt((xInches * xInches + yInches * yInches).toDouble()))
+            return "$diagonalInches inches"
+        } catch (e: Exception) {
+            return "-1"
+        }
+    }
+
+    private fun getAspectRatio(): String {
+        var w = ScreenEz.fullWidth
+        var h = ScreenEz.fullHeight
+        var aspect = AppUtils.getAspectRatio(w,h)
+        return if(aspect!="strings") aspect else requireContext().getString(R.string.unknown)
+    }
+
+    private fun getScreenBrightness(): String {
+        var brightness = 0f
+        var mode = 0
+        try {
+            brightness = Settings.System.getInt(requireContext().contentResolver,
+                Settings.System.SCREEN_BRIGHTNESS
+            ).toFloat()
+            mode = Settings.System.getInt(requireContext().contentResolver,
+                Settings.System.SCREEN_BRIGHTNESS_MODE
+            )
+        } catch (e: SettingNotFoundException) {
+            // TODO Auto-generated catch block
+            e.printStackTrace()
+        }
+
+        return AppUtils.getScreenBrightness(brightness) + (if(mode==0)
+            requireContext().getString(R.string.manualMode) else
+                requireContext().getString(R.string.automaticMode)) + ")"
+    }
+
+
+
+
+}

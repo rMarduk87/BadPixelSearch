@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_background_search"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TableLayout
+        android:id="@+id/tableLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/dp_30"
+        android:stretchColumns="0,1">
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="@color/white"
+                android:id="@+id/textView1"
+                android:text="@string/full_resolution"
+                android:textSize="@dimen/dp_15"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_column="0">
+            </TextView>
+
+            <TextView
+                android:textColor="@color/white"
+                android:id="@+id/textView2"
+                android:textSize="@dimen/dp_15"
+                android:layout_column="1">
+            </TextView>
+
+        </TableRow>
+        <TableRow
+            android:layout_marginTop="@dimen/dp_10"
+            android:id="@+id/tableRow2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="@color/white"
+                android:id="@+id/textView21"
+                android:text="@string/current_resolution"
+                android:textSize="@dimen/dp_15"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_column="0">
+            </TextView>
+
+            <TextView
+                android:textColor="@color/white"
+                android:id="@+id/textView22"
+                android:textSize="@dimen/dp_15"
+                android:layout_column="1">
+            </TextView>
+
+        </TableRow>
+        <TableRow
+            android:layout_marginTop="@dimen/dp_10"
+            android:id="@+id/tableRow3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="@color/white"
+                android:id="@+id/textView31"
+                android:text="@string/visual_resolution"
+                android:textSize="@dimen/dp_15"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_column="0">
+            </TextView>
+
+            <TextView
+                android:textColor="@color/white"
+                android:id="@+id/textView32"
+                android:textSize="@dimen/dp_15"
+                android:layout_column="1">
+            </TextView>
+
+        </TableRow>
+        <TableRow
+            android:layout_marginTop="@dimen/dp_10"
+            android:id="@+id/tableRow4"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="@color/white"
+                android:id="@+id/textView41"
+                android:text="@string/screen_scale"
+                android:textSize="@dimen/dp_15"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_column="0">
+            </TextView>
+
+            <TextView
+                android:textColor="@color/white"
+                android:id="@+id/textView42"
+                android:textSize="@dimen/dp_15"
+                android:layout_column="1">
+            </TextView>
+
+        </TableRow>
+        <TableRow
+            android:layout_marginTop="@dimen/dp_10"
+            android:id="@+id/tableRow5"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="@color/white"
+                android:id="@+id/textView51"
+                android:text="@string/pixel_density"
+                android:textSize="@dimen/dp_15"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_column="0">
+            </TextView>
+
+            <TextView
+                android:textColor="@color/white"
+                android:id="@+id/textView52"
+                android:textSize="@dimen/dp_15"
+                android:layout_column="1">
+            </TextView>
+
+        </TableRow>
+        <TableRow
+            android:layout_marginTop="@dimen/dp_10"
+            android:id="@+id/tableRow6"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="@color/white"
+                android:id="@+id/textView61"
+                android:text="@string/screen_size"
+                android:textSize="@dimen/dp_15"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_column="0">
+            </TextView>
+
+            <TextView
+                android:textColor="@color/white"
+                android:id="@+id/textView62"
+                android:textSize="@dimen/dp_15"
+                android:layout_column="1">
+            </TextView>
+
+        </TableRow>
+        <TableRow
+            android:layout_marginTop="@dimen/dp_10"
+            android:id="@+id/tableRow7"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="@color/white"
+                android:id="@+id/textView71"
+                android:text="@string/refresh_rate"
+                android:textSize="@dimen/dp_15"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_column="0">
+            </TextView>
+
+            <TextView
+                android:textColor="@color/white"
+                android:id="@+id/textView72"
+                android:textSize="@dimen/dp_15"
+                android:layout_column="1">
+            </TextView>
+
+        </TableRow>
+        <TableRow
+            android:layout_marginTop="@dimen/dp_10"
+            android:id="@+id/tableRow8"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="@color/white"
+                android:id="@+id/textView81"
+                android:text="@string/screen_type"
+                android:textSize="@dimen/dp_15"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_column="0">
+            </TextView>
+
+            <TextView
+                android:textColor="@color/white"
+                android:id="@+id/textView82"
+                android:textSize="@dimen/dp_15"
+                android:layout_column="1">
+            </TextView>
+
+        </TableRow>
+        <TableRow
+            android:layout_marginTop="@dimen/dp_10"
+            android:id="@+id/tableRow9"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="@color/white"
+                android:id="@+id/textView91"
+                android:text="@string/aspect_ratio"
+                android:textSize="@dimen/dp_15"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_column="0">
+            </TextView>
+
+            <TextView
+                android:textColor="@color/white"
+                android:id="@+id/textView92"
+                android:textSize="@dimen/dp_15"
+                android:layout_column="1">
+            </TextView>
+
+        </TableRow>
+        <TableRow
+            android:layout_marginTop="@dimen/dp_10"
+            android:id="@+id/tableRow10"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="@color/white"
+                android:id="@+id/textView101"
+                android:text="@string/screen_brightness"
+                android:textSize="@dimen/dp_15"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_column="0">
+            </TextView>
+
+            <TextView
+                android:textColor="@color/white"
+                android:id="@+id/textView102"
+                android:textSize="@dimen/dp_15"
+                android:layout_column="1">
+            </TextView>
+
+        </TableRow>
+        <TableRow
+            android:layout_marginTop="@dimen/dp_10"
+            android:id="@+id/tableRow11"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="@color/white"
+                android:id="@+id/textView111"
+                android:text="@string/wide_color_gamut"
+                android:textSize="@dimen/dp_15"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_column="0">
+            </TextView>
+
+            <TextView
+                android:textColor="@color/white"
+                android:id="@+id/textView112"
+                android:textSize="@dimen/dp_15"
+                android:layout_column="1">
+            </TextView>
+
+        </TableRow>
+        <TableRow
+            android:layout_marginTop="@dimen/dp_10"
+            android:id="@+id/tableRow12"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="@color/white"
+                android:id="@+id/textView121"
+                android:text="@string/hdr_screen"
+                android:textSize="@dimen/dp_15"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_column="0">
+            </TextView>
+
+            <TextView
+                android:textColor="@color/white"
+                android:id="@+id/textView122"
+                android:textSize="@dimen/dp_15"
+                android:layout_column="1">
+            </TextView>
+
+        </TableRow>
+        <TableRow
+            android:layout_marginTop="@dimen/dp_10"
+            android:id="@+id/tableRow13"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="@color/white"
+                android:id="@+id/textView131"
+                android:text="@string/pixel_format"
+                android:textSize="@dimen/dp_15"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_column="0">
+            </TextView>
+
+            <TextView
+                android:textColor="@color/white"
+                android:id="@+id/textView132"
+                android:textSize="@dimen/dp_15"
+                android:layout_column="1">
+            </TextView>
+
+        </TableRow>
+
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,19 +3,25 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_nav_graph"
-    app:startDestination="@id/BadPixelSearchFragment">
+    app:startDestination="@id/MenuFragment">
 
     <fragment
-        android:id="@+id/BadPixelSearchFragment"
-        android:name="rpt.tool.badpixelsearch.ui.pixel.BadPixelSearchFragment"
+        android:id="@+id/MenuFragment"
+        android:name="rpt.tool.badpixelsearch.ui.menu.MenuFragment"
         android:label="BadPixelSearchFragment"
         tools:layout="@layout/bad_pixel_search_fragment">
         <action
-            android:id="@+id/action_badPixelSearchFragment_to_settingsFragment"
+            android:id="@+id/action_menuFragment_to_settingsFragment"
             app:destination="@id/SettingsFragment" />
         <action
-            android:id="@+id/action_badPixelSearchFragment_to_faqFragment"
+            android:id="@+id/action_menuFragment_to_faqFragment"
             app:destination="@id/FaqFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_screenInfoFragment"
+            app:destination="@id/ScreenInfoFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_BadPixelSearchFragment"
+            app:destination="@id/BadPixelSearchFragment" />
     </fragment>
     <fragment
         android:id="@+id/SettingsFragment"
@@ -23,8 +29,8 @@
         android:label="SettingsFragment"
         tools:layout="@layout/settings_fragments">
         <action
-            android:id="@+id/action_settingsFragment_to_badPixelSearchFragment"
-            app:destination="@id/BadPixelSearchFragment" />
+            android:id="@+id/action_settingsFragment_to_menuFragment"
+            app:destination="@id/MenuFragment" />
     </fragment>
     <fragment
         android:id="@+id/FaqFragment"
@@ -32,8 +38,26 @@
         android:label="FaqFragment"
         tools:layout="@layout/faq_fragment">
         <action
-            android:id="@+id/action_faqFragment_to_badPixelSearchFragment"
-            app:destination="@id/BadPixelSearchFragment" />
+            android:id="@+id/action_faqFragment_to_menuFragment"
+            app:destination="@id/MenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ScreenInfoFragment"
+        android:name="rpt.tool.badpixelsearch.ui.screen.ScreenInfoFragment"
+        android:label="ScreenInfoFragment"
+        tools:layout="@layout/screen_info_fragment">
+        <action
+            android:id="@+id/action_screenInfoFragment_to_menuFragment"
+            app:destination="@id/MenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/BadPixelSearchFragment"
+        android:name="rpt.tool.badpixelsearch.ui.pixel.BadPixelSearchFragment"
+        android:label="BadPixelSearchFragment"
+        tools:layout="@layout/bad_pixel_search_fragment">
+        <action
+            android:id="@+id/action_badPixelSearchFragment_to_menuFragment"
+            app:destination="@id/MenuFragment" />
     </fragment>
 
 </navigation>
