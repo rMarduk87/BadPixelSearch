@@ -1,9 +1,7 @@
 package rpt.tool.badpixelsearch
 
 import android.annotation.SuppressLint
-import android.content.Context
 import android.content.Intent
-import android.content.res.Configuration
 import android.graphics.Color
 import android.os.Bundle
 import android.os.CountDownTimer
@@ -11,11 +9,13 @@ import android.os.Handler
 import android.view.MenuItem
 import android.view.View
 import android.view.View.OnTouchListener
+import android.view.WindowManager
 import android.widget.FrameLayout
 import androidx.appcompat.app.AppCompatActivity
 import rpt.tool.badpixelsearch.databinding.ActivityFixPixelBinding
 import rpt.tool.badpixelsearch.utils.managers.SharedPreferencesManager
 import java.util.Random
+
 
 class FixPixelActivity : AppCompatActivity() {
     private var fixCancelled = false
@@ -47,7 +47,7 @@ class FixPixelActivity : AppCompatActivity() {
     private var mVisible = false
     private val mHideRunnable = Runnable { hide() }
     private val mDelayHideTouchListener =
-        OnTouchListener { view, motionEvent ->
+        OnTouchListener { _, _ ->
             fixCancelled = true
             finish()
             false
@@ -64,7 +64,7 @@ class FixPixelActivity : AppCompatActivity() {
         mVisible = true
         mControlsView = findViewById(R.id.fullscreen_content_controls)
         frameLayout = binding.frameFix
-        frameLayout!!.setOnClickListener{ view: View? ->
+        frameLayout!!.setOnClickListener{ _: View? ->
             val pressTime = System.currentTimeMillis()
             if (pressTime - lastPressTime > doublePressDelay) {
                 if (!isFixing) {
@@ -89,8 +89,12 @@ class FixPixelActivity : AppCompatActivity() {
         if (SharedPreferencesManager.fullBrightness) {
             val lp = window.attributes
             lp.screenBrightness = 1.0f
-            window.setAttributes(lp)
+            window.attributes = lp
         }
+
+        val attrs = window.attributes
+        attrs.flags = attrs.flags or WindowManager.LayoutParams.FLAG_FULLSCREEN
+        window.attributes = attrs
     }
 
     private fun fix() {
@@ -98,7 +102,8 @@ class FixPixelActivity : AppCompatActivity() {
         object : CountDownTimer(fixDelay.toLong(), 1000) {
             override fun onTick(millisUntilFinished: Long) {}
             override fun onFinish() {
-                val color = Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256))
+                val color = Color.argb(255, rnd.nextInt(256), rnd.nextInt(256),
+                    rnd.nextInt(256))
                 frameLayout!!.setBackgroundColor(color)
                 if (!fixCancelled) {
                     start()

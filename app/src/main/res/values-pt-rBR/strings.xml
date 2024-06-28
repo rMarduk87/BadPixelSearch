@@ -46,7 +46,7 @@
     <string name="faq_answer_5">Ao ativar o modo de correção iremos manipular a tela para tentar restaurar os pixels quebrados, recomendamos pelo menos 10 minutos ou melhor ainda várias horas de uso deste modo.\nAtenção, não olhe para o tela durante este modo.\nO consumo da bateria pode aumentar, é recomendado ter a bateria em 100% ou conectada ao carregador\nPara interromper esta função feche o aplicativo ou pressione o botão Voltar</string>
     <string name="screen_info">INFORMAÇÕES DA TELA</string>
     <string name="touch">Pressione o botão Voltar para interromper os testes</string>
-    <string name="slide">Deslize para a esquerda ou para a direita para iniciar o teste desejado</string>
+    <string name="choose">No menu de configurações, escolha a opção de pesquisa desejada e selecione iniciar para começar</string>
     <string name="full_resolution">Resolução total</string>
     <string name="current_resolution">Resolução Atual</string>
     <string name="visual_resolution">Resolução Visual</string>
@@ -65,4 +65,8 @@
     <string name="unknown">Proporção de expectativa desconhecida</string>
     <string name="automaticMode">Automático</string>
     <string name="manualMode">Manual</string>
+    <string name="start">INICIAR</string>
+    <string name="back">Clique no botão para retornar ao menu</string>
+    <string name="goBack">VOLTAR</string>
+    <string name="slide">Deslize para a esquerda ou direita para iniciar sua pesquisa\nOpção selecionada $1</string>
 </resources>

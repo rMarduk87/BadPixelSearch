@@ -5,11 +5,10 @@ App to check for dead pixels with 8 color, black and white screens
 # Screeanshot
 
 
-
-<img width="423" alt="1" src="https://github.com/rMarduk87/BadPixelSearch/assets/30796324/3de00774-f5d8-4c28-b995-d475bc0ca2f8">
-<img width="424" alt="2" src="https://github.com/rMarduk87/BadPixelSearch/assets/30796324/ba6b5519-050d-4f7f-b50a-425bf44ac1ca">
-<img width="427" alt="3" src="https://github.com/rMarduk87/BadPixelSearch/assets/30796324/1265e3f2-d51c-40c8-a71b-429ea70a19a6">
-<img width="420" alt="4" src="https://github.com/rMarduk87/BadPixelSearch/assets/30796324/11002250-6313-41e3-a8cb-352888a2cfa4">
+![screenshot 3](https://github.com/rMarduk87/BadPixelSearch/assets/30796324/d01a8f1a-334b-41ad-ba95-b35d50139136)
+![screenshot 4](https://github.com/rMarduk87/BadPixelSearch/assets/30796324/c9de9677-544e-49dd-88df-d196a2bd963c)
+![screenshot 5](https://github.com/rMarduk87/BadPixelSearch/assets/30796324/71e31fc8-3338-4e00-a669-84ed7cc99b20)
+![screenshot 6](https://github.com/rMarduk87/BadPixelSearch/assets/30796324/8958d0b4-eb91-44c7-bde0-896c41ff6bdc)
 <img width="420" alt="5" src="https://github.com/rMarduk87/BadPixelSearch/assets/30796324/175bb45d-07ce-4bfe-ae26-379fedf2584a">
 <img width="409" alt="6" src="https://github.com/rMarduk87/BadPixelSearch/assets/30796324/c60bf71a-f360-4292-955e-75fcc82969ed">
 <img width="421" alt="7" src="https://github.com/rMarduk87/BadPixelSearch/assets/30796324/43376080-bd63-4ce7-be06-948bdf176b43">

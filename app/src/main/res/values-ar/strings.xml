@@ -46,7 +46,7 @@
     <string name="faq_answer_5">من خلال تنشيط وضع الإصلاح، سنتلاعب بالشاشة لمحاولة استعادة وحدات البكسل المعطلة، نوصي باستخدام هذا الوضع لمدة 10 دقائق على الأقل أو حتى عدة ساعات أفضل.\nتحذير، لا تنظر إلى الشاشة أثناء هذا الوضع.\nقد يزيد استهلاك البطارية، فمن المستحسن أن تكون البطارية 100% أو متصلة بالشاحن\nلمقاطعة هذه الوظيفة، أغلق التطبيق أو اضغط على زر الرجوع</string>
     <string name="screen_info">معلومات الشاشة</string>
     <string name="touch">اضغط على زر الرجوع لإيقاف الاختبارات</string>
-    <string name="slide">حرك إلى اليسار أو اليمين لبدء الاختبار المطلوب</string>
+    <string name="choose">في قائمة الإعدادات، اختر خيار البحث المطلوب، ثم اختر البدء للبدء</string>
     <string name="full_resolution">الدقة الكاملة</string>
     <string name="current_resolution">الحل الحالي</string>
     <string name="visual_resolution">الدقة المرئية</string>
@@ -65,4 +65,8 @@
     <string name="unknown">نسبة العرض إلى الارتفاع غير معروفة</string>
     <string name="automaticMode">تلقائي</string>
     <string name="manualMode">يدويًا</string>
+    <string name="start">ابدأ</string>
+    <string name="back">انقر على الزر للعودة إلى القائمة</string>
+    <string name="goBack">العودة</string>
+    <string name="slide">اسحب لليسار أو لليمين لبدء البحث\nالخيار المحدد 1$</string>
 </resources>

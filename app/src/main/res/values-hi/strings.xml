@@ -43,17 +43,11 @@
     <string name='faq_question_4'>क्या मैं स्वचालित मोड में गति या आवृत्ति सेट कर सकता हूं?</string>
     <string name="faq_answer_4">हां, \"सेटिंग्स\" मेनू में आप मोड पैरामीटर बदल सकते हैं</string>
     <string name="faq_question_5">स्वचालित खराब पिक्सेल खोज कैसे काम करती है?</string>
-
     <string name="faq_answer_5">फिक्स मोड को सक्रिय करके हम टूटे हुए पिक्सेल को पुनर्स्थापित करने के लिए स्क्रीन में हेरफेर करेंगे, हम इस मोड का उपयोग करने के कम से कम 10 मिनट या इससे भी बेहतर कई घंटे की सलाह देते हैं।\nचेतावनी, इस मोड के दौरान स्क्रीन को न देखें।\nबैटरी की खपत बढ़ सकती है, बैटरी को 100% पर रखने या चार्जर से कनेक्ट करने की सलाह दी जाती है।\nइस फ़ंक्शन को बाधित करने के लिए ऐप बंद करें या बैक बटन दबाएँ</string>
-
     <string name="screen_info">स्क्रीन जानकारी</string>
-
     <string name="touch">परीक्षण रोकने के लिए बैक बटन दबाएँ</string>
-
-    <string name="slide">वांछित परीक्षण शुरू करने के लिए बाएँ या दाएँ स्लाइड करें</string>
-
+    <string name="choose">सेटिंग्स मेनू में, वांछित खोज विकल्प चुनें, फिर शुरू करने के लिए प्रारंभ का चयन करें</string>
     <string name="full_resolution">पूर्ण रिज़ॉल्यूशन</string>
-
     <string name="current_resolution">वर्तमान रिज़ॉल्यूशन</string>
     <string name="visual_resolution">विज़ुअल रिज़ॉल्यूशन</string>
     <string name="screen_scale">स्क्रीन स्केल</string>
@@ -71,4 +65,8 @@
     <string name="unknown">अज्ञात पहलू अनुपात</string>
     <string name="automaticMode">स्वचालित</string>
     <string name="manualMode">मैनुअल</string>
+    <string name="start">START</string>
+    <string name="back">मेनू पर वापस जाने के लिए बटन पर क्लिक करें</string>
+    <string name="goBack">वापस जाएँ</string>
+    <string name="slide">अपनी खोज शुरू करने के लिए बाएँ या दाएँ स्वाइप करें\nचयनित विकल्प $1</string>
 </resources>
