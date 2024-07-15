@@ -76,15 +76,12 @@ dependencies {
     //Lottie
     implementation 'com.airbnb.android:lottie:6.1.0'
     //Firebase
-    implementation platform('com.google.firebase:firebase-bom:33.1.1')
+    implementation platform('com.google.firebase:firebase-bom:33.1.2')
     implementation 'com.google.firebase:firebase-analytics-ktx'
     //Crashlytics
     implementation("com.google.firebase:firebase-crashlytics-ktx")
     // Screen
     implementation "io.github.torrydo:screen-easy:0.1.0"
-    //Play Asset
-    implementation("com.google.android.play:asset-delivery:2.2.2")
-    implementation("com.google.android.play:asset-delivery-ktx:2.2.2")
     //Test
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.2.1'
