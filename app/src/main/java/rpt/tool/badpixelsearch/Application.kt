@@ -1,8 +1,6 @@
 package rpt.tool.badpixelsearch
 
 import android.app.Application
-import com.google.firebase.crashlytics.FirebaseCrashlytics
-import timber.log.Timber
 
 class Application  : Application() {
 

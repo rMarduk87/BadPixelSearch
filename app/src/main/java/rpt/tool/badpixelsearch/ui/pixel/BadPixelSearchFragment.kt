@@ -1,33 +1,26 @@
 package rpt.tool.badpixelsearch.ui.pixel
 
-import rpt.tool.badpixelsearch.BaseFragment
-import rpt.tool.badpixelsearch.databinding.BadPixelSearchFragmentBinding
-import android.app.Activity
-import android.app.AlertDialog
-import android.content.ActivityNotFoundException
+import android.annotation.SuppressLint
 import android.content.Intent
-import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.view.GestureDetector
 import android.view.GestureDetector.SimpleOnGestureListener
-import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
-import android.widget.Button
-import android.widget.EditText
-import android.widget.Toast
 import androidx.annotation.RequiresApi
+import rpt.tool.badpixelsearch.BaseFragment
 import rpt.tool.badpixelsearch.FixPixelActivity
 import rpt.tool.badpixelsearch.R
-import rpt.tool.badpixelsearch.ui.menu.MenuFragmentDirections
+import rpt.tool.badpixelsearch.databinding.BadPixelSearchFragmentBinding
 import rpt.tool.badpixelsearch.utils.extensions.modeToText
 import rpt.tool.badpixelsearch.utils.managers.SharedPreferencesManager
 import rpt.tool.badpixelsearch.utils.navigation.safeNavController
 import rpt.tool.badpixelsearch.utils.navigation.safeNavigate
 import kotlin.math.abs
 
+@Suppress("DEPRECATION")
 class BadPixelSearchFragment :
     BaseFragment<BadPixelSearchFragmentBinding>(BadPixelSearchFragmentBinding::inflate),
     View.OnClickListener {
@@ -39,6 +32,7 @@ class BadPixelSearchFragment :
     var count = 0
 
 
+    @SuppressLint("ClickableViewAccessibility")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -129,8 +123,8 @@ class BadPixelSearchFragment :
 
     private inner class RptDetectGesture : SimpleOnGestureListener() {
 
-        private val SWIPE_MIN_DISTANCE = 120
-        private val SWIPE_THRESHOLD_VELOCITY = 50
+        private val swipeMinDistance = 120
+        private val swipeThresholdVelocity = 50
 
         override fun onFling(
             e1: MotionEvent?,
@@ -138,7 +132,7 @@ class BadPixelSearchFragment :
             velocityX: Float,
             velocityY: Float
         ): Boolean {
-            if (e1!!.x - e2.x > SWIPE_MIN_DISTANCE && abs(velocityX) > SWIPE_THRESHOLD_VELOCITY) {
+            if (e1!!.x - e2.x > swipeMinDistance && abs(velocityX) > swipeThresholdVelocity) {
                 when (SharedPreferencesManager.mode) {
                     0 -> {
                         i++
@@ -154,7 +148,7 @@ class BadPixelSearchFragment :
                 }
 
                 return true
-            } else if (e2.x - e1.x > SWIPE_MIN_DISTANCE && abs(velocityX) > SWIPE_THRESHOLD_VELOCITY) {
+            } else if (e2.x - e1.x > swipeMinDistance && abs(velocityX) > swipeThresholdVelocity) {
                 when (SharedPreferencesManager.mode) {
                     0 -> {
                         i--
@@ -173,7 +167,7 @@ class BadPixelSearchFragment :
 
                 return true
             }
-            if (e1.y - e2.y > SWIPE_MIN_DISTANCE && abs(velocityY) > SWIPE_THRESHOLD_VELOCITY) {
+            if (e1.y - e2.y > swipeMinDistance && abs(velocityY) > swipeThresholdVelocity) {
                 when (SharedPreferencesManager.mode) {
                     0 -> {
                         i++
@@ -189,7 +183,7 @@ class BadPixelSearchFragment :
                 }
 
                 return true
-            } else if (e2.y - e1.y > SWIPE_MIN_DISTANCE && abs(velocityY) > SWIPE_THRESHOLD_VELOCITY) {
+            } else if (e2.y - e1.y > swipeMinDistance && abs(velocityY) > swipeThresholdVelocity) {
                 when (SharedPreferencesManager.mode) {
                     0 -> {
                         i--
@@ -214,7 +208,7 @@ class BadPixelSearchFragment :
     }
 
     private fun automatic() {
-        var delay = (if (SharedPreferencesManager.velocity == 0) 3000 else 2000).toLong()
+        val delay = (if (SharedPreferencesManager.velocity == 0) 3000 else 2000).toLong()
 
 
         finalizer = object  : Runnable{

@@ -1,5 +1,6 @@
 package rpt.tool.badpixelsearch.ui.settings
 
+import android.annotation.SuppressLint
 import android.graphics.PorterDuff
 import android.os.Build
 import android.os.Bundle
@@ -15,10 +16,12 @@ import rpt.tool.badpixelsearch.utils.managers.SharedPreferencesManager
 import rpt.tool.badpixelsearch.utils.navigation.safeNavController
 import rpt.tool.badpixelsearch.utils.navigation.safeNavigate
 
+@Suppress("DEPRECATION")
 class SettingsFragments : BaseFragment<SettingsFragmentsBinding>(SettingsFragmentsBinding::inflate) {
 
-    var mDropdown: PopupWindow? = null
+    private var mDropdown: PopupWindow? = null
 
+    @SuppressLint("ObsoleteSdkInt", "SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -69,7 +72,7 @@ class SettingsFragments : BaseFragment<SettingsFragmentsBinding>(SettingsFragmen
             }
         }
 
-        binding.switchFixMode.setOnCheckedChangeListener{ it, isChecked ->
+        binding.switchFixMode.setOnCheckedChangeListener{ _, isChecked ->
             SharedPreferencesManager.mode = if (isChecked) 2 else 0
             if(isChecked){
                 binding.switchAutomaticMode.setChecked(false)
@@ -110,11 +113,11 @@ class SettingsFragments : BaseFragment<SettingsFragmentsBinding>(SettingsFragmen
         binding.rdo30.setOnClickListener { saveInterval() }
         binding.rdo60.setOnClickListener { saveInterval() }
 
-        binding.rdo1.isChecked = SharedPreferencesManager.interval == AppUtils.one
-        binding.rdo5.isChecked = SharedPreferencesManager.interval == AppUtils.five
-        binding.rdo15.isChecked = SharedPreferencesManager.interval == AppUtils.fifthy
-        binding.rdo30.isChecked = SharedPreferencesManager.interval == AppUtils.thirty
-        binding.rdo60.isChecked = SharedPreferencesManager.interval == AppUtils.hour
+        binding.rdo1.isChecked = SharedPreferencesManager.interval == AppUtils.ONE
+        binding.rdo5.isChecked = SharedPreferencesManager.interval == AppUtils.FIVE
+        binding.rdo15.isChecked = SharedPreferencesManager.interval == AppUtils.FIFTY
+        binding.rdo30.isChecked = SharedPreferencesManager.interval == AppUtils.THIRTY
+        binding.rdo60.isChecked = SharedPreferencesManager.interval == AppUtils.HOUR
 
         binding.delay.progress = SharedPreferencesManager.delay
         binding.delay.progressDrawable.setColorFilter(requireContext().getColor(R.color.white), PorterDuff.Mode.MULTIPLY)
@@ -160,7 +163,7 @@ class SettingsFragments : BaseFragment<SettingsFragmentsBinding>(SettingsFragmen
     }
 
     private fun saveInterval() {
-        var interval = if(binding.rdo1.isChecked){
+        val interval = if(binding.rdo1.isChecked){
             1
         }
         else if(binding.rdo5.isChecked){

@@ -69,4 +69,8 @@
     <string name="back">ボタンをクリックしてメニューに戻ります</string>
     <string name="goBack">戻る</string>
     <string name="slide">左または右にスワイプして検索を開始します\n選択されたオプション $1</string>
+    <string name="background">background</string>
+    <string name="arrow">arrow</string>
+    <string name="question">question</string>
+    <string name="screen_info_title">画面情報</string>
 </resources>

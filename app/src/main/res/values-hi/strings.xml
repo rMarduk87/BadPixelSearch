@@ -69,4 +69,8 @@
     <string name="back">मेनू पर वापस जाने के लिए बटन पर क्लिक करें</string>
     <string name="goBack">वापस जाएँ</string>
     <string name="slide">अपनी खोज शुरू करने के लिए बाएँ या दाएँ स्वाइप करें\nचयनित विकल्प $1</string>
+    <string name="background">background</string>
+    <string name="arrow">arrow</string>
+    <string name="question">question</string>
+    <string name="screen_info_title">स्क्रीन जानकारी</string>
 </resources>

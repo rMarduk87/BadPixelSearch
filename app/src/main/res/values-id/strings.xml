@@ -69,4 +69,8 @@
     <string name="back">Klik tombol untuk kembali ke menu</string>
     <string name="goBack">KEMBALI</string>
     <string name="slide">Geser ke kiri atau kanan untuk memulai pencarian Anda\nOpsi yang dipilih $1</string>
+    <string name="background">background</string>
+    <string name="arrow">arrow</string>
+    <string name="question">question</string>
+    <string name="screen_info_title">Info Layar</string>
 </resources>

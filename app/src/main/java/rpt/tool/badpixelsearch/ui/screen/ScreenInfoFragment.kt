@@ -1,6 +1,7 @@
 package rpt.tool.badpixelsearch.ui.screen
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.provider.Settings
 import android.provider.Settings.SettingNotFoundException
@@ -8,6 +9,7 @@ import android.view.View
 import android.view.WindowManager
 import com.torrydo.screenez.ScreenEz
 import rpt.tool.badpixelsearch.BaseFragment
+import rpt.tool.badpixelsearch.MainActivity
 import rpt.tool.badpixelsearch.R
 import rpt.tool.badpixelsearch.databinding.ScreenInfoFragmentBinding
 import rpt.tool.badpixelsearch.utils.AppUtils
@@ -15,6 +17,7 @@ import rpt.tool.badpixelsearch.utils.extensions.roundToString
 import kotlin.math.sqrt
 
 
+@Suppress("DEPRECATION")
 class ScreenInfoFragment : BaseFragment<ScreenInfoFragmentBinding>(ScreenInfoFragmentBinding::inflate) {
 
     private var fullResolution = ""
@@ -39,6 +42,8 @@ class ScreenInfoFragment : BaseFragment<ScreenInfoFragmentBinding>(ScreenInfoFra
 
         val wm = requireContext().getSystemService(Context.WINDOW_SERVICE) as WindowManager
         val display = wm.defaultDisplay
+
+        binding.leftIconBlock.setOnClickListener{ finish() }
 
         fullResolution = getScreenResolution()
         currentResolution = getScreenResolution()
@@ -69,19 +74,21 @@ class ScreenInfoFragment : BaseFragment<ScreenInfoFragmentBinding>(ScreenInfoFra
         binding.textView112.text = wideColorGamut
         binding.textView122.text = hdrScreen
         binding.textView132.text = pixelFormat
+    }
 
-
+    private fun finish() {
+        startActivity(Intent(requireContext(), MainActivity::class.java))
     }
 
     private fun getScreenResolution(): String {
-        var w = ScreenEz.fullWidth
-        var h = ScreenEz.fullHeight
+        val w = ScreenEz.fullWidth
+        val h = ScreenEz.fullHeight
         return "$w X $h px"
     }
 
     private fun getVisualResolution(): String {
-        var w = ScreenEz.safeWidth
-        var h = ScreenEz.safeHeight
+        val w = ScreenEz.safeWidth
+        val h = ScreenEz.safeHeight
         return "$w X $h px"
     }
 
@@ -111,9 +118,9 @@ class ScreenInfoFragment : BaseFragment<ScreenInfoFragmentBinding>(ScreenInfoFra
     }
 
     private fun getAspectRatio(): String {
-        var w = ScreenEz.fullWidth
-        var h = ScreenEz.fullHeight
-        var aspect = AppUtils.getAspectRatio(w,h)
+        val w = ScreenEz.fullWidth
+        val h = ScreenEz.fullHeight
+        val aspect = AppUtils.getAspectRatio(w,h)
         return if(aspect!="strings") aspect else requireContext().getString(R.string.unknown)
     }
 
@@ -128,7 +135,6 @@ class ScreenInfoFragment : BaseFragment<ScreenInfoFragmentBinding>(ScreenInfoFra
                 Settings.System.SCREEN_BRIGHTNESS_MODE
             )
         } catch (e: SettingNotFoundException) {
-            // TODO Auto-generated catch block
             e.printStackTrace()
         }
 
