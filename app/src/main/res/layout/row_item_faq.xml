@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -35,7 +36,8 @@
                     android:visibility="gone"
                     android:textColor="@color/white"
                     android:textSize="@dimen/dp_14"
-                    android:fontFamily="@font/calibri_bold"/>
+                    android:fontFamily="@font/calibri_bold"
+                    tools:ignore="SpUsage" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/lbl_question"
@@ -43,11 +45,14 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
+                    android:contentDescription="@string/question"
                     android:fontFamily="@font/calibri_bold"
+                    android:importantForAccessibility="no"
                     android:includeFontPadding="true"
                     android:text="Question"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/dp_14" />
+                    android:textSize="@dimen/dp_14"
+                    tools:ignore="TextSizeCheck" />
 
                 <ImageView
                     android:id="@+id/img_faq"
@@ -76,7 +81,8 @@
                     android:layout_marginEnd="@dimen/dp_5"
                     android:textColor="@color/white"
                     android:textSize="@dimen/dp_14"
-                    android:fontFamily="@font/calibri_regular"/>
+                    android:fontFamily="@font/calibri_regular"
+                    tools:ignore="SpUsage" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/lbl_answer"
@@ -89,7 +95,8 @@
                     android:text="Answer"
                     android:textColor="@color/white"
                     android:textSize="@dimen/dp_14"
-                    android:fontFamily="@font/calibri_regular"/>
+                    android:fontFamily="@font/calibri_regular"
+                    tools:ignore="InefficientWeight" />
 
             </LinearLayout>
 

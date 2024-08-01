@@ -3,40 +3,32 @@ package rpt.tool.badpixelsearch.ui.menu
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
 import android.animation.ValueAnimator
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.AlertDialog
 import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.graphics.Point
 import android.net.Uri
-import android.os.Build
 import android.os.Bundle
-import android.os.Handler
-import android.view.GestureDetector
-import android.view.GestureDetector.SimpleOnGestureListener
 import android.view.LayoutInflater
-import android.view.MotionEvent
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import androidx.annotation.RequiresApi
 import rpt.tool.badpixelsearch.BaseFragment
-import rpt.tool.badpixelsearch.FixPixelActivity
 import rpt.tool.badpixelsearch.R
-import rpt.tool.badpixelsearch.databinding.BadPixelSearchFragmentBinding
 import rpt.tool.badpixelsearch.databinding.MenuFragmentBinding
 import rpt.tool.badpixelsearch.utils.managers.SharedPreferencesManager
 import rpt.tool.badpixelsearch.utils.navigation.safeNavController
 import rpt.tool.badpixelsearch.utils.navigation.safeNavigate
-import kotlin.math.abs
 
 
 @Suppress("DEPRECATION")
 class MenuFragment :
     BaseFragment<MenuFragmentBinding>(MenuFragmentBinding::inflate){
 
-    val durationValue = 6000L
+    private val durationValue = 6000L
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -123,6 +115,7 @@ class MenuFragment :
         animatorSet.start()
     }
 
+    @SuppressLint("IntentReset")
     private fun sendMail(
         activity: Activity,
         emailIds: Array<String>,

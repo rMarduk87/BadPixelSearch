@@ -1,5 +1,6 @@
 package rpt.tool.badpixelsearch
 
+import android.annotation.SuppressLint
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -25,6 +26,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var activityResultLauncher: ActivityResultLauncher<IntentSenderRequest>
 
 
+    @SuppressLint("ObsoleteSdkInt")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -34,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             window.setFlags(
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
-                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
         }
     }
 

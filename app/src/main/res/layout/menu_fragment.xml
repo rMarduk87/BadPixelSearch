@@ -3,6 +3,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@drawable/ic_background_search"
@@ -22,6 +23,7 @@
             android:id="@+id/logo_animated"
             android:layout_width="@dimen/dp_128"
             android:layout_height="@dimen/dp_128"
+            android:importantForAccessibility="no"
             android:src="@drawable/splash_image_mini"
             android:layout_marginTop="@dimen/dp_75"
             android:layout_centerHorizontal="true">
@@ -53,59 +55,67 @@
             android:textColor="@color/white" />
 
         <Button
-            android:text="@string/settings"
-            android:background="@drawable/walk_through_button_bg"
-            android:layout_width="@dimen/dp_120"
-            android:layout_height="wrap_content"
             android:id="@+id/openSettingsMenuBtn"
-            android:layout_marginTop="@dimen/dp_215"
-            android:layout_marginLeft="@dimen/dp_25"
-            android:alpha="0.25"
-            android:textSize="14dp" />
-
-        <Button
-            android:text="@string/send_req"
-            android:background="@drawable/walk_through_button_bg"
-            android:alpha="0.25"
             android:layout_width="@dimen/dp_120"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_25"
+            android:layout_marginTop="@dimen/dp_215"
+            android:alpha="0.25"
+            android:background="@drawable/walk_through_button_bg"
+            android:text="@string/settings"
+            android:textColor="#7986CB"
+            android:textSize="14sp"
+            tools:ignore="VisualLintButtonSize" />
+
+        <Button
             android:id="@+id/sendRequestBtn"
-            android:textSize="14dp"
+            android:layout_width="@dimen/dp_120"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_170"
             android:layout_marginTop="@dimen/dp_215"
-            android:layout_marginLeft="@dimen/dp_170" />
+            android:alpha="0.25"
+            android:background="@drawable/walk_through_button_bg"
+            android:text="@string/send_req"
+            android:textSize="14sp"
+            tools:ignore="TextSizeCheck" />
 
         <Button
-            android:text="@string/faq"
-            android:background="@drawable/walk_through_button_bg"
-            android:layout_width="@dimen/dp_120"
-            android:layout_height="wrap_content"
             android:id="@+id/openFaqMenuBtn"
-            android:layout_marginTop="@dimen/dp_265"
-            android:layout_marginLeft="@dimen/dp_25"
-            android:alpha="0.25"
-            android:textSize="14dp" />
-
-        <Button
-            android:text="@string/screen_info"
-            android:background="@drawable/walk_through_button_bg"
-            android:alpha="0.25"
             android:layout_width="@dimen/dp_120"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_25"
+            android:layout_marginTop="@dimen/dp_265"
+            android:alpha="0.25"
+            android:background="@drawable/walk_through_button_bg"
+            android:text="@string/faq"
+            android:textColor="#448AFF"
+            android:textSize="14sp"
+            tools:ignore="TextSizeCheck,VisualLintButtonSize" />
+
+        <Button
             android:id="@+id/screenInfoBtn"
-            android:textSize="14dp"
-            android:layout_marginTop="@dimen/dp_265"
-            android:layout_marginLeft="@dimen/dp_170" />
-
-        <Button
-            android:text="@string/start"
-            android:background="@drawable/walk_through_button_bg"
-            android:alpha="0.25"
             android:layout_width="@dimen/dp_120"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_170"
+            android:layout_marginTop="@dimen/dp_265"
+            android:alpha="0.25"
+            android:background="@drawable/walk_through_button_bg"
+            android:text="@string/screen_info"
+            android:textColor="#448AFF"
+            android:textSize="14sp"
+            tools:ignore="VisualLintButtonSize" />
+
+        <Button
             android:id="@+id/startBtn"
-            android:textSize="14dp"
+            android:layout_width="@dimen/dp_120"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_98"
             android:layout_marginTop="@dimen/dp_315"
-            android:layout_marginLeft="@dimen/dp_98" />
+            android:alpha="0.25"
+            android:background="@drawable/walk_through_button_bg"
+            android:text="@string/start"
+            android:textSize="14sp"
+            tools:ignore="TextSizeCheck" />
 
 
 

@@ -17,6 +17,7 @@ import rpt.tool.badpixelsearch.utils.managers.SharedPreferencesManager
 import java.util.Random
 
 
+@Suppress("DEPRECATION")
 class FixPixelActivity : AppCompatActivity() {
     private var fixCancelled = false
     private var frameLayout: FrameLayout? = null
@@ -27,8 +28,8 @@ class FixPixelActivity : AppCompatActivity() {
     private var lastPressTime: Long = 0
 
     private val rnd = Random()
-    private val AUTO_HIDE_DELAY_MILLIS = 5000
-    private val UI_ANIMATION_DELAY = 300
+    private val autoHideTimeMillis = 5000
+    private val uiAnimationDelay = 300
     private val mHideHandler = Handler()
     private val mHidePart2Runnable = Runnable {
         frameLayout!!.systemUiVisibility = (View.SYSTEM_UI_FLAG_LOW_PROFILE
@@ -46,6 +47,7 @@ class FixPixelActivity : AppCompatActivity() {
     }
     private var mVisible = false
     private val mHideRunnable = Runnable { hide() }
+    @SuppressLint("ClickableViewAccessibility")
     private val mDelayHideTouchListener =
         OnTouchListener { _, _ ->
             fixCancelled = true
@@ -56,6 +58,7 @@ class FixPixelActivity : AppCompatActivity() {
     private lateinit var binding: ActivityFixPixelBinding
 
 
+    @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityFixPixelBinding.inflate(layoutInflater)
@@ -122,7 +125,7 @@ class FixPixelActivity : AppCompatActivity() {
             hide()
         } else {
             show()
-            delayedHide(AUTO_HIDE_DELAY_MILLIS)
+            delayedHide(autoHideTimeMillis)
         }
     }
 
@@ -132,7 +135,7 @@ class FixPixelActivity : AppCompatActivity() {
         mControlsView!!.visibility = View.GONE
         mVisible = false
         mHideHandler.removeCallbacks(mShowPart2Runnable)
-        mHideHandler.postDelayed(mHidePart2Runnable, UI_ANIMATION_DELAY.toLong())
+        mHideHandler.postDelayed(mHidePart2Runnable, uiAnimationDelay.toLong())
     }
 
     @SuppressLint("InlinedApi")
@@ -141,7 +144,7 @@ class FixPixelActivity : AppCompatActivity() {
             View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
         mVisible = true
         mHideHandler.removeCallbacks(mHidePart2Runnable)
-        mHideHandler.postDelayed(mShowPart2Runnable, UI_ANIMATION_DELAY.toLong())
+        mHideHandler.postDelayed(mShowPart2Runnable, uiAnimationDelay.toLong())
     }
 
     private fun delayedHide(delayMillis: Int) {
@@ -156,6 +159,7 @@ class FixPixelActivity : AppCompatActivity() {
         return true
     }
 
+    @Deprecated("This method has been deprecated in favor of using the\n      {@link OnBackPressedDispatcher} via {@link #getOnBackPressedDispatcher()}.\n      The OnBackPressedDispatcher controls how back button events are dispatched\n      to one or more {@link OnBackPressedCallback} objects.")
     override fun onBackPressed() {
         super.onBackPressed()
         startActivity(Intent(this, MainActivity::class.java))

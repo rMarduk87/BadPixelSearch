@@ -3,7 +3,7 @@
   <component name="AndroidLayouts">
     <shared>
       <config>
-        <device id="_android_virtual_device_id_7_WSVGA_Tablet_API_33" />
+        <locale>it</locale>
       </config>
     </shared>
     <layouts>
@@ -28,6 +28,11 @@
         </config>
       </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/faq_fragment.xml">
+        <config>
+          <theme>@style/Theme.BadPixelSearch</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/menu_fragment.xml">
         <config>
           <theme>@style/Theme.BadPixelSearch</theme>
         </config>
@@ -69,33 +74,48 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77f83ee0-a6c7-4100-b36d-12571e602f78" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/8.4/checksums/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.4/checksums/md5-checksums.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.4/checksums/sha1-checksums.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.4/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.4/dependencies-accessors/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.4/executionHistory/executionHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.4/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.4/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.4/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.4/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.4/fileHashes/resourceHashesCache.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.4/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.6/checksums/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.6/dependencies-accessors/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.6/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.6/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.6/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.6/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.6/fileHashes/resourceHashesCache.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.6/gc.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.7/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.7/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.7/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.7/checksums/md5-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.7/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.7/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.7/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.7/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.7/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.7/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.7/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.7/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.7/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.7/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.7/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.7/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/rpt/tool/badpixelsearch/Application.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/rpt/tool/badpixelsearch/Application.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/rpt/tool/badpixelsearch/FixPixelActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/rpt/tool/badpixelsearch/FixPixelActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/rpt/tool/badpixelsearch/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/rpt/tool/badpixelsearch/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/rpt/tool/badpixelsearch/SplashScreenActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/rpt/tool/badpixelsearch/SplashScreenActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/rpt/tool/badpixelsearch/ui/faq/FaqFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/rpt/tool/badpixelsearch/ui/faq/FaqFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/rpt/tool/badpixelsearch/ui/menu/MenuFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/rpt/tool/badpixelsearch/ui/menu/MenuFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/rpt/tool/badpixelsearch/ui/pixel/BadPixelSearchFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/rpt/tool/badpixelsearch/ui/pixel/BadPixelSearchFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/rpt/tool/badpixelsearch/ui/screen/ScreenInfoFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/rpt/tool/badpixelsearch/ui/screen/ScreenInfoFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/rpt/tool/badpixelsearch/ui/settings/SettingsFragments.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/rpt/tool/badpixelsearch/ui/settings/SettingsFragments.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/rpt/tool/badpixelsearch/utils/AppUtils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/rpt/tool/badpixelsearch/utils/AppUtils.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/rpt/tool/badpixelsearch/utils/log/Log.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/rpt/tool/badpixelsearch/utils/log/Log.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_fix_pixel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_fix_pixel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_splash_screen.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_splash_screen.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/bad_pixel_search_fragment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/bad_pixel_search_fragment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/faq_fragment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/faq_fragment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/menu_fragment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/menu_fragment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/row_item_faq.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/row_item_faq.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/row_item_speed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/row_item_speed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/screen_info_fragment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/screen_info_fragment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/navigation/main_nav_graph.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/navigation/main_nav_graph.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-ar/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-ar/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-es/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-es/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-hi/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-hi/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-id/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-id/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-it/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-it/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-ja/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-ja/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-pt-rBR/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-pt-rBR/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-pt/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-pt/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +125,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=/Users/riccardopezzolati/.android/avd/7_WSVGA_Tablet_API_33.avd)]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=C:\Users\r.pezzolati\.android\avd\Pixel_8_Pro_API_34_2.avd)]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -138,7 +158,6 @@
     </option>
   </component>
   <component name="GenerateSignedApkSettings">
-    <option name="EXPORT_PRIVATE_KEY" value="false" />
     <option name="KEY_STORE_PATH" value="$USER_HOME$/Documents/key0" />
     <option name="KEY_ALIAS" value="key0" />
   </component>
@@ -149,7 +168,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -179,14 +198,18 @@
     "git-widget-placeholder": "devel",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/r.pezzolati/Downloads",
-    "memory.settings.postsync.last.time.stamp": "1702323664650"
+    "memory.settings.postsync.last.time.stamp": "1702323664650",
+    "project.structure.last.edited": "Suggestions",
+    "project.structure.proportion": "0.17",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.notifications"
   },
   "keyToStringList": {
     "ExportApk.BuildVariants": [
       "release"
     ],
     "kotlin-gradle-user-dirs": [
-      "/Users/riccardopezzolati/.gradle"
+      "C:\\Users\\r.pezzolati\\.gradle"
     ]
   }
 }]]></component>
@@ -318,12 +341,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/rpt/tool/badpixelsearch/ui/screen/ScreenInfoFragment.kt</url>
-          <line>40</line>
+          <line>43</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/rpt/tool/badpixelsearch/ui/screen/ScreenInfoFragment.kt</url>
-          <line>120</line>
+          <line>127</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>

@@ -69,4 +69,8 @@
     <string name="back">Fai clic sul pulsante per tornare al menu</string>
     <string name="goBack">INDIETRO</string>
     <string name="slide">Scorri verso sinistra o destra per iniziare la ricerca\nOpzione selezionata $1</string>
+    <string name="background">background</string>
+    <string name="arrow">arrow</string>
+    <string name="question">question</string>
+    <string name="screen_info_title">Informazioni sullo schermo</string>
 </resources>

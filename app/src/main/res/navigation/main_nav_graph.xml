@@ -9,7 +9,7 @@
         android:id="@+id/MenuFragment"
         android:name="rpt.tool.badpixelsearch.ui.menu.MenuFragment"
         android:label="BadPixelSearchFragment"
-        tools:layout="@layout/bad_pixel_search_fragment">
+        tools:layout="@layout/menu_fragment">
         <action
             android:id="@+id/action_menuFragment_to_settingsFragment"
             app:destination="@id/SettingsFragment" />

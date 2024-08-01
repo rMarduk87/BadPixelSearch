@@ -16,7 +16,7 @@ android {
         applicationId "rpt.tool.badpixelsearch"
         minSdk 26
         targetSdk 34
-        versionCode 16
+        versionCode 17
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -71,10 +71,9 @@ dependencies {
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
     implementation "androidx.navigation:navigation-dynamic-features-fragment:$nav_version"
     //InApp Update
-    implementation 'com.google.android.play:review:2.0.1'
+    implementation 'com.google.android.play:feature-delivery:2.1.0'
     implementation 'com.google.android.play:app-update:2.1.0'
-    //Lottie
-    implementation 'com.airbnb.android:lottie:6.1.0'
+    implementation 'com.google.android.gms:play-services-tasks:18.2.0'
     //Firebase
     implementation platform('com.google.firebase:firebase-bom:33.1.2')
     implementation 'com.google.firebase:firebase-analytics-ktx'

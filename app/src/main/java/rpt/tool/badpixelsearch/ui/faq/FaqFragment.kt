@@ -1,5 +1,6 @@
 package rpt.tool.badpixelsearch.ui.faq
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -16,9 +17,9 @@ import rpt.tool.badpixelsearch.utils.view.custom.animation.AnimationUtils
 
 class FaqFragment : BaseFragment<FaqFragmentBinding>(FaqFragmentBinding::inflate) {
 
-    var lst_faq: MutableList<FAQModel> = arrayListOf()
-    var answer_block_lst: MutableList<LinearLayout> = arrayListOf()
-    var img_faq_lst: MutableList<ImageView> = arrayListOf()
+    private var lstFaq: MutableList<FAQModel> = arrayListOf()
+    private var answerBlockLst: MutableList<LinearLayout> = arrayListOf()
+    private var imgFaqLst: MutableList<ImageView> = arrayListOf()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -37,54 +38,55 @@ class FaqFragment : BaseFragment<FaqFragmentBinding>(FaqFragmentBinding::inflate
         var faqModel = FAQModel()
         faqModel.question = (requireContext().resources.getString(R.string.faq_question_1))
         faqModel.answer = (requireContext().resources.getString(R.string.faq_answer_1))
-        lst_faq.add(faqModel)
+        lstFaq.add(faqModel)
 
         faqModel = FAQModel()
         faqModel.question = (requireContext().resources.getString(R.string.faq_question_2))
         faqModel.answer = (requireContext().resources.getString(R.string.faq_answer_2))
-        lst_faq.add(faqModel)
+        lstFaq.add(faqModel)
 
         faqModel = FAQModel()
         faqModel.question = (requireContext().resources.getString(R.string.faq_question_3))
         faqModel.answer = (requireContext().resources.getString(R.string.faq_answer_3))
-        lst_faq.add(faqModel)
+        lstFaq.add(faqModel)
 
         faqModel = FAQModel()
         faqModel.question = (requireContext().resources.getString(R.string.faq_question_4))
         faqModel.answer = (requireContext().resources.getString(R.string.faq_answer_4))
-        lst_faq.add(faqModel)
+        lstFaq.add(faqModel)
 
         faqModel = FAQModel()
         faqModel.question = (requireContext().resources.getString(R.string.faq_question_5))
         faqModel.answer = (requireContext().resources.getString(R.string.faq_answer_5))
-        lst_faq.add(faqModel)
+        lstFaq.add(faqModel)
 
 
     }
 
+    @SuppressLint("InflateParams")
     private fun loadFAQData() {
         binding.faqBlock.removeAllViews()
-        for (k in lst_faq.indices) {
-            val rowModel = lst_faq[k]
+        for (k in lstFaq.indices) {
+            val rowModel = lstFaq[k]
             val layoutInflater = LayoutInflater.from(requireContext())
             val itemView = layoutInflater.inflate(R.layout.row_item_faq, null, false)
-            val lbl_question = itemView.findViewById<AppCompatTextView>(R.id.lbl_question)
-            val lbl_answer = itemView.findViewById<AppCompatTextView>(R.id.lbl_answer)
-            val question_block = itemView.findViewById<LinearLayout>(R.id.question_block)
-            val answer_block = itemView.findViewById<LinearLayout>(R.id.answer_block)
-            val img_faq = itemView.findViewById<ImageView>(R.id.img_faq)
-            answer_block_lst.add(answer_block)
-            img_faq_lst.add(img_faq)
-            lbl_question.text = rowModel.question
-            lbl_answer.text = rowModel.answer
-            question_block.setOnClickListener {
-                if (answer_block.visibility == View.GONE) {
+            val lblQuestion = itemView.findViewById<AppCompatTextView>(R.id.lbl_question)
+            val lblAnswer = itemView.findViewById<AppCompatTextView>(R.id.lbl_answer)
+            val questionBlock = itemView.findViewById<LinearLayout>(R.id.question_block)
+            val answerBlock = itemView.findViewById<LinearLayout>(R.id.answer_block)
+            val imgFaq = itemView.findViewById<ImageView>(R.id.img_faq)
+            answerBlockLst.add(answerBlock)
+            imgFaqLst.add(imgFaq)
+            lblQuestion.text = rowModel.question
+            lblAnswer.text = rowModel.answer
+            questionBlock.setOnClickListener {
+                if (answerBlock.visibility == View.GONE) {
                     viewAnswer(k)
-                    img_faq.setImageResource(R.drawable.ic_faq_minus)
-                    AnimationUtils.expand(answer_block)
+                    imgFaq.setImageResource(R.drawable.ic_faq_minus)
+                    AnimationUtils.expand(answerBlock)
                 } else {
-                    img_faq.setImageResource(R.drawable.ic_faq_plus)
-                    AnimationUtils.collapse(answer_block)
+                    imgFaq.setImageResource(R.drawable.ic_faq_plus)
+                    AnimationUtils.collapse(answerBlock)
                 }
             }
             binding.faqBlock.addView(itemView)
@@ -92,10 +94,10 @@ class FaqFragment : BaseFragment<FaqFragmentBinding>(FaqFragmentBinding::inflate
     }
 
     private fun viewAnswer(pos: Int) {
-        for (k in answer_block_lst.indices) {
+        for (k in answerBlockLst.indices) {
             if (k == pos) continue else {
-                img_faq_lst[k].setImageResource(R.drawable.ic_faq_plus)
-                AnimationUtils.collapse(answer_block_lst[k])
+                imgFaqLst[k].setImageResource(R.drawable.ic_faq_plus)
+                AnimationUtils.collapse(answerBlockLst[k])
             }
         }
     }
