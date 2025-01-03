@@ -5,9 +5,9 @@ App to check for dead pixels with 8 color, black and white screens
 # Screeanshot
 
 
-![screenshot 3](https://github.com/rMarduk87/BadPixelSearch/assets/30796324/d01a8f1a-334b-41ad-ba95-b35d50139136)
+<img width="260" alt="1" src="https://github.com/user-attachments/assets/5c3d83ca-25e9-42fb-ba4b-e297665629fd" />
 ![screenshot 4](https://github.com/rMarduk87/BadPixelSearch/assets/30796324/c9de9677-544e-49dd-88df-d196a2bd963c)
-![screenshot 5](https://github.com/rMarduk87/BadPixelSearch/assets/30796324/71e31fc8-3338-4e00-a669-84ed7cc99b20)
+<img width="260" alt="3" src="https://github.com/user-attachments/assets/9c9af009-1f78-4c11-8d05-fda2e581f9cf" />
 ![screenshot 6](https://github.com/rMarduk87/BadPixelSearch/assets/30796324/8958d0b4-eb91-44c7-bde0-896c41ff6bdc)
 <img width="420" alt="5" src="https://github.com/rMarduk87/BadPixelSearch/assets/30796324/175bb45d-07ce-4bfe-ae26-379fedf2584a">
 <img width="409" alt="6" src="https://github.com/rMarduk87/BadPixelSearch/assets/30796324/c60bf71a-f360-4292-955e-75fcc82969ed">
