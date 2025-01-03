@@ -18,7 +18,7 @@ import android.widget.EditText
 import android.widget.Toast
 import rpt.tool.badpixelsearch.BaseFragment
 import rpt.tool.badpixelsearch.R
-import rpt.tool.badpixelsearch.databinding.MenuFragmentBinding
+import rpt.tool.badpixelsearch.databinding.FragmentMenuBinding
 import rpt.tool.badpixelsearch.utils.managers.SharedPreferencesManager
 import rpt.tool.badpixelsearch.utils.navigation.safeNavController
 import rpt.tool.badpixelsearch.utils.navigation.safeNavigate
@@ -26,7 +26,7 @@ import rpt.tool.badpixelsearch.utils.navigation.safeNavigate
 
 @Suppress("DEPRECATION")
 class MenuFragment :
-    BaseFragment<MenuFragmentBinding>(MenuFragmentBinding::inflate){
+    BaseFragment<FragmentMenuBinding>(FragmentMenuBinding::inflate){
 
     private val durationValue = 6000L
 

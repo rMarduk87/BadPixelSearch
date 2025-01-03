@@ -9,15 +9,15 @@ import android.widget.FrameLayout
 import android.widget.PopupWindow
 import rpt.tool.badpixelsearch.BaseFragment
 import rpt.tool.badpixelsearch.R
+import rpt.tool.badpixelsearch.databinding.FragmentSettingsBinding
 import rpt.tool.badpixelsearch.databinding.RowItemSpeedBinding
-import rpt.tool.badpixelsearch.databinding.SettingsFragmentsBinding
 import rpt.tool.badpixelsearch.utils.AppUtils
 import rpt.tool.badpixelsearch.utils.managers.SharedPreferencesManager
 import rpt.tool.badpixelsearch.utils.navigation.safeNavController
 import rpt.tool.badpixelsearch.utils.navigation.safeNavigate
 
 @Suppress("DEPRECATION")
-class SettingsFragments : BaseFragment<SettingsFragmentsBinding>(SettingsFragmentsBinding::inflate) {
+class SettingsFragments : BaseFragment<FragmentSettingsBinding>(FragmentSettingsBinding::inflate) {
 
     private var mDropdown: PopupWindow? = null
 

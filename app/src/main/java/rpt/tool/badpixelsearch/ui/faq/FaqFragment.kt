@@ -11,11 +11,11 @@ import androidx.appcompat.widget.AppCompatTextView
 import rpt.tool.badpixelsearch.BaseFragment
 import rpt.tool.badpixelsearch.MainActivity
 import rpt.tool.badpixelsearch.R
-import rpt.tool.badpixelsearch.databinding.FaqFragmentBinding
+import rpt.tool.badpixelsearch.databinding.FragmentFaqBinding
 import rpt.tool.badpixelsearch.model.faq.FAQModel
 import rpt.tool.badpixelsearch.utils.view.custom.animation.AnimationUtils
 
-class FaqFragment : BaseFragment<FaqFragmentBinding>(FaqFragmentBinding::inflate) {
+class FaqFragment : BaseFragment<FragmentFaqBinding>(FragmentFaqBinding::inflate) {
 
     private var lstFaq: MutableList<FAQModel> = arrayListOf()
     private var answerBlockLst: MutableList<LinearLayout> = arrayListOf()

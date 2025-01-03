@@ -11,14 +11,15 @@ import com.torrydo.screenez.ScreenEz
 import rpt.tool.badpixelsearch.BaseFragment
 import rpt.tool.badpixelsearch.MainActivity
 import rpt.tool.badpixelsearch.R
-import rpt.tool.badpixelsearch.databinding.ScreenInfoFragmentBinding
+import rpt.tool.badpixelsearch.databinding.FragmentScreenInfoBinding
 import rpt.tool.badpixelsearch.utils.AppUtils
 import rpt.tool.badpixelsearch.utils.extensions.roundToString
 import kotlin.math.sqrt
 
 
 @Suppress("DEPRECATION")
-class ScreenInfoFragment : BaseFragment<ScreenInfoFragmentBinding>(ScreenInfoFragmentBinding::inflate) {
+class ScreenInfoFragment :
+    BaseFragment<FragmentScreenInfoBinding>(FragmentScreenInfoBinding::inflate) {
 
     private var fullResolution = ""
     private var currentResolution = ""
