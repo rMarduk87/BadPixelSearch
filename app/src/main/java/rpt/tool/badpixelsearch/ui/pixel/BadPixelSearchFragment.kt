@@ -13,7 +13,7 @@ import androidx.annotation.RequiresApi
 import rpt.tool.badpixelsearch.BaseFragment
 import rpt.tool.badpixelsearch.FixPixelActivity
 import rpt.tool.badpixelsearch.R
-import rpt.tool.badpixelsearch.databinding.BadPixelSearchFragmentBinding
+import rpt.tool.badpixelsearch.databinding.FragmentBadPixelSearchBinding
 import rpt.tool.badpixelsearch.utils.extensions.modeToText
 import rpt.tool.badpixelsearch.utils.managers.SharedPreferencesManager
 import rpt.tool.badpixelsearch.utils.navigation.safeNavController
@@ -22,7 +22,7 @@ import kotlin.math.abs
 
 @Suppress("DEPRECATION")
 class BadPixelSearchFragment :
-    BaseFragment<BadPixelSearchFragmentBinding>(BadPixelSearchFragmentBinding::inflate),
+    BaseFragment<FragmentBadPixelSearchBinding>(FragmentBadPixelSearchBinding::inflate),
     View.OnClickListener {
 
     private var finalizer: Runnable? = null

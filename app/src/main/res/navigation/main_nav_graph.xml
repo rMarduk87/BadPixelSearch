@@ -9,7 +9,7 @@
         android:id="@+id/MenuFragment"
         android:name="rpt.tool.badpixelsearch.ui.menu.MenuFragment"
         android:label="BadPixelSearchFragment"
-        tools:layout="@layout/menu_fragment">
+        tools:layout="@layout/fragment_menu">
         <action
             android:id="@+id/action_menuFragment_to_settingsFragment"
             app:destination="@id/SettingsFragment" />
@@ -27,7 +27,7 @@
         android:id="@+id/SettingsFragment"
         android:name="rpt.tool.badpixelsearch.ui.settings.SettingsFragments"
         android:label="SettingsFragment"
-        tools:layout="@layout/settings_fragments">
+        tools:layout="@layout/fragment_settings">
         <action
             android:id="@+id/action_settingsFragment_to_menuFragment"
             app:destination="@id/MenuFragment" />
@@ -36,7 +36,7 @@
         android:id="@+id/FaqFragment"
         android:name="rpt.tool.badpixelsearch.ui.faq.FaqFragment"
         android:label="FaqFragment"
-        tools:layout="@layout/faq_fragment">
+        tools:layout="@layout/fragment_faq">
         <action
             android:id="@+id/action_faqFragment_to_menuFragment"
             app:destination="@id/MenuFragment" />
@@ -45,7 +45,7 @@
         android:id="@+id/ScreenInfoFragment"
         android:name="rpt.tool.badpixelsearch.ui.screen.ScreenInfoFragment"
         android:label="ScreenInfoFragment"
-        tools:layout="@layout/screen_info_fragment">
+        tools:layout="@layout/fragment_screen_info">
         <action
             android:id="@+id/action_screenInfoFragment_to_menuFragment"
             app:destination="@id/MenuFragment" />
@@ -54,7 +54,7 @@
         android:id="@+id/BadPixelSearchFragment"
         android:name="rpt.tool.badpixelsearch.ui.pixel.BadPixelSearchFragment"
         android:label="BadPixelSearchFragment"
-        tools:layout="@layout/bad_pixel_search_fragment">
+        tools:layout="@layout/fragment_bad_pixel_search">
         <action
             android:id="@+id/action_badPixelSearchFragment_to_menuFragment"
             app:destination="@id/MenuFragment" />
