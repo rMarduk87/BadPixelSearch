@@ -3,7 +3,7 @@
     <string name="info">Scorri sullo schermo per cambiare colore</string>
     <string name="version">Versione dell\'app:</string>
     <string name="build">Costruisci</string>
-    <string name="dot">...</string>
+    <string name="dot">…</string>
     <string name="get_started">INIZIA</string>
     <string name="walkthrough_text_one">Pulisci con cura lo schermo del telefono o un tampone, uno straccio morbido o un tovagliolo da sporco, polvere, macchie di grasso e altro inquinamento.</string>
     <string name="walkthrough_text_two">Avvia l\'applicazione.</string>
@@ -52,11 +52,11 @@
     <string name="visual_resolution">Risoluzione visiva</string>
     <string name="screen_scale">Scala delle\ndimensioni schermo</string>
     <string name="pixel_density">Densità pixel</string>
-    <string name="screen_size">Dimensione dello schermo</string>
-    <string name="refresh_rate">Frequenza di aggiornamento</string>
+    <string name="screen_size">Dimensione dello\nschermo</string>
+    <string name="refresh_rate">Frequenza di\naggiornamento</string>
     <string name="screen_type">Tipo di schermo</string>
     <string name="aspect_ratio">Proporzioni</string>
-    <string name="screen_brightness">Luminosità dello schermo</string>
+    <string name="screen_brightness">Luminosità dello\nschermo</string>
     <string name="wide_color_gamut">Ampia gamma di colori</string>
     <string name="hdr_screen">Schermo HDR</string>
     <string name="pixel_format">Formato pixel</string>
@@ -73,4 +73,6 @@
     <string name="arrow">arrow</string>
     <string name="question">question</string>
     <string name="screen_info_title">Informazioni sullo schermo</string>
+    <string name="add_language_to_app">Aggiungi lingua all\'app</string>
+    <string name="message">Messaggio</string>
 </resources>

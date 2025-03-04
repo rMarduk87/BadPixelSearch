@@ -3,7 +3,7 @@
     <string name="info">画面をスワイプして色を変更します</string>
     <string name="version">アプリのバージョン:</string>
     <string name="build">ビルド</string>
-    <string name="dot">...</string>
+    <string name="dot">…</string>
     <string name="get_started">開始</string>
     <string name="walkthrough_text_one">電話の画面、綿棒、柔らかい布、ナプキンを使用して、汚れ、ほこり、油汚れ、その他の汚染物質を注意深く拭き取ります。</string>
     <string name="walkthrough_text_two">アプリケーションを起動します。</string>
@@ -73,4 +73,6 @@
     <string name="arrow">arrow</string>
     <string name="question">question</string>
     <string name="screen_info_title">画面情報</string>
+    <string name="add_language_to_app">アプリに言語を追加</string>
+    <string name="message">メッセージ</string>
 </resources>

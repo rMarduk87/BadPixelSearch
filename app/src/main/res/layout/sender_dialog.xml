@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingLeft="20dp"
@@ -10,19 +11,24 @@
         android:id="@+id/txtSub"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:autofillHints=""
         android:focusable="false"
-        android:text="Add Language To App"/>
+        android:text="@string/add_language_to_app"
+        tools:ignore="LabelFor,TextFields" />
     <EditText
         android:id="@+id/txtMsg"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:autofillHints=""
         android:gravity="top"
-        android:hint="Message"/>
+        android:hint="@string/message"
+        tools:ignore="TextFields" />
     <Button
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
-        android:text="Send"
-        android:id="@+id/btnSend"/>
+        android:text="@string/send"
+        android:id="@+id/btnSend"
+        tools:ignore="RtlHardcoded" />
 </LinearLayout>

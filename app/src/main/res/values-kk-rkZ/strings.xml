@@ -3,7 +3,7 @@
     <string name="info">Түсті өзгерту үшін экранды сырғытыңыз</string>
     <string name="version">Қолданба нұсқасы:</string>
     <string name="build">Құру</string>
-    <string name="dot">...</string>
+    <string name="dot">…</string>
     <string name="get_started">БАСТАУ</string>
     <string name="walkthrough_text_one">Телефон экранын немесе тампонды, жұмсақ шүберекті немесе майлықты кірден, шаңнан, май дақтарынан және басқа ластанулардан мұқият тазалаңыз.</string>
     <string name="walkthrough_text_two">Қолданбаны іске қосыңыз.</string >
@@ -73,4 +73,6 @@
     <string name="arrow">көрсеткі</string>
     <string name="question" >сұрақ</string>
     <string name="screen_info_title">Экран ақпараты</string>
+    <string name = "add_language_to_app">Қолданбаға тіл қосу</string>
+    <string name="message">Хабар</string>
 </resources>
