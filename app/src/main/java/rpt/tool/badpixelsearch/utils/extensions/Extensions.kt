@@ -12,3 +12,36 @@ fun Int.modeToText() : Int{
         else -> R.string.manualMode
     }
 }
+
+fun String.toEscapedString() : String{
+    var spaceCount = 0
+    for (c in this.toCharArray()) {
+        if (c == ' ') {
+            spaceCount++
+        }
+    }
+    if(spaceCount==0){
+        return this
+    }
+    return this.replace(' ','\n',true)
+}
+
+fun String.toNewLineString() : String{
+    var spaceCount = 0
+    for (c in this.toCharArray()) {
+        if (c == ' ') {
+            spaceCount++
+        }
+    }
+    if(spaceCount==0){
+        return this
+    }
+
+    val start: Int = this.lastIndexOf(' ')
+    val builder = StringBuilder()
+    builder.append(this.substring(0, start))
+    builder.append("\n").append("px")
+
+
+    return builder.toString()
+}

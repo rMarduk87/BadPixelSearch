@@ -3,7 +3,7 @@
     <string name="info">Deslize na tela para mudar de cor</string>
     <string name="version">Versão do aplicativo:</string>
     <string name="build">Construir</string>
-    <string name="dot">...</string>
+    <string name="dot">…</string>
     <string name="get_started">INICIAR</string>
     <string name="walkthrough_text_one">Limpe cuidadosamente a tela do telefone ou um pano macio ou guardanapo de sujeira, poeira, manchas de gordura e outras impurezas.</string>
     <string name="walkthrough_text_two">Iniciar aplicativo.</string>
@@ -73,4 +73,6 @@
     <string name="arrow">arrow</string>
     <string name="question">question</string>
     <string name="screen_info_title">Informações da tela</string>
+    <string name="add_language_to_app">Adicionar idioma à aplicação</string>
+    <string name="message">Mensagem</string>
 </resources>

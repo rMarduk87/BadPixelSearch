@@ -14,6 +14,8 @@ import rpt.tool.badpixelsearch.R
 import rpt.tool.badpixelsearch.databinding.FragmentScreenInfoBinding
 import rpt.tool.badpixelsearch.utils.AppUtils
 import rpt.tool.badpixelsearch.utils.extensions.roundToString
+import rpt.tool.badpixelsearch.utils.extensions.toEscapedString
+import rpt.tool.badpixelsearch.utils.extensions.toNewLineString
 import kotlin.math.sqrt
 
 
@@ -46,14 +48,14 @@ class ScreenInfoFragment :
 
         binding.leftIconBlock.setOnClickListener{ finish() }
 
-        fullResolution = getScreenResolution()
-        currentResolution = getScreenResolution()
-        visualResolution = getVisualResolution()
+        fullResolution = getScreenResolution().toNewLineString()
+        currentResolution = getScreenResolution().toNewLineString()
+        visualResolution = getVisualResolution().toNewLineString()
         screenScale = getScreenScale()
         pixelDensity = getPixelDensity()
         screenSize = getScreenSize()
         refreshRate = display.refreshRate.roundToString() + " Hz"
-        screenType = display.name
+        screenType = display.name.toEscapedString()
         aspectRatio = getAspectRatio()
         screenBrightness = getScreenBrightness()
         wideColorGamut = if(display.isWideColorGamut) requireContext().getString(R.string.yes)
@@ -139,7 +141,7 @@ class ScreenInfoFragment :
             e.printStackTrace()
         }
 
-        return AppUtils.getScreenBrightness(brightness) + (if(mode==0)
+        return AppUtils.getScreenBrightness(brightness)+"\n" + (if(mode==0)
             requireContext().getString(R.string.manualMode) else
                 requireContext().getString(R.string.automaticMode)) + ")"
     }

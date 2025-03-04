@@ -3,7 +3,7 @@
     <string name="info">Проведите по экрану, чтобы изменить цвет</string>
     <string name="version">Версия приложения:</string>
     <string name="build">Сборка</string>
-    <string name="dot">...</string>
+    <string name="dot">…</string>
     <string name="get_started">START</string>
     <string name="walkthrough_text_one">Осторожно очистите экран телефона тампоном, мягкой тряпкой или салфеткой от грязи, пыли, жирных пятен и других загрязнений.</string>
     <string name="walkthrough_text_two">Запустите приложение.</string>
@@ -73,4 +73,6 @@
     <string name="arrow">стрелка</string>
     <string name="question">вопрос</string>
     <string name="screen_info_title">Информация на экране</string>
+    <string name="add_language_to_app">Adăugați limba în aplicație</string>
+    <string name="message">Mesaj</string>
 </resources>
