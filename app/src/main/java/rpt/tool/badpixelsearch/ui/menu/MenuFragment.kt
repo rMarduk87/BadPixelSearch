@@ -22,6 +22,7 @@ import rpt.tool.badpixelsearch.databinding.FragmentMenuBinding
 import rpt.tool.badpixelsearch.utils.managers.SharedPreferencesManager
 import rpt.tool.badpixelsearch.utils.navigation.safeNavController
 import rpt.tool.badpixelsearch.utils.navigation.safeNavigate
+import androidx.core.net.toUri
 
 
 @Suppress("DEPRECATION")
@@ -126,7 +127,7 @@ class MenuFragment :
 
         val emailIntent = Intent(Intent.ACTION_SEND)
         emailIntent.type = "text/plain"
-        emailIntent.setData(Uri.parse("mailto:"))
+        emailIntent.setData("mailto:".toUri())
         emailIntent.putExtra(Intent.EXTRA_EMAIL, emailIds)
         emailIntent.putExtra(Intent.EXTRA_SUBJECT, subject)
         emailIntent.putExtra(Intent.EXTRA_TEXT, textMessage)
