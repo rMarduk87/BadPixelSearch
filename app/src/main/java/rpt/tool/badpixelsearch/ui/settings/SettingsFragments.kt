@@ -37,9 +37,13 @@ class SettingsFragments : BaseFragment<FragmentSettingsBinding>(FragmentSettings
         }
 
         if(SharedPreferencesManager.mode == 1){
-            binding.speedSuperBlock.visibility = View.VISIBLE
-            binding.interval.visibility = View.VISIBLE
-            binding.scrollView.visibility = View.VISIBLE
+            binding.speedSuperBlock.visibility =
+                if(SharedPreferencesManager.typeMode == 0) View.VISIBLE
+                    else View.GONE
+            binding.interval.visibility = if(SharedPreferencesManager.typeMode == 0) View.VISIBLE
+            else View.GONE
+            binding.scrollView.visibility = if(SharedPreferencesManager.typeMode == 0)
+                View.VISIBLE else View.GONE
             binding.typeModeBlock.visibility = View.VISIBLE
             binding.brightness.visibility = View.GONE
             binding.delayBlock.visibility = View.GONE
@@ -64,10 +68,13 @@ class SettingsFragments : BaseFragment<FragmentSettingsBinding>(FragmentSettings
             SharedPreferencesManager.mode = if (isChecked) 1 else 0
             if(isChecked){
                 binding.switchFixMode.setChecked(false)
-                binding.speedSuperBlock.visibility = View.VISIBLE
+                binding.speedSuperBlock.visibility = if(SharedPreferencesManager.typeMode == 0)
+                    View.VISIBLE else View.GONE
                 binding.typeModeBlock.visibility = View.VISIBLE
-                binding.interval.visibility = View.VISIBLE
-                binding.scrollView.visibility = View.VISIBLE
+                binding.interval.visibility = if(SharedPreferencesManager.typeMode == 0)
+                    View.VISIBLE else View.GONE
+                binding.scrollView.visibility = if(SharedPreferencesManager.typeMode == 0)
+                    View.VISIBLE else View.GONE
                 binding.brightness.visibility = View.GONE
                 binding.delayBlock.visibility = View.GONE
             }
@@ -189,57 +196,75 @@ class SettingsFragments : BaseFragment<FragmentSettingsBinding>(FragmentSettings
             bindingRow.lblHrect.text = requireContext().getString(R.string.horizontal_rectangle)
             bindingRow.lblVrect.text = requireContext().getString(R.string.vertical_rectangle)
             bindingRow.lblGradient.text = requireContext().getString(R.string.gradient)
-            bindingRow.lblScreenLine.text = requireContext().getString(R.string.screen_line)
 
             bindingRow.lblColorLoop.setOnClickListener {
                 SharedPreferencesManager.typeMode = 0
                 binding.txtType.text = requireContext().getString(R.string.color_loop)
+                binding.typeModeBlock.visibility = View.VISIBLE
+                binding.speedSuperBlock.visibility = View.VISIBLE
+                binding.scrollView.visibility = View.VISIBLE
+                binding.interval.visibility = View.VISIBLE
                 mDropdown!!.dismiss()
             }
             bindingRow.lblBlackWhite.setOnClickListener {
                 SharedPreferencesManager.typeMode = 1
                 binding.txtType.text = requireContext().getString(R.string.black_and_white)
+                binding.speedSuperBlock.visibility = View.GONE
+                binding.interval.visibility = View.GONE
+                binding.scrollView.visibility = View.GONE
                 mDropdown!!.dismiss()
             }
             bindingRow.lblNoise.setOnClickListener {
                 SharedPreferencesManager.typeMode = 2
                 binding.txtType.text = requireContext().getString(R.string.noise)
+                binding.speedSuperBlock.visibility = View.GONE
+                binding.interval.visibility = View.GONE
+                binding.scrollView.visibility = View.GONE
                 mDropdown!!.dismiss()
             }
             bindingRow.lblHline.setOnClickListener {
                 SharedPreferencesManager.typeMode = 3
                 binding.txtType.text = requireContext().getString(R.string.horizontal_line)
                 SharedPreferencesManager.isVertical = false
+                binding.speedSuperBlock.visibility = View.GONE
+                binding.interval.visibility = View.GONE
+                binding.scrollView.visibility = View.GONE
                 mDropdown!!.dismiss()
             }
             bindingRow.lblVline.setOnClickListener {
                 SharedPreferencesManager.typeMode = 4
                 binding.txtType.text = requireContext().getString(R.string.vertical_line)
                 SharedPreferencesManager.isVertical = true
+                binding.speedSuperBlock.visibility = View.GONE
+                binding.interval.visibility = View.GONE
+                binding.scrollView.visibility = View.GONE
                 mDropdown!!.dismiss()
             }
             bindingRow.lblHrect.setOnClickListener {
                 SharedPreferencesManager.typeMode = 5
                 binding.txtType.text = requireContext().getString(R.string.horizontal_rectangle)
                 SharedPreferencesManager.isVertical = false
+                binding.speedSuperBlock.visibility = View.GONE
+                binding.interval.visibility = View.GONE
+                binding.scrollView.visibility = View.GONE
                 mDropdown!!.dismiss()
             }
             bindingRow.lblVrect.setOnClickListener {
                 SharedPreferencesManager.typeMode = 6
                 binding.txtType.text = requireContext().getString(R.string.vertical_rectangle)
                 SharedPreferencesManager.isVertical = true
+                binding.speedSuperBlock.visibility = View.GONE
+                binding.interval.visibility = View.GONE
+                binding.scrollView.visibility = View.GONE
                 mDropdown!!.dismiss()
             }
 
             bindingRow.lblGradient.setOnClickListener {
                 SharedPreferencesManager.typeMode = 7
                 binding.txtType.text = requireContext().getString(R.string.gradient)
-                mDropdown!!.dismiss()
-            }
-
-            bindingRow.lblScreenLine.setOnClickListener {
-                SharedPreferencesManager.typeMode = 8
-                binding.txtType.text = requireContext().getString(R.string.screen_line)
+                binding.speedSuperBlock.visibility = View.GONE
+                binding.interval.visibility = View.GONE
+                binding.scrollView.visibility = View.GONE
                 mDropdown!!.dismiss()
             }
 

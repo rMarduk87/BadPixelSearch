@@ -19,9 +19,6 @@
         tools:ignore="RtlEnabled,UnusedAttribute"
         tools:targetApi="31">
         <activity
-            android:name=".GridLineTestActivity"
-            android:exported="false" />
-        <activity
             android:name=".GradientTestActivity"
             android:exported="false" />
         <activity

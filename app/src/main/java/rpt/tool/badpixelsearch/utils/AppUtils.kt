@@ -37,6 +37,7 @@ class AppUtils {
                 4->text = context.getString(R.string.vertical_line)
                 5->text = context.getString(R.string.horizontal_rectangle)
                 6->text = context.getString(R.string.vertical_rectangle)
+                7->text = context.getString(R.string.gradient)
             }
 
             return text

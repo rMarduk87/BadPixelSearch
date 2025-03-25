@@ -89,7 +89,7 @@
     <string name="vertical_line">Linea verticale</string>
     <string name="horizontal_rectangle">Rettangolo orizzontale</string>
     <string name="vertical_rectangle">Rettangolo verticale</string>
-    <string name="device_info">INFORMAZIONI DISPOSITIVO</string>
+    <string name="device_info">DEVICE INFO</string>
     <string name="device_info_title">Informazioni dispositivo</string>
     <string name="model">Modello</string>
     <string name="manufacturer">Produttore</string>
@@ -107,7 +107,6 @@
     <string name="answer">Risposta</string>
     <string name="green_screen">Schermo verde</string>
     <string name="gradient">Gradiente di colore</string>
-    <string name="screen_line">Linea di colore</string>
     <string name="white">Bianco</string>
     <string name="red">Rosso</string>
     <string name="green">Verde</string>

@@ -26,7 +26,6 @@ import rpt.tool.badpixelsearch.BadPixelSearchActivity
 import rpt.tool.badpixelsearch.PixelTestActivity
 import rpt.tool.badpixelsearch.NoiseSearchActivity
 import rpt.tool.badpixelsearch.GradientTestActivity
-import rpt.tool.badpixelsearch.GridLineTestActivity
 
 
 @Suppress("DEPRECATION")
@@ -93,10 +92,7 @@ class MenuFragment :
                 2->startActivity(Intent(requireContext(),NoiseSearchActivity::class.java))
                 3,4,5,6->startActivity(Intent(requireContext(),PixelTestActivity::class.java))
                 7->startActivity(Intent(requireContext(),GradientTestActivity::class.java))
-                8->startActivity(Intent(requireContext(),GridLineTestActivity::class.java))
-
             }
-
         }
 
         binding.deviceInfoBtn.setOnClickListener{
@@ -107,8 +103,6 @@ class MenuFragment :
         val point = Point()
         requireActivity().windowManager.defaultDisplay.getSize(point)
         val width = binding.logoAnimated.measuredWidth.toFloat()
-
-
 
         val animator1 = ObjectAnimator
             .ofFloat(binding.logoAnimated,
@@ -138,7 +132,6 @@ class MenuFragment :
         subject: String,
         textMessage: String
     ) {
-
 
         val emailIntent = Intent(Intent.ACTION_SEND)
         emailIntent.type = "text/plain"
