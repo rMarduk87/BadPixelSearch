@@ -29,6 +29,27 @@
                       </LayoutPositions>
                     </value>
                   </entry>
+                  <entry key="DeviceInfoFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="24" />
+                            <option name="y" value="331" />
+                          </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_screenInfoFragment_to_menuFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="FaqFragment">
                     <value>
                       <LayoutPositions>
@@ -62,6 +83,11 @@
                         <option name="myPositions">
                           <map>
                             <entry key="action_menuFragment_to_BadPixelSearchFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_menuFragment_to_deviceInfoFragment">
                               <value>
                                 <LayoutPositions />
                               </value>

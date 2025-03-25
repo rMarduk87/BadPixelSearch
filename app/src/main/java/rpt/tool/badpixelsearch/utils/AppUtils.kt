@@ -1,5 +1,7 @@
 package rpt.tool.badpixelsearch.utils
 
+import android.content.Context
+import rpt.tool.badpixelsearch.R
 import rpt.tool.badpixelsearch.utils.extensions.roundToString
 
 
@@ -25,6 +27,21 @@ class AppUtils {
             return brightness.roundToString() + " (" + (brightness*100/250).roundToString() + " %, "
         }
 
+        fun getText(value: Int,context: Context): String{
+            var text = ""
+            when(value){
+                0->text = context.getString(R.string.color_loop)
+                1->text = context.getString(R.string.black_and_white)
+                2->text = context.getString(R.string.noise)
+                3->text = context.getString(R.string.horizontal_line)
+                4->text = context.getString(R.string.vertical_line)
+                5->text = context.getString(R.string.horizontal_rectangle)
+                6->text = context.getString(R.string.vertical_rectangle)
+            }
+
+            return text
+        }
+
 
         const val USERS_SHARED_PREF : String = "user_pref"
         const val FIRST_RUN_KEY : String = "firstrun"
@@ -34,6 +51,8 @@ class AppUtils {
         const val VELOCITY_KEY: String = "scrolling_speed"
         const val INTERVAL_KEY: String = "interval"
         const val FULL_BRIGHTNESS_KEY: String = "full_brightness"
+        const val TYPE_MODE_KEY: String = "type_mode"
+        const val IS_VERTICAL: String = "is_vertical"
         const val ONE = 60000
         const val FIVE = 300000
         const val FIFTY = 900000

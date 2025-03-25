@@ -78,13 +78,13 @@
             tools:ignore="TextSizeCheck" />
 
         <Button
-            android:id="@+id/openFaqMenuBtn"
+            android:id="@+id/deviceInfoBtn"
             android:layout_width="@dimen/dp_120"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dp_25"
             android:layout_marginTop="@dimen/dp_265"
             android:background="@drawable/walk_through_button_bg"
-            android:text="@string/faq"
+            android:text="@string/device_info"
             android:textColor="@color/white"
             android:textSize="14sp"
             tools:ignore="TextSizeCheck,VisualLintButtonSize" />
@@ -102,15 +102,27 @@
             tools:ignore="VisualLintButtonSize" />
 
         <Button
-            android:id="@+id/startBtn"
+            android:id="@+id/openFaqMenuBtn"
             android:layout_width="@dimen/dp_120"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dp_98"
+            android:layout_marginStart="@dimen/dp_25"
+            android:layout_marginTop="@dimen/dp_315"
+            android:background="@drawable/walk_through_button_bg"
+            android:text="@string/faq"
+            android:textSize="14sp"
+            tools:ignore="TextSizeCheck" />
+
+        <Button
+            android:id="@+id/strBtn"
+            android:layout_width="@dimen/dp_120"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_170"
             android:layout_marginTop="@dimen/dp_315"
             android:background="@drawable/walk_through_button_bg"
             android:text="@string/start"
+            android:textColor="@color/white"
             android:textSize="14sp"
-            tools:ignore="TextSizeCheck" />
+            tools:ignore="VisualLintButtonSize" />
 
 
 

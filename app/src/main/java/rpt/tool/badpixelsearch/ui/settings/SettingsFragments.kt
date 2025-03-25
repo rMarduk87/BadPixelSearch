@@ -11,10 +11,12 @@ import rpt.tool.badpixelsearch.BaseFragment
 import rpt.tool.badpixelsearch.R
 import rpt.tool.badpixelsearch.databinding.FragmentSettingsBinding
 import rpt.tool.badpixelsearch.databinding.RowItemSpeedBinding
+import rpt.tool.badpixelsearch.databinding.RowTypeModeBinding
 import rpt.tool.badpixelsearch.utils.AppUtils
 import rpt.tool.badpixelsearch.utils.managers.SharedPreferencesManager
 import rpt.tool.badpixelsearch.utils.navigation.safeNavController
 import rpt.tool.badpixelsearch.utils.navigation.safeNavigate
+import java.lang.Exception
 
 @Suppress("DEPRECATION")
 class SettingsFragments : BaseFragment<FragmentSettingsBinding>(FragmentSettingsBinding::inflate) {
@@ -38,6 +40,7 @@ class SettingsFragments : BaseFragment<FragmentSettingsBinding>(FragmentSettings
             binding.speedSuperBlock.visibility = View.VISIBLE
             binding.interval.visibility = View.VISIBLE
             binding.scrollView.visibility = View.VISIBLE
+            binding.typeModeBlock.visibility = View.VISIBLE
             binding.brightness.visibility = View.GONE
             binding.delayBlock.visibility = View.GONE
         }
@@ -45,10 +48,12 @@ class SettingsFragments : BaseFragment<FragmentSettingsBinding>(FragmentSettings
             binding.speedSuperBlock.visibility = View.GONE
             binding.interval.visibility = View.GONE
             binding.scrollView.visibility = View.GONE
+            binding.typeModeBlock.visibility = View.GONE
         }
 
         if(SharedPreferencesManager.mode==2){
             binding.speedSuperBlock.visibility = View.GONE
+            binding.typeModeBlock.visibility = View.GONE
             binding.interval.visibility = View.GONE
             binding.scrollView.visibility = View.GONE
             binding.brightness.visibility = View.VISIBLE
@@ -60,6 +65,7 @@ class SettingsFragments : BaseFragment<FragmentSettingsBinding>(FragmentSettings
             if(isChecked){
                 binding.switchFixMode.setChecked(false)
                 binding.speedSuperBlock.visibility = View.VISIBLE
+                binding.typeModeBlock.visibility = View.VISIBLE
                 binding.interval.visibility = View.VISIBLE
                 binding.scrollView.visibility = View.VISIBLE
                 binding.brightness.visibility = View.GONE
@@ -67,6 +73,7 @@ class SettingsFragments : BaseFragment<FragmentSettingsBinding>(FragmentSettings
             }
             else{
                 binding.speedSuperBlock.visibility = View.GONE
+                binding.typeModeBlock.visibility = View.GONE
                 binding.interval.visibility = View.GONE
                 binding.scrollView.visibility = View.GONE
             }
@@ -77,6 +84,7 @@ class SettingsFragments : BaseFragment<FragmentSettingsBinding>(FragmentSettings
             if(isChecked){
                 binding.switchAutomaticMode.setChecked(false)
                 binding.speedSuperBlock.visibility = View.GONE
+                binding.typeModeBlock.visibility = View.GONE
                 binding.interval.visibility = View.GONE
                 binding.scrollView.visibility = View.GONE
                 binding.brightness.visibility = View.VISIBLE
@@ -96,16 +104,23 @@ class SettingsFragments : BaseFragment<FragmentSettingsBinding>(FragmentSettings
             initiateSpeedPopupWindow(binding.switchAutomaticMode)
         }
 
+        binding.typeBlock.setOnClickListener{
+            initiateTypeModePopupWindow(binding.switchAutomaticMode)
+        }
+
         binding.txtSpeed.text = if(SharedPreferencesManager.velocity == 0)
             requireContext().getString(R.string.normal)
         else
             requireContext().getString(R.string.fast)
 
+        binding.txtType.text = AppUtils.getText(
+            SharedPreferencesManager.typeMode,requireContext())
+
         binding.rdo1.text = "1 " + requireContext().getString(R.string.min)
         binding.rdo5.text = "5 " + requireContext().getString(R.string.min)
         binding.rdo15.text = "10 " + requireContext().getString(R.string.min)
         binding.rdo30.text = "30 " + requireContext().getString(R.string.min)
-        binding.rdo60.text = "1 " + requireContext().getString(R.string.hour)
+        binding.rdo60.text = "60 " + requireContext().getString(R.string.min)
 
         binding.rdo1.setOnClickListener { saveInterval() }
         binding.rdo5.setOnClickListener { saveInterval() }
@@ -156,7 +171,89 @@ class SettingsFragments : BaseFragment<FragmentSettingsBinding>(FragmentSettings
             )
 
             mDropdown!!.showAsDropDown(v, 5, 5)
-        } catch (e: java.lang.Exception) {
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+        return mDropdown!!
+    }
+
+    private fun initiateTypeModePopupWindow(v: View): PopupWindow {
+        try {
+            val bindingRow: RowTypeModeBinding = RowTypeModeBinding.inflate(layoutInflater)
+
+            bindingRow.lblColorLoop.text = requireContext().getString(R.string.color_loop)
+            bindingRow.lblBlackWhite.text = requireContext().getString(R.string.black_and_white)
+            bindingRow.lblNoise.text = requireContext().getString(R.string.noise)
+            bindingRow.lblHline.text = requireContext().getString(R.string.horizontal_line)
+            bindingRow.lblVline.text = requireContext().getString(R.string.vertical_line)
+            bindingRow.lblHrect.text = requireContext().getString(R.string.horizontal_rectangle)
+            bindingRow.lblVrect.text = requireContext().getString(R.string.vertical_rectangle)
+            bindingRow.lblGradient.text = requireContext().getString(R.string.gradient)
+            bindingRow.lblScreenLine.text = requireContext().getString(R.string.screen_line)
+
+            bindingRow.lblColorLoop.setOnClickListener {
+                SharedPreferencesManager.typeMode = 0
+                binding.txtType.text = requireContext().getString(R.string.color_loop)
+                mDropdown!!.dismiss()
+            }
+            bindingRow.lblBlackWhite.setOnClickListener {
+                SharedPreferencesManager.typeMode = 1
+                binding.txtType.text = requireContext().getString(R.string.black_and_white)
+                mDropdown!!.dismiss()
+            }
+            bindingRow.lblNoise.setOnClickListener {
+                SharedPreferencesManager.typeMode = 2
+                binding.txtType.text = requireContext().getString(R.string.noise)
+                mDropdown!!.dismiss()
+            }
+            bindingRow.lblHline.setOnClickListener {
+                SharedPreferencesManager.typeMode = 3
+                binding.txtType.text = requireContext().getString(R.string.horizontal_line)
+                SharedPreferencesManager.isVertical = false
+                mDropdown!!.dismiss()
+            }
+            bindingRow.lblVline.setOnClickListener {
+                SharedPreferencesManager.typeMode = 4
+                binding.txtType.text = requireContext().getString(R.string.vertical_line)
+                SharedPreferencesManager.isVertical = true
+                mDropdown!!.dismiss()
+            }
+            bindingRow.lblHrect.setOnClickListener {
+                SharedPreferencesManager.typeMode = 5
+                binding.txtType.text = requireContext().getString(R.string.horizontal_rectangle)
+                SharedPreferencesManager.isVertical = false
+                mDropdown!!.dismiss()
+            }
+            bindingRow.lblVrect.setOnClickListener {
+                SharedPreferencesManager.typeMode = 6
+                binding.txtType.text = requireContext().getString(R.string.vertical_rectangle)
+                SharedPreferencesManager.isVertical = true
+                mDropdown!!.dismiss()
+            }
+
+            bindingRow.lblGradient.setOnClickListener {
+                SharedPreferencesManager.typeMode = 7
+                binding.txtType.text = requireContext().getString(R.string.gradient)
+                mDropdown!!.dismiss()
+            }
+
+            bindingRow.lblScreenLine.setOnClickListener {
+                SharedPreferencesManager.typeMode = 8
+                binding.txtType.text = requireContext().getString(R.string.screen_line)
+                mDropdown!!.dismiss()
+            }
+
+            bindingRow.root.measure(
+                View.MeasureSpec.UNSPECIFIED,
+                View.MeasureSpec.UNSPECIFIED
+            )
+            mDropdown = PopupWindow(
+                bindingRow.root, FrameLayout.LayoutParams.WRAP_CONTENT,
+                FrameLayout.LayoutParams.WRAP_CONTENT, true
+            )
+
+            mDropdown!!.showAsDropDown(v, 5, 5)
+        } catch (e: Exception) {
             e.printStackTrace()
         }
         return mDropdown!!
