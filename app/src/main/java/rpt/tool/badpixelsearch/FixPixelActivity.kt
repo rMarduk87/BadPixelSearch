@@ -12,6 +12,9 @@ import android.view.View.OnTouchListener
 import android.view.WindowManager
 import android.widget.FrameLayout
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.WindowCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.WindowInsetsControllerCompat
 import rpt.tool.badpixelsearch.databinding.ActivityFixPixelBinding
 import rpt.tool.badpixelsearch.utils.managers.SharedPreferencesManager
 import java.util.Random
@@ -84,6 +87,11 @@ class FixPixelActivity : AppCompatActivity() {
             }
             lastPressTime = pressTime
         }
+        val windowInsetsController =
+            WindowCompat.getInsetsController(window, window.decorView)
+        windowInsetsController.systemBarsBehavior =
+            WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
+        windowInsetsController.hide(WindowInsetsCompat.Type.systemBars())
         binding.BtnCloseFix.setOnTouchListener(mDelayHideTouchListener)
         fixDelay = SharedPreferencesManager.delay
         if (SharedPreferencesManager.action == "fix") {

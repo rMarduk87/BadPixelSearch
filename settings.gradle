@@ -14,5 +14,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Bad Pixel Search"
+rootProject.name="Bad Pixel Search"
 include ':app'

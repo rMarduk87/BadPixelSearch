@@ -41,7 +41,7 @@
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/lbl_question"
-                    android:layout_width="fill_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_weight="1"
@@ -49,16 +49,17 @@
                     android:fontFamily="@font/calibri_bold"
                     android:importantForAccessibility="no"
                     android:includeFontPadding="true"
-                    android:text="Question"
+                    android:text="@string/question"
                     android:textColor="@color/white"
                     android:textSize="@dimen/dp_14"
-                    tools:ignore="TextSizeCheck" />
+                    tools:ignore="SpUsage,TextSizeCheck" />
 
                 <ImageView
                     android:id="@+id/img_faq"
                     android:layout_width="@dimen/dp_17"
                     android:layout_height="@dimen/dp_17"
                     app:tint="@color/white"
+                    android:contentDescription="@string/img"
                     android:layout_gravity="center_vertical"
                     android:src="@drawable/ic_faq_plus"/>
 
@@ -92,11 +93,11 @@
                     android:includeFontPadding="true"
                     android:paddingBottom="2dp"
                     android:layout_gravity="center_vertical"
-                    android:text="Answer"
+                    android:text="@string/answer"
                     android:textColor="@color/white"
                     android:textSize="@dimen/dp_14"
                     android:fontFamily="@font/calibri_regular"
-                    tools:ignore="InefficientWeight" />
+                    tools:ignore="InefficientWeight,SpUsage" />
 
             </LinearLayout>
 
@@ -107,7 +108,7 @@
             android:layout_width="fill_parent"
             android:layout_height="0.5dp"
             android:layout_marginTop="@dimen/dp_10"
-            android:background="@color/item_line"></View>
+            android:background="@color/item_line" />
 
     </LinearLayout>
 

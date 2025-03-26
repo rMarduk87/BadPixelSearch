@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:background="@color/app_transparant">
+
+	<androidx.core.widget.NestedScrollView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content">
+
+
+	<LinearLayout
+        android:id="@+id/item_block"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:background="@color/white"
+		android:layout_marginEnd="@dimen/dp_15"
+		android:padding="@dimen/dp_5">
+
+		<TextView
+			android:id="@+id/lbl_color_loop"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:includeFontPadding="false"
+			android:layout_gravity="center_vertical"
+			android:text="@string/color_loop"
+			android:padding="@dimen/dp_10"
+			android:textColor="@color/black"
+			android:textSize="@dimen/dp_15"
+            tools:ignore="SpUsage" />
+
+		<TextView
+			android:id="@+id/lbl_black_white"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:includeFontPadding="false"
+			android:layout_gravity="center_vertical"
+			android:text="@string/black_and_white"
+			android:padding="@dimen/dp_10"
+			android:textColor="@color/black"
+			android:textSize="@dimen/dp_15"
+            tools:ignore="SpUsage" />
+
+		<TextView
+			android:id="@+id/lbl_noise"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:includeFontPadding="false"
+			android:layout_gravity="center_vertical"
+			android:text="@string/noise"
+			android:padding="@dimen/dp_10"
+			android:textColor="@color/black"
+			android:textSize="@dimen/dp_15"
+			tools:ignore="SpUsage" />
+
+		<TextView
+			android:id="@+id/lbl_hline"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:includeFontPadding="false"
+			android:layout_gravity="center_vertical"
+			android:text="@string/horizontal_line"
+			android:padding="@dimen/dp_10"
+			android:textColor="@color/black"
+			android:textSize="@dimen/dp_15"
+			tools:ignore="SpUsage" />
+
+		<TextView
+			android:id="@+id/lbl_vline"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:includeFontPadding="false"
+			android:layout_gravity="center_vertical"
+			android:text="@string/vertical_line"
+			android:padding="@dimen/dp_10"
+			android:textColor="@color/black"
+			android:textSize="@dimen/dp_15"
+			tools:ignore="SpUsage" />
+
+		<TextView
+			android:id="@+id/lbl_hrect"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:includeFontPadding="false"
+			android:layout_gravity="center_vertical"
+			android:text="@string/horizontal_rectangle"
+			android:padding="@dimen/dp_10"
+			android:textColor="@color/black"
+			android:textSize="@dimen/dp_15"
+			tools:ignore="SpUsage" />
+
+		<TextView
+			android:id="@+id/lbl_vrect"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:includeFontPadding="false"
+			android:layout_gravity="center_vertical"
+			android:text="@string/vertical_rectangle"
+			android:padding="@dimen/dp_10"
+			android:textColor="@color/black"
+			android:textSize="@dimen/dp_15"
+			tools:ignore="SpUsage" />
+
+		<TextView
+			android:id="@+id/lbl_gradient"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:includeFontPadding="false"
+			android:layout_gravity="center_vertical"
+			android:text="@string/gradient"
+			android:padding="@dimen/dp_10"
+			android:textColor="@color/black"
+			android:textSize="@dimen/dp_15"
+			tools:ignore="SpUsage" />
+
+
+    </LinearLayout>
+
+	</androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

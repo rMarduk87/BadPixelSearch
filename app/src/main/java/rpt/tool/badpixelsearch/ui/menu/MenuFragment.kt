@@ -9,7 +9,6 @@ import android.app.AlertDialog
 import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.graphics.Point
-import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -22,6 +21,11 @@ import rpt.tool.badpixelsearch.databinding.FragmentMenuBinding
 import rpt.tool.badpixelsearch.utils.managers.SharedPreferencesManager
 import rpt.tool.badpixelsearch.utils.navigation.safeNavController
 import rpt.tool.badpixelsearch.utils.navigation.safeNavigate
+import androidx.core.net.toUri
+import rpt.tool.badpixelsearch.BadPixelSearchActivity
+import rpt.tool.badpixelsearch.PixelTestActivity
+import rpt.tool.badpixelsearch.NoiseSearchActivity
+import rpt.tool.badpixelsearch.GradientTestActivity
 
 
 @Suppress("DEPRECATION")
@@ -82,17 +86,23 @@ class MenuFragment :
                 MenuFragmentDirections.actionMenuFragmentToScreenInfoFragment())
         }
 
-        binding.startBtn.setOnClickListener{
-            safeNavController?.safeNavigate(
-                MenuFragmentDirections.actionMenuFragmentToBadPixelSearchFragment())
+        binding.strBtn.setOnClickListener{
+            when(SharedPreferencesManager.typeMode){
+                0,1->startActivity(Intent(requireContext(),BadPixelSearchActivity::class.java))
+                2->startActivity(Intent(requireContext(),NoiseSearchActivity::class.java))
+                3,4,5,6->startActivity(Intent(requireContext(),PixelTestActivity::class.java))
+                7->startActivity(Intent(requireContext(),GradientTestActivity::class.java))
+            }
         }
 
+        binding.deviceInfoBtn.setOnClickListener{
+            safeNavController?.safeNavigate(
+                MenuFragmentDirections.actionMenuFragmentToDeviceInfoFragment())
+        }
 
         val point = Point()
         requireActivity().windowManager.defaultDisplay.getSize(point)
         val width = binding.logoAnimated.measuredWidth.toFloat()
-
-
 
         val animator1 = ObjectAnimator
             .ofFloat(binding.logoAnimated,
@@ -123,10 +133,9 @@ class MenuFragment :
         textMessage: String
     ) {
 
-
         val emailIntent = Intent(Intent.ACTION_SEND)
         emailIntent.type = "text/plain"
-        emailIntent.setData(Uri.parse("mailto:"))
+        emailIntent.setData("mailto:".toUri())
         emailIntent.putExtra(Intent.EXTRA_EMAIL, emailIds)
         emailIntent.putExtra(Intent.EXTRA_SUBJECT, subject)
         emailIntent.putExtra(Intent.EXTRA_TEXT, textMessage)

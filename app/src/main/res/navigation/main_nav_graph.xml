@@ -20,8 +20,8 @@
             android:id="@+id/action_menuFragment_to_screenInfoFragment"
             app:destination="@id/ScreenInfoFragment" />
         <action
-            android:id="@+id/action_menuFragment_to_BadPixelSearchFragment"
-            app:destination="@id/BadPixelSearchFragment" />
+            android:id="@+id/action_menuFragment_to_deviceInfoFragment"
+            app:destination="@id/DeviceInfoFragment" />
     </fragment>
     <fragment
         android:id="@+id/SettingsFragment"
@@ -51,12 +51,12 @@
             app:destination="@id/MenuFragment" />
     </fragment>
     <fragment
-        android:id="@+id/BadPixelSearchFragment"
-        android:name="rpt.tool.badpixelsearch.ui.pixel.BadPixelSearchFragment"
-        android:label="BadPixelSearchFragment"
-        tools:layout="@layout/fragment_bad_pixel_search">
+        android:id="@+id/DeviceInfoFragment"
+        android:name="rpt.tool.badpixelsearch.ui.device.DeviceInfoFragment"
+        android:label="ScreenInfoFragment"
+        tools:layout="@layout/fragment_device_info">
         <action
-            android:id="@+id/action_badPixelSearchFragment_to_menuFragment"
+            android:id="@+id/action_deviceInfoFragment_to_menuFragment"
             app:destination="@id/MenuFragment" />
     </fragment>
 
