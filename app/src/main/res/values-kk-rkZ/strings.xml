@@ -115,4 +115,7 @@
     <string name="cyan">көгілдір</string>
     <string name="yellow">Сары</string>
     <string name="gray">Сұр</string>
+    <string name = "other">Басқа қолданбалар</ string>
+    <string name="name">ҚОЛДАНБА</string>
+    <string name = "other_apps">БАСҚА ҚОЛДАНБАЛАР</ string>
 </resources>

@@ -115,4 +115,7 @@
     <string name="cyan">Голубой</string>
     <string name="yellow">Желтый</string>
     <string name="gray">Серый</string>
+    <string name="other">Другие приложения</string>
+    <string name="name">ПРИЛОЖЕНИЕ</string>
+    <string name="other_apps">ДРУГИЕ ПРИЛОЖЕНИЯ</string>
 </resources>

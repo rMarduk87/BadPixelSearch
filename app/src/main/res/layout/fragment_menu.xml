@@ -124,6 +124,17 @@
             android:textSize="14sp"
             tools:ignore="VisualLintButtonSize" />
 
+        <Button
+            android:id="@+id/otherAppBtn"
+            android:layout_width="@dimen/dp_120"
+            android:layout_height="@dimen/dp_35"
+            android:layout_marginStart="@dimen/dp_98"
+            android:layout_marginTop="@dimen/dp_365"
+            android:background="@drawable/walk_through_button_bg"
+            android:text="@string/other"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            tools:ignore="VisualLintButtonSize" />
 
 
         <TextView
@@ -131,7 +142,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="@dimen/dp_370"
+            android:layout_marginTop="@dimen/dp_410"
             android:gravity="center"
             android:text="@string/touch"
             android:textAlignment="center"
