@@ -115,4 +115,7 @@
     <string name="cyan">シアン</string>
     <string name="yellow">黄色</string>
     <string name="gray">灰色</string>
+    <string name="other">その他のアプリ</string>
+    <string name="name">アプリ</string>
+    <string name="other_apps">その他のアプリ</string>
 </resources>

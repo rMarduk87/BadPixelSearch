@@ -115,4 +115,7 @@
     <string name="cyan">Cyan</string>
     <string name="yellow">Kuning</string>
     <string name="gray">Abu-abu</string>
+    <string name="other">Aplikasi Lainnya</string>
+    <string name="name">APLIKASI</string>
+    <string name="other_apps">APLIKASI LAIN</string>
 </resources>

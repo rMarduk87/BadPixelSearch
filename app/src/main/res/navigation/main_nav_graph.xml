@@ -22,6 +22,9 @@
         <action
             android:id="@+id/action_menuFragment_to_deviceInfoFragment"
             app:destination="@id/DeviceInfoFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_otherAppsFragment"
+            app:destination="@id/OtherAppsFragment" />
     </fragment>
     <fragment
         android:id="@+id/SettingsFragment"
@@ -57,6 +60,15 @@
         tools:layout="@layout/fragment_device_info">
         <action
             android:id="@+id/action_deviceInfoFragment_to_menuFragment"
+            app:destination="@id/MenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/OtherAppsFragment"
+        android:name="rpt.tool.badpixelsearch.ui.other.OtherAppsFragment"
+        android:label="OtherAppsFragment"
+        tools:layout="@layout/fragment_other_apps">
+        <action
+            android:id="@+id/action_otherAppsFragment_to_menuFragment"
             app:destination="@id/MenuFragment" />
     </fragment>
 

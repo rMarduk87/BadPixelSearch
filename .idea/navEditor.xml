@@ -8,27 +8,6 @@
             <LayoutPositions>
               <option name="myPositions">
                 <map>
-                  <entry key="BadPixelSearchFragment">
-                    <value>
-                      <LayoutPositions>
-                        <option name="myPosition">
-                          <Point>
-                            <option name="x" value="83" />
-                            <option name="y" value="-61" />
-                          </Point>
-                        </option>
-                        <option name="myPositions">
-                          <map>
-                            <entry key="action_badPixelSearchFragment_to_menuFragment">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
-                          </map>
-                        </option>
-                      </LayoutPositions>
-                    </value>
-                  </entry>
                   <entry key="DeviceInfoFragment">
                     <value>
                       <LayoutPositions>
@@ -40,7 +19,7 @@
                         </option>
                         <option name="myPositions">
                           <map>
-                            <entry key="action_screenInfoFragment_to_menuFragment">
+                            <entry key="action_deviceInfoFragment_to_menuFragment">
                               <value>
                                 <LayoutPositions />
                               </value>
@@ -82,11 +61,6 @@
                         </option>
                         <option name="myPositions">
                           <map>
-                            <entry key="action_menuFragment_to_BadPixelSearchFragment">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
                             <entry key="action_menuFragment_to_deviceInfoFragment">
                               <value>
                                 <LayoutPositions />
@@ -97,12 +71,38 @@
                                 <LayoutPositions />
                               </value>
                             </entry>
+                            <entry key="action_menuFragment_to_otherAppsFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
                             <entry key="action_menuFragment_to_screenInfoFragment">
                               <value>
                                 <LayoutPositions />
                               </value>
                             </entry>
                             <entry key="action_menuFragment_to_settingsFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="ODeviceInfoFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="12" />
+                            <option name="y" value="12" />
+                          </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_deviceInfoFragment_to_menuFragment">
                               <value>
                                 <LayoutPositions />
                               </value>

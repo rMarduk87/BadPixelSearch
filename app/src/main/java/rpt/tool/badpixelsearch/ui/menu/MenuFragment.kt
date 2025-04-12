@@ -100,6 +100,11 @@ class MenuFragment :
                 MenuFragmentDirections.actionMenuFragmentToDeviceInfoFragment())
         }
 
+        binding.otherAppBtn.setOnClickListener{
+            safeNavController?.safeNavigate(
+                MenuFragmentDirections.actionMenuFragmentToOtherAppsFragment())
+        }
+
         val point = Point()
         requireActivity().windowManager.defaultDisplay.getSize(point)
         val width = binding.logoAnimated.measuredWidth.toFloat()

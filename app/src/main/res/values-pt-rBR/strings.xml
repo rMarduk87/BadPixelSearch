@@ -115,4 +115,7 @@
     <string name="cyan">Ciano</string>
     <string name="yellow">Amarelo</string>
     <string name="gray">Cinza</string>
+    <string name="other">Outros Aplicativos</string>
+    <string name="name">APLICATIVO</string>
+    <string name="other_apps">OUTROS APLICATIVOS</string>
 </resources>

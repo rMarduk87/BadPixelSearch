@@ -115,4 +115,7 @@
     <string name="cyan">سماوي</string>
     <string name="yellow">أصفر</string>
     <string name="gray">رمادي</string>
+    <string name="other">تطبيقات أخرى</string>
+    <string name="name">تطبيق</string>
+    <string name="other_apps">تطبيقات أخرى</string>
 </resources>

@@ -115,4 +115,7 @@
     <string name="cyan">सियान</string>
     <string name="yellow">पीला</string>
     <string name="gray">ग्रे</string>
+    <string name="other">अन्य ऐप्स</string>
+    <string name="name">ऐप</string>
+    <string name="other_apps">अन्य ऐप्स</string>
 </resources>

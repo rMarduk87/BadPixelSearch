@@ -115,4 +115,7 @@
     <string name="cyan">Camgöbeği</string>
     <string name="yellow">Sarı</string>
     <string name="gray">Gri</string>
+    <string name="other">Diğer Uygulamalar</string>
+    <string name="name">UYGULAMA</string>
+    <string name="other_apps">DİĞER UYGULAMALAR</string>
 </resources>

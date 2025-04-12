@@ -115,4 +115,7 @@
     <string name="cyan">Cyan</string>
     <string name="yellow">Galben</string>
     <string name="gray">Gri</string>
+    <string name="other">Alte aplicații</string>
+    <string name="name">APP</string>
+    <string name="other_apps">ALTE APLICAȚII</string>
 </resources>
