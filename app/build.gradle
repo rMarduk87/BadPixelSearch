@@ -16,7 +16,7 @@ android {
         applicationId "rpt.tool.badpixelsearch"
         minSdk 26
         targetSdk 35
-        versionCode 25
+        versionCode 26
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -73,9 +73,9 @@ dependencies {
     //InApp Update
     implementation 'com.google.android.play:feature-delivery:2.1.0'
     implementation 'com.google.android.play:app-update:2.1.0'
-    implementation 'com.google.android.gms:play-services-tasks:18.2.1'
+    implementation 'com.google.android.gms:play-services-tasks:18.3.0'
     //Firebase
-    implementation platform('com.google.firebase:firebase-bom:33.12.0')
+    implementation platform('com.google.firebase:firebase-bom:33.13.0')
     implementation 'com.google.firebase:firebase-analytics-ktx'
     //Crashlytics
     implementation("com.google.firebase:firebase-crashlytics-ktx")

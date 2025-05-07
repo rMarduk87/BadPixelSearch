@@ -17,6 +17,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BadPixelSearch"
         tools:ignore="RtlEnabled,UnusedAttribute"
+        android:hardwareAccelerated="false"
         tools:targetApi="31">
         <activity
             android:name=".GradientTestActivity"

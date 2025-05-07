@@ -188,9 +188,11 @@ class BadPixelSearchActivity : AppCompatActivity(), View.OnClickListener {
                     }
                     else -> {
                         isRunning = false
-                        timeoutHandler.removeCallbacks(finalizer!!)
-                        i=0
-                        changeColor()
+                        if(finalizer != null){
+                            timeoutHandler.removeCallbacks(finalizer!!)
+                            i=0
+                            changeColor()
+                        }
                     }
                 }
 
@@ -223,9 +225,11 @@ class BadPixelSearchActivity : AppCompatActivity(), View.OnClickListener {
                     }
                     else -> {
                         isRunning = false
-                        timeoutHandler.removeCallbacks(finalizer!!)
-                        i=0
-                        changeColor()
+                        if(finalizer != null){
+                            timeoutHandler.removeCallbacks(finalizer!!)
+                            i=0
+                            changeColor()
+                        }
                     }
                 }
 

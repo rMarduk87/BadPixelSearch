@@ -43,7 +43,12 @@ class GradientTestActivity : AppCompatActivity(), View.OnClickListener {
         windowInsetsController.hide(WindowInsetsCompat.Type.systemBars())
         binding.mainBG.setOnClickListener(this)
 
+        val gestureDetector = GestureDetector(RptDetectGesture())
 
+        binding.mainBG.setOnTouchListener { _, event ->
+            gestureDetector.onTouchEvent(event)
+            true
+        }
 
     }
 
