@@ -91,7 +91,7 @@
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="ODeviceInfoFragment">
+                  <entry key="OtherAppsFragment">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
@@ -102,7 +102,7 @@
                         </option>
                         <option name="myPositions">
                           <map>
-                            <entry key="action_deviceInfoFragment_to_menuFragment">
+                            <entry key="action_otherAppsFragment_to_menuFragment">
                               <value>
                                 <LayoutPositions />
                               </value>
