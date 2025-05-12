@@ -47,9 +47,9 @@
     <string name="screen_info">ЭКРАН АҚПАРАТЫ</string>
     <string name="touch">Тестілеуді тоқтату үшін Артқа түймесін басыңыз</string>
     <string name="choose">Параметрлер мәзірінде қажетті іздеу опциясын таңдаңыз, содан кейін бастау үшін бастауды таңдаңыз</string>
-    <string name="full_resolution">Толық ажыратымдылық</string>
-    <string name="current_resolution" >Ағымдағы ажыратымдылық</string>
-    <string name="visual_resolution">Көрнекі ажыратымдылық</string>
+    <string name="full_resolution">Толық\nажыратымдылық (px)</string>
+    <string name="current_resolution" >Ағымдағы\nажыратымдылық (px)</string>
+    <string name="visual_resolution">Көрнекі\nажыратымдылық (px)</string>
     <string name="screen_scale">Экран өлшемі шкаласы</string>
     <string name="pixel_density">Пиксель тығыздығы</string>
     <string name="screen_size">Экран өлшемі</string>

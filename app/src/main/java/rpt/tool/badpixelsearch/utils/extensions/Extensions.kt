@@ -40,8 +40,6 @@ fun String.toNewLineString() : String{
     val start: Int = this.lastIndexOf(' ')
     val builder = StringBuilder()
     builder.append(this.substring(0, start))
-    builder.append("\n").append("px")
-
 
     return builder.toString()
 }

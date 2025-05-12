@@ -47,9 +47,9 @@
     <string name="screen_info">ИНФОРМАЦИЯ ОБ ЭКРАНЕ</string>
     <string name="touch">Чтобы остановить тестирование, нажмите кнопку «Назад»</string>
     <string name="choose">В меню настроек выберите нужный вариант поиска, затем выберите «Начать, чтобы начать»</string>
-    <string name="full_resolution">Полное разрешение</string>
-    <string name="current_resolution">Текущее разрешение</string>
-    <string name="visual_resolution">Визуальное разрешение</string>
+    <string name="full_resolution">Полное\nразрешение (px)</string>
+    <string name="current_resolution">Текущее\nразрешение (px)</string>
+    <string name="visual_resolution">Визуальное\nразрешение (px)</string>
     <string name="screen_scale">Шкала размера экрана</string>
     <string name="pixel_density">Плотность пикселей</string>
     <string name="screen_size">Размер экрана</string>

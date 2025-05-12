@@ -25,7 +25,7 @@
             android:layout_height="@dimen/dp_128"
             android:importantForAccessibility="no"
             android:src="@drawable/splash"
-            android:layout_marginTop="@dimen/dp_75"
+            android:layout_marginTop="@dimen/dp_125"
             android:layout_centerHorizontal="true">
 
         </ImageView>
@@ -59,7 +59,7 @@
             android:layout_width="@dimen/dp_120"
             android:layout_height="@dimen/dp_35"
             android:layout_marginStart="@dimen/dp_25"
-            android:layout_marginTop="@dimen/dp_215"
+            android:layout_marginTop="@dimen/dp_260"
             android:background="@drawable/walk_through_button_bg"
             android:text="@string/settings"
             android:textColor="@color/white"
@@ -71,7 +71,7 @@
             android:layout_width="@dimen/dp_120"
             android:layout_height="@dimen/dp_35"
             android:layout_marginStart="@dimen/dp_170"
-            android:layout_marginTop="@dimen/dp_215"
+            android:layout_marginTop="@dimen/dp_260"
             android:background="@drawable/walk_through_button_bg"
             android:text="@string/send_req"
             android:textSize="14sp"
@@ -82,7 +82,7 @@
             android:layout_width="@dimen/dp_120"
             android:layout_height="@dimen/dp_35"
             android:layout_marginStart="@dimen/dp_25"
-            android:layout_marginTop="@dimen/dp_265"
+            android:layout_marginTop="@dimen/dp_310"
             android:background="@drawable/walk_through_button_bg"
             android:text="@string/device_info"
             android:textColor="@color/white"
@@ -94,7 +94,7 @@
             android:layout_width="@dimen/dp_120"
             android:layout_height="@dimen/dp_35"
             android:layout_marginStart="@dimen/dp_170"
-            android:layout_marginTop="@dimen/dp_265"
+            android:layout_marginTop="@dimen/dp_310"
             android:background="@drawable/walk_through_button_bg"
             android:text="@string/screen_info"
             android:textColor="@color/white"
@@ -106,7 +106,7 @@
             android:layout_width="@dimen/dp_120"
             android:layout_height="@dimen/dp_35"
             android:layout_marginStart="@dimen/dp_25"
-            android:layout_marginTop="@dimen/dp_315"
+            android:layout_marginTop="@dimen/dp_360"
             android:background="@drawable/walk_through_button_bg"
             android:text="@string/faq"
             android:textSize="14sp"
@@ -117,7 +117,7 @@
             android:layout_width="@dimen/dp_120"
             android:layout_height="@dimen/dp_35"
             android:layout_marginStart="@dimen/dp_170"
-            android:layout_marginTop="@dimen/dp_315"
+            android:layout_marginTop="@dimen/dp_360"
             android:background="@drawable/walk_through_button_bg"
             android:text="@string/start"
             android:textColor="@color/white"
@@ -129,7 +129,7 @@
             android:layout_width="@dimen/dp_120"
             android:layout_height="@dimen/dp_35"
             android:layout_marginStart="@dimen/dp_98"
-            android:layout_marginTop="@dimen/dp_365"
+            android:layout_marginTop="@dimen/dp_410"
             android:background="@drawable/walk_through_button_bg"
             android:text="@string/other"
             android:textColor="@color/white"
@@ -142,16 +142,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="@dimen/dp_410"
+            android:layout_marginTop="@dimen/dp_455"
             android:gravity="center"
             android:text="@string/touch"
             android:textAlignment="center"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@color/white" />
-
-
-
-
 
 
     </RelativeLayout>

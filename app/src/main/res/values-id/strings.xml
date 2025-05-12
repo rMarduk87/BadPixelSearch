@@ -47,9 +47,9 @@
     <string name="screen_info">INFO LAYAR</string>
     <string name="touch">Tekan tombol kembali untuk menghentikan pengujian</string>
     <string name="choose">Di menu pengaturan, pilih opsi pencarian yang diinginkan, lalu pilih mulai untuk memulai</string>
-    <string name="full_resolution">Resolusi Penuh</string>
-    <string name="current_resolution">Resolusi Saat Ini</string>
-    <string name="visual_resolution">Resolusi Visual</string>
+    <string name="full_resolution">Resolusi Penuh (px)</string>
+    <string name="current_resolution">Resolusi Saat\nIni (px)</string>
+    <string name="visual_resolution">Resolusi Visual (px)</string>
     <string name="screen_scale">Skala Layar</string>
     <string name="pixel_density">Kepadatan Piksel</string>
     <string name="screen_size">Ukuran Layar</string>

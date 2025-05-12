@@ -47,9 +47,9 @@
     <string name="screen_info">स्क्रीन जानकारी</string>
     <string name="touch">परीक्षण रोकने के लिए बैक बटन दबाएँ</string>
     <string name="choose">सेटिंग्स मेनू में, वांछित खोज विकल्प चुनें, फिर शुरू करने के लिए प्रारंभ का चयन करें</string>
-    <string name="full_resolution">पूर्ण रिज़ॉल्यूशन</string>
-    <string name="current_resolution">वर्तमान रिज़ॉल्यूशन</string>
-    <string name="visual_resolution">विज़ुअल रिज़ॉल्यूशन</string>
+    <string name="full_resolution">पूर्ण रिज़ॉल्यूशन (px)</string>
+    <string name="current_resolution">वर्तमान रिज़ॉल्यूशन (px)</string>
+    <string name="visual_resolution">विज़ुअल रिज़ॉल्यूशन (px)</string>
     <string name="screen_scale">स्क्रीन स्केल</string>
     <string name="pixel_density">पिक्सेल घनत्व</string>
     <string name="screen_size">स्क्रीन आकार</string>

@@ -47,9 +47,9 @@
     <string name="screen_info">EKRAN BİLGİSİ</string>
     <string name="touch">Testleri durdurmak için geri düğmesine basın</string>
     <string name="choose">Ayarlar menüsünde, istediğiniz arama seçeneğini seçin, ardından başlamak için başlat\'ı seçin</string>
-    <string name="full_resolution">Tam Çözünürlük</string>
-    <string name="current_resolution">Mevcut Çözünürlük</string>
-    <string name="visual_resolution">Görsel Çözünürlük</string>
+    <string name="full_resolution">Tam Çözünürlük (px)</string>
+    <string name="current_resolution">Mevcut Çözünürlük (px)</string>
+    <string name="visual_resolution">Görsel Çözünürlük (px)</string>
     <string name="screen_scale">Ekran Ölçeği</string>
     <string name="pixel_density">Piksel Yoğunluğu</string>
     <string name="screen_size">Ekran Boyutu</string>
