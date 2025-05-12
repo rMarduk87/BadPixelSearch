@@ -134,7 +134,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=C:\Users\r.pezzolati\.android\avd\Pixel_9_Pro_XL.avd)]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=/Users/riccardopezzolati/.android/avd/Medium_Phone.avd)]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -167,7 +167,7 @@
     </option>
   </component>
   <component name="GenerateSignedApkSettings">
-    <option name="KEY_STORE_PATH" value="$USER_HOME$/Downloads/zip/zip/key0" />
+    <option name="KEY_STORE_PATH" value="$PROJECT_DIR$/../Documents/zip/zip/key0" />
     <option name="KEY_ALIAS" value="key0" />
   </component>
   <component name="Git.Settings">
@@ -208,7 +208,7 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "Android App.app.executor": "Debug",
     "BundleExportedModule": "Bad_Pixel_Search.app",
-    "ExportBundle.BundlePathForBad_Pixel_Search.app": "/Users/riccardopezzolati/Apps/BadPixelSearch/app",
+    "ExportBundle.BundlePathForBad_Pixel_Search.app": "/Users/riccardopezzolati/BadPixelSearch/app",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
@@ -218,9 +218,9 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "devel",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/r.pezzolati/AndroidStudioProjects/BadPixelSearch/app/src/main/res/layout",
+    "last_opened_file_path": "/Users/riccardopezzolati/BadPixelSearch",
     "memory.settings.postsync.last.time.stamp": "1702323664650",
     "project.structure.last.edited": "Suggestions",
     "project.structure.proportion": "0.17",
