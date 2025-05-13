@@ -47,9 +47,9 @@
     <string name="screen_info">INFORMACIÓN DE PANTALLA</string>
     <string name="touch">Presione el botón Atrás para detener las pruebas</string>
     <string name="choose">En el menú de configuración, elija la opción de búsqueda deseada, luego seleccione iniciar para comenzar</string>
-    <string name="full_resolution">Resolución completa</string>
-    <string name="current_resolution">Resolución actual</string>
-    <string name="visual_resolution">Resolución visual</string>
+    <string name="full_resolution">Resolución completa (px)</string>
+    <string name="current_resolution">Resolución actual (px)</string>
+    <string name="visual_resolution">Resolución visual (px)</string>
     <string name="screen_scale">Escala de pantalla</string>
     <string name="pixel_density">Densidad de píxeles</string>
     <string name="screen_size">Tamaño de pantalla</string>

@@ -47,9 +47,9 @@
     <string name="screen_info">SCREEN INFO</string>
     <string name="touch">Press back button to stop tests</string>
     <string name="choose">In the settings menu, choose the desired search option, then select start to begin</string>
-    <string name="full_resolution">Full Resolution</string>
-    <string name="current_resolution">Current Resolution</string>
-    <string name="visual_resolution">Visual Resolution</string>
+    <string name="full_resolution">Full Resolution (px)</string>
+    <string name="current_resolution">Current Resolution (px)</string>
+    <string name="visual_resolution">Visual Resolution (px)</string>
     <string name="screen_scale">Screen Scale</string>
     <string name="pixel_density">Pixel Density</string>
     <string name="screen_size">Screen Size</string>

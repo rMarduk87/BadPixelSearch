@@ -47,9 +47,9 @@
     <string name="screen_info">معلومات الشاشة</string>
     <string name="touch">اضغط على زر الرجوع لإيقاف الاختبارات</string>
     <string name="choose">في قائمة الإعدادات، اختر خيار البحث المطلوب، ثم اختر البدء للبدء</string>
-    <string name="full_resolution">الدقة الكاملة</string>
-    <string name="current_resolution">الحل الحالي</string>
-    <string name="visual_resolution">الدقة المرئية</string>
+    <string name="full_resolution">الدقة الكاملة (بكسل)</string>
+    <string name="current_resolution">الدقة الحالية (بكسل)</string>
+    <string name="visual_resolution">الدقة المرئية (بكسل)</string>
     <string name="screen_scale">مقياس الشاشة</string>
     <string name="pixel_density">كثافة البكسل</string>
     <string name="screen_size">حجم الشاشة</string>

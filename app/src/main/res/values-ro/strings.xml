@@ -47,9 +47,9 @@
     <string name="screen_info">INFORMAȚII ECRAN</string>
     <string name="touch">Apăsați butonul Înapoi pentru a opri testele</string>
     <string name="choose">În meniul de setări, alegeți opțiunea de căutare dorită, apoi selectați începe pentru a începe</string>
-    <string name="full_resolution">Rezoluție completă</string>
-    <string name="current_resolution">Rezoluție curentă</string>
-    <string name="visual_resolution">Rezoluție vizuală</string>
+    <string name="full_resolution">Rezoluție completă (px)</string>
+    <string name="current_resolution">Rezoluție curentă (px)</string>
+    <string name="visual_resolution">Rezoluție vizuală (px)</string>
     <string name="screen_scale">Scala ecranului</string>
     <string name="pixel_density">Densitate pixeli</string>
     <string name="screen_size">Dimensiunea ecranului</string>

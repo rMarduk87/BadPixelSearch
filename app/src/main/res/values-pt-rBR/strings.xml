@@ -47,9 +47,9 @@
     <string name="screen_info">INFORMAÇÕES DA TELA</string>
     <string name="touch">Pressione o botão Voltar para interromper os testes</string>
     <string name="choose">No menu de configurações, escolha a opção de pesquisa desejada e selecione iniciar para começar</string>
-    <string name="full_resolution">Resolução total</string>
-    <string name="current_resolution">Resolução Atual</string>
-    <string name="visual_resolution">Resolução Visual</string>
+    <string name="full_resolution">Resolução total (px)</string>
+    <string name="current_resolution">Resolução Atual (px)</string>
+    <string name="visual_resolution">Resolução Visual (px)</string>
     <string name="screen_scale">Escala da tela</string>
     <string name="pixel_density">Densidade de pixels</string>
     <string name="screen_size">Tamanho da tela</string>

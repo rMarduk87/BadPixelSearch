@@ -47,9 +47,9 @@
     <string name="screen_info">画面情報</string>
     <string name="touch">テストを停止するには、戻るボタンを押します</string>
     <string name="choose">設定メニューで、目的の検索オプションを選択し、[開始] を選択して開始します。</string>
-    <string name="full_resolution">フル解像度</string>
-    <string name="current_resolution">現在の解像度</string>
-    <string name="visual_resolution">視覚解像度</string>
+    <string name="full_resolution">フル解像度 (px)</string>
+    <string name="current_resolution">現在の解像度 (px)</string>
+    <string name="visual_resolution">視覚解像度 (px)</string>
     <string name="screen_scale">画面スケール</string>
     <string name="pixel_density">ピクセル密度</string>
     <string name="screen_size">画面サイズ</string>
