@@ -26,9 +26,9 @@ class OtherAppsFragment: BaseFragment<FragmentOtherAppsBinding>(FragmentOtherApp
         binding.leftIconBlock.setOnClickListener{ finish() }
 
         val appWaterDiary = OtherApps()
-        appWaterDiary.name = "Water Reminder"
+        appWaterDiary.name = "Water Diary"
         appWaterDiary.id = "0"
-        appWaterDiary.link = "https://play.google.com/store/apps/details?id=rpt.tool.waterreminder"
+        appWaterDiary.link = "https://play.google.com/store/apps/details?id=rpt.tool.mementobibere"
 
         val appPongClock = OtherApps()
         appPongClock.name = "Pong Clock"
