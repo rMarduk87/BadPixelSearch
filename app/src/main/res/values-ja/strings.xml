@@ -15,7 +15,7 @@
     <string name="start_fix_tool">ピクセル修正ユーティリティを開始します</string>
     <string name="restart">再起動</string>
     <string name="send">下のボタンをクリックして、希望の言語でローカリゼーション リクエストを送信してください</string>
-    <string name="send_req">リクエストの送信</string>
+    <string name="send_req">リクエスト</string>
     <string name="choose_mail_app">メール アプリを選択してください</string>
     <string name="to">rptechnologies.info@gmail.com</string>
     <string name="automatic">自動モード</string>
@@ -26,10 +26,10 @@
     <string name="fast">高速</string>
     <string name="help">自動モードを有効にすると、アプリはテスト カラーをスクロールします。有効にするには、下部のボタンをクリックし、スクロール速度を選択し、この画面に戻り、右にスワイプして開始します。</string>
     <string name="interval">自動モードの継続時間</string>
-    <string name="min">分</string>
-    <string name="hour">時間</string>
+    <string name="min">m</string>
+    <string name="hour">h</string>
     <string name="fix">修正モード</string>
-   <string name="brightness">明るさ</string>
+    <string name="brightness">明るさ</string>
     <string name="text_delay">遅延</string>
     <string name="faq">よくある質問</string>
     <string name="faq_a">A:</string>
@@ -118,4 +118,17 @@
     <string name="other">その他のアプリ</string>
     <string name="name">アプリ</string>
     <string name="other_apps">その他のアプリ</string>
+    <string name="test_3d_device">3Dデバイステスト</string>
+    <string name="check_requirements_and_rendering">要件とレンダリングを確認しています…</string>
+    <string name="start_test_3d_5s">3Dテストを開始 (5秒)</string>
+    <string name="sensors">センサー: -</string>
+    <string name="opengl_es">OpenGL ES: -</string>
+    <string name="fps_result">FPS結果: -</string>
+    <string name="opengl_es_request">OpenGL ESリクエスト: %1$s</string>
+    <string name="_sensors">センサー: %1$s</string>
+    <string name="rendering_and_measuring_fps_per_seconds">%1$d秒間のレンダリングとFPS測定を行っています…</string>
+    <string name="fps_medio_1f">平均FPS: %.1f</string>
+    <string name="test_passed">テスト合格 ✅</string>
+    <string name="test_not_passed">テスト不合格 ❌ (FPSがしきい値を下回っているか、OpenGLがサポートされていません)</string>
+    <string name="threed">3Dテスト</string>
 </resources>

@@ -15,7 +15,7 @@
     <string name="start_fix_tool">फ़िक्स टूल प्रारंभ करें</string>
     <string name="restart">Restart</string>
     <string name="send">अपनी इच्छित भाषा में स्थानीयकरण अनुरोध भेजने के लिए नीचे दिए गए बटन पर क्लिक करें</string>
-    <string name="send_req">अनुरोध भेजें</string>
+    <string name="send_req">अनुरोध</string>
     <string name="choose_mail_app">मेल ऐप चुनें</string>
     <string name="to">rptechnologies.info@gmail.com</string>
     <string name="automatic">स्वचालित मोड</string>
@@ -26,8 +26,8 @@
     <string name="fast">तेज</string>
     <string name="help">स्वचालित मोड को सक्रिय करने से ऐप परीक्षण रंगों के माध्यम से स्क्रॉल करेगा, इसे सक्रिय करने के लिए नीचे दिए गए बटन पर क्लिक करें, स्क्रॉलिंग गति चुनें, इस स्क्रीन पर वापस आएं और शुरू करने के लिए दाईं ओर स्वाइप करें। </string>
     <string name='interval'>स्वचालित मोड अवधि</string>
-    <string name="min">मिनट</string>
-    <string name="hour">घंटा</string>
+    <string name="min">m</string>
+    <string name="hour">h</string>
     <string name="fix">फिक्स मोड</string>
     <string name="brightness">चमक</string>
     <string name="text_delay">देरी</string>
@@ -80,7 +80,7 @@
     <string name="_5_mins">5 मिनट</string>
     <string name="_15_mins">15 मिनट</string>
     <string name="_30_mins">30 मिनट</string>
-    <string name="_1_hour">1 घंटा</string>
+    <string name="_1_hour">60 मिनट</string>
     <string name="type">टाइप</string>
     <string name="color_loop">कलर लूप</string>
     <string name="black_and_white">ब्लैक एंड व्हाइट</string>
@@ -118,4 +118,17 @@
     <string name="other">अन्य ऐप्स</string>
     <string name="name">ऐप</string>
     <string name="other_apps">अन्य ऐप्स</string>
+    <string name="test_3d_device">3D डिवाइस परीक्षण</string>
+    <string name="check_requirements_and_rendering">आवश्यकताओं की जाँच और रेंडरिंग…</string>
+    <string name="start_test_3d_5s">3D परीक्षण शुरू करें (5s)</string>
+    <string name="sensors">सेंसर: -</string>
+    <string name="opengl_es">OpenGL ES: -</string>
+    <string name="fps_result">FPS परिणाम: -</string>
+    <string name="opengl_es_request">OpenGL ES अनुरोध: %1$s</string>
+    <string name="_sensors">सेंसर: %1$s</string>
+    <string name="rendering_and_measuring_fps_per_seconds">के लिए FPS रेंडर करना और मापना %1$d सेकंड…</string>
+    <string name="fps_medio_1f">औसत FPS: %.1f</string>
+    <string name="test_passed">परीक्षण पास हुआ ✅</string>
+    <string name="test_not_passed">परीक्षण विफल हुआ ❌ (FPS सीमा से नीचे या OpenGL समर्थित नहीं)</string>
+    <string name="threed">3D परीक्षण</string>
 </resources>

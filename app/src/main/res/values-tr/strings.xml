@@ -15,7 +15,7 @@
     <string name="start_fix_tool">Düzeltme aracını başlat</string>
     <string name="restart">Yeniden başlat</string>
     <string name="send">İstediğiniz dilde yerelleştirme isteği göndermek için aşağıdaki düğmeye tıklayın</string>
-    <string name="send_req">İSTEK GÖNDER</string>
+    <string name="send_req">RİCA ETMEK</string>
     <string name="choose_mail_app">Posta Uygulamasını Seçin</string>
     <string name="to">rptechnologies.info@gmail.com</string>
     <string name="automatic">Otomatik mod</string>
@@ -26,8 +26,8 @@
     <string name="fast">Hızlı</string>
     <string name="help">Otomatik modu etkinleştirerek uygulama test renkleri arasında kaydıracaktır, etkinleştirmek için alttaki düğmeye tıklayın, kaydırma hızını seçin, bu ekrana geri dönün ve başlamak için sağa kaydırın.</string>
     <string name="interval">Otomatik mod süresi</string>
-    <string name="min">Dakika</string>
-    <string name="hour">Saat</string>
+    <string name="min">m</string>
+    <string name="hour">h</string>
     <string name="fix">Düzeltme Modu</string>
     <string name="brightness">Parlaklık</string>
     <string name="text_delay">Gecikme</string>
@@ -76,11 +76,11 @@
     <string name="add_language_to_app">Uygulamaya Dil Ekle</string>
     <string name="message">Mesaj</string>
     <string name="img">img</string>
-    <string name="_1_mins">1 Dakika</string>
-    <string name="_5_mins">5 Dakika</string>
-    <string name="_15_mins">15 Dakika</string>
-    <string name="_30_mins">30 Dakika</string>
-    <string name="_1_hour">1 Saat</string>
+    <string name="_1_mins">1m</string>
+    <string name="_5_mins">5m</string>
+    <string name="_15_mins">15m</string>
+    <string name="_30_mins">30m</string>
+    <string name="_1_hour">60m</string>
     <string name="type">Tür</string>
     <string name="color_loop">Renk Döngüsü</string>
     <string name="black_and_white">Siyah Beyaz</string>
@@ -118,4 +118,17 @@
     <string name="other">Diğer Uygulamalar</string>
     <string name="name">UYGULAMA</string>
     <string name="other_apps">DİĞER UYGULAMALAR</string>
+    <string name="test_3d_device">3B cihaz testi</string>
+    <string name="check_requirements_and_rendering">Gereksinimler kontrol ediliyor ve görüntüleniyor…</string>
+    <string name="start_test_3d_5s">3B testi başlat (5 sn)</string>
+    <string name="sensors">Sensörler: -</string>
+    <string name="opengl_es">OpenGL ES: -</string>
+    <string name="fps_result">FPS sonucu: -</string>
+    <string name="opengl_es_request">OpenGL ES isteği: %1$s</string>
+    <string name="_sensors">Sensörler: %1$s</string>
+    <string name="rendering_and_measuring_fps_per_seconds">%1$d saniye boyunca görüntüleniyor ve FPS ölçülüyor…</string>
+    <string name="fps_medio_1f">Ortalama FPS: %.1f</string>
+    <string name="test_passed">Test başarılı ✅</string>
+    <string name="test_not_passed">Test başarısız ❌ (FPS eşik değerinin altında veya OpenGL desteklenmiyor)</string>
+    <string name="threed">3D TESTİ</string>
 </resources>

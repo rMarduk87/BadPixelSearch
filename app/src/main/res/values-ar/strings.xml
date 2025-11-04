@@ -15,7 +15,7 @@
     <string name="start_fix_tool">بدء تشغيل الأداة المساعدة لإصلاح البكسل</string>
     <string name="restart">إعادة التشغيل</string>
     <string name="send">انقر فوق الزر أدناه لإرسال طلب الترجمة باللغة التي تريدها</string>
-    <string name="send_req">ارسل طلب</string>
+    <string name="send_req">طلب</string>
     <string name="choose_mail_app">اختر تطبيق البريد</string>
     <string name="to">rptechnologies.info@gmail.com</string>
     <string name="automatic">الوضع التلقائي</string>
@@ -26,8 +26,8 @@
     <string name="fast">سريع</string>
     <string name="help">من خلال تنشيط الوضع التلقائي، سيقوم التطبيق بالتمرير عبر ألوان الاختبار، لتنشيطه انقر على الزر الموجود في الأسفل، واختر سرعة التمرير، ثم ارجع إلى هذه الشاشة واسحب إلى اليمين للبدء.</string>
     <string name="interval">مدة الوضع التلقائي</string>
-    <string name="min">دقيقة</string>
-    <string name="hour">ساعة</string>
+    <string name="min">m</string>
+    <string name="hour">h</string>
     <string name="fix">وضع الإصلاح</string>
     <string name="brightness">سطوع</string>
     <string name="text_delay">تأخير</string>
@@ -80,7 +80,7 @@
     <string name="_5_mins">5 دقائق</string>
     <string name="_15_mins">15 دقيقة</string>
     <string name="_30_mins">30 دقيقة</string>
-    <string name="_1_hour">ساعة واحدة</string>
+    <string name="_1_hour">60 دقيقة</string>
     <string name="type">النوع</string>
     <string name="color_loop">حلقة اللون</string>
     <string name="black_and_white">أبيض وأسود</string>
@@ -118,4 +118,17 @@
     <string name="other">تطبيقات أخرى</string>
     <string name="name">تطبيق</string>
     <string name="other_apps">تطبيقات أخرى</string>
+    <string name="test_3d_device">اختبار جهاز ثلاثي الأبعاد</string>
+    <string name="check_requirements_and_rendering">جارٍ التحقق من المتطلبات والعرض…</string>
+    <string name="start_test_3d_5s">بدء اختبار ثلاثي الأبعاد (5 ثوانٍ)</string>
+    <string name="sensors">المستشعرات: -</string>
+    <string name="opengl_es">OpenGL ES: -</string>
+    <string name="fps_result">نتيجة معدل الإطارات في الثانية: -</string>
+    <string name="opengl_es_request">طلب OpenGL ES: %1$s</string>
+    <string name="_sensors">المستشعرات: %1$s</string>
+    <string name="rendering_and_measuring_fps_per_seconds">عرض وقياس معدل الإطارات في الثانية لمدة %1$d ثانية…</string>
+    <string name="fps_medio_1f">متوسط ​​معدل الإطارات في الثانية: %.1f</string>
+    <string name="test_passed">تم الاختبار بنجاح ✅</string>
+    <string name="test_not_passed">فشل الاختبار ❌ (معدل الإطارات في الثانية أقل من الحد الأقصى أو عدم دعم OpenGL)</string>
+    <string name="threed">اختبار ثلاثي الأبعاد</string>
 </resources>

@@ -15,7 +15,7 @@
     <string name="start_fix_tool">Пиксельді түзету утилитасын іске қосыңыз</string>
     <string name="restart">Қайта іске қосу</string>
     <string name="send">Қажетті тілде локализация сұрауын жіберу үшін төмендегі түймені басыңыз</string>
-    <string name="send_req">СҰРАНЫС ЖІБЕРУ</string>
+    <string name="send_req">СҰРАНЫС</string>
     <string name="choose_mail_app">Пошта қолданбасын таңдау</string>
     <string name="to">rptechnologies.info@gmail.com</string>
     <string name="automatic">Автоматты режим</string>
@@ -26,8 +26,8 @@
     <string name="fast">Жылдам</string>
     <string name="help">Автоматты режимді қосу арқылы қолданба сынақ түстері бойынша жылжиды, оны белсендіру үшін төменгі жағындағы түймені басыңыз, айналдыру жылдамдығын таңдаңыз, осы экранға оралыңыз және бастау үшін оңға сырғытыңыз.</string>>
     <string name="interval">Авто режим ұзақтығы</string>
-    <string name="min">Минуттар</string>
-    <string name="hour">Уақыт</string>
+    <string name="min">m</string>
+    <string name="hour">h</string>
     <string name="fix">Түзету режимі</string>
     <string name="brightness">Жарықтық</string>
     <string name="text_delay">Кідіріс</string>
@@ -118,4 +118,17 @@
     <string name="other">Басқа қолданбалар</string>
     <string name="name">ҚОЛДАНБА</string>
     <string name="other_apps">БАСҚА ҚОЛДАНБАЛАР</string>
+    <string name="test_3d_device">3D құрылғы сынағы</string>
+    <string name="check_requirements_and_rendering">Талаптар мен көрсетуді тексеру…</string>
+    <string name="start_test_3d_5s">3D сынағын бастау (5s)</string>
+    <string name="sensors">Сенсорлар: -</string>
+    <string name="opengl_es">OpenGL ES: -</string>
+    <string name="fps_result">FPS нәтижесі: -</string>
+    <string name="opengl_es_request">OpenGL ES сұрауы: %1$s</string>
+    <string name="_sensors">Сенсорлар: %1$s</string>
+    <string name="rendering_and_measuring_fps_per_seconds">FPS-ті %1$d секунд бойы көрсету және өлшеу…</string>
+    <string name="fps_medio_1f">Орташа FPS: %.1f</string>
+    <string name="test_passed">Тест сәтті өтті ✅</string>
+    <string name="test_not_passed">Тест сәтсіз аяқталды ❌ (FPS шекті мәннен төмен немесе OpenGL қолдау көрсетілмейді)</string>
+    <string name="threed">3D ТЕСТ</string>
 </resources>
