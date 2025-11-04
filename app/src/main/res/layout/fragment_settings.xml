@@ -233,12 +233,11 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
-                            android:layout_marginStart="@dimen/dp_18"
                             android:layout_marginTop="@dimen/dp_20">
 
                             <RadioButton
                                 android:id="@+id/rdo_1"
-                                android:layout_width="wrap_content"
+                                android:layout_width="@dimen/dp_50"
                                 android:layout_height="wrap_content"
                                 android:button="@null"
                                 android:background="@drawable/rdo_back_3"
@@ -247,7 +246,7 @@
 
                             <RadioButton
                                 android:id="@+id/rdo_5"
-                                android:layout_width="wrap_content"
+                                android:layout_width="@dimen/dp_50"
                                 android:layout_height="wrap_content"
                                 android:button="@null"
                                 android:checked="true"
@@ -258,7 +257,7 @@
 
                             <RadioButton
                                 android:id="@+id/rdo_15"
-                                android:layout_width="wrap_content"
+                                android:layout_width="@dimen/dp_50"
                                 android:layout_height="wrap_content"
                                 android:button="@null"
                                 android:layout_marginStart="@dimen/dp_3"
@@ -268,7 +267,7 @@
 
                             <RadioButton
                                 android:id="@+id/rdo_30"
-                                android:layout_width="wrap_content"
+                                android:layout_width="@dimen/dp_50"
                                 android:layout_height="wrap_content"
                                 android:button="@null"
                                 android:layout_marginStart="@dimen/dp_3"
@@ -278,7 +277,7 @@
 
                             <RadioButton
                                 android:id="@+id/rdo_60"
-                                android:layout_width="wrap_content"
+                                android:layout_width="@dimen/dp_50"
                                 android:layout_height="wrap_content"
                                 android:button="@null"
                                 android:layout_marginStart="@dimen/dp_5"

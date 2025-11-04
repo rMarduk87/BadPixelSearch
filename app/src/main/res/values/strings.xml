@@ -15,7 +15,7 @@
     <string name="start_fix_tool">Start fix tool</string>
     <string name="restart">Restart</string>
     <string name="send">Click on the button below to send a localization request in your desired language</string>
-    <string name="send_req">SEND REQUEST</string>
+    <string name="send_req">REQUEST</string>
     <string name="choose_mail_app">Choose Mail App</string>
     <string name="to">rptechnologies.info@gmail.com</string>
     <string name="automatic">Automatic mode</string>
@@ -26,8 +26,8 @@
     <string name="fast">Fast</string>
     <string name="help">By activating the automatic mode the app will scroll through the test colours, to activate it click on the button at the bottom, choose the scrolling speed, return to this screen and swipe to the right to start.</string>
     <string name="interval">Automatic mode duration</string>
-    <string name="min">Mins</string>
-    <string name="hour">Hour</string>
+    <string name="min">m</string>
+    <string name="hour">h</string>
     <string name="fix">Fix Mode</string>
     <string name="brightness">Brightness</string>
     <string name="text_delay">Delay</string>
@@ -76,11 +76,11 @@
     <string name="add_language_to_app">Add Language To App</string>
     <string name="message">Message</string>
     <string name="img">img</string>
-    <string name="_1_mins">1 Mins</string>
-    <string name="_5_mins">5 Mins</string>
-    <string name="_15_mins">15 Mins</string>
-    <string name="_30_mins">30 Mins</string>
-    <string name="_1_hour">1 Hour</string>
+    <string name="_1_mins">1m</string>
+    <string name="_5_mins">5m</string>
+    <string name="_15_mins">15m</string>
+    <string name="_30_mins">30m</string>
+    <string name="_1_hour">60m</string>
     <string name="type">Type</string>
     <string name="color_loop">Color Loop</string>
     <string name="black_and_white">Black And White</string>
@@ -118,5 +118,18 @@
     <string name="other">Other Apps</string>
     <string name="name">APP</string>
     <string name="other_apps">OTHER APPS</string>
+    <string name="test_3d_device">3D device test</string>
+    <string name="check_requirements_and_rendering">Checking requirements and rendering…</string>
+    <string name="start_test_3d_5s">Start 3D test (5s)</string>
+    <string name="sensors">Sensors: -</string>
+    <string name="opengl_es">OpenGL ES: -</string>
+    <string name="fps_result">FPS result: -</string>
+    <string name="opengl_es_request">OpenGL ES request: %1$s</string>
+    <string name="_sensors">Sensors: %1$s</string>
+    <string name="rendering_and_measuring_fps_per_seconds">Rendering and measuring FPS for %1$d seconds…</string>
+    <string name="fps_medio_1f">Average FPS: %.1f</string>
+    <string name="test_passed">Test passed ✅</string>
+    <string name="test_not_passed">Test failed ❌ (FPS below threshold or OpenGL not supported)</string>
+    <string name="threed">3D TEST</string>
 
 </resources>

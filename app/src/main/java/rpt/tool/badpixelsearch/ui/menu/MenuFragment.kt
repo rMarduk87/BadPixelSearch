@@ -26,6 +26,7 @@ import rpt.tool.badpixelsearch.BadPixelSearchActivity
 import rpt.tool.badpixelsearch.PixelTestActivity
 import rpt.tool.badpixelsearch.NoiseSearchActivity
 import rpt.tool.badpixelsearch.GradientTestActivity
+import rpt.tool.badpixelsearch.ThreeDTestActivity
 
 
 @Suppress("DEPRECATION")
@@ -103,6 +104,11 @@ class MenuFragment :
         binding.otherAppBtn.setOnClickListener{
             safeNavController?.safeNavigate(
                 MenuFragmentDirections.actionMenuFragmentToOtherAppsFragment())
+        }
+
+        binding.threeDBtn.setOnClickListener{
+            startActivity(Intent(requireContext(),
+                ThreeDTestActivity::class.java))
         }
 
         val point = Point()

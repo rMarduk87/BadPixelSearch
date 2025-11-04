@@ -25,17 +25,11 @@ class OtherAppsFragment: BaseFragment<FragmentOtherAppsBinding>(FragmentOtherApp
 
         binding.leftIconBlock.setOnClickListener{ finish() }
 
-        val appWaterDiary = OtherApps()
-        appWaterDiary.name = "Water Diary"
-        appWaterDiary.id = "0"
-        appWaterDiary.link = "https://play.google.com/store/apps/details?id=rpt.tool.mementobibere"
-
         val appPongClock = OtherApps()
         appPongClock.name = "Pong Clock"
         appPongClock.id = "1"
         appPongClock.link = "https://play.google.com/store/apps/details?id=rpt.tool.pongclock"
 
-        other.add(appWaterDiary)
         other.add(appPongClock)
 
         binding.otherAppsRecyclerView.isNestedScrollingEnabled = false
