@@ -128,10 +128,22 @@
             android:id="@+id/otherAppBtn"
             android:layout_width="@dimen/dp_120"
             android:layout_height="@dimen/dp_35"
-            android:layout_marginStart="@dimen/dp_98"
+            android:layout_marginStart="@dimen/dp_25"
             android:layout_marginTop="@dimen/dp_410"
             android:background="@drawable/walk_through_button_bg"
             android:text="@string/other"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            tools:ignore="VisualLintButtonSize" />
+
+        <Button
+            android:id="@+id/threeDBtn"
+            android:layout_width="@dimen/dp_120"
+            android:layout_height="@dimen/dp_35"
+            android:layout_marginStart="@dimen/dp_170"
+            android:layout_marginTop="@dimen/dp_410"
+            android:background="@drawable/walk_through_button_bg"
+            android:text="@string/threed"
             android:textColor="@color/white"
             android:textSize="14sp"
             tools:ignore="VisualLintButtonSize" />

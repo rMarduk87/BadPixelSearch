@@ -15,7 +15,7 @@
     <string name="start_fix_tool">Iniciar la utilidad de corrección de píxeles</string>
     <string name="restart">Reiniciar</string>
     <string name="send">Haga clic en el botón a continuación para enviar una solicitud de localización en el idioma que desee</string>
-    <string name="send_req">ENVIAR SOLICITUD</string>
+    <string name="send_req">SOLICITUD</string>
     <string name="choose_mail_app">Elegir aplicación de correo</string>
     <string name="to">rptechnologies.info@gmail.com</string>
     <string name="automatic">Modalità automatica</string>
@@ -26,8 +26,8 @@
     <string name="fast">Veloce</string>
     <string name="help">Al activar el modo automático la aplicación se desplazará por los colores de prueba, para activarlo pulsa en el botón de la parte inferior, elige la velocidad de desplazamiento, vuelve a esta pantalla y desliza hacia la derecha para comenzar.</string>
     <string name="interval">Duración del modo automático</string>
-    <string name="min">Minutos</string>
-    <string name="hour">Hora</string>
+    <string name="min">m</string>
+    <string name="hour">h</string>
     <string name="fix">Modo de reparación</string>
    <string name="brightness">Brillo</string>
     <string name="text_delay">Retraso</string>
@@ -76,11 +76,11 @@
     <string name="add_language_to_app">Agregar idioma a la aplicación</string>
     <string name="message">Mensaje</string>
     <string name="img">img</string>
-    <string name="_1_mins">1 minuto</string>
-    <string name="_5_mins">5 minutos</string>
-    <string name="_15_mins">15 minutos</string>
-    <string name="_30_mins">30 minutos</string>
-    <string name="_1_hour">1 hora</string>
+    <string name="_1_mins">1m</string>
+    <string name="_5_mins">5m</string>
+    <string name="_15_mins">15m</string>
+    <string name="_30_mins">30m</string>
+    <string name="_1_hour">60m</string>
     <string name="type">Tipo</string>
     <string name="color_loop">Bucle de color</string>
     <string name="black_and_white">Blanco y negro</string>
@@ -118,4 +118,17 @@
     <string name="other">Otras aplicaciones</string>
     <string name="name">APLICACIÓN</string>
     <string name="other_apps">OTRAS APLICACIONES</string>
+    <string name="test_3d_device">Prueba del dispositivo 3D</string>
+    <string name="check_requirements_and_rendering">Comprobando requisitos y renderizando…</string>
+    <string name="start_test_3d_5s">Iniciando prueba 3D (5 s)</string>
+    <string name="sensors">Sensores: -</string>
+    <string name="opengl_es">OpenGL ES: -</string>
+    <string name="fps_result">Resultado de FPS: -</string>
+    <string name="opengl_es_request">Solicitud de OpenGL ES: %1$s</string>
+    <string name="_sensors">Sensores: %1$s</string>
+    <string name="rendering_and_measuring_fps_per_seconds">Renderizando y midiendo FPS durante %1$d segundos…</string>
+    <string name="fps_medio_1f">FPS promedio: %.1f</string>
+    <string name="test_passed">Prueba superada ✅</string>
+    <string name="test_not_passed">Prueba fallida ❌ (FPS por debajo del umbral o OpenGL no compatible)</string>
+    <string name="threed">PRUEBA 3D</string>
 </resources>
