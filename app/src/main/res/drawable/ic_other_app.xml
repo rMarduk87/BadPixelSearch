@@ -1,0 +1,18 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/bg_icon_circle" />
+    <item>
+        <vector
+            android:width="24dp"
+            android:height="24dp"
+            android:viewportWidth="24"
+            android:viewportHeight="24">
+            <path
+                android:fillColor="@android:color/transparent"
+                android:strokeColor="@android:color/white"
+                android:strokeWidth="2"
+                android:strokeLineJoin="round"
+                android:strokeLineCap="round"
+                android:pathData="M4,7 L20,7 L20,21 L4,21 Z M4,7 L6,3 L18,3 L20,7 M9,11 L9,17 M15,11 L15,17" />
+        </vector>
+    </item>
+</layer-list>

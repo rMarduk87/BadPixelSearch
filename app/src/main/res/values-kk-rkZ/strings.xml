@@ -118,17 +118,15 @@
     <string name="other">Басқа қолданбалар</string>
     <string name="name">ҚОЛДАНБА</string>
     <string name="other_apps">БАСҚА ҚОЛДАНБАЛАР</string>
-    <string name="test_3d_device">3D құрылғы сынағы</string>
-    <string name="check_requirements_and_rendering">Талаптар мен көрсетуді тексеру…</string>
-    <string name="start_test_3d_5s">3D сынағын бастау (5s)</string>
-    <string name="sensors">Сенсорлар: -</string>
-    <string name="opengl_es">OpenGL ES: -</string>
-    <string name="fps_result">FPS нәтижесі: -</string>
-    <string name="opengl_es_request">OpenGL ES сұрауы: %1$s</string>
-    <string name="_sensors">Сенсорлар: %1$s</string>
-    <string name="rendering_and_measuring_fps_per_seconds">FPS-ті %1$d секунд бойы көрсету және өлшеу…</string>
-    <string name="fps_medio_1f">Орташа FPS: %.1f</string>
-    <string name="test_passed">Тест сәтті өтті ✅</string>
-    <string name="test_not_passed">Тест сәтсіз аяқталды ❌ (FPS шекті мәннен төмен немесе OpenGL қолдау көрсетілмейді)</string>
     <string name="threed">3D ТЕСТ</string>
+    <string name="noise_colored">Айырылатын қар үлпектері</string>
+    <string name="open_menu">Мәзір</string>
+    <string name="app_menu">Мәзір</string>
+    <string name="two">2D ТЕСТ</string>
+    <string name="fps_0">FPS: 0</string>
+    <string name="fps">FPS: </string>
+    <string name="cpu_0">Процессор: 0%</string>
+    <string name="gpu_load_0">GPU жүктемесі: 0%</string>
+    <string name="cpu_test">Процессор: </string>
+    <string name="gpu_load">GPU жүктемесі: </string>
 </resources>

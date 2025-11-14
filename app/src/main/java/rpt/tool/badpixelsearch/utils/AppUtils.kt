@@ -54,6 +54,7 @@ class AppUtils {
         const val FULL_BRIGHTNESS_KEY: String = "full_brightness"
         const val TYPE_MODE_KEY: String = "type_mode"
         const val IS_VERTICAL: String = "is_vertical"
+        const val NOISE_COLORED: String = "noise_colored"
         const val ONE = 60000
         const val FIVE = 300000
         const val FIFTY = 900000

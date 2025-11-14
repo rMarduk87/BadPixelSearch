@@ -118,17 +118,15 @@
     <string name="other">Diğer Uygulamalar</string>
     <string name="name">UYGULAMA</string>
     <string name="other_apps">DİĞER UYGULAMALAR</string>
-    <string name="test_3d_device">3B cihaz testi</string>
-    <string name="check_requirements_and_rendering">Gereksinimler kontrol ediliyor ve görüntüleniyor…</string>
-    <string name="start_test_3d_5s">3B testi başlat (5 sn)</string>
-    <string name="sensors">Sensörler: -</string>
-    <string name="opengl_es">OpenGL ES: -</string>
-    <string name="fps_result">FPS sonucu: -</string>
-    <string name="opengl_es_request">OpenGL ES isteği: %1$s</string>
-    <string name="_sensors">Sensörler: %1$s</string>
-    <string name="rendering_and_measuring_fps_per_seconds">%1$d saniye boyunca görüntüleniyor ve FPS ölçülüyor…</string>
-    <string name="fps_medio_1f">Ortalama FPS: %.1f</string>
-    <string name="test_passed">Test başarılı ✅</string>
-    <string name="test_not_passed">Test başarısız ❌ (FPS eşik değerinin altında veya OpenGL desteklenmiyor)</string>
     <string name="threed">3D TESTİ</string>
+    <string name="noise_colored">Değiştirilebilir Kar Taneleri</string>
+    <string name="open_menu">Menü</string>
+    <string name="app_menu">Menü</string>
+    <string name="two">2D TEST</string>
+    <string name="fps_0">FPS: 0</string>
+    <string name="fps">FPS: </string>
+    <string name="cpu_0">CPU: %0</string>
+    <string name="gpu_load_0">GPU Yükü: %0</string>
+    <string name="cpu_test">CPU: </string>
+    <string name="gpu_load">GPU Yükü: </string>
 </resources>

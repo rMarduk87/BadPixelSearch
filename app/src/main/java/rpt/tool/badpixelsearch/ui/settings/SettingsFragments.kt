@@ -191,6 +191,7 @@ class SettingsFragments : BaseFragment<FragmentSettingsBinding>(FragmentSettings
             bindingRow.lblColorLoop.text = requireContext().getString(R.string.color_loop)
             bindingRow.lblBlackWhite.text = requireContext().getString(R.string.black_and_white)
             bindingRow.lblNoise.text = requireContext().getString(R.string.noise)
+            bindingRow.lblNoiseColored.text = requireContext().getString(R.string.noise_colored)
             bindingRow.lblHline.text = requireContext().getString(R.string.horizontal_line)
             bindingRow.lblVline.text = requireContext().getString(R.string.vertical_line)
             bindingRow.lblHrect.text = requireContext().getString(R.string.horizontal_rectangle)
@@ -216,6 +217,7 @@ class SettingsFragments : BaseFragment<FragmentSettingsBinding>(FragmentSettings
             }
             bindingRow.lblNoise.setOnClickListener {
                 SharedPreferencesManager.typeMode = 2
+                SharedPreferencesManager.typeNoiseColored = false
                 binding.txtType.text = requireContext().getString(R.string.noise)
                 binding.speedSuperBlock.visibility = View.GONE
                 binding.interval.visibility = View.GONE
@@ -262,6 +264,15 @@ class SettingsFragments : BaseFragment<FragmentSettingsBinding>(FragmentSettings
             bindingRow.lblGradient.setOnClickListener {
                 SharedPreferencesManager.typeMode = 7
                 binding.txtType.text = requireContext().getString(R.string.gradient)
+                binding.speedSuperBlock.visibility = View.GONE
+                binding.interval.visibility = View.GONE
+                binding.scrollView.visibility = View.GONE
+                mDropdown!!.dismiss()
+            }
+            bindingRow.lblNoiseColored.setOnClickListener {
+                SharedPreferencesManager.typeMode = 2
+                SharedPreferencesManager.typeNoiseColored = true
+                binding.txtType.text = requireContext().getString(R.string.noise_colored)
                 binding.speedSuperBlock.visibility = View.GONE
                 binding.interval.visibility = View.GONE
                 binding.scrollView.visibility = View.GONE
