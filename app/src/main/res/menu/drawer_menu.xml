@@ -1,0 +1,35 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="none">
+
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_settings"
+            android:iconTint="@color/white"
+            android:title="@string/settings" />
+
+        <item
+            android:id="@+id/nav_other_app"
+            android:icon="@drawable/ic_other_app"
+            android:iconTint="@color/white"
+            android:title="@string/other_apps" />
+
+        <item
+            android:id="@+id/nav_device_info"
+            android:icon="@drawable/ic_device"
+            android:iconTint="@color/white"
+            android:title="@string/device_info" />
+
+        <item
+            android:id="@+id/nav_screen_info"
+            android:icon="@drawable/ic_screen"
+            android:iconTint="@color/white"
+            android:title="@string/screen_info" />
+
+        <item
+            android:id="@+id/nav_contacts"
+            android:icon="@drawable/ic_send_request"
+            android:iconTint="@color/white"
+            android:title="@string/send_req" />
+
+    </group>
+</menu>

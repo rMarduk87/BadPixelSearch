@@ -1,76 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/root3d"
+    android:id="@+id/root"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#000000">
 
-    <!-- Header -->
     <TextView
-        android:id="@+id/tvHeader"
+        android:id="@+id/txtFps3d"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/test_3d_device"
-        android:textSize="22sp"
-        android:layout_margin="15dp"
-        android:textStyle="bold" />
+        android:text="@string/fps_0"
+        android:textSize="14sp"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="70dp"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:alpha="0.9"/>
 
-    <!-- Info -->
-    <TextView
-        android:id="@+id/tvInfo"
-        android:layout_below="@id/tvHeader"
+    <rpt.tool.badpixelsearch.utils.view.threed.Cube3DView
+        android:id="@+id/glView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="12dp"
-        android:text="@string/check_requirements_and_rendering" />
-
-    <!-- GLSurfaceView occupies most of the screen -->
-    <FrameLayout
-        android:id="@+id/glContainer"
-        android:layout_below="@id/tvInfo"
-        android:layout_above="@id/controlsContainer"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_margin="8dp"
-        android:layout_alignParentTop="false"
-        tools:ignore="ObsoleteLayoutParam" />
-
-    <Button
-        android:id="@+id/btnStartTest"
-        android:layout_alignParentBottom="true"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="12dp"
-        android:text="@string/start_test_3d_5s" />
-
-    <LinearLayout
-        android:id="@+id/controlsContainer"
-        android:orientation="vertical"
-        android:layout_above="@id/btnStartTest"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="8dp">
-
-        <TextView
-            android:id="@+id/tvSensors"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/sensors"
-            android:layout_marginBottom="4dp"/>
-
-        <TextView
-            android:id="@+id/tvGLES"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/opengl_es"/>
-        <TextView
-            android:id="@+id/tvFpsResult"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/fps_result"
-            android:textStyle="bold"
-            android:layout_marginTop="6dp"/>
-    </LinearLayout>
+        android:layout_height="match_parent"
+        android:layout_below="@id/txtFps3d" />
 
 </RelativeLayout>

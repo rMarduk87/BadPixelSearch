@@ -118,17 +118,15 @@
     <string name="other">Aplikasi Lainnya</string>
     <string name="name">APLIKASI</string>
     <string name="other_apps">APLIKASI LAIN</string>
-    <string name="test_3d_device">Uji perangkat 3D</string>
-    <string name="check_requirements_and_rendering">Memeriksa persyaratan dan rendering…</string>
-    <string name="start_test_3d_5s">Mulai uji 3D (5 detik)</string>
-    <string name="sensors">Sensor: -</string>
-    <string name="opengl_es">OpenGL ES: -</string>
-    <string name="fps_result">Hasil FPS: -</string>
-    <string name="opengl_es_request">Permintaan OpenGL ES: %1$s</string>
-    <string name="_sensors">Sensor: %1$s</string>
-    <string name="rendering_and_measuring_fps_per_seconds">Rendering dan pengukuran FPS selama %1$d detik…</string>
-    <string name="fps_medio_1f">Rata-rata FPS: %.1f</string>
-    <string name="test_passed">Uji lulus ✅</string>
-    <string name="test_not_passed">Uji gagal ❌ (FPS di bawah ambang batas atau OpenGL tidak didukung)</string>
     <string name="threed">UJI 3D</string>
+    <string name="noise_colored">Kepingan Salju yang Dapat Diubah</string>
+    <string name="open_menu">Menu</string>
+    <string name="app_menu">Menu</string>
+    <string name="two">UJI COBA 2D</string>
+    <string name="fps_0">FPS: 0</string>
+    <string name="fps">FPS: </string>
+    <string name="cpu_0">CPU: 0%</string>
+    <string name="gpu_load_0">Beban GPU: 0%</string>
+    <string name="cpu_test">CPU: </string>
+    <string name="gpu_load">Beban GPU: </string>
 </resources>
