@@ -24,11 +24,4 @@
         android:gravity="top"
         android:hint="@string/message"
         tools:ignore="TextFields" />
-    <Button
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:text="@string/send"
-        android:id="@+id/btnSend"
-        tools:ignore="RtlHardcoded" />
 </LinearLayout>

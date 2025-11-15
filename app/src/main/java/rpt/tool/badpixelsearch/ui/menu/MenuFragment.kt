@@ -12,21 +12,22 @@ import android.graphics.Point
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
-import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.core.net.toUri
+import androidx.core.view.GravityCompat
+import rpt.tool.badpixelsearch.BadPixelSearchActivity
 import rpt.tool.badpixelsearch.BaseFragment
+import rpt.tool.badpixelsearch.GradientTestActivity
+import rpt.tool.badpixelsearch.NoiseSearchActivity
+import rpt.tool.badpixelsearch.PixelTestActivity
 import rpt.tool.badpixelsearch.R
+import rpt.tool.badpixelsearch.ThreeDTestActivity
+import rpt.tool.badpixelsearch.TwoDTestActivity
 import rpt.tool.badpixelsearch.databinding.FragmentMenuBinding
 import rpt.tool.badpixelsearch.utils.managers.SharedPreferencesManager
 import rpt.tool.badpixelsearch.utils.navigation.safeNavController
 import rpt.tool.badpixelsearch.utils.navigation.safeNavigate
-import androidx.core.net.toUri
-import rpt.tool.badpixelsearch.BadPixelSearchActivity
-import rpt.tool.badpixelsearch.PixelTestActivity
-import rpt.tool.badpixelsearch.NoiseSearchActivity
-import rpt.tool.badpixelsearch.GradientTestActivity
-import rpt.tool.badpixelsearch.ThreeDTestActivity
 
 
 @Suppress("DEPRECATION")
@@ -41,82 +42,44 @@ class MenuFragment :
 
         SharedPreferencesManager.firstRun = false
 
-        binding.sendRequestBtn.setOnClickListener {
-            val li = LayoutInflater.from(requireContext())
-            val promptsView = li.inflate(R.layout.sender_dialog, null)
-
-            val alertDialogBuilder = AlertDialog.Builder(requireContext())
-            alertDialogBuilder.setView(promptsView)
-
-            val userInputTextSub: EditText = promptsView.findViewById(R.id.txtSub)
-
-            val userInputTxtMsg: EditText = promptsView.findViewById(R.id.txtMsg)
-
-            val userInputSendBtn: Button = promptsView.findViewById(R.id.btnSend)
-
-            userInputSendBtn.setOnClickListener {
-                val inputText = userInputTextSub.text.toString()
-                val inputTextMsg = userInputTxtMsg.text.toString()
-                sendMail(requireActivity(),
-                    arrayOf(resources.getString(R.string.to)), inputText, inputTextMsg)
-                userInputTxtMsg.text.clear()
-            }
-
-            alertDialogBuilder.setPositiveButton("OK") { _, _ ->
-
-            }.setNegativeButton("Cancel") { dialog, _ ->
-                dialog.cancel()
-            }
-
-            val alertDialog = alertDialogBuilder.create()
-            alertDialog.show()
-        }
-
-        binding.openSettingsMenuBtn.setOnClickListener {
-            safeNavController?.safeNavigate(
-                MenuFragmentDirections.actionMenuFragmentToSettingsFragment())
-        }
-
-        binding.openFaqMenuBtn.setOnClickListener{
+        binding.include.openFaqMenuBtn.setOnClickListener{
             safeNavController?.safeNavigate(
                 MenuFragmentDirections.actionMenuFragmentToFaqFragment())
         }
 
-        binding.screenInfoBtn.setOnClickListener{
-            safeNavController?.safeNavigate(
-                MenuFragmentDirections.actionMenuFragmentToScreenInfoFragment())
-        }
-
-        binding.strBtn.setOnClickListener{
+        binding.include.strBtn.setOnClickListener{
             when(SharedPreferencesManager.typeMode){
-                0,1->startActivity(Intent(requireContext(),BadPixelSearchActivity::class.java))
-                2->startActivity(Intent(requireContext(),NoiseSearchActivity::class.java))
-                3,4,5,6->startActivity(Intent(requireContext(),PixelTestActivity::class.java))
-                7->startActivity(Intent(requireContext(),GradientTestActivity::class.java))
+                0,1->startActivity(Intent(requireContext(),
+                    BadPixelSearchActivity::class.java))
+                2->startActivity(Intent(requireContext(),
+                    NoiseSearchActivity::class.java))
+                3,4,5,6->startActivity(Intent(requireContext(),
+                    PixelTestActivity::class.java))
+                7->startActivity(Intent(requireContext(),
+                    GradientTestActivity::class.java))
             }
         }
 
-        binding.deviceInfoBtn.setOnClickListener{
-            safeNavController?.safeNavigate(
-                MenuFragmentDirections.actionMenuFragmentToDeviceInfoFragment())
-        }
-
-        binding.otherAppBtn.setOnClickListener{
-            safeNavController?.safeNavigate(
-                MenuFragmentDirections.actionMenuFragmentToOtherAppsFragment())
-        }
-
-        binding.threeDBtn.setOnClickListener{
+        binding.include.threeDBtn.setOnClickListener{
             startActivity(Intent(requireContext(),
                 ThreeDTestActivity::class.java))
         }
 
+        binding.include.twoDBtn.setOnClickListener {
+            startActivity(
+                Intent(
+                    requireContext(),
+                    TwoDTestActivity::class.java
+                )
+            )
+        }
+
         val point = Point()
         requireActivity().windowManager.defaultDisplay.getSize(point)
-        val width = binding.logoAnimated.measuredWidth.toFloat()
+        val width = binding.include.logoAnimated.measuredWidth.toFloat()
 
         val animator1 = ObjectAnimator
-            .ofFloat(binding.logoAnimated,
+            .ofFloat(binding.include.logoAnimated,
                 "translationX", 0f, -(width - point.x)).apply {
                     duration = durationValue
                     repeatCount = 1
@@ -124,7 +87,7 @@ class MenuFragment :
             }
 
         val animator2 = ObjectAnimator
-            .ofFloat(binding.logoAnimated,"translationX",
+            .ofFloat(binding.include.logoAnimated,"translationX",
                 0f, +(width - point.x)).apply {
                 duration = durationValue
                 repeatCount = 1
@@ -134,6 +97,12 @@ class MenuFragment :
         val animatorSet = AnimatorSet()
         animatorSet.playSequentially(animator1, animator2)
         animatorSet.start()
+
+        binding.btnOpenDrawer.setOnClickListener{
+            binding.drawerLayout.openDrawer(GravityCompat.START)
+        }
+
+        setupNavigationDrawer()
     }
 
     @SuppressLint("IntentReset")
@@ -146,11 +115,11 @@ class MenuFragment :
 
         val emailIntent = Intent(Intent.ACTION_SEND)
         emailIntent.type = "text/plain"
-        emailIntent.setData("mailto:".toUri())
+        emailIntent.data = "mailto:".toUri()
         emailIntent.putExtra(Intent.EXTRA_EMAIL, emailIds)
         emailIntent.putExtra(Intent.EXTRA_SUBJECT, subject)
         emailIntent.putExtra(Intent.EXTRA_TEXT, textMessage)
-        emailIntent.setType("message/rfc822")
+        emailIntent.type = "message/rfc822"
         try {
             activity.startActivity(
                 Intent.createChooser(
@@ -166,4 +135,65 @@ class MenuFragment :
             ).show()
         }
     }
+
+    private fun setupNavigationDrawer() {
+
+        binding.navigationView.setNavigationItemSelectedListener { menuItem ->
+
+
+            when (menuItem.itemId) {
+                R.id.nav_settings -> {
+                    safeNavController?.safeNavigate(
+                        MenuFragmentDirections.actionMenuFragmentToSettingsFragment()
+                    )
+                }
+                R.id.nav_other_app -> {
+                    safeNavController?.safeNavigate(
+                        MenuFragmentDirections.actionMenuFragmentToOtherAppsFragment()
+                    )
+                }
+                R.id.nav_device_info -> {
+                    safeNavController?.safeNavigate(
+                        MenuFragmentDirections.actionMenuFragmentToDeviceInfoFragment()
+                    )
+                }
+                R.id.nav_screen_info -> {
+                    safeNavController?.safeNavigate(
+                        MenuFragmentDirections.actionMenuFragmentToScreenInfoFragment()
+                    )
+                }
+                R.id.nav_contacts -> {
+                    showContactsDialog()
+                }
+            }
+
+            binding.drawerLayout.closeDrawer(GravityCompat.START)
+
+            true
+        }
+    }
+
+    private fun showContactsDialog() {
+        val li = LayoutInflater.from(requireContext())
+        val promptsView = li.inflate(R.layout.sender_dialog, null)
+        val alertDialogBuilder = AlertDialog.Builder(requireContext())
+        alertDialogBuilder.setView(promptsView)
+
+        val userInputTextSub: EditText = promptsView.findViewById(R.id.txtSub)
+        val userInputTxtMsg: EditText = promptsView.findViewById(R.id.txtMsg)
+
+
+        alertDialogBuilder.setPositiveButton("OK") { _, _ ->
+            val inputText = userInputTextSub.text.toString()
+            val inputTextMsg = userInputTxtMsg.text.toString()
+            sendMail(requireActivity(),
+                arrayOf(resources.getString(R.string.to)), inputText,
+                inputTextMsg)
+            userInputTxtMsg.text.clear() }
+            .setNegativeButton("Cancel") { dialog, _ -> dialog.cancel() }
+
+        val alertDialog = alertDialogBuilder.create()
+        alertDialog.show()
+    }
+    
 }

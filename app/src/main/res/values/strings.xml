@@ -118,18 +118,19 @@
     <string name="other">Other Apps</string>
     <string name="name">APP</string>
     <string name="other_apps">OTHER APPS</string>
-    <string name="test_3d_device">3D device test</string>
-    <string name="check_requirements_and_rendering">Checking requirements and rendering…</string>
-    <string name="start_test_3d_5s">Start 3D test (5s)</string>
-    <string name="sensors">Sensors: -</string>
-    <string name="opengl_es">OpenGL ES: -</string>
-    <string name="fps_result">FPS result: -</string>
-    <string name="opengl_es_request">OpenGL ES request: %1$s</string>
-    <string name="_sensors">Sensors: %1$s</string>
-    <string name="rendering_and_measuring_fps_per_seconds">Rendering and measuring FPS for %1$d seconds…</string>
-    <string name="fps_medio_1f">Average FPS: %.1f</string>
-    <string name="test_passed">Test passed ✅</string>
-    <string name="test_not_passed">Test failed ❌ (FPS below threshold or OpenGL not supported)</string>
     <string name="threed">3D TEST</string>
-
-</resources>
+    <string name="noise_colored">Changeable Snowflakes</string>
+    <string name="open_menu">Menu</string>
+    <string name="app_menu">Menu</string>
+    <string name="two">2D TEST</string>
+    <string name="fps_0">FPS: 0</string>
+    <string name="fps">FPS: </string>
+    <string name="cpu_0">CPU: 0%</string>
+    <string name="gpu_load_0">GPU Load: 0%</string>
+    <string name="cpu_test">CPU: </string>
+    <string name="gpu_load">GPU Load: </string>
+    <string name="dialog_default_title">Here\'s a message!</string>
+    <string name="dialog_ok">OK</string>
+    <string name="dialog_cancel">Cancel</string>
+    <string name="LOADING">Loading…</string>
+    </resources>

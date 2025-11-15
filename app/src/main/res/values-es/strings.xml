@@ -118,17 +118,15 @@
     <string name="other">Otras aplicaciones</string>
     <string name="name">APLICACIÓN</string>
     <string name="other_apps">OTRAS APLICACIONES</string>
-    <string name="test_3d_device">Prueba del dispositivo 3D</string>
-    <string name="check_requirements_and_rendering">Comprobando requisitos y renderizando…</string>
-    <string name="start_test_3d_5s">Iniciando prueba 3D (5 s)</string>
-    <string name="sensors">Sensores: -</string>
-    <string name="opengl_es">OpenGL ES: -</string>
-    <string name="fps_result">Resultado de FPS: -</string>
-    <string name="opengl_es_request">Solicitud de OpenGL ES: %1$s</string>
-    <string name="_sensors">Sensores: %1$s</string>
-    <string name="rendering_and_measuring_fps_per_seconds">Renderizando y midiendo FPS durante %1$d segundos…</string>
-    <string name="fps_medio_1f">FPS promedio: %.1f</string>
-    <string name="test_passed">Prueba superada ✅</string>
-    <string name="test_not_passed">Prueba fallida ❌ (FPS por debajo del umbral o OpenGL no compatible)</string>
     <string name="threed">PRUEBA 3D</string>
+    <string name="noise_colored">Copos de nieve cambiantes</string>
+    <string name="open_menu">Menú</string>
+    <string name="app_menu">Menú</string>
+    <string name="two">PRUEBA 2D</string>
+    <string name="fps_0">FPS: 0</string>
+    <string name="fps">FPS:</string>
+    <string name="cpu_0">CPU: 0%</string>
+    <string name="gpu_load_0">Carga de la GPU: 0%</string>
+    <string name="cpu_test">CPU:</string>
+    <string name="gpu_load">Carga de la GPU:</string>
 </resources>

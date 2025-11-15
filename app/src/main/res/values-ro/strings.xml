@@ -118,17 +118,15 @@
     <string name="other">Alte aplicații</string>
     <string name="name">APP</string>
     <string name="other_apps">ALTE APLICAȚII</string>
-    <string name="test_3d_device">Test dispozitiv 3D</string>
-    <string name="check_requirements_and_rendering">Se verifică cerințele și se randează…</string>
-    <string name="start_test_3d_5s">Începe testul 3D (5s)</string>
-    <string name="sensors">Senzori: -</string>
-    <string name="opengl_es">OpenGL ES: -</string>
-    <string name="fps_result">Rezultat FPS: -</string>
-    <string name="opengl_es_request">Solicitare OpenGL ES: %1$s</string>
-    <string name="_sensors">Senzori: %1$s</string>
-    <string name="rendering_and_measuring_fps_per_seconds">Se randează și se măsoară FPS timp de %1$d secunde…</string>
-    <string name="fps_medio_1f">FPS mediu: %.1f</string>
-    <string name="test_passed">Test trecut ✅</string>
-    <string name="test_not_passed">Test eșuat ❌ (FPS sub prag sau OpenGL nu este acceptat)</string>
     <string name="threed">TEST 3D</string>
+    <string name="noise_colored">Fulgi de zăpadă modificabili</string>
+    <string name="open_menu">Meniu</string>
+    <string name="app_menu">Meniu</string>
+    <string name="two">TEST 2D</string>
+    <string name="fps_0">FPS: 0</string>
+    <string name="fps">FPS: </string>
+    <string name="cpu_0">CPU: 0%</string>
+    <string name="gpu_load_0">Încărcare GPU: 0%</string>
+    <string name="cpu_test">CPU: </string>
+    <string name="gpu_load">Încărcare GPU: </string>
 </resources>

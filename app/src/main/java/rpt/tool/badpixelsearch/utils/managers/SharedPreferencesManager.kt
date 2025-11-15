@@ -44,4 +44,7 @@ object SharedPreferencesManager {
     var isVertical: Boolean
         get() = sharedPreferences.getBoolean(AppUtils.IS_VERTICAL, false)
         set(value) = sharedPreferences.edit() { putBoolean(AppUtils.IS_VERTICAL, value) }
+    var typeNoiseColored: Boolean
+        get() = sharedPreferences.getBoolean(AppUtils.NOISE_COLORED, false)
+        set(value) = sharedPreferences.edit() { putBoolean(AppUtils.NOISE_COLORED, value) }
 }

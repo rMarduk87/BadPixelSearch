@@ -118,17 +118,15 @@
     <string name="other">تطبيقات أخرى</string>
     <string name="name">تطبيق</string>
     <string name="other_apps">تطبيقات أخرى</string>
-    <string name="test_3d_device">اختبار جهاز ثلاثي الأبعاد</string>
-    <string name="check_requirements_and_rendering">جارٍ التحقق من المتطلبات والعرض…</string>
-    <string name="start_test_3d_5s">بدء اختبار ثلاثي الأبعاد (5 ثوانٍ)</string>
-    <string name="sensors">المستشعرات: -</string>
-    <string name="opengl_es">OpenGL ES: -</string>
-    <string name="fps_result">نتيجة معدل الإطارات في الثانية: -</string>
-    <string name="opengl_es_request">طلب OpenGL ES: %1$s</string>
-    <string name="_sensors">المستشعرات: %1$s</string>
-    <string name="rendering_and_measuring_fps_per_seconds">عرض وقياس معدل الإطارات في الثانية لمدة %1$d ثانية…</string>
-    <string name="fps_medio_1f">متوسط ​​معدل الإطارات في الثانية: %.1f</string>
-    <string name="test_passed">تم الاختبار بنجاح ✅</string>
-    <string name="test_not_passed">فشل الاختبار ❌ (معدل الإطارات في الثانية أقل من الحد الأقصى أو عدم دعم OpenGL)</string>
     <string name="threed">اختبار ثلاثي الأبعاد</string>
-</resources>
+    <string name="noise_colored">رقاقات ثلج قابلة للتغيير</string>
+    <string name="open_menu">القائمة</string>
+    <string name="app_menu">القائمة</string>
+    <string name="two">اختبار ثنائي الأبعاد</string>
+    <string name="fps_0">معدل الإطارات في الثانية: 0</string>
+    <string name="fps">معدل الإطارات في الثانية: </string>
+    <string name="cpu_0">وحدة المعالجة المركزية: 0%</string>
+    <string name="gpu_load_0">حمل وحدة معالجة الرسومات: 0%</string>
+    <string name="cpu_test">وحدة المعالجة المركزية: </string>
+    <string name="gpu_load">حمل وحدة معالجة الرسومات: </string>
+    </resources>
