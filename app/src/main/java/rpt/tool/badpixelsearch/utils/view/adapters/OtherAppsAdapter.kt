@@ -70,12 +70,12 @@ class OtherAppsAdapter(
     }
 
     private fun getImage(pos: Int): Int {
-        var drawable: Int = R.drawable.ic_water_diary
+        var drawable: Int = R.drawable.ic_pong_clock
 
         val `val`: String = otherArrayList[pos].id.toString()
 
-        if (`val`.toInt() == 0) drawable = R.drawable.ic_water_diary
-        else if (`val`.toInt() == 1) drawable = R.drawable.ic_pong_clock
+        if (`val`.toInt() == 0) drawable = R.drawable.ic_pong_clock
+        else if (`val`.toInt() == 1) drawable = R.drawable.ic_marimo_care
 
         return drawable
     }
