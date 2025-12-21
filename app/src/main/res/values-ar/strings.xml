@@ -106,7 +106,7 @@
     <string name="sdk">مجموعة تطوير البرامج (SDK)</string>
     <string name="answer">الإجابة</string>
     <string name="green_screen"> شاشة خضراء</string>
-    <string name="gradient">تدرج لوني</string>
+    <string name="gradient">تدرج</string>
     <string name="white">أبيض</string>
     <string name="red">أحمر</string>
     <string name="green">أخضر</string>
@@ -134,4 +134,23 @@
     <string name="system_fonts">SYSTEM FONTS</string>
     <string name="rgb_colors">RGB COLORS</string>
     <string name="camera_test">CAMERA TESTS</string>
+    <string name="screen_sensor">SENSOR</string>
+    <string name="animation_test_full">ANIMATION TESTS</string>
+    <string name="two_gravity">2D GRAVITY</string>
+    <string name="three_gravity">3D GRAVITY</string>
+    <string name="moving_bars">MOVING BARS</string>
+    <string name="rotation">ROTATION TEST</string>
+    <string name="display_fps_0">DISPLAY FPS: 0</string>
+    <string name="display_fps">Display FPS: </string>
+    <string name="purity">PURITY</string>
+    <string name="scales">SCALES</string>
+    <string name="shades">SHADES</string>
+    <string name="gamma_test">GAMMA TEST</string>
+    <string name="line_test">LINE TEST</string>
+    <string name="normal_fonts">NORMAL FONTS</string>
+    <string name="italic_fonts">ITALIC FONTS</string>
+    <string name="bold_fonts">BOLD FONTS</string>
+    <string name="bold_italic_fonts">BOLD-ITALIC FONTS</string>
+    <string name="font_families">FONT FAMILIES</string>
+    <string name="reading_test">READING TEST</string>
 </resources>

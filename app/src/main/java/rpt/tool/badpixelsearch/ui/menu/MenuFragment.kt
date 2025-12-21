@@ -44,10 +44,15 @@ class MenuFragment :
 
         binding.include.openColorTestMenuBtn.setOnClickListener{
             safeNavController?.safeNavigate(
-                MenuFragmentDirections.actionMenuFragmentToFaqFragment())
+                MenuFragmentDirections.actionMenuFragmentToColorTestMenuFragment())
         }
 
         binding.include.openAnimationTestBtn.setOnClickListener{
+            safeNavController?.safeNavigate(
+                MenuFragmentDirections.actionMenuFragmentToAnimationTestMenuFragment())
+        }
+
+        /*binding.include.openAnimationTestBtn.setOnClickListener{
             when(SharedPreferencesManager.typeMode){
                 0,1->startActivity(Intent(requireContext(),
                     BadPixelSearchActivity::class.java))
@@ -58,11 +63,11 @@ class MenuFragment :
                 7->startActivity(Intent(requireContext(),
                     GradientTestActivity::class.java))
             }
-        }
+        }*/
 
         binding.include.openSystemFontBtn.setOnClickListener{
-            startActivity(Intent(requireContext(),
-                ThreeDTestActivity::class.java))
+            safeNavController?.safeNavigate(
+                MenuFragmentDirections.actionMenuFragmentToSystemFontMenuFragment())
         }
 
         binding.include.openRgbColorsBtn.setOnClickListener {
@@ -153,6 +158,11 @@ class MenuFragment :
                     )
                 }
                 R.id.nav_device_info -> {
+                    safeNavController?.safeNavigate(
+                        MenuFragmentDirections.actionMenuFragmentToDeviceInfoFragment()
+                    )
+                }
+                R.id.nav_screen_sensor -> {
                     safeNavController?.safeNavigate(
                         MenuFragmentDirections.actionMenuFragmentToDeviceInfoFragment()
                     )

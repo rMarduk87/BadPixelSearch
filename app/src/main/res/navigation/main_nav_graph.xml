@@ -23,8 +23,20 @@
             android:id="@+id/action_menuFragment_to_deviceInfoFragment"
             app:destination="@id/DeviceInfoFragment" />
         <action
+            android:id="@+id/action_menuFragment_to_sensorInfoFragment"
+            app:destination="@id/SensorInfoFragment" />
+        <action
             android:id="@+id/action_menuFragment_to_otherAppsFragment"
             app:destination="@id/OtherAppsFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_colorTestMenuFragment"
+            app:destination="@id/ColorTestsMenuFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_animationTestMenuFragment"
+            app:destination="@id/AnimationTestMenuFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_systemFontMenuFragment"
+            app:destination="@id/SystemFontMenuFragment" />
     </fragment>
     <fragment
         android:id="@+id/SettingsFragment"
@@ -63,6 +75,15 @@
             app:destination="@id/MenuFragment" />
     </fragment>
     <fragment
+        android:id="@+id/SensorInfoFragment"
+        android:name="rpt.tool.badpixelsearch.ui.sensor.SensorInfoFragment"
+        android:label="SensorInfoFragment"
+        tools:layout="@layout/fragment_sensor_info">
+        <action
+            android:id="@+id/action_sensorInfoFragment_to_menuFragment"
+            app:destination="@id/MenuFragment" />
+    </fragment>
+    <fragment
         android:id="@+id/OtherAppsFragment"
         android:name="rpt.tool.badpixelsearch.ui.other.OtherAppsFragment"
         android:label="OtherAppsFragment"
@@ -70,6 +91,57 @@
         <action
             android:id="@+id/action_otherAppsFragment_to_menuFragment"
             app:destination="@id/MenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ColorTestsMenuFragment"
+        android:name="rpt.tool.badpixelsearch.ui.color.menu.ColorTestMenuFragment"
+        android:label="ColorTestsMenuFragment"
+        tools:layout="@layout/fragment_menu_color_test">
+        <action
+            android:id="@+id/action_colorTestsMenuFragment_to_menuFragment"
+            app:destination="@id/MenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/AnimationTestMenuFragment"
+        android:name="rpt.tool.badpixelsearch.ui.animation.menu.AnimationMenuFragment"
+        android:label="AnimationTestMenuFragment"
+        tools:layout="@layout/fragment_animation_menu">
+        <action
+            android:id="@+id/action_animationMenuFragment_to_menuFragment"
+            app:destination="@id/MenuFragment" />
+        <action
+            android:id="@+id/action_animationMenuFragment_to_movingBarsFragment"
+            app:destination="@id/MovingBarFragment" />
+        <action
+            android:id="@+id/action_animationMenuFragment_to_rotationFragment"
+            app:destination="@id/RotationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SystemFontMenuFragment"
+        android:name="rpt.tool.badpixelsearch.ui.fonts.menu.SystemFontMenuFragment"
+        android:label="SystemFontMenuFragment"
+        tools:layout="@layout/fragment_system_font_menu">
+        <action
+            android:id="@+id/action_systemFontMenuFragment_to_menuFragment"
+            app:destination="@id/MenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/MovingBarFragment"
+        android:name="rpt.tool.badpixelsearch.ui.animation.bars.MovingBarsFragment"
+        android:label="MovingBarFragment"
+        tools:layout="@layout/fragment_animation_bars">
+        <action
+            android:id="@+id/action_movingBarFragment_to_animationMenuFragment"
+            app:destination="@id/AnimationTestMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/RotationFragment"
+        android:name="rpt.tool.badpixelsearch.ui.animation.rotation.RotationFragment"
+        android:label="RotationFragment"
+        tools:layout="@layout/fragment_rotation">
+        <action
+            android:id="@+id/action_rotationBarFragment_to_animationMenuFragment"
+            app:destination="@id/AnimationTestMenuFragment" />
     </fragment>
 
 </navigation>
