@@ -42,12 +42,12 @@ class MenuFragment :
 
         SharedPreferencesManager.firstRun = false
 
-        binding.include.openFaqMenuBtn.setOnClickListener{
+        binding.include.openColorTestMenuBtn.setOnClickListener{
             safeNavController?.safeNavigate(
                 MenuFragmentDirections.actionMenuFragmentToFaqFragment())
         }
 
-        binding.include.strBtn.setOnClickListener{
+        binding.include.openAnimationTestBtn.setOnClickListener{
             when(SharedPreferencesManager.typeMode){
                 0,1->startActivity(Intent(requireContext(),
                     BadPixelSearchActivity::class.java))
@@ -60,12 +60,12 @@ class MenuFragment :
             }
         }
 
-        binding.include.threeDBtn.setOnClickListener{
+        binding.include.openSystemFontBtn.setOnClickListener{
             startActivity(Intent(requireContext(),
                 ThreeDTestActivity::class.java))
         }
 
-        binding.include.twoDBtn.setOnClickListener {
+        binding.include.openRgbColorsBtn.setOnClickListener {
             startActivity(
                 Intent(
                     requireContext(),
@@ -142,9 +142,9 @@ class MenuFragment :
 
 
             when (menuItem.itemId) {
-                R.id.nav_settings -> {
+                R.id.nav_faq -> {
                     safeNavController?.safeNavigate(
-                        MenuFragmentDirections.actionMenuFragmentToSettingsFragment()
+                        MenuFragmentDirections.actionMenuFragmentToFaqFragment()
                     )
                 }
                 R.id.nav_other_app -> {

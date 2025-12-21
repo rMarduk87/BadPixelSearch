@@ -2,10 +2,10 @@
     <group android:checkableBehavior="none">
 
         <item
-            android:id="@+id/nav_settings"
+            android:id="@+id/nav_faq"
             android:icon="@drawable/ic_settings"
             android:iconTint="@color/white"
-            android:title="@string/settings" />
+            android:title="@string/faq" />
 
         <item
             android:id="@+id/nav_other_app"

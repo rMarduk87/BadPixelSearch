@@ -31,7 +31,7 @@
     <string name="fix">Fix Mode</string>
     <string name="brightness">Brightness</string>
     <string name="text_delay">Delay</string>
-    <string name="faq">Faq</string>
+    <string name="faq">FAQ</string>
     <string name="faq_a">A:</string>
     <string name="faq_q">Q:</string>
     <string name="faq_question_1">How to use this app?</string>
@@ -129,8 +129,9 @@
     <string name="gpu_load_0">GPU Load: 0%</string>
     <string name="cpu_test">CPU: </string>
     <string name="gpu_load">GPU Load: </string>
-    <string name="dialog_default_title">Here\'s a message!</string>
-    <string name="dialog_ok">OK</string>
-    <string name="dialog_cancel">Cancel</string>
-    <string name="LOADING">Loading…</string>
-    </resources>
+    <string name="color_tests">COLOR TESTS</string>
+    <string name="animation_test">ANIM. TESTS</string>
+    <string name="system_fonts">SYSTEM FONTS</string>
+    <string name="rgb_colors">RGB COLORS</string>
+    <string name="camera_test">CAMERA TESTS</string>
+</resources>
