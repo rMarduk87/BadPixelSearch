@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainBG"
+    android:background="@drawable/ic_background_search">
+
+    <!-- SEZIONE SUPERIORE (UI SEMPRE VISIBILE) -->
+    <RelativeLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/logo_animated"
+            android:layout_width="@dimen/dp_128"
+            android:layout_height="@dimen/dp_128"
+            android:layout_marginTop="@dimen/dp_125"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/splash" />
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_38"
+            android:gravity="center"
+            android:text="@string/camera_tests"
+            android:textColor="@color/white"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <!-- PULSANTI CAMERA -->
+        <Button
+            android:id="@+id/openFrontCameraTest"
+            android:layout_width="@dimen/dp_120"
+            android:layout_height="@dimen/dp_35"
+            android:layout_marginStart="@dimen/dp_25"
+            android:layout_marginTop="@dimen/dp_260"
+            android:text="@string/camera1"
+            android:textColor="@color/white"
+            android:background="@drawable/walk_through_button_bg" />
+
+        <Button
+            android:id="@+id/openRearCameraTest"
+            android:layout_width="@dimen/dp_120"
+            android:layout_height="@dimen/dp_35"
+            android:layout_marginStart="@dimen/dp_170"
+            android:layout_marginTop="@dimen/dp_260"
+            android:text="@string/camera2"
+            android:background="@drawable/walk_through_button_bg" />
+
+    </RelativeLayout>
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/previewCamera"
+        android:layout_marginTop="@dimen/dp_40"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        android:background="@android:color/transparent"
+        android:clickable="false"
+        android:focusable="false"
+        app:layout_constraintTop_toBottomOf="@id/topLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

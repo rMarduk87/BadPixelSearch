@@ -153,4 +153,16 @@
     <string name="bold_italic_fonts">BOLD-ITALIC FONTS</string>
     <string name="font_families">FONT FAMILIES</string>
     <string name="reading_test">READING TEST</string>
+    <string name="camera_tests">CAMERA TESTS</string>
+    <string name="camera1">CAMERA 1</string>
+    <string name="camera2">"CAMERA 2 "</string>
+    <string name="fix_tests">FIX PIXELS</string>
+    <string name="bw_test"><![CDATA[BLACK & WHITE TEST]]></string>
+    <string name="noise_test">NOISE TEST</string>
+    <string name="snow">SNOWFLAKES</string>
+    <string name="horizontal_line_test">HORIZONTAL LINE</string>
+    <string name="vertical_line_test">VERTICAL LINE</string>
+    <string name="hori_rect_test">HORIZONTAL RECTANGLE</string>
+    <string name="vertical_rectangle_test">VERTICAL RECTANGLE</string>
+    <string name="fix_test">FIX</string>
 </resources>

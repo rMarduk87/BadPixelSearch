@@ -39,6 +39,18 @@
                       </LayoutPositions>
                     </value>
                   </entry>
+                  <entry key="CameraTestMenuFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="12" />
+                            <option name="y" value="12" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="ColorTestsMenuFragment">
                     <value>
                       <LayoutPositions>
@@ -118,6 +130,11 @@
                                 <LayoutPositions />
                               </value>
                             </entry>
+                            <entry key="action_menuFragment_to_cameraTestMenuFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
                             <entry key="action_menuFragment_to_colorTestMenuFragment">
                               <value>
                                 <LayoutPositions />
@@ -129,6 +146,11 @@
                               </value>
                             </entry>
                             <entry key="action_menuFragment_to_faqFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_menuFragment_to_fixTestMenuFragment">
                               <value>
                                 <LayoutPositions />
                               </value>

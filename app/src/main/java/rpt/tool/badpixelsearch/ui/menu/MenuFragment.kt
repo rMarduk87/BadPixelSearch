@@ -52,18 +52,17 @@ class MenuFragment :
                 MenuFragmentDirections.actionMenuFragmentToAnimationTestMenuFragment())
         }
 
-        /*binding.include.openAnimationTestBtn.setOnClickListener{
-            when(SharedPreferencesManager.typeMode){
-                0,1->startActivity(Intent(requireContext(),
-                    BadPixelSearchActivity::class.java))
-                2->startActivity(Intent(requireContext(),
-                    NoiseSearchActivity::class.java))
-                3,4,5,6->startActivity(Intent(requireContext(),
-                    PixelTestActivity::class.java))
-                7->startActivity(Intent(requireContext(),
-                    GradientTestActivity::class.java))
-            }
-        }*/
+        binding.include.openCameraTests.setOnClickListener {
+            safeNavController?.safeNavigate(
+                MenuFragmentDirections.actionMenuFragmentToCameraTestMenuFragment()
+            )
+        }
+
+        binding.include.openFixPixelBtn.setOnClickListener {
+            safeNavController?.safeNavigate(
+                MenuFragmentDirections.actionMenuFragmentToFixTestMenuFragment()
+            )
+        }
 
         binding.include.openSystemFontBtn.setOnClickListener{
             safeNavController?.safeNavigate(

@@ -37,6 +37,12 @@
         <action
             android:id="@+id/action_menuFragment_to_systemFontMenuFragment"
             app:destination="@id/SystemFontMenuFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_cameraTestMenuFragment"
+            app:destination="@id/CameraTestMenuFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_fixTestMenuFragment"
+            app:destination="@id/FixTestMenuFragment" />
     </fragment>
     <fragment
         android:id="@+id/SettingsFragment"
@@ -142,6 +148,18 @@
         <action
             android:id="@+id/action_rotationBarFragment_to_animationMenuFragment"
             app:destination="@id/AnimationTestMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/CameraTestMenuFragment"
+        android:name="rpt.tool.badpixelsearch.ui.camera.menu.CameraMenuFragment"
+        android:label="CameraTestMenu"
+        tools:layout="@layout/fragment_menu_camera">
+    </fragment>
+    <fragment
+        android:id="@+id/FixTestMenuFragment"
+        android:name="rpt.tool.badpixelsearch.ui.fix.menu.FixPixelMenuFragment"
+        android:label="FixTestMenuFragment"
+        tools:layout="@layout/fragment_fix_pixels_menu">
     </fragment>
 
 </navigation>
