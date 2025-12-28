@@ -55,6 +55,8 @@ class AppUtils {
         const val TYPE_MODE_KEY: String = "type_mode"
         const val IS_VERTICAL: String = "is_vertical"
         const val NOISE_COLORED: String = "noise_colored"
+        const val IS_BOLD: String = "is_bold"
+        const val IS_BOLD_ITALIC: String = "is_bold_italic"
         const val ONE = 60000
         const val FIVE = 300000
         const val FIFTY = 900000

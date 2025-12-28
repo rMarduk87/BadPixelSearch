@@ -164,4 +164,36 @@
     <string name="hori_rect_test">HORIZONTAL RECTANGLE</string>
     <string name="vertical_rectangle_test">VERTICAL RECTANGLE</string>
     <string name="fix_test">FIX</string>
+    <string name="gray_text">Gray text</string>
+    <string name="xsmall">Xsmall</string>
+    <string name="text_1">abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz</string>
+    <string name="text_1_cap">ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+    <string name="text_numb_symbol"><![CDATA[0123456789012345678901234567890123456789012345678901234 @ # $ % ^ & | = . - _ ! ? , ( ) + - * < > / \\]]></string>
+    <string name="small">Small</string>
+    <string name="medium">Medium</string>
+    <string name="large">Large</string>
+    <string name="white_text">White Text</string>
+    <string name="red_text">Red Text</string>
+    <string name="green_text">Green Text</string>
+    <string name="blue_text">Blue Text</string>
+    <string name="magenta_text">Magenta Text</string>
+    <string name="cyan_text">Cyan Text</string>
+    <string name="yellow_text">Yellow Text</string>
+    <string name="calibri">Calibri</string>
+    <string name="open_sans">Sans-serif</string>
+    <string name="kanit">Kanit</string>
+    <string name="cursive">Cursive</string>
+    <string name="baloo">Baloo</string>
+    <string name="monospace">Monospace</string>
+    <string name="bold_monospace">Bold Monospace</string>
+    <string name="muhaqu">Sans-serif-condensed</string>
+    <string name="calibir_light">Calibri-light</string>
+    <string name="sans">Sans-serif</string>
+    <string name="sans_small">Sans-serif-smallcaps</string>
+    <string name="sans_thin">Sans-serif-thin</string>
+    <string name="text_r_1">Geometry is a branch of mathematics concerned with properties of space such as the distance, shape, size, and relative position of figures. Geometry is, along with arithmetic, one of the oldest branches of mathematics. A mathematician who works in the field of\ngeometry is called a geometer. Until the 19th century, geometry was almost exclusively devoted to Euclidean geometry, which includes the notions of point, line, plane, distance, angle, surface, and curve, as fundamental concepts.</string>
+    <string name="text_r_2">Originally developed to model the physical world, geometry has applications in almost all sciences, and also in art, architecture, and other activities that are related to graphics. Geometry also has applications in areas of mathematics that are apparently unrelated.\nFor example, methods of algebraic geometry are fundamental in Wiles\'s proof of Fermat\'s Last Theorem, a problem that was stated in terms of elementary arithmetic, and remained unsolved for several centuries.</string>
+    <string name="text_r_3">During the 19th century several discoveries enlarged dramatically the scope of geometry. One of the oldest such discoveries is Carl Friedrich Gauss\' Theorema Egregium (\"remarkable theorem\") that asserts roughly that the Gaussian curvature of a surface is\nindependent from any specific embedding in a Euclidean space. This implies that surfaces can be studied intrinsically, that is, as stand-alone spaces, and has been expanded into the theory of manifolds and Riemannian geometry. Later in the 19th century, it\nappeared that geometries without the parallel postulate (non-Euclidean geometries) can be developed without introducing any contradiction. The geometry that underlies general relativity is a famous application of non-Euclidean geometry.</string>
+    <string name="text_r_4">Since the late 19th century, the scope of geometry has been greatly expanded, and the field has been split in many subfields that depend on the underlying methods - differential geometry, algebraic geometry, computational geometry, algebraic topology, discrete\ngeometry (also known as combinatorial geometry), etc. - or on the properties of Euclidean spaces that are disregarded - projective geometry that consider only alignment of points but not distance and parallelism, affine geometry that omits the concept of angle and\ndistance, finite geometry that omits continuity, and others. This enlargement of the scope of geometry led to a change of meaning of the word \"space\", which originally referred to the three-dimensional space of the physical world and its model provided by\nEuclidean geometry; presently a geometric space, or simply a space is a mathematical structure on which some geometry is defined.</string>
+    <string name="xlarge">XLarge</string>
 </resources>

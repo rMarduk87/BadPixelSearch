@@ -130,6 +130,18 @@
         <action
             android:id="@+id/action_systemFontMenuFragment_to_menuFragment"
             app:destination="@id/MenuFragment" />
+        <action
+            android:id="@+id/action_systemFontMenuFragment_to_normalFontFragment"
+            app:destination="@id/NormalFontFragment" />
+        <action
+            android:id="@+id/action_systemFontMenuFragment_to_italicFontFragment"
+            app:destination="@id/ItalicFontFragment" />
+        <action
+            android:id="@+id/action_systemFontMenuFragment_to_fontFamiliesFragment"
+            app:destination="@id/FontFamiliesFragment" />
+        <action
+            android:id="@+id/action_systemFontMenuFragment_to_readingTestFragment"
+            app:destination="@id/ReadingTestFragment" />
     </fragment>
     <fragment
         android:id="@+id/MovingBarFragment"
@@ -160,6 +172,42 @@
         android:name="rpt.tool.badpixelsearch.ui.fix.menu.FixPixelMenuFragment"
         android:label="FixTestMenuFragment"
         tools:layout="@layout/fragment_fix_pixels_menu">
+    </fragment>
+    <fragment
+        android:id="@+id/NormalFontFragment"
+        android:name="rpt.tool.badpixelsearch.ui.fonts.normal.NormalFontFragment"
+        android:label="NormalFontFragment"
+        tools:layout="@layout/fragment_normal_font">
+        <action
+            android:id="@+id/action_normalFontFragment_to_systemFontMenuFragment"
+            app:destination="@id/SystemFontMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ItalicFontFragment"
+        android:name="rpt.tool.badpixelsearch.ui.fonts.italic.ItalicFontFragment"
+        android:label="ItalicFontFragment"
+        tools:layout="@layout/fragment_italic_font">
+        <action
+            android:id="@+id/action_italicFontFragment_to_systemFontMenuFragment"
+            app:destination="@id/SystemFontMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/FontFamiliesFragment"
+        android:name="rpt.tool.badpixelsearch.ui.fonts.families.FontFamiliesFragment"
+        android:label="FontFamiliesFragment"
+        tools:layout="@layout/fragment_font_families">
+        <action
+            android:id="@+id/action_fontFamiliesFragment_to_systemFontMenuFragment"
+            app:destination="@id/SystemFontMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ReadingTestFragment"
+        android:name="rpt.tool.badpixelsearch.ui.fonts.re.families.FontFamiliesFragment"
+        android:label="FontFamiliesFragment"
+        tools:layout="@layout/fragment_font_families">
+        <action
+            android:id="@+id/action_fontFamiliesFragment_to_systemFontMenuFragment"
+            app:destination="@id/SystemFontMenuFragment" />
     </fragment>
 
 </navigation>
