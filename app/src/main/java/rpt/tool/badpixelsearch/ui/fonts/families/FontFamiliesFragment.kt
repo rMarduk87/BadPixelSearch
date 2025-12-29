@@ -31,8 +31,7 @@ class FontFamiliesFragment :
     private var currentColor: Int = Color.GRAY
 
     private val titleIds = setOf(
-        R.id.title_xsmall, R.id.title_small,
-        R.id.title_medium, R.id.title_large
+        R.id.title_xsmall, R.id.title_small, R.id.title_medium, R.id.title_large
     )
 
     private val textLines = mutableListOf<TextView>()
@@ -45,12 +44,11 @@ class FontFamiliesFragment :
         applyColor(colors[0])
         applyBoldItalic()
 
-        textLines.forEach { tv ->
-            tv.setOnClickListener { changeAllColors() }
-        }
-        
+        textLines.forEach { it.setOnClickListener { changeAllColors() } }
+
         binding.fontChange.setOnClickListener { changeFonts() }
     }
+    
 
     private fun applyBoldItalic() {
         val style =
@@ -71,7 +69,6 @@ class FontFamiliesFragment :
 
         if (view is TextView) {
             val id = view.id
-
             if (id != R.id.txtSelected && id !in titleIds) {
                 textLines.add(view)
             }
@@ -95,7 +92,19 @@ class FontFamiliesFragment :
 
     private fun applyColor(color: Int) {
         currentColor = color
-        textLines.forEach { it.setTextColor(color) }
+        textLines.forEach {
+            it.setTextColor(color)
+        }
+    }
+
+    private fun forceRecolor() {
+        binding.root.post {
+            applyColor(currentColor)
+
+            binding.root.postDelayed({
+                applyColor(currentColor)
+            }, 16) // 1 frame (60fps)
+        }
     }
 
     private fun changeFonts() {
@@ -107,10 +116,11 @@ class FontFamiliesFragment :
             2 -> applyFontSet(FontSet.LIGHT)
         }
 
-        binding.root.post {
-            applyColor(currentColor)
-            applyBoldItalic()
-        }
+        findAllTextViews()
+
+        forceRecolor()
+
+        applyBoldItalic()
     }
 
     private enum class FontSet { CALIBRI, BALOO, LIGHT }
