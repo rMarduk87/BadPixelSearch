@@ -23,6 +23,7 @@
             android:layout_height="@dimen/dp_128"
             android:layout_marginTop="@dimen/dp_125"
             android:layout_centerHorizontal="true"
+            android:contentDescription="@string/img"
             android:src="@drawable/splash" />
 
         <TextView
@@ -34,6 +35,18 @@
             android:text="@string/camera_tests"
             android:textColor="@color/white"
             android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/use"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/choose"
+            android:textAlignment="center"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginTop="@dimen/dp_60"
+            android:textColor="@color/white" />
 
         <!-- PULSANTI CAMERA -->
         <Button

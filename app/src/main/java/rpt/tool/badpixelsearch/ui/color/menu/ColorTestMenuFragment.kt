@@ -12,6 +12,8 @@ import rpt.tool.badpixelsearch.BaseFragment
 import rpt.tool.badpixelsearch.GradientTestActivity
 import rpt.tool.badpixelsearch.databinding.FragmentMenuColorTestBinding
 import rpt.tool.badpixelsearch.utils.managers.SharedPreferencesManager
+import rpt.tool.badpixelsearch.utils.navigation.safeNavController
+import rpt.tool.badpixelsearch.utils.navigation.safeNavigate
 
 class ColorTestMenuFragment: BaseFragment<FragmentMenuColorTestBinding>
     (FragmentMenuColorTestBinding::inflate) {
@@ -59,5 +61,24 @@ class ColorTestMenuFragment: BaseFragment<FragmentMenuColorTestBinding>
                 )
             )
         }
+
+        binding.openScalesTest.setOnClickListener {
+            safeNavController?.safeNavigate(ColorTestMenuFragmentDirections
+                .actionColorTestsMenuFragmentToColorScalesFragment())
+        }
+
+        binding.openShadesTest.setOnClickListener {
+            safeNavController?.safeNavigate(
+                ColorTestMenuFragmentDirections
+                    .actionColorTestsMenuFragmentToColorShadeFragment()
+            )
+        }
+
+        binding.openGammaTest.setOnClickListener {
+            safeNavController?.safeNavigate(
+                ColorTestMenuFragmentDirections
+                    .actionColorTestsMenuFragmentToGammaColorFragment())
+        }
+
     }
 }

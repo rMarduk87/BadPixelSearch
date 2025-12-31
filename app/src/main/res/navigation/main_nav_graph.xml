@@ -43,6 +43,9 @@
         <action
             android:id="@+id/action_menuFragment_to_fixTestMenuFragment"
             app:destination="@id/FixTestMenuFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_rgbColorMenuFragment"
+            app:destination="@id/RgbColorsMenuFragment" />
     </fragment>
     <fragment
         android:id="@+id/SettingsFragment"
@@ -106,6 +109,15 @@
         <action
             android:id="@+id/action_colorTestsMenuFragment_to_menuFragment"
             app:destination="@id/MenuFragment" />
+        <action
+            android:id="@+id/action_colorTestsMenuFragment_to_colorScalesFragment"
+            app:destination="@id/ColorScalesFragment" />
+        <action
+            android:id="@+id/action_colorTestsMenuFragment_to_colorShadeFragment"
+            app:destination="@id/ColorShadeFragment" />
+        <action
+            android:id="@+id/action_colorTestsMenuFragment_to_gammaColorFragment"
+            app:destination="@id/GammaColorFragment" />
     </fragment>
     <fragment
         android:id="@+id/AnimationTestMenuFragment"
@@ -202,12 +214,57 @@
     </fragment>
     <fragment
         android:id="@+id/ReadingTestFragment"
-        android:name="rpt.tool.badpixelsearch.ui.fonts.re.families.FontFamiliesFragment"
+        android:name="rpt.tool.badpixelsearch.ui.fonts.families.FontFamiliesFragment"
         android:label="FontFamiliesFragment"
         tools:layout="@layout/fragment_font_families">
         <action
             android:id="@+id/action_fontFamiliesFragment_to_systemFontMenuFragment"
             app:destination="@id/SystemFontMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ColorScalesFragment"
+        android:name="rpt.tool.badpixelsearch.ui.color.scales.ColorScalesFragment"
+        android:label="ColorScalesFragment"
+        tools:layout="@layout/fragment_color_scales">
+        <action
+            android:id="@+id/action_colorScalesFragment_to_colorTestsMenuFragment"
+            app:destination="@id/ColorTestsMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ColorShadeFragment"
+        android:name="rpt.tool.badpixelsearch.ui.color.shades.ColorShadeFragment"
+        android:label="ColorShadeFragment"
+        tools:layout="@layout/fragment_color_shade">
+        <action
+            android:id="@+id/action_colorShadeFragment_to_colorTestsMenuFragment"
+            app:destination="@id/ColorTestsMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/GammaColorFragment"
+        android:name="rpt.tool.badpixelsearch.ui.color.gamma.ColorGammaFragment"
+        android:label="GammaColorFragment"
+        tools:layout="@layout/fragment_gamma_color">
+        <action
+            android:id="@+id/action_gammaColorFragment_to_colorTestsMenuFragment"
+            app:destination="@id/ColorTestsMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/RgbColorsMenuFragment"
+        android:name="rpt.tool.badpixelsearch.ui.rgb.menu.RgbColorsMenuFragment"
+        android:label="RgbColorsMenuFragment"
+        tools:layout="@layout/fragment_rgb_menu">
+        <action
+            android:id="@+id/action_rgbColorsMenuFragment_to_rgbColorMixerFragment"
+            app:destination="@id/RgbColorMixerFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/RgbColorMixerFragment"
+        android:name="rpt.tool.badpixelsearch.ui.rgb.mixer.RgbColorMixerFragment"
+        android:label="RgbColorMixerFragment"
+        tools:layout="@layout/fragment_rgb_color_mixer">
+        <action
+            android:id="@+id/action_rgbColorMixerFragment_to_rgbColorsMenuFragment"
+            app:destination="@id/RgbColorsMenuFragment"/>
     </fragment>
 
 </navigation>

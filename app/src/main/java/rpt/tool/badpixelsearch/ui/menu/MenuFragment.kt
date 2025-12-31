@@ -70,12 +70,8 @@ class MenuFragment :
         }
 
         binding.include.openRgbColorsBtn.setOnClickListener {
-            startActivity(
-                Intent(
-                    requireContext(),
-                    TwoDTestActivity::class.java
-                )
-            )
+            safeNavController?.safeNavigate(MenuFragmentDirections
+                .actionMenuFragmentToRgbColorMenuFragment())
         }
 
         val point = Point()

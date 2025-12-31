@@ -48,7 +48,7 @@ class FontFamiliesFragment :
 
         binding.fontChange.setOnClickListener { changeFonts() }
     }
-    
+
 
     private fun applyBoldItalic() {
         val style =

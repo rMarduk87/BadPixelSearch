@@ -41,6 +41,18 @@
             android:layout_marginTop="@dimen/dp_38"
             android:textColor="@color/white" />
 
+        <TextView
+            android:id="@+id/use"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/choose"
+            android:textAlignment="center"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginTop="@dimen/dp_60"
+            android:textColor="@color/white" />
+
         <Button
             android:id="@+id/openPurityTest"
             android:layout_width="@dimen/dp_120"

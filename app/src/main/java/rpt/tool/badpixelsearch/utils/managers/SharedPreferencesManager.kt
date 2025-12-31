@@ -47,11 +47,13 @@ object SharedPreferencesManager {
     var typeNoiseColored: Boolean
         get() = sharedPreferences.getBoolean(AppUtils.NOISE_COLORED, false)
         set(value) = sharedPreferences.edit() { putBoolean(AppUtils.NOISE_COLORED, value) }
-
     var IsBold:  Boolean
         get() = sharedPreferences.getBoolean(AppUtils.IS_BOLD, false)
         set(value) = sharedPreferences.edit() { putBoolean(AppUtils.IS_BOLD, value) }
     var IsBoldItalic:  Boolean
         get() = sharedPreferences.getBoolean(AppUtils.IS_BOLD_ITALIC, false)
         set(value) = sharedPreferences.edit() { putBoolean(AppUtils.IS_BOLD_ITALIC, value) }
+    var rgbOption : Int
+        get() = sharedPreferences.getInt(AppUtils.RGB_OPTION, 0)
+        set(value) = sharedPreferences.edit() { putInt(AppUtils.RGB_OPTION, value) }
 }

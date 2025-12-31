@@ -9,9 +9,11 @@
     <uses-permission android:name="android.permission.READ_BASIC_PHONE_STATE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
-        android:maxSdkVersion="28"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
         android:maxSdkVersion="32" />
 
     <application
@@ -28,6 +30,9 @@
         android:theme="@style/Theme.BadPixelSearch"
         tools:ignore="RtlEnabled,UnusedAttribute"
         tools:targetApi="31">
+        <activity
+            android:name=".RgbColorsLevelActivity"
+            android:exported="false" />
         <activity
             android:name=".TwoDTestActivity"
             android:exported="false" />

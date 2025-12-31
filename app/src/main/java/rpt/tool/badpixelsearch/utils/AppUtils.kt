@@ -57,6 +57,7 @@ class AppUtils {
         const val NOISE_COLORED: String = "noise_colored"
         const val IS_BOLD: String = "is_bold"
         const val IS_BOLD_ITALIC: String = "is_bold_italic"
+        const val RGB_OPTION: String = "rgb_option"
         const val ONE = 60000
         const val FIVE = 300000
         const val FIFTY = 900000

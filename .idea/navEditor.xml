@@ -51,6 +51,48 @@
                       </LayoutPositions>
                     </value>
                   </entry>
+                  <entry key="ColorScalesFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="12" />
+                            <option name="y" value="12" />
+                          </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_colorScalesFragment_to_colorTestsMenuFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="ColorShadeFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="12" />
+                            <option name="y" value="12" />
+                          </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_colorShadeFragment_to_colorTestsMenuFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="ColorTestsMenuFragment">
                     <value>
                       <LayoutPositions>
@@ -62,6 +104,21 @@
                         </option>
                         <option name="myPositions">
                           <map>
+                            <entry key="action_colorTestsMenuFragment_to_colorScalesFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_colorTestsMenuFragment_to_colorShadeFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_colorTestsMenuFragment_to_gammaColorFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
                             <entry key="action_colorTestsMenuFragment_to_menuFragment">
                               <value>
                                 <LayoutPositions />
@@ -147,6 +204,27 @@
                       </LayoutPositions>
                     </value>
                   </entry>
+                  <entry key="GColorShadeFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="12" />
+                            <option name="y" value="12" />
+                          </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_colorShadeFragment_to_colorTestsMenuFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="ItalicFontFragment">
                     <value>
                       <LayoutPositions>
@@ -210,6 +288,11 @@
                               </value>
                             </entry>
                             <entry key="action_menuFragment_to_otherAppsFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_menuFragment_to_rgbColorMenuFragment">
                               <value>
                                 <LayoutPositions />
                               </value>
@@ -314,6 +397,48 @@
                         <option name="myPositions">
                           <map>
                             <entry key="action_fontFamiliesFragment_to_systemFontMenuFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="RgbColorMixerFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="32" />
+                            <option name="y" value="12" />
+                          </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_rgbColorMixerFragment_to_rgbColorsMenuFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="RgbColorsMenuFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="12" />
+                            <option name="y" value="12" />
+                          </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_rgbColorsMenuFragment_to_rgbColorMixerFragment">
                               <value>
                                 <LayoutPositions />
                               </value>

@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/mixer"
+        android:textSize="24sp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="10dp"
+        android:layout_marginTop="@dimen/dp_25"
+        android:layout_marginBottom="@dimen/dp_5" />
+
+    <LinearLayout
+        android:id="@+id/layoutBars"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="80dp">
+
+        <!-- 1: R -->
+        <FrameLayout
+            android:id="@+id/bar1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/lblBar1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/r"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_gravity="center" />
+        </FrameLayout>
+
+        <!-- 2: R+G -->
+        <FrameLayout
+            android:id="@+id/bar2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/lblBar2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/r_g"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"/>
+        </FrameLayout>
+
+        <!-- 3: G -->
+        <FrameLayout
+            android:id="@+id/bar3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/lblBar3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/g"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"/>
+        </FrameLayout>
+
+        <!-- 4: G+B -->
+        <FrameLayout
+            android:id="@+id/bar4"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/lblBar4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/g_b"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"/>
+        </FrameLayout>
+
+        <!-- 5: B -->
+        <FrameLayout
+            android:id="@+id/bar5"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/lblBar5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/b"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"/>
+        </FrameLayout>
+
+        <!-- 6: B+R -->
+        <FrameLayout
+            android:id="@+id/bar6"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/lblBar6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/b_r"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"/>
+        </FrameLayout>
+
+        <!-- 7: R+G+B -->
+        <FrameLayout
+            android:id="@+id/bar7"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/lblBar7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/r_g_b"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"/>
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardMixer"
+        android:layout_width="@dimen/dp_310"
+        android:layout_height="@dimen/dp_270"
+        android:layout_marginBottom="50dp"
+        android:layout_gravity="bottom"
+        android:padding="30dp"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="25dp"
+        app:cardUseCompatPadding="true"
+        app:cardBackgroundColor="#AA1A1A1A"
+        app:strokeColor="#0AA0FF"
+        app:strokeWidth="4dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- R -->
+            <TextView
+                android:layout_marginTop="@dimen/dp_18"
+                android:layout_marginStart="@dimen/dp_5"
+                android:id="@+id/lblR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/r_128"
+                android:textColor="#72757d"/>
+
+            <SeekBar
+                android:id="@+id/seekR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="255"
+                android:progress="128"
+                android:thumb="@drawable/white_thumb"
+                android:progressDrawable="@drawable/seek_round"/>
+
+            <!-- G -->
+            <TextView
+                android:layout_marginTop="@dimen/dp_18"
+                android:layout_marginStart="@dimen/dp_5"
+                android:id="@+id/lblG"
+                android:paddingTop="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/g_128"
+                android:textColor="#72757d"/>
+
+            <SeekBar
+                android:id="@+id/seekG"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:progress="128"
+                android:max="255"
+                android:thumb="@drawable/white_thumb"
+                android:progressDrawable="@drawable/seek_round"/>
+
+            <!-- B -->
+            <TextView
+                android:layout_marginTop="@dimen/dp_18"
+                android:layout_marginStart="@dimen/dp_5"
+                android:id="@+id/lblB"
+                android:paddingTop="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/b_128"
+                android:textColor="#72757d"/>
+
+            <SeekBar
+                android:id="@+id/seekB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="255"
+                android:progress="128"
+                android:thumb="@drawable/white_thumb"
+                android:progressDrawable="@drawable/seek_round"/>
+
+            <!-- L -->
+            <TextView
+                android:layout_marginTop="@dimen/dp_18"
+                android:layout_marginStart="@dimen/dp_5"
+                android:id="@+id/lblL"
+                android:paddingTop="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/l_102"
+                android:textColor="#72757d"/>
+
+            <SeekBar
+                android:id="@+id/seekL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="255"
+                android:progress="102"
+                android:thumb="@drawable/white_thumb"
+                android:progressDrawable="@drawable/seek_round"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    </FrameLayout>
