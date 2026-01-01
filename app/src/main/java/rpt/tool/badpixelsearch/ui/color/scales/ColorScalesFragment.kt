@@ -14,6 +14,7 @@ import rpt.tool.badpixelsearch.databinding.FragmentColorScalesBinding
 class ColorScalesFragment:
     BaseFragment<FragmentColorScalesBinding>(FragmentColorScalesBinding::inflate) {
 
+    private lateinit var names: List<String>
     private val percentages = listOf(
         100, 93, 87, 81, 75, 68, 62, 56,
         50, 43, 37, 31, 25, 18, 12, 6
@@ -23,10 +24,21 @@ class ColorScalesFragment:
         "White", "Red", "Green", "Blue", "Magenta", "Cyan", "Yellow"
     )
 
+
+
     private var currentColorIndex = 0
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        names = listOf(
+            requireContext().resources.getString(R.string.white),
+            requireContext().resources.getString(R.string.red),
+            requireContext().resources.getString(R.string.green),
+            requireContext().resources.getString(R.string.blue),
+            requireContext().resources.getString(R.string.magenta),
+            requireContext().resources.getString(R.string.cyan),
+            requireContext().resources.getString(R.string.yellow))
 
         generateLevels()
 
@@ -84,7 +96,7 @@ class ColorScalesFragment:
         binding.txtTitle.text = buildString {
             append(getString(R.string._16_levels_of))
             append(" ")
-            append(mode)
+            append(names[currentColorIndex])
         }
 
         for (i in 0 until binding.levelsContainer.childCount) {

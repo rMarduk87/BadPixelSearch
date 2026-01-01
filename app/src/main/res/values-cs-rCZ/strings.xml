@@ -31,7 +31,8 @@
     <string name="fix">Oprava režimu</string>
     <string name="brightness">Jas</string>
     <string name="text_delay">Zpoždění</string>
-    <string name="faq">Často kladené otázky</string>
+    <string name="faq">Čko</string>
+    <string name="faq_menu">Čko</string>
     <string name="faq_a">Odpověď:</string>
     <string name="faq_q">Otázka:</string>
     <string name="faq_question_1">Jak tuto aplikaci používat?</string>
@@ -130,7 +131,8 @@
     <string name="gpu_load">Zatížení GPU: </string>
     <string name="color_tests">BAREVNÉ TESTY</string>
     <string name="animation_test">ANIM. TESTY</string>
-    <string name="system_fonts">SYSTÉMOVÁ PÍSMA</string>
+    <string name="system_fonts">SYSTÉMOVÉ PÍSMO</string>
+    <string name="system_fonts_title">SYSTÉMOVÉ PÍSMO - ZNAČKY</string>
     <string name="rgb_colors">RGB BARVY</string>
     <string name="camera_test">TESTY KAMERY</string>
     <string name="screen_sensor">SENZOR</string>
@@ -227,4 +229,12 @@
     <string name="g_b">G+B</string>
     <string name="b_r">B+R</string>
     <string name="r_g_b">R+G+B</string>
+    <string name="white_lines">Bílé čáry</string>
+    <string name="red_lines">Červené čáry</string>
+    <string name="green_lines">Zelené čáry</string>
+    <string name="blue_lines">Modré čáry</string>
+    <string name="magenta_lines">Purpurové čáry</string>
+    <string name="cyan_lines">Azurové čáry</string>
+    <string name="yellow_lines">Žluté čáry</string>
+    <string name="black">Černá</string>
 </resources>

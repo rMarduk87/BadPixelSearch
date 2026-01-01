@@ -32,6 +32,7 @@
     <string name="brightness">Luminosità</string>
     <string name="text_delay">Ritardo</string>
     <string name="faq">Faq</string>
+    <string name="faq_menu">FAQ</string>
     <string name="faq_a">R:</string>
     <string name="faq_q">D:</string>
     <string name="faq_question_1">Come utilizzare questa app?</string>
@@ -132,8 +133,9 @@
     <string name="color_tests">TEST COLORE</string>
     <string name="animation_test">ANIM. TEST</string>
     <string name="system_fonts">FONT DI SISTEMA</string>
+    <string name="system_fonts_title">FONT DI SISTEMA - CARATTERI</string>
     <string name="rgb_colors">COLORI RGB</string>
-    <string name="camera_test">TEST TELECAMERA</string>
+    <string name="camera_test">TEST CAMERA</string>
     <string name="screen_sensor">SENSORE</string>
     <string name="animation_test_full">TEST ANIMAZIONE</string>
     <string name="two_gravity">GRAVITÀ 2D</string>
@@ -143,14 +145,14 @@
     <string name="display_fps_0">FPS DISPLAY: 0</string>
     <string name="display_fps">FPS Display: </string>
     <string name="purity">PUREZZA</string>
-    <string name="scales">SCALE</string>
+    <string name="scales">SCALA</string>
     <string name="shades">TONALITÀ</string>
     <string name="gamma_test">TEST GAMMA</string>
     <string name="line_test">TEST LINEA</string>
-    <string name="normal_fonts">CARATTERI NORMALI</string>
-    <string name="italic_fonts">CARATTERI CORSIVO</string>
-    <string name="bold_fonts">CARATTERI GRASSETTO</string>
-    <string name="bold_italic_fonts">CARATTERI GRASSETTO-CORSIVO</string>
+    <string name="normal_fonts">NORMALE</string>
+    <string name="italic_fonts">CORSIVO</string>
+    <string name="bold_fonts">GRASSETTO</string>
+    <string name="bold_italic_fonts">GRASSETTO-CORSIVO</string>
     <string name="font_families">FAMIGLIE DI FONT</string>
     <string name="reading_test">TEST DI LETTURA</string>
     <string name="camera_tests">TEST FOTOCAMERA</string>
@@ -207,7 +209,7 @@
     <string name="blue_level">LIVELLO BLU</string>
     <string name="gray_level">LIVELLO GRIGIO</string>
     <string name="color_all">TUTTI I COLORI</string>
-    <string name="color_mixer">MISCELATORE COLORI</string>
+    <string name="color_mixer">MIX COLORI</string>
     <string name="red_level_act">Livello Rosso</string>
     <string name="r_128">R: 128</string>
     <string name="g_0">G: 0</string>
@@ -228,4 +230,12 @@
     <string name="g_b">G+B</string>
     <string name="b_r">B+R</string>
     <string name="r_g_b">R+G+B</string>
+    <string name="white_lines">Linee Bianche</string>
+    <string name="red_lines">Linee Rosse</string>
+    <string name="green_lines">Linee Verdi</string>
+    <string name="blue_lines">Linee Blu</string>
+    <string name="magenta_lines">Linee Magenta</string>
+    <string name="cyan_lines">Linee Ciano</string>
+    <string name="yellow_lines">Linee Gialle</string>
+    <string name="black">Nero</string>
 </resources>

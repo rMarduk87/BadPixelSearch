@@ -32,6 +32,7 @@
     <string name="brightness">밝기</string>
     <string name="text_delay">지연</string>
     <string name="faq">자주 묻는 질문</string>
+    <string name="faq_menu">자주 묻는 질문</string>
     <string name="faq_a">답변:</string>
     <string name="faq_q">질문:</string>
     <string name="faq_question_1">이 앱을 어떻게 사용하나요?</string>
@@ -132,6 +133,7 @@
     <string name="color_tests">색상 테스트</string>
     <string name="animation_test">애니메이션. 테스트</string>
     <string name="system_fonts">시스템 글꼴</string>
+    <string name="system_fonts_title">시스템 글꼴 - 글꼴</string>
     <string name="rgb_colors">RGB 색상</string>
     <string name="camera_test">카메라 테스트</string>
     <string name="screen_sensor">센서</string>
@@ -228,4 +230,12 @@
     <string name="g_b">G+B</string>
     <string name="b_r">B+R</string>
     <string name="r_g_b">R+G+B</string>
+    <string name="white_lines">흰색 선</string>
+    <string name="red_lines">빨간색 선</string>
+    <string name="green_lines">초록색 선</string>
+    <string name="blue_lines">파란색 선</string>
+    <string name="magenta_lines">자홍색 선</string>
+    <string name="cyan_lines">청록색 선</string>
+    <string name="yellow_lines">노란색 선</string>
+    <string name="black">검은색</string>
 </resources>

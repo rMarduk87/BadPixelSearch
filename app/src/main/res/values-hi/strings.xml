@@ -32,6 +32,7 @@
     <string name="brightness">चमक</string>
     <string name="text_delay">देरी</string>
     <string name="faq">Faq</string>
+    <string name="faq_menu">FAQ</string>
     <string name='faq_a'>A:</string>
     <string name='faq_q'>प्र:</string>
     <string name='faq_question_1'>इस ऐप का उपयोग कैसे करें?</string>
@@ -132,6 +133,7 @@
     <string name="color_tests">कलर टेस्ट</string>
     <string name="animation_test">ANIM. टेस्ट</string>
     <string name="system_fonts">सिस्टम फ़ॉन्ट</string>
+    <string name="system_fonts_title">सिस्टम फ़ॉन्ट - फ़ॉन्ट</string>
     <string name="rgb_colors">RGB कलर</string>
     <string name="camera_test">कैमरा टेस्ट</string>
     <string name="screen_sensor">सेंसर</string>
@@ -228,4 +230,12 @@
     <string name="g_b">G+B</string>
     <string name="b_r">B+R</string>
     <string name="r_g_b">R+G+B</string>
+    <string name="white_lines">सफ़ेद लाइनें</string>
+    <string name="red_lines">लाल लाइनें</string>
+    <string name="green_lines">हरी लाइनें</string>
+    <string name="blue_lines">नीली लाइनें</string>
+    <string name="magenta_lines">मैजेंटा लाइनें</string>
+    <string name="cyan_lines">सियान लाइनें</string>
+    <string name="yellow_lines">पीली लाइनें</string>
+    <string name="black">काली</string>
 </resources>

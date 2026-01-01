@@ -29,9 +29,10 @@
     <string name="min">m</string>
     <string name="hour">h</string>
     <string name="fix">Modo de reparación</string>
-   <string name="brightness">Brillo</string>
+    <string name="brightness">Brillo</string>
     <string name="text_delay">Retraso</string>
     <string name="faq">Faq</string>
+    <string name="faq_menu">FAQ</string>
     <string name="faq_a">R:</string>
     <string name="faq_q">P:</string>
     <string name="faq_question_1">¿Cómo utilizar esta aplicación?</string>
@@ -131,7 +132,8 @@
     <string name="gpu_load">Carga de la GPU:</string>
     <string name="color_tests">PRUEBAS DE COLOR</string>
     <string name="animation_test">ANIM. PRUEBAS</string>
-    <string name="system_fonts">FUENTES DEL SISTEMA</string>
+    <string name="system_fonts">FUENTE DEL SISTEMA</string>
+    <string name="system_fonts_title">FUENTE DEL SISTEMA - CARACTERÍSTICAS</string>
     <string name="rgb_colors">COLORES RGB</string>
     <string name="camera_test">PRUEBAS DE CÁMARA</string>
     <string name="screen_sensor">SENSOR</string>
@@ -228,4 +230,12 @@
     <string name="g_b">G+B</string>
     <string name="b_r">B+R</string>
     <string name="r_g_b">R+G+B</string>
+    <string name="white_lines">Líneas blancas</string>
+    <string name="red_lines">Líneas rojas</string>
+    <string name="green_lines">Líneas verdes</string>
+    <string name="blue_lines">Líneas azules</string>
+    <string name="magenta_lines">Líneas magenta</string>
+    <string name="cyan_lines">Líneas cian</string>
+    <string name="yellow_lines">Líneas amarillas</string>
+    <string name="black">Negro</string>
 </resources>

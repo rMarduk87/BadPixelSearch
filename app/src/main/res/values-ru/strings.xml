@@ -31,7 +31,8 @@
     <string name="fix">Режим исправления</string>
     <string name="brightness">Яркость</string>
     <string name="text_delay">Задержка</string>
-    <string name="faq">Часто задаваемые вопросы</string>
+    <string name="faq">Чзв</string>
+    <string name="faq_menu">Чзв</string>
     <string name="faq_a">О:</string>
     <string name="faq_q">В:</string>
     <string name="faq_question_1">Как использовать это приложение?</string>
@@ -131,7 +132,8 @@
     <string name="gpu_load">Нагрузка на видеокарту: </string>
     <string name="color_tests">ТЕСТЫ ЦВЕТА</string>
     <string name="animation_test">ANIM. ТЕСТЫ</string>
-    <string name="system_fonts">СИСТЕМНЫЕ ШРИФТЫ</string>
+    <string name="system_fonts">СИСТЕМНЫЙ ШРИФТ</string>
+    <string name="system_fonts_title">СИСТЕМНЫЕ ШРИФТЫ - ШРИФТЫ</string>
     <string name="rgb_colors">ЦВЕТА RGB</string>
     <string name="camera_test">ТЕСТЫ КАМЕРЫ</string>
     <string name="screen_sensor">ДАТЧИК</string>
@@ -228,4 +230,12 @@
     <string name="g_b">G+B</string>
     <string name="b_r">B+R</string>
     <string name="r_g_b">R+G+B</string>
+    <string name="white_lines">Белые линии</string>
+    <string name="red_lines">Красные линии</string>
+    <string name="green_lines">Зеленые линии</string>
+    <string name="blue_lines">Синие линии</string>
+    <string name="magenta_lines">Пурпурные линии</string>
+    <string name="cyan_lines">Голубые линии</string>
+    <string name="yellow_lines">Желтые линии</string>
+    <string name="black">Черные</string>
 </resources>

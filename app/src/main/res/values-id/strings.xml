@@ -32,6 +32,7 @@
     <string name="brightness">Kecerahan</string>
     <string name="text_delay">Penundaan</string>
     <string name="faq">Faq</string>
+    <string name="faq_menu">FAQ</string>
     <string name="faq_a">J:</string>
     <string name="faq_q">T:</string>
     <string name="faq_question_1">Bagaimana cara menggunakan aplikasi ini?</string>
@@ -130,9 +131,9 @@
     <string name="cpu_test">CPU: </string>
     <string name="gpu_load">Beban GPU: </string>
     <string name="color_tests">TES WARNA</string>
-
     <string name="animation_test">ANIM. TES</string>
     <string name="system_fonts">FONT SISTEM</string>
+    <string name="system_fonts_title">FONT SISTEM - FONT</string>
     <string name="rgb_colors">WARNA RGB</string>
     <string name="camera_test">TES KAMERA</string>
     <string name="screen_sensor">SENSOR</string>
@@ -145,7 +146,6 @@
     <string name="display_fps">FPS TAMPILAN: </string>
     <string name="purity">KEMURNIAN</string>
     <string name="scales">SKALA</string>
-
     <string name="shades">SHADES</string>
     <string name="gamma_test">TES GAMMA</string>
     <string name="line_test">TES GARIS</string>
@@ -230,4 +230,12 @@
     <string name="g_b">G+B</string>
     <string name="b_r">B+R</string>
     <string name="r_g_b">R+G+B</string>
+    <string name="white_lines">Garis Putih</string>
+    <string name="red_lines">Garis Merah</string>
+    <string name="green_lines">Garis Hijau</string>
+    <string name="blue_lines">Garis Biru</string>
+    <string name="magenta_lines">Garis Magenta</string>
+    <string name="cyan_lines">Garis Sian</string>
+    <string name="yellow_lines">Garis Kuning</string>
+    <string name="black">Hitam</string>
 </resources>

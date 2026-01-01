@@ -32,6 +32,7 @@
     <string name="brightness">سطوع</string>
     <string name="text_delay">تأخير</string>
     <string name="faq">Faq</string>
+    <string name="faq_menu">FAQ</string>
     <string name="faq_a">ج:</string>
     <string name="faq_q">س:</string>
     <string name="faq_question_1">كيفية استخدام هذا التطبيق؟</string>
@@ -131,7 +132,8 @@
     <string name="gpu_load">حمل وحدة معالجة الرسومات: </string>
     <string name="color_tests">اختبارات الألوان</string>
     <string name="animation_test">رسوم متحركة الاختبارات</string>
-    <string name="system_fonts">خطوط النظام</string>
+    <string name="system_fonts">خط النظام</string>
+    <string name="system_fonts_title">خط النظام - الأحرف</string>
     <string name="rgb_colors">ألوان RGB</string>
     <string name="camera_test">اختبارات الكاميرا</string>
     <string name="screen_sensor">المستشعر</string>
@@ -228,4 +230,12 @@
     <string name="g_b">أخضر + أزرق</string>
     <string name="b_r">أزرق + أحمر</string>
     <string name="r_g_b">أحمر + أخضر + أزرق</string>
+    <string name="white_lines">خطوط بيضاء</string>
+    <string name="red_lines">خطوط حمراء</string>
+    <string name="green_lines">خطوط خضراء</string>
+    <string name="blue_lines">خطوط زرقاء</string>
+    <string name="magenta_lines">خطوط أرجوانية</string>
+    <string name="cyan_lines">خطوط سماوية</string>
+    <string name="yellow_lines">خطوط صفراء</string>
+    <string name="black">خطوط سوداء</string>
 </resources>

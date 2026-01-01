@@ -32,6 +32,7 @@
     <string name="brightness">明るさ</string>
     <string name="text_delay">遅延</string>
     <string name="faq">よくある質問</string>
+    <string name="faq_menu">よくある質問</string>
     <string name="faq_a">A:</string>
     <string name="faq_q">Q:</string>
     <string name="faq_question_1">このアプリの使用方法</string>
@@ -132,6 +133,7 @@
     <string name="color_tests">カラーテスト</string>
     <string name="animation_test">アニメーション。テスト</string>
     <string name="system_fonts">システムフォント</string>
+    <string name="system_fonts_title">システムフォント - フォント</string>
     <string name="rgb_colors">RGBカラー</string>
     <string name="camera_test">カメラテスト</string>
     <string name="screen_sensor">センサー</string>
@@ -228,4 +230,12 @@
     <string name="g_b">G+B</string>
     <string name="b_r">B+R</string>
     <string name="r_g_b">R+G+B</string>
+    <string name="white_lines">白線</string>
+    <string name="red_lines">赤線</string>
+    <string name="green_lines">緑線</string>
+    <string name="blue_lines">青線</string>
+    <string name="magenta_lines">マゼンタ線</string>
+    <string name="cyan_lines">シアン線</string>
+    <string name="yellow_lines">黄線</string>
+    <string name="black">黒線</string>
 </resources>

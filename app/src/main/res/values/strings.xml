@@ -32,6 +32,7 @@
     <string name="brightness">Brightness</string>
     <string name="text_delay">Delay</string>
     <string name="faq">FAQ</string>
+    <string name="faq_menu">FAQ</string>
     <string name="faq_a">A:</string>
     <string name="faq_q">Q:</string>
     <string name="faq_question_1">How to use this app?</string>
@@ -131,7 +132,8 @@
     <string name="gpu_load">GPU Load: </string>
     <string name="color_tests">COLOR TESTS</string>
     <string name="animation_test">ANIM. TESTS</string>
-    <string name="system_fonts">SYSTEM FONTS</string>
+    <string name="system_fonts">FONT DI SISTEMA</string>
+    <string name="system_fonts_title">FONT DI SISTEMA - CARATTERI</string>
     <string name="rgb_colors">RGB COLORS</string>
     <string name="camera_test">CAMERA TESTS</string>
     <string name="screen_sensor">SENSOR</string>
@@ -228,4 +230,12 @@
     <string name="g_b">G+B</string>
     <string name="b_r">B+R</string>
     <string name="r_g_b">R+G+B</string>
+    <string name="white_lines">White Lines</string>
+    <string name="red_lines">Red Lines</string>
+    <string name="green_lines">Green Lines</string>
+    <string name="blue_lines">Blue Lines</string>
+    <string name="magenta_lines">Magenta Lines</string>
+    <string name="cyan_lines">Cyan Lines</string>
+    <string name="yellow_lines">Yellow Lines</string>
+    <string name="black">Black</string>
 </resources>

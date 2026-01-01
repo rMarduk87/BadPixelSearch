@@ -32,6 +32,7 @@
     <string name="brightness">Parlaklık</string>
     <string name="text_delay">Gecikme</string>
     <string name="faq">SSS</string>
+    <string name="faq_menu">SSS</string>
     <string name="faq_a">C:</string>
     <string name="faq_q">S:</string>
     <string name="faq_question_1">Bu uygulama nasıl kullanılır?</string>
@@ -131,7 +132,8 @@
     <string name="gpu_load">GPU Yükü: </string>
     <string name="color_tests">RENK TESTLERİ</string>
     <string name="animation_test">ANİMASYON. TESTLER</string>
-    <string name="system_fonts">SİSTEM YAZI TİPLERİ</string>
+    <string name="system_fonts">SİSTEM YAZI TİPİ</string>
+    <string name="system_fonts_title">SİSTEM YAZI TİPLERİ - YAZI TİPLERİ</string>
     <string name="rgb_colors">RGB RENKLERİ</string>
     <string name="camera_test">KAMERA TESTLERİ</string>
     <string name="screen_sensor">SENSÖR</string>
@@ -228,4 +230,12 @@
     <string name="g_b">G+B</string>
     <string name="b_r">B+R</string>
     <string name="r_g_b">R+G+B</string>
+    <string name="white_lines">Beyaz Çizgiler</string>
+    <string name="red_lines">Kırmızı Çizgiler</string>
+    <string name="green_lines">Yeşil Çizgiler</string>
+    <string name="blue_lines">Mavi Çizgiler</string>
+    <string name="magenta_lines">Macenta Çizgiler</string>
+    <string name="cyan_lines">Camgöğü Çizgiler</string>
+    <string name="yellow_lines">Sarı Çizgiler</string>
+    <string name="black">Siyah</string>
 </resources>

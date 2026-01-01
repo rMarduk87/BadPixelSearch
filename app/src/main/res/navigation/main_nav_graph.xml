@@ -118,6 +118,9 @@
         <action
             android:id="@+id/action_colorTestsMenuFragment_to_gammaColorFragment"
             app:destination="@id/GammaColorFragment" />
+        <action
+            android:id="@+id/action_colorTestsMenuFragment_to_colorLineTestFragment"
+            app:destination="@id/ColorLineTestFragment" />
     </fragment>
     <fragment
         android:id="@+id/AnimationTestMenuFragment"
@@ -214,9 +217,9 @@
     </fragment>
     <fragment
         android:id="@+id/ReadingTestFragment"
-        android:name="rpt.tool.badpixelsearch.ui.fonts.families.FontFamiliesFragment"
-        android:label="FontFamiliesFragment"
-        tools:layout="@layout/fragment_font_families">
+        android:name="rpt.tool.badpixelsearch.ui.fonts.reading.ReadingTestFragment"
+        android:label="ReadingTestFragment"
+        tools:layout="@layout/fragment_reading_test">
         <action
             android:id="@+id/action_fontFamiliesFragment_to_systemFontMenuFragment"
             app:destination="@id/SystemFontMenuFragment" />
@@ -246,6 +249,15 @@
         tools:layout="@layout/fragment_gamma_color">
         <action
             android:id="@+id/action_gammaColorFragment_to_colorTestsMenuFragment"
+            app:destination="@id/ColorTestsMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ColorLineTestFragment"
+        android:name="rpt.tool.badpixelsearch.ui.color.line.ColorLineTestFragment"
+        android:label="ColorLineTestFragment"
+        tools:layout="@layout/fragment_color_line_test">
+        <action
+            android:id="@+id/action_colorLineTestFragment_to_colorTestsMenuFragment"
             app:destination="@id/ColorTestsMenuFragment" />
     </fragment>
     <fragment

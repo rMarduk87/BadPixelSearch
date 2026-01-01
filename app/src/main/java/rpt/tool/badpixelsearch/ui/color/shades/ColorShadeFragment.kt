@@ -24,14 +24,23 @@ class ColorShadeFragment :
         Color.YELLOW
     )
 
-    private val colorNames = listOf(
-        "Gray", "White", "Black", "Red", "Green", "Blue", "Magenta", "Cyan", "Yellow"
-    )
+    private var colorNames = listOf<String>()
 
     private var colorIndex = 0
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        colorNames = listOf(
+            requireContext().resources.getString(R.string.gray),
+            requireContext().resources.getString(R.string.white),
+            requireContext().resources.getString(R.string.black),
+            requireContext().resources.getString(R.string.red),
+            requireContext().resources.getString(R.string.green),
+            requireContext().resources.getString(R.string.blue),
+            requireContext().resources.getString(R.string.magenta),
+            requireContext().resources.getString(R.string.cyan),
+            requireContext().resources.getString(R.string.yellow))
 
         setupBoxes()
         applyColor()

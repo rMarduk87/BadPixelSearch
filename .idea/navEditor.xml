@@ -39,6 +39,27 @@
                       </LayoutPositions>
                     </value>
                   </entry>
+                  <entry key="CGammaColorFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="12" />
+                            <option name="y" value="12" />
+                          </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_gammaColorFragment_to_colorTestsMenuFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="CameraTestMenuFragment">
                     <value>
                       <LayoutPositions>
@@ -104,6 +125,11 @@
                         </option>
                         <option name="myPositions">
                           <map>
+                            <entry key="action_colorTestsMenuFragment_to_colorLineTestFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
                             <entry key="action_colorTestsMenuFragment_to_colorScalesFragment">
                               <value>
                                 <LayoutPositions />
@@ -204,7 +230,7 @@
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="GColorShadeFragment">
+                  <entry key="GammaColorFragment">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
@@ -215,7 +241,7 @@
                         </option>
                         <option name="myPositions">
                           <map>
-                            <entry key="action_colorShadeFragment_to_colorTestsMenuFragment">
+                            <entry key="action_gammaColorFragment_to_colorTestsMenuFragment">
                               <value>
                                 <LayoutPositions />
                               </value>

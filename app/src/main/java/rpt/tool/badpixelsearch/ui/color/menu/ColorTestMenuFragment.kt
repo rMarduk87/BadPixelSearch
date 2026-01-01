@@ -80,5 +80,11 @@ class ColorTestMenuFragment: BaseFragment<FragmentMenuColorTestBinding>
                     .actionColorTestsMenuFragmentToGammaColorFragment())
         }
 
+        binding.openLineTest.setOnClickListener {
+            safeNavController?.safeNavigate(
+                ColorTestMenuFragmentDirections
+                    .actionColorTestsMenuFragmentToColorLineTestFragment())
+        }
+
     }
 }

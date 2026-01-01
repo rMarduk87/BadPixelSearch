@@ -31,7 +31,8 @@
     <string name="fix">Түзету режимі</string>
     <string name="brightness">Жарықтық</string>
     <string name="text_delay">Кідіріс</string>
-    <string name="faq">Жиі қойылатын сұрақтар</string>
+    <string name="faq">Жқс</string>
+    <string name="faq_menu">Жқс</string>
     <string name="faq_a">Ж:</string>
     <string name="faq_q">С:</string>
     <string name="faq_question_1">Бұл қолданбаны қалай пайдалануға болады?</string>
@@ -131,7 +132,8 @@
     <string name="gpu_load">GPU жүктемесі: </string>
     <string name="color_tests">ТҮС ТЕСТТЕРІ</string>
     <string name="animation_test">АНИМ. ТЕСТТЕР</string>
-    <string name="system_fonts">ЖҮЙЕ ҚАРІПТЕРІ</string>
+    <string name="system_fonts">ЖҮЙЕ ҚАРІПІ</string>
+    <string name="system_fonts_title">ЖҮЙЕ ҚАРІПТЕРІ - ҚАРІПТЕР</string>
     <string name="rgb_colors">RGB ТҮСТЕРІ</string>
     <string name="camera_test">КАМЕРА ТЕСТТЕРІ</string>
     <string name="screen_sensor">СЕНСОР</string>
@@ -228,4 +230,12 @@
     <string name="g_b">G+B</string>
     <string name="b_r">B+R</string>
     <string name="r_g_b">R+G+B</string>
+    <string name="white_lines">Ақ сызықтар</string>
+    <string name="red_lines">Қызыл сызықтар</string>
+    <string name="green_lines">Жасыл сызықтар</string>
+    <string name="blue_lines">Көк сызықтар</string>
+    <string name="magenta_lines">Қызыл сызықтар</string>
+    <string name="cyan_lines">Көгілдір сызықтар</string>
+    <string name="yellow_lines">Сары сызықтар</string>
+    <string name="black">Қара</string>
 </resources>
