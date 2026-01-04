@@ -131,6 +131,9 @@
             android:id="@+id/action_animationMenuFragment_to_menuFragment"
             app:destination="@id/MenuFragment" />
         <action
+            android:id="@+id/action_animationMenuFragment_to_3dGravityFragment"
+            app:destination="@id/ThreeDGravityFragment" />
+        <action
             android:id="@+id/action_animationMenuFragment_to_movingBarsFragment"
             app:destination="@id/MovingBarFragment" />
         <action
@@ -165,6 +168,15 @@
         tools:layout="@layout/fragment_animation_bars">
         <action
             android:id="@+id/action_movingBarFragment_to_animationMenuFragment"
+            app:destination="@id/AnimationTestMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ThreeDGravityFragment"
+        android:name="rpt.tool.badpixelsearch.ui.animation.gravity.threed.ThreeDGravityFragment"
+        android:label="ThreeDGravityFragment"
+        tools:layout="@layout/fragment_threed_gravity">
+        <action
+            android:id="@+id/action_3DGravityFragment_to_animationMenuFragment"
             app:destination="@id/AnimationTestMenuFragment" />
     </fragment>
     <fragment

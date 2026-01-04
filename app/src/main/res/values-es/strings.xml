@@ -238,4 +238,5 @@
     <string name="cyan_lines">Líneas cian</string>
     <string name="yellow_lines">Líneas amarillas</string>
     <string name="black">Negro</string>
+    <string name="_3d_gravity">Gravedad 3D</string>
 </resources>

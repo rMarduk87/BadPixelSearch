@@ -238,4 +238,5 @@
     <string name="cyan_lines">청록색 선</string>
     <string name="yellow_lines">노란색 선</string>
     <string name="black">검은색</string>
+    <string name="_3d_gravity">3D 중력</string>
 </resources>

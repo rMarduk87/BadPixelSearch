@@ -238,4 +238,5 @@
     <string name="cyan_lines">خطوط سماوية</string>
     <string name="yellow_lines">خطوط صفراء</string>
     <string name="black">خطوط سوداء</string>
+    <string name="_3d_gravity">جاذبية ثلاثية الأبعاد</string>
 </resources>

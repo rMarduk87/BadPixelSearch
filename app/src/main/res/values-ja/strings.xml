@@ -238,4 +238,5 @@
     <string name="cyan_lines">シアン線</string>
     <string name="yellow_lines">黄線</string>
     <string name="black">黒線</string>
+    <string name="_3d_gravity">3D重力</string>
 </resources>

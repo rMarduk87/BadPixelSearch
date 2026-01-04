@@ -8,6 +8,27 @@
             <LayoutPositions>
               <option name="myPositions">
                 <map>
+                  <entry key="3">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="12" />
+                            <option name="y" value="12" />
+                          </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_movingBarFragment_to_animationMenuFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="AnimationTestMenuFragment">
                     <value>
                       <LayoutPositions>
@@ -19,6 +40,11 @@
                         </option>
                         <option name="myPositions">
                           <map>
+                            <entry key="action_animationMenuFragment_to_3dGravityFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
                             <entry key="action_animationMenuFragment_to_menuFragment">
                               <value>
                                 <LayoutPositions />
@@ -39,7 +65,19 @@
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="CGammaColorFragment">
+                  <entry key="CameraTestMenuFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="12" />
+                            <option name="y" value="12" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="ColorLineTestFragment">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
@@ -50,24 +88,12 @@
                         </option>
                         <option name="myPositions">
                           <map>
-                            <entry key="action_gammaColorFragment_to_colorTestsMenuFragment">
+                            <entry key="action_colorLineTestFragment_to_colorTestsMenuFragment">
                               <value>
                                 <LayoutPositions />
                               </value>
                             </entry>
                           </map>
-                        </option>
-                      </LayoutPositions>
-                    </value>
-                  </entry>
-                  <entry key="CameraTestMenuFragment">
-                    <value>
-                      <LayoutPositions>
-                        <option name="myPosition">
-                          <Point>
-                            <option name="x" value="12" />
-                            <option name="y" value="12" />
-                          </Point>
                         </option>
                       </LayoutPositions>
                     </value>

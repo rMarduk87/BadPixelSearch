@@ -238,4 +238,5 @@
     <string name="cyan_lines">Голубые линии</string>
     <string name="yellow_lines">Желтые линии</string>
     <string name="black">Черные</string>
+    <string name="_3d_gravity">3D Gravity</string>
 </resources>

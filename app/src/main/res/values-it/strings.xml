@@ -46,8 +46,8 @@
     <string name="faq_question_5">Come funziona la ricerca automatica dei pixel danneggiati?</string>
     <string name="faq_answer_5">Attivando la modalità correzione manipoleremo lo schermo per provare a ripristinare i pixel rotti, consigliamo almeno 10 minuti o meglio ancora diverse ore di utilizzo di questa modalità.\nAttenzione, non guardare lo schermo durante questa modalità.\nIl consumo della batteria potrebbe aumentare, si consiglia di avere la batteria al 100% o collegata al caricabatterie\nPer interrompere questa funzione chiudi l\'app o premi il pulsante Indietro</string>
     <string name="screen_info">INFO SCHERMO</string>
-    <string name="touch">Premi il pulsante Indietro per interrompere i test</string>
-    <string name="choose">In questo menu scegli l\'opzione di ricerca desiderata</string>
+    <string name="touch">Premi il pulsante Indietro per\ninterrompere i test</string>
+    <string name="choose">In questo menu scegli l\'opzione di\nricerca desiderata</string>
     <string name="full_resolution">Risoluzione\ncompleta (px)</string>
     <string name="current_resolution">Risoluzione\ncorrente (px)</string>
     <string name="visual_resolution">Risoluzione visiva (px)</string>
@@ -238,4 +238,5 @@
     <string name="cyan_lines">Linee Ciano</string>
     <string name="yellow_lines">Linee Gialle</string>
     <string name="black">Nero</string>
+    <string name="_3d_gravity">Garvità 3D</string>
 </resources>

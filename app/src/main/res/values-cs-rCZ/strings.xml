@@ -237,4 +237,5 @@
     <string name="cyan_lines">Azurové čáry</string>
     <string name="yellow_lines">Žluté čáry</string>
     <string name="black">Černá</string>
+    <string name="_3d_gravity">3D Gravitace</string>
 </resources>

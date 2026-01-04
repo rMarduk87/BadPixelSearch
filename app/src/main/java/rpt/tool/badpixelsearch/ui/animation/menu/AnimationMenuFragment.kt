@@ -71,5 +71,12 @@ class AnimationMenuFragment: BaseFragment<FragmentAnimationMenuBinding>
                 AnimationMenuFragmentDirections
                     .actionAnimationMenuFragmentToRotationFragment())
         }
+
+        binding.openthreeDGravityTest.setOnClickListener {
+            safeNavController?.safeNavigate(
+                AnimationMenuFragmentDirections
+                    .actionAnimationMenuFragmentTo3dGravityFragment()
+            )
+        }
     }
 }
