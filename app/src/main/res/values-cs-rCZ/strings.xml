@@ -39,10 +39,10 @@
     <string name="faq_answer_1">Opatrně otřete obrazovku telefonu nebo podložku, měkký hadr nebo ubrousek od nečistot, prachu, mastných skvrn a jiného znečištění.</string>
     <string name="faq_question_2">Jak vyhledat mrtvé nebo rozbité pixely?</string>
     <string name="faq_answer_2">Pro přechod na další nebo předchozí barvu jednoduše přejeďte prstem doleva nebo doprava.</string>
-    <string name="faq_question_3">Existují i jiné způsoby použití? Pokud ano, jak je mohu povolit?</string>
-    <string name="faq_answer_3">Klikněte na tlačítko \"Nastavení\", v nové nabídce si můžete vybrat Automatický (můžete si také vybrat typ testu, který preferujete) nebo režim FixPixel</string>
-    <string name="faq_question_4">Mohu v automatickém režimu nastavit rychlost nebo frekvenci?</string>
-    <string name="faq_answer_4">Ano, v nabídce \"Nastavení\" můžete změnit parametry režimu</string>
+    <string name="faq_question_3">Existují i jiné způsoby použití?</string>
+    <string name="faq_answer_3">V hlavní nabídce si můžete vybrat typ testu, který chcete provést. Pro každý typ se otevře sekundární nabídka, kde si můžete vybrat konkrétní test.</string>
+    <string name="faq_question_4">Kde najdu informace o svém zařízení?</string>
+    <string name="faq_answer_4">Kliknutím na nabídku vpravo nahoře si můžete prohlédnout informace o zařízení, obrazovce a jeho senzorech.</string>
     <string name="faq_question_5">Jak funguje automatické vyhledávání vadných pixelů?</string>
     <string name="faq_answer_5">Aktivací režimu opravy budeme manipulovat s obrazovkou a pokusíme se obnovit rozbité pixely. Doporučujeme tento režim používat alespoň 10 minut, nebo ještě lépe několik hodin.\nVarování: Během tohoto režimu se na obrazovku nedívejte.\nSpotřeba baterie se může zvýšit, doporučuje se mít baterii nabitou na 100 % nebo připojenou k nabíječce.\nChcete-li tuto funkci přerušit, zavřete aplikaci nebo stiskněte tlačítko zpět</string>
     <string name="screen_info">INFORMACE O OBRAZOVCE</string>
@@ -237,5 +237,9 @@
     <string name="cyan_lines">Azurové čáry</string>
     <string name="yellow_lines">Žluté čáry</string>
     <string name="black">Černá</string>
+    <string name="sensor_name">Název senzoru:</string>
+    <string name="vendor">Dodavatel:</string>
+    <string name="sensor_info_title">Seznam senzorů zařízení</string>
+    <string name="_2d_gravity">2D gravitace</string>
     <string name="_3d_gravity">3D Gravitace</string>
 </resources>

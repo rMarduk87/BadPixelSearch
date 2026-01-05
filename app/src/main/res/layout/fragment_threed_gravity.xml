@@ -16,7 +16,7 @@
         android:layout_marginTop="@dimen/dp_34" />
 
     <!-- Simulazione -->
-    <rpt.tool.badpixelsearch.utils.view.Gravity3DBallView
+    <rpt.tool.badpixelsearch.utils.view.physics.Gravity3DBallView
         android:id="@+id/gravityView"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

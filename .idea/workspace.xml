@@ -107,6 +107,11 @@
           <theme>@style/Theme.BadPixelSearch</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_2d_gravity.xml">
+        <config>
+          <theme>@style/Theme.BadPixelSearch</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_animation_menu.xml">
         <config>
           <theme>@style/Theme.BadPixelSearch</theme>
@@ -182,7 +187,7 @@
           <theme>@style/Theme.BadPixelSearch</theme>
         </config>
       </layout>
-      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_settings.xml">
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_sensor_info.xml">
         <config>
           <theme>@style/Theme.BadPixelSearch</theme>
         </config>
@@ -193,6 +198,11 @@
         </config>
       </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_threed_gravity.xml">
+        <config>
+          <theme>@style/Theme.BadPixelSearch</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/item_sensor.xml">
         <config>
           <theme>@style/Theme.BadPixelSearch</theme>
         </config>
@@ -244,13 +254,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77f83ee0-a6c7-4100-b36d-12571e602f78" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/rpt/tool/badpixelsearch/ui/animation/gravity/threed/ThreeDGravityFragment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/rpt/tool/badpixelsearch/utils/view/Gravity3DBallView.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_threed_gravity.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/rpt/tool/badpixelsearch/utils/view/physics/Gravity3DBallView.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.13/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.13/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.13/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.13/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.13/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.13/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.13/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.13/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.13/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.13/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.13/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.13/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.13/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.13/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.13/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.13/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/config.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deploymentTargetSelector.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deploymentTargetSelector.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/navEditor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/navEditor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/rpt/tool/badpixelsearch/ui/animation/menu/AnimationMenuFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/rpt/tool/badpixelsearch/ui/animation/menu/AnimationMenuFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/rpt/tool/badpixelsearch/ui/menu/MenuFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/rpt/tool/badpixelsearch/ui/menu/MenuFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/rpt/tool/badpixelsearch/ui/sensor/SensorInfoFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/rpt/tool/badpixelsearch/ui/sensor/SensorInfoFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/rpt/tool/badpixelsearch/ui/settings/SettingsFragments.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/rpt/tool/badpixelsearch/utils/view/Gravity3DBallView.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_sensor_info.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_sensor_info.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_threed_gravity.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_threed_gravity.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/navigation/main_nav_graph.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/navigation/main_nav_graph.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values-ar/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-ar/strings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values-cs-rCZ/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-cs-rCZ/strings.xml" afterDir="false" />
@@ -267,6 +295,8 @@
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values-ru/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-ru/strings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values-tr/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-tr/strings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/problems/problems-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/problems/problems-report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -276,7 +306,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=C:\Users\shaun\.android\avd\Pixel_9_Pro.avd)]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=C:\Users\r.pezzolati\.android\avd\Pixel_9_Pro.avd)]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -418,6 +448,7 @@
       <recent name="rpt.tool.badpixelsearch" />
     </key>
     <key name="K2MoveDeclarationsDialog.RECENT_PACKAGE_KEY">
+      <recent name="rpt.tool.badpixelsearch.utils.view.physics" />
       <recent name="rpt.tool.badpixelsearch.utils.balloon.whatsnew" />
       <recent name="rpt.tool.badpixelsearch.utils.balloon.request" />
     </key>
@@ -562,12 +593,12 @@
       <map>
         <entry key="rpt.tool.badpixelsearch">
           <value>
-            <CheckInfo lastCheckTimestamp="1767521642294" />
+            <CheckInfo lastCheckTimestamp="1767607928021" />
           </value>
         </entry>
         <entry key="rpt.tool.badpixelsearch.test">
           <value>
-            <CheckInfo lastCheckTimestamp="1767521642295" />
+            <CheckInfo lastCheckTimestamp="1767607928017" />
           </value>
         </entry>
       </map>

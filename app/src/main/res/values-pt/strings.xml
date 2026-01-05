@@ -39,10 +39,10 @@
     <string name="faq_answer_1">Limpe cuidadosamente a tela do telefone ou um pano macio ou guardanapo de sujeira, poeira, manchas de gordura e outras impurezas.</string>
     <string name="faq_question_2">Como pesquisar pixels mortos ou quebrados?</string>
     <string name="faq_answer_2">Basta deslizar para a esquerda ou para a direita para ir para a próxima cor ou para a cor anterior.</string>
-    <string name="faq_question_3">Existem outros modos de uso? Se sim, como faço para ativá-los?</string>
-    <string name="faq_answer_3">Clique no botão \"Configurações\", no novo menu você pode escolher Automático (Você também pode escolher o tipo\n de teste que preferir) ou modo FixPixel</string>
-    <string name="faq_question_4">Posso definir velocidade ou frequência no modo Automático?</string>
-    <string name="faq_answer_4">Sim, no menu \"Configurações\" você pode alterar os parâmetros do modo</string>
+    <string name="faq_question_3">Existem outros modos de utilização?</string>
+    <string name="faq_answer_3">No menu principal, pode escolher o tipo de teste a realizar. Para cada tipo, será aberto um menu secundário, onde poderá escolher o teste específico.</string>
+    <string name="faq_question_4">Onde posso encontrar informação sobre o meu dispositivo?</string>
+    <string name="faq_answer_4">Ao clicar no menu no canto superior direito, pode ver informações sobre o dispositivo, o ecrã e os seus sensores.</string>
     <string name="faq_question_5">Como funciona a pesquisa automática de pixels ruins?</string>
     <string name="faq_answer_5">Ao ativar o modo de correção iremos manipular a tela para tentar restaurar os pixels quebrados, recomendamos pelo menos 10 minutos ou melhor ainda várias horas de uso deste modo.\nAtenção, não olhe para o tela durante este modo.\nO consumo da bateria pode aumentar, é recomendado ter a bateria em 100% ou conectada ao carregador\nPara interromper esta função feche o aplicativo ou pressione o botão Voltar</string>
     <string name="screen_info">INFORMAÇÕES DA TELA</string>
@@ -238,5 +238,9 @@
     <string name="cyan_lines">Linhas Ciano</string>
     <string name="yellow_lines">Linhas Amarelas</string>
     <string name="black">Preto</string>
+    <string name="sensor_name">Nome do sensor:</string>
+    <string name="vendor">Fabricante:</string>
+    <string name="sensor_info_title">Lista de sensores do dispositivo</string>
+    <string name="_2d_gravity">Gravidade 2D</string>
     <string name="_3d_gravity">Gravidade 3D</string>
 </resources>

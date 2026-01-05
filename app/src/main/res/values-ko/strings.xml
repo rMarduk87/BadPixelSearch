@@ -39,10 +39,10 @@
     <string name="faq_answer_1">면봉, 부드러운 천 또는 냅킨을 사용하여 휴대폰 화면에 묻은 먼지, 흙, 기름 얼룩 등을 조심스럽게 닦아주세요.</string>
     <string name="faq_question_2">죽거나 깨진 픽셀을 어떻게 확인할 수 있나요?</string>
     <string name="faq_answer_2">다음 또는 이전 색상으로 이동하려면 왼쪽이나 오른쪽으로 살짝 밀기만 하면 됩니다.</string>
-    <string name="faq_question_3">다른 사용 방법이 있나요? 그렇다면 어떻게 활성화할 수 있나요?</string>
-    <string name="faq_answer_3">새 메뉴에서 \"설정\" 버튼을 클릭하면 자동 모드(원하는 테스트 유형도 선택 가능) 또는 FixPixel을 선택할 수 있습니다.</string>
-    <string name="faq_question_4">자동 모드에서 속도나 주파수를 설정할 수 있나요?</string>
-    <string name="faq_answer_4">네, \"설정\" 메뉴에서 모드 매개변수를 변경할 수 있습니다.</string>
+    <string name="faq_question_3">다른 사용 모드가 있나요?</string>
+    <string name="faq_answer_3">메인 메뉴에서 수행할 테스트 유형을 선택할 수 있으며, 각 유형에 따라 특정 테스트를 선택할 수 있는 보조 메뉴가 열립니다.</string>
+    <string name="faq_question_4">내 기기에 대한 정보는 어디에서 확인할 수 있나요?</string>
+    <string name="faq_answer_4">오른쪽 상단의 메뉴를 클릭하면 기기, 화면 및 센서에 대한 정보를 볼 수 있습니다.</string>
     <string name="faq_question_5">손상된 픽셀을 자동으로 검색하는 기능은 어떻게 작동하나요?</string>
     <string name="faq_answer_5">수정 모드를 활성화하면 화면이 조작되어 깨진 픽셀을 복구합니다. 최소 10분, 더 나은 경우 몇 시간 동안 이 모드를 사용하는 것이 좋습니다.\n주의: 이 모드에서는 화면을 보지 마십시오.\n배터리 소모가 증가할 수 있으므로 배터리를 100% 충전하거나 충전기에 연결하는 것이 좋습니다.\n이 기능을 중지하려면 앱을 닫거나 뒤로 가기 버튼을 누르세요.</string>
     <string name="screen_info">화면 정보</string>
@@ -238,5 +238,9 @@
     <string name="cyan_lines">청록색 선</string>
     <string name="yellow_lines">노란색 선</string>
     <string name="black">검은색</string>
+    <string name="sensor_name">센서 이름:</string>
+    <string name="vendor">공급업체:</string>
+    <string name="sensor_info_title">장치 센서 목록</string>
+    <string name="_2d_gravity">2D 중력</string>
     <string name="_3d_gravity">3D 중력</string>
 </resources>

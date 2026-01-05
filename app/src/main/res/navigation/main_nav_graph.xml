@@ -11,9 +11,6 @@
         android:label="BadPixelSearchFragment"
         tools:layout="@layout/fragment_menu">
         <action
-            android:id="@+id/action_menuFragment_to_settingsFragment"
-            app:destination="@id/SettingsFragment" />
-        <action
             android:id="@+id/action_menuFragment_to_faqFragment"
             app:destination="@id/FaqFragment" />
         <action
@@ -46,15 +43,6 @@
         <action
             android:id="@+id/action_menuFragment_to_rgbColorMenuFragment"
             app:destination="@id/RgbColorsMenuFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/SettingsFragment"
-        android:name="rpt.tool.badpixelsearch.ui.settings.SettingsFragments"
-        android:label="SettingsFragment"
-        tools:layout="@layout/fragment_settings">
-        <action
-            android:id="@+id/action_settingsFragment_to_menuFragment"
-            app:destination="@id/MenuFragment" />
     </fragment>
     <fragment
         android:id="@+id/FaqFragment"
@@ -131,6 +119,9 @@
             android:id="@+id/action_animationMenuFragment_to_menuFragment"
             app:destination="@id/MenuFragment" />
         <action
+            android:id="@+id/action_animationMenuFragment_to_2dGravityFragment"
+            app:destination="@id/TwoDGravityFragment" />
+        <action
             android:id="@+id/action_animationMenuFragment_to_3dGravityFragment"
             app:destination="@id/ThreeDGravityFragment" />
         <action
@@ -160,6 +151,15 @@
         <action
             android:id="@+id/action_systemFontMenuFragment_to_readingTestFragment"
             app:destination="@id/ReadingTestFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/TwoDGravityFragment"
+        android:name="rpt.tool.badpixelsearch.ui.animation.gravity.twod.TwoDGravityFragment"
+        android:label="TwoDGravityFragment"
+        tools:layout="@layout/fragment_2d_gravity">
+        <action
+            android:id="@+id/action_2dGravityFragment_to_animationMenuFragment"
+            app:destination="@id/AnimationTestMenuFragment" />
     </fragment>
     <fragment
         android:id="@+id/MovingBarFragment"

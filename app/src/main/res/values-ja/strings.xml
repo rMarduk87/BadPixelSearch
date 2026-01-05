@@ -39,10 +39,10 @@
     <string name="faq_answer_1">綿棒、柔らかい布、またはナプキンを使用して電話の画面を注意深く掃除し、汚れ、ほこり、油汚れなどを取り除きます。</string>
     <string name="faq_question_2">デッドピクセルや壊れたピクセルを検索するにはどうすればよいですか?</string>
     <string name="faq_answer_2">左右にスワイプするだけで次の色または前の色に移動します。</string>
-    <string name="faq_question_3">他の使用方法はありますか?もしそうなら、どうすればそれらを有効にできますか?</string>
-    <string name="faq_answer_3">「設定」ボタンをクリックすると、新しいメニューで自動（好みのテストの種類を選択することもできます）またはFixPixelモードを選択できます。</string>
-    <string name="faq_question_4">自動モードで速度や頻度を設定できますか?</string>
-    <string name="faq_answer_4">はい、「設定」メニューでモードパラメータを変更できます</string>
+    <string name="faq_question_3">他の使用方法はありますか？</string>
+    <string name="faq_answer_3">メインメニューで実行するテストの種類を選択できます。種類ごとにサブメニューが開き、特定のテストを選択できます。</string>
+    <string name="faq_question_4">デバイスに関する情報はどこで確認できますか？</string>
+    <string name="faq_answer_4">右上のメニューをクリックすると、デバイス、画面、センサーに関する情報を確認できます。</string>
     <string name="faq_question_5">自動不良ピクセル検索はどのように機能しますか?</string>
     <string name="faq_answer_5">修正モードを有効にすると、画面を操作して壊れたピクセルを修復しようとします。このモードを少なくとも 10 分間、できれば数時間使用することをお勧めします。\n警告: このモード中は画面を見ないでください。\nバッテリー消費が増加する可能性があります。バッテリーを 100% にするか、充電器に接続しておくことをお勧めします。\nこの機能を中断するには、アプリを閉じるか、戻るボタンを押します</string>
     <string name="screen_info">画面情報</string>
@@ -238,5 +238,9 @@
     <string name="cyan_lines">シアン線</string>
     <string name="yellow_lines">黄線</string>
     <string name="black">黒線</string>
+    <string name="sensor_name">センサー名:</string>
+    <string name="vendor">ベンダー:</string>
+    <string name="sensor_info_title">デバイスセンサー一覧</string>
+    <string name="_2d_gravity">2D重力</string>
     <string name="_3d_gravity">3D重力</string>
 </resources>

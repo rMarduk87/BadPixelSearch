@@ -39,10 +39,10 @@
     <string name="faq_answer_1">Telefonun ekranını veya yumuşak bir bez veya peçeteyi kirden, tozdan, yağ lekelerinden ve diğer kirliliklerden dikkatlice silin.</string>
     <string name="faq_question_2">Ölü veya bozuk piksel nasıl aranır?</string>
     <string name="faq_answer_2">Bir sonraki veya önceki renge gitmek için sola veya sağa kaydırmanız yeterlidir.</string>
-    <string name="faq_question_3">Başka modlar var mı? kullan? Eğer öyleyse, bunları nasıl etkinleştiririm?</string>
-    <string name="faq_answer_3">\"Ayarlar\" düğmesine tıklayın, yeni menüde Otomatik (Tercih ettiğiniz test türünü de seçebilirsiniz) veya FixPixel modunu seçebilirsiniz</string>
-    <string name="faq_question_4">Otomatik modda hız veya frekans ayarlayabilir miyim?</string>
-    <string name="faq_answer_4">Evet, \"Ayarlar\" menüsünde mod parametrelerini değiştirebilirsiniz</string>
+    <string name="faq_question_3">Başka kullanım modları var mı?</string>
+    <string name="faq_answer_3">Ana menüde gerçekleştirilecek test türünü seçebilirsiniz; her tür için ayrı bir menü açılacak ve buradan belirli testi seçebilirsiniz.</string>
+    <string name="faq_question_4">Cihazım hakkında bilgiyi nerede bulabilirim?</string>
+    <string name="faq_answer_4">Sağ üstteki menüye tıklayarak cihaz, ekran ve sensörleri hakkında bilgi görebilirsiniz.</string>
     <string name="faq_question_5">Otomatik kötü piksel araması nasıl çalışır?</string>
     <string name="faq_answer_5">Düzeltme modunu etkinleştirerek, bozuk pikselleri geri yüklemeye çalışmak için ekranı manipüle edeceğiz, bu modu en az 10 dakika veya daha da iyisi birkaç saat kullanmanızı öneririz.\nUyarı, bu modda ekrana bakmayın.\nPil tüketimi artabilir, pilin %100 dolu olması veya şarj cihazına bağlı olması önerilir\nBu işlevi kesmek için Uygulamayı kapatın veya geri düğmesine basın</string>
     <string name="screen_info">EKRAN BİLGİSİ</string>
@@ -238,5 +238,9 @@
     <string name="cyan_lines">Camgöğü Çizgiler</string>
     <string name="yellow_lines">Sarı Çizgiler</string>
     <string name="black">Siyah</string>
+    <string name="sensor_name">Sensör Adı:</string>
+    <string name="vendor">Satıcı:</string>
+    <string name="sensor_info_title">Cihaz Sensörlerinin Listesi</string>
+    <string name="_2d_gravity">2 Boyutlu Yerçekimi</string>
     <string name="_3d_gravity">3B Yerçekimi</string>
 </resources>

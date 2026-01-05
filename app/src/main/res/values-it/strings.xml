@@ -39,10 +39,10 @@
     <string name="faq_answer_1">Pulisci con cura lo schermo del telefono con  un tampone, uno straccio morbido o un tovagliolo, da sporco, polvere, macchie di grasso e altro.</string>
     <string name="faq_question_2">Come posso cercare pixel morti o rotti?</string>
     <string name="faq_answer_2">Scorri semplicemente verso sinistra o verso destra per passare al colore successivo o precedente.</string>
-    <string name="faq_question_3">Esistono altre modalità di utilizzo? Se sì, come posso abilitarle?</string>
-    <string name="faq_answer_3">Clicca sul pulsante \"Impostazioni\", nel nuovo menu puoi scegliere la modalità Automatica (puoi anche scegliere il tipo di test che preferisci) o FixPixel</string>
-    <string name="faq_question_4">Posso impostare la velocità o la frequenza in modalità automatica?</string>
-    <string name="faq_answer_4">Sì, nel menu \"Impostazioni\" puoi modificare i parametri della modalità</string>
+    <string name="faq_question_3">Esistono altre modalità di utilizzo?</string>
+    <string name="faq_answer_3">Nel menu principale puoi scegliere il tipo di test da eseguire, per ogni tipologia si aprirà un menu secondario dove potrai scegliere il test specifico</string>
+    <string name="faq_question_4">Dove posso trovare informazioni sul mio dispositivo?</string>
+    <string name="faq_answer_4">Cliccando sul menu in alto a destra puoi visualizzare informazioni sul dispositivo, sullo schermo e sui suoi sensori.</string>
     <string name="faq_question_5">Come funziona la ricerca automatica dei pixel danneggiati?</string>
     <string name="faq_answer_5">Attivando la modalità correzione manipoleremo lo schermo per provare a ripristinare i pixel rotti, consigliamo almeno 10 minuti o meglio ancora diverse ore di utilizzo di questa modalità.\nAttenzione, non guardare lo schermo durante questa modalità.\nIl consumo della batteria potrebbe aumentare, si consiglia di avere la batteria al 100% o collegata al caricabatterie\nPer interrompere questa funzione chiudi l\'app o premi il pulsante Indietro</string>
     <string name="screen_info">INFO SCHERMO</string>
@@ -131,7 +131,7 @@
     <string name="cpu_test">CPU: </string>
     <string name="gpu_load">Carico GPU: </string>
     <string name="color_tests">TEST COLORE</string>
-    <string name="animation_test">ANIM. TEST</string>
+    <string name="animation_test">TEST ANIM.</string>
     <string name="system_fonts">FONT DI SISTEMA</string>
     <string name="system_fonts_title">FONT DI SISTEMA - CARATTERI</string>
     <string name="rgb_colors">COLORI RGB</string>
@@ -238,5 +238,9 @@
     <string name="cyan_lines">Linee Ciano</string>
     <string name="yellow_lines">Linee Gialle</string>
     <string name="black">Nero</string>
+    <string name="sensor_name">Nome del sensore:</string>
+    <string name="vendor">Fornitore:</string>
+    <string name="sensor_info_title">Elenco dei sensori del dispositivo</string>
+    <string name="_2d_gravity">Gravità 2D</string>
     <string name="_3d_gravity">Garvità 3D</string>
 </resources>

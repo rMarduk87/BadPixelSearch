@@ -159,7 +159,7 @@ class MenuFragment :
                 }
                 R.id.nav_screen_sensor -> {
                     safeNavController?.safeNavigate(
-                        MenuFragmentDirections.actionMenuFragmentToDeviceInfoFragment()
+                        MenuFragmentDirections.actionMenuFragmentToSensorInfoFragment()
                     )
                 }
                 R.id.nav_screen_info -> {

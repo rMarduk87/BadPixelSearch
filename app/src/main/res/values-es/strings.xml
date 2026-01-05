@@ -39,10 +39,10 @@
     <string name="faq_answer_1">Limpie con cuidado la pantalla del teléfono o la almohadilla con un trapo suave o una servilleta para quitar la suciedad, el polvo, las manchas de grasa y otras contaminaciones.</string>
     <string name="faq_question_2">¿Cómo buscar píxeles muertos o rotos?</string>
     <string name="faq_answer_2">Simplemente deslice el dedo hacia la izquierda o hacia la derecha para ir al color siguiente o al color anterior.</string>
-    <string name="faq_question_3">¿Existen otros modos de uso? Si es así, ¿cómo los habilito?</string>
-    <string name="faq_answer_3">Haga clic en el botón \"Configuración\", en el nuevo menú puede elegir Automático (también puede elegir el tipo de prueba que prefiera) o el modo FixPixel</string>
-    <string name="faq_question_4">¿Puedo configurar la velocidad o la frecuencia en el modo Automático?</string>
-    <string name="faq_answer_4">Sí, en el menú \"Configuración\" puedes cambiar los parámetros del modo</string>
+    <string name="faq_question_3">¿Existen otros modos de uso?</string>
+    <string name="faq_answer_3">En el menú principal puedes elegir el tipo de prueba que deseas realizar. Para cada tipo, se abrirá un menú secundario donde podrás elegir la prueba específica.</string>
+    <string name="faq_question_4">¿Dónde puedo encontrar información sobre mi dispositivo?</string>
+    <string name="faq_answer_4">Al hacer clic en el menú de la esquina superior derecha, puedes ver información sobre el dispositivo, la pantalla y sus sensores.</string>
     <string name="faq_question_5">¿Cómo funciona la búsqueda automática de píxeles defectuosos?</string>
     <string name="faq_answer_5">Al activar el modo de reparación manipularemos la pantalla para intentar restaurar los píxeles rotos, recomendamos al menos 10 minutos o incluso mejor varias horas de uso de este modo.\nAdvertencia, no mires el pantalla durante este modo.\nEl consumo de batería puede aumentar, se recomienda tener la batería al 100% o conectada al cargador\nPara interrumpir esta función cierre la aplicación o presione el botón Atrás</string>
     <string name="screen_info">INFORMACIÓN DE PANTALLA</string>
@@ -238,5 +238,9 @@
     <string name="cyan_lines">Líneas cian</string>
     <string name="yellow_lines">Líneas amarillas</string>
     <string name="black">Negro</string>
+    <string name="sensor_name">Nombre del sensor:</string>
+    <string name="vendor">Proveedor:</string>
+    <string name="sensor_info_title">Lista de sensores del dispositivo</string>
+    <string name="_2d_gravity">Gravedad 2D</string>
     <string name="_3d_gravity">Gravedad 3D</string>
 </resources>

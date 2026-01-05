@@ -39,10 +39,10 @@
     <string name="faq_answer_1">Seka layar ponsel atau bantalan dengan lap lembut, atau serbet dengan hati-hati dari kotoran, debu, noda minyak, dan polusi lainnya.</string>
     <string name="faq_question_2">Bagaimana cara mencari piksel mati atau rusak?</string>
     <string name="faq_answer_2">Cukup usap ke kiri atau kanan untuk beralih ke warna berikutnya atau warna sebelumnya.</string>
-    <string name="faq_question_3">Apakah ada cara penggunaan lainnya? Jika ya, bagaimana cara mengaktifkannya?</string>
-    <string name="faq_answer_3">Klik tombol \"Pengaturan\", di menu baru Anda dapat memilih Otomatis (Anda juga dapat memilih jenis pengujian yang Anda inginkan) atau mode FixPixel</string>
-    <string name="faq_question_4">Dapatkah saya menyetel kecepatan atau frekuensi dalam mode Otomatis?</string>
-    <string name="faq_answer_4">Ya, di menu \"Pengaturan\" Anda dapat mengubah parameter mode</string>
+    <string name="faq_question_3">Apakah ada mode penggunaan lain?</string>
+    <string name="faq_answer_3">Di menu utama, Anda dapat memilih jenis pengujian yang akan dilakukan. Untuk setiap jenis, menu sekunder akan terbuka di mana Anda dapat memilih pengujian spesifik.</string>
+    <string name="faq_question_4">Di mana saya dapat menemukan informasi tentang perangkat saya?</string>
+    <string name="faq_answer_4">Dengan mengklik menu di kanan atas, Anda dapat melihat informasi tentang perangkat, layar, dan sensornya.</string>
     <string name="faq_question_5">Bagaimana cara kerja pencarian piksel buruk otomatis?</string>
     <string name="faq_answer_5">Dengan mengaktifkan mode perbaikan kami akan memanipulasi layar untuk mencoba memulihkan piksel yang rusak, kami menyarankan setidaknya 10 menit atau bahkan lebih baik beberapa jam untuk menggunakan mode ini.\nPeringatan, jangan lihat layar selama mode ini.\nKonsumsi baterai dapat meningkat, disarankan untuk memiliki baterai 100% atau terhubung ke pengisi daya\nUntuk menghentikan fungsi ini, tutup aplikasi atau tekan tombol kembali</string>
     <string name="screen_info">INFO LAYAR</string>
@@ -238,5 +238,9 @@
     <string name="cyan_lines">Garis Sian</string>
     <string name="yellow_lines">Garis Kuning</string>
     <string name="black">Hitam</string>
+    <string name="sensor_name">Nama Sensor:</string>
+    <string name="vendor">Vendor:</string>
+    <string name="sensor_info_title">Daftar Sensor Perangkat</string>
+    <string name="_2d_gravity">Gravitasi 2D</string>
     <string name="_3d_gravity">Gravitasi 3D</string>
 </resources>

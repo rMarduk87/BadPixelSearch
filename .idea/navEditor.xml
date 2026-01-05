@@ -8,27 +8,6 @@
             <LayoutPositions>
               <option name="myPositions">
                 <map>
-                  <entry key="3">
-                    <value>
-                      <LayoutPositions>
-                        <option name="myPosition">
-                          <Point>
-                            <option name="x" value="12" />
-                            <option name="y" value="12" />
-                          </Point>
-                        </option>
-                        <option name="myPositions">
-                          <map>
-                            <entry key="action_movingBarFragment_to_animationMenuFragment">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
-                          </map>
-                        </option>
-                      </LayoutPositions>
-                    </value>
-                  </entry>
                   <entry key="AnimationTestMenuFragment">
                     <value>
                       <LayoutPositions>
@@ -40,7 +19,7 @@
                         </option>
                         <option name="myPositions">
                           <map>
-                            <entry key="action_animationMenuFragment_to_3dGravityFragment">
+                            <entry key="action_animationMenuFragment_to_2dGravityFragment">
                               <value>
                                 <LayoutPositions />
                               </value>
@@ -359,11 +338,6 @@
                                 <LayoutPositions />
                               </value>
                             </entry>
-                            <entry key="action_menuFragment_to_settingsFragment">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
                             <entry key="action_menuFragment_to_systemFontMenuFragment">
                               <value>
                                 <LayoutPositions />
@@ -563,27 +537,6 @@
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="SettingsFragment">
-                    <value>
-                      <LayoutPositions>
-                        <option name="myPosition">
-                          <Point>
-                            <option name="x" value="-448" />
-                            <option name="y" value="-44" />
-                          </Point>
-                        </option>
-                        <option name="myPositions">
-                          <map>
-                            <entry key="action_settingsFragment_to_menuFragment">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
-                          </map>
-                        </option>
-                      </LayoutPositions>
-                    </value>
-                  </entry>
                   <entry key="SystemFontMenuFragment">
                     <value>
                       <LayoutPositions>
@@ -616,6 +569,48 @@
                               </value>
                             </entry>
                             <entry key="action_systemFontMenuFragment_to_readingTestFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="ThreeDGravityFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="256" />
+                            <option name="y" value="12" />
+                          </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_3DGravityFragment_to_animationMenuFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="TwoDGravityFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="12" />
+                            <option name="y" value="12" />
+                          </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_2dGravityFragment_to_animationMenuFragment">
                               <value>
                                 <LayoutPositions />
                               </value>

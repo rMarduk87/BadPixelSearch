@@ -39,10 +39,10 @@
     <string name="faq_answer_1">Ștergeți cu grijă ecranul telefonului sau un tampon, o cârpă moale sau un șervețel de murdărie, praf, pete de grăsime și alte poluări.</string>
     <string name="faq_question_2">Cum se caută un pixel mort sau rupt?</string>
     <string name="faq_answer_2">Pur și simplu glisați spre stânga sau spre dreapta pentru a trece la următoarea culoare sau la culoarea anterioară.</string>
-    <string name="faq_question_3">Există și alte moduri de utilizare? Dacă da, cum le activez?</string>
-    <string name="faq_answer_3">Faceți clic pe butonul \"Setări\", în noul meniu puteți alege automat (puteți alege și tipul\n de test pe care îl preferați) sau modul FixPixel</string>
-    <string name="faq_question_4">Pot seta viteza sau frecvența în modul automat?</string>
-    <string name="faq_answer_4">Da, în meniul \"Setări\" puteți modifica parametrii modului</string>
+    <string name="faq_question_3">Există și alte moduri de utilizare?</string>
+    <string name="faq_answer_3">În meniul principal puteți alege tipul de test pe care doriți să îl efectuați, pentru fiecare tip se va deschide un meniu secundar de unde puteți alege testul specific</string>
+    <string name="faq_question_4">Unde pot găsi informații despre dispozitivul meu?</string>
+    <string name="faq_answer_4">Făcând clic pe meniul din dreapta sus puteți vedea informații despre dispozitiv, ecran și senzorii acestuia.</string>
     <string name="faq_question_5">Cum funcționează căutarea automată a pixelilor eronați?</string>
     <string name="faq_answer_5">Prin activarea modului de reparare vom manipula ecranul pentru a încerca să restabilim pixelii rupti, vă recomandăm cel puțin 10 minute sau chiar mai bine câteva ore de utilizare a acestui mod.\nAtenție, nu vă uitați la ecran în acest mod.\nConsumul bateriei poate crește, este recomandat să aveți bateria la 100% sau conectată înapoi pentru a întrerupe această funcție de încărcare sau pentru a închide din nou aplicația pentru a întrerupe această funcție. butonul</string>
     <string name="screen_info">INFORMAȚII ECRAN</string>
@@ -238,5 +238,9 @@
     <string name="cyan_lines">Linii cyan</string>
     <string name="yellow_lines">Linii galbene</string>
     <string name="black">Negre</string>
+    <string name="sensor_name">Nume senzor:</string>
+    <string name="vendor">Furnizor:</string>
+    <string name="sensor_info_title">Lista senzorilor dispozitivului</string>
+    <string name="_2d_gravity">Gravitație 2D</string>
     <string name="_3d_gravity">Gravitație 3D</string>
 </resources>

@@ -39,10 +39,10 @@
     <string name="faq_answer_1">Осторожно очистите экран телефона тампоном, мягкой тряпкой или салфеткой, удалив грязь, пыль, жирные пятна и многое другое.</string>
     <string name="faq_question_2">Как найти битые или битые пиксели?</string>
     <string name="faq_answer_2">Просто проведите пальцем влево или вправо, чтобы перейти к следующему или предыдущему цвету.</string>
-    <string name="faq_question_3">Есть ли другие способы его использования? Если да, то как их включить?</string>
-    <string name="faq_answer_3">Нажмите кнопку «Настройки», в новом меню вы можете выбрать «Автоматический» (вы также можете выбрать тип теста, который вы предпочитаете) или режим FixPixel.</string>
-    <string name="faq_question_4">Можно ли установить скорость или частоту в автоматическом режиме?</string>
-    <string name="faq_answer_4">Да, в меню «Настройки» вы можете изменить параметры режима</string>
+    <string name="faq_question_3">Есть ли другие режимы использования?</string>
+    <string name="faq_answer_3">В главном меню вы можете выбрать тип теста для выполнения; для каждого типа откроется дополнительное меню, где вы можете выбрать конкретный тест.</string>
+    <string name="faq_question_4">Где я могу найти информацию о своем устройстве?</string>
+    <string name="faq_answer_4">Нажав на меню в правом верхнем углу, вы можете увидеть информацию об устройстве, экране и его датчиках.</string>
     <string name="faq_question_5">Как работает автоматический поиск поврежденных пикселей?</string>
     <string name="faq_answer_5">Активировав режим исправления, мы будем манипулировать экраном, пытаясь восстановить битые пиксели, мы рекомендуем использовать этот режим не менее 10 минут, а лучше несколько часов.\nВнимание, не смотрите на экран в этом режиме.\nПотребление батареи может увеличиться, рекомендуется держать батарею на 100% или подключать к зарядному устройству.\nЧтобы отключить эту функцию, закройте приложение или нажмите кнопку «Назад».</string>
     <string name="screen_info">ИНФОРМАЦИЯ ОБ ЭКРАНЕ</string>
@@ -157,7 +157,7 @@
     <string name="reading_test">ТЕСТ ЧТЕНИЯ</string>
     <string name="camera_tests">КАМЕРА ТЕСТЫ</string>
     <string name="camera1">КАМЕРА 1</string>
-    <string name="camera2">"КАМЕРА 2 "</string>
+    <string name="camera2">КАМЕРА 2</string>
     <string name="fix_tests">ИСПРАВЛЕНИЕ ПИКСЕЛЕЙ</string>
     <string name="bw_test"><![CDATA[ЧЕРНО-БЕЛЫЙ ТЕСТ]]></string>
     <string name="noise_test">ТЕСТ ШУМА</string>
@@ -238,5 +238,9 @@
     <string name="cyan_lines">Голубые линии</string>
     <string name="yellow_lines">Желтые линии</string>
     <string name="black">Черные</string>
-    <string name="_3d_gravity">3D Gravity</string>
+    <string name="sensor_name">Название датчика:</string>
+    <string name="vendor">Производитель:</string>
+    <string name="sensor_info_title">Список датчиков устройства</string>
+    <string name="_2d_gravity">2D гравитация</string>
+    <string name="_3d_gravity">3D гравитация</string>
 </resources>
