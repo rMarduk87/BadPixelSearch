@@ -47,48 +47,72 @@
             android:textColor="@color/white" />
 
         <Button
-            android:id="@+id/openFaqMenuBtn"
+            android:id="@+id/openColorTestMenuBtn"
             android:layout_width="@dimen/dp_120"
             android:layout_height="@dimen/dp_35"
             android:layout_marginStart="@dimen/dp_25"
             android:layout_marginTop="@dimen/dp_260"
             android:background="@drawable/walk_through_button_bg"
-            android:text="@string/faq"
+            android:text="@string/color_tests"
             android:textColor="@color/white"
             android:textSize="14sp"
             tools:ignore="VisualLintButtonSize" />
 
         <Button
-            android:id="@+id/strBtn"
+            android:id="@+id/openAnimationTestBtn"
             android:layout_width="@dimen/dp_120"
             android:layout_height="@dimen/dp_35"
             android:layout_marginStart="@dimen/dp_170"
             android:layout_marginTop="@dimen/dp_260"
             android:background="@drawable/walk_through_button_bg"
-            android:text="@string/start"
+            android:text="@string/animation_test"
             android:textSize="14sp"
             tools:ignore="TextSizeCheck" />
 
         <Button
-            android:id="@+id/twoDBtn"
+            android:id="@+id/openSystemFontBtn"
             android:layout_width="@dimen/dp_120"
             android:layout_height="@dimen/dp_35"
             android:layout_marginStart="@dimen/dp_25"
             android:layout_marginTop="@dimen/dp_310"
             android:background="@drawable/walk_through_button_bg"
-            android:text="@string/two"
+            android:text="@string/system_fonts"
             android:textColor="@color/white"
             android:textSize="14sp"
             tools:ignore="TextSizeCheck,VisualLintButtonSize" />
 
         <Button
-            android:id="@+id/threeDBtn"
+            android:id="@+id/openRgbColorsBtn"
             android:layout_width="@dimen/dp_120"
             android:layout_height="@dimen/dp_35"
             android:layout_marginStart="@dimen/dp_170"
             android:layout_marginTop="@dimen/dp_310"
             android:background="@drawable/walk_through_button_bg"
-            android:text="@string/threed"
+            android:text="@string/rgb_colors"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            tools:ignore="VisualLintButtonSize" />
+
+        <Button
+            android:id="@+id/openCameraTests"
+            android:layout_width="@dimen/dp_120"
+            android:layout_height="@dimen/dp_35"
+            android:layout_marginStart="@dimen/dp_25"
+            android:layout_marginTop="@dimen/dp_360"
+            android:background="@drawable/walk_through_button_bg"
+            android:text="@string/camera_test"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            tools:ignore="TextSizeCheck,VisualLintButtonSize" />
+
+        <Button
+            android:id="@+id/openFixPixelBtn"
+            android:layout_width="@dimen/dp_120"
+            android:layout_height="@dimen/dp_35"
+            android:layout_marginStart="@dimen/dp_170"
+            android:layout_marginTop="@dimen/dp_360"
+            android:background="@drawable/walk_through_button_bg"
+            android:text="@string/fix"
             android:textColor="@color/white"
             android:textSize="14sp"
             tools:ignore="VisualLintButtonSize" />
@@ -98,7 +122,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="@dimen/dp_355"
+            android:layout_marginTop="@dimen/dp_405"
             android:gravity="center"
             android:text="@string/touch"
             android:textAlignment="center"
