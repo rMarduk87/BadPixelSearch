@@ -27,10 +27,16 @@ class OtherAppsFragment: BaseFragment<FragmentOtherAppsBinding>(FragmentOtherApp
 
         val appPongClock = OtherApps()
         appPongClock.name = "Pong Clock"
-        appPongClock.id = "1"
+        appPongClock.id = "0"
         appPongClock.link = "https://play.google.com/store/apps/details?id=rpt.tool.pongclock"
 
+        val appMarimoCare = OtherApps()
+        appMarimoCare.name = "Marimo Care"
+        appMarimoCare.id = "1"
+        appMarimoCare.link = "https://play.google.com/store/apps/details?id=rpt.tool.marimocare"
+
         other.add(appPongClock)
+        other.add(appMarimoCare)
 
         binding.otherAppsRecyclerView.isNestedScrollingEnabled = false
 

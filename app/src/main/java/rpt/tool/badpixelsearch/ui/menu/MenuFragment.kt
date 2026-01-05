@@ -42,36 +42,36 @@ class MenuFragment :
 
         SharedPreferencesManager.firstRun = false
 
-        binding.include.openFaqMenuBtn.setOnClickListener{
+        binding.include.openColorTestMenuBtn.setOnClickListener{
             safeNavController?.safeNavigate(
-                MenuFragmentDirections.actionMenuFragmentToFaqFragment())
+                MenuFragmentDirections.actionMenuFragmentToColorTestMenuFragment())
         }
 
-        binding.include.strBtn.setOnClickListener{
-            when(SharedPreferencesManager.typeMode){
-                0,1->startActivity(Intent(requireContext(),
-                    BadPixelSearchActivity::class.java))
-                2->startActivity(Intent(requireContext(),
-                    NoiseSearchActivity::class.java))
-                3,4,5,6->startActivity(Intent(requireContext(),
-                    PixelTestActivity::class.java))
-                7->startActivity(Intent(requireContext(),
-                    GradientTestActivity::class.java))
-            }
+        binding.include.openAnimationTestBtn.setOnClickListener{
+            safeNavController?.safeNavigate(
+                MenuFragmentDirections.actionMenuFragmentToAnimationTestMenuFragment())
         }
 
-        binding.include.threeDBtn.setOnClickListener{
-            startActivity(Intent(requireContext(),
-                ThreeDTestActivity::class.java))
-        }
-
-        binding.include.twoDBtn.setOnClickListener {
-            startActivity(
-                Intent(
-                    requireContext(),
-                    TwoDTestActivity::class.java
-                )
+        binding.include.openCameraTests.setOnClickListener {
+            safeNavController?.safeNavigate(
+                MenuFragmentDirections.actionMenuFragmentToCameraTestMenuFragment()
             )
+        }
+
+        binding.include.openFixPixelBtn.setOnClickListener {
+            safeNavController?.safeNavigate(
+                MenuFragmentDirections.actionMenuFragmentToFixTestMenuFragment()
+            )
+        }
+
+        binding.include.openSystemFontBtn.setOnClickListener{
+            safeNavController?.safeNavigate(
+                MenuFragmentDirections.actionMenuFragmentToSystemFontMenuFragment())
+        }
+
+        binding.include.openRgbColorsBtn.setOnClickListener {
+            safeNavController?.safeNavigate(MenuFragmentDirections
+                .actionMenuFragmentToRgbColorMenuFragment())
         }
 
         val point = Point()
@@ -142,9 +142,9 @@ class MenuFragment :
 
 
             when (menuItem.itemId) {
-                R.id.nav_settings -> {
+                R.id.nav_faq -> {
                     safeNavController?.safeNavigate(
-                        MenuFragmentDirections.actionMenuFragmentToSettingsFragment()
+                        MenuFragmentDirections.actionMenuFragmentToFaqFragment()
                     )
                 }
                 R.id.nav_other_app -> {
@@ -155,6 +155,11 @@ class MenuFragment :
                 R.id.nav_device_info -> {
                     safeNavController?.safeNavigate(
                         MenuFragmentDirections.actionMenuFragmentToDeviceInfoFragment()
+                    )
+                }
+                R.id.nav_screen_sensor -> {
+                    safeNavController?.safeNavigate(
+                        MenuFragmentDirections.actionMenuFragmentToSensorInfoFragment()
                     )
                 }
                 R.id.nav_screen_info -> {

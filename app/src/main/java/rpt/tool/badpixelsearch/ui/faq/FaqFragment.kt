@@ -12,7 +12,7 @@ import rpt.tool.badpixelsearch.BaseFragment
 import rpt.tool.badpixelsearch.MainActivity
 import rpt.tool.badpixelsearch.R
 import rpt.tool.badpixelsearch.databinding.FragmentFaqBinding
-import rpt.tool.badpixelsearch.model.faq.FAQModel
+import rpt.tool.badpixelsearch.utils.data.model.faq.FAQModel
 import rpt.tool.badpixelsearch.utils.view.custom.animation.AnimationUtils
 
 class FaqFragment : BaseFragment<FragmentFaqBinding>(FragmentFaqBinding::inflate) {

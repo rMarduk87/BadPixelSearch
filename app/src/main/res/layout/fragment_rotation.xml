@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <TextView
+        android:id="@+id/txtRotation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fps_0"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="55dp"
+        android:layout_centerHorizontal="true"/>
+
+    <LinearLayout
+        android:id="@+id/containerSquares"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center">
+
+        <View
+            android:id="@+id/square1"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="#a2b6cc"/>
+
+        <View
+            android:id="@+id/square2"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="50dp"
+            android:background="#7595b9"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+
+        <View
+            android:id="@+id/square3"
+            android:layout_marginTop="50dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="#466d98"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,4 +1,4 @@
-package rpt.tool.badpixelsearch.model.faq
+package rpt.tool.badpixelsearch.utils.data.model.faq
 
 class FAQModel {
     var question = ""
