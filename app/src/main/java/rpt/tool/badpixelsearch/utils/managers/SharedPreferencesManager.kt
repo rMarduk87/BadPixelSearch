@@ -56,4 +56,8 @@ object SharedPreferencesManager {
     var rgbOption : Int
         get() = sharedPreferences.getInt(AppUtils.RGB_OPTION, 0)
         set(value) = sharedPreferences.edit() { putInt(AppUtils.RGB_OPTION, value) }
+
+    var sound:  Boolean
+        get() = sharedPreferences.getBoolean(AppUtils.SOUND_ON, true)
+        set(value) = sharedPreferences.edit() { putBoolean(AppUtils.SOUND_ON, value) }
 }

@@ -58,12 +58,6 @@ class AppUtils {
         const val IS_BOLD: String = "is_bold"
         const val IS_BOLD_ITALIC: String = "is_bold_italic"
         const val RGB_OPTION: String = "rgb_option"
-        const val ONE = 60000
-        const val FIVE = 300000
-        const val FIFTY = 900000
-        const val THIRTY = 1800000
-        const val HOUR = 3600000
-
-
+        const val SOUND_ON: String = "sound_on"
     }
 }

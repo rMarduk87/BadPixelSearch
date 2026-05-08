@@ -18,12 +18,12 @@
     <string name="send_req">PEDIDO</string>
     <string name="choose_mail_app">Escolha o aplicativo Mail</string>
     <string name="to">rptechnologies.info@gmail.com</string>
-    <string name="automatic">Moda automática</string>
+    <string name="automatic">Modo automático</string>
     <string name="settings">CONFIGURAÇÕES</string>
     <string name="settings_t">CONFIGURAÇÕES</string>
     <string name="speed">Velocidade de rolagem</string>
     <string name="normal">Normal</string>
-    <string name="fast">Veloce</string>
+    <string name="fast">Rápido</string>
     <string name="help">Ao ativar o modo automático o aplicativo irá rolar pelas cores de teste, para ativá-lo clique no botão na parte inferior, escolha a velocidade de rolagem, retorne a esta tela e deslize para a direita para iniciar.</string>
     <string name="interval">Duração do modo automático</string>
     <string name="min">m</string>
@@ -243,4 +243,6 @@
     <string name="sensor_info_title">Lista de sensores do dispositivo</string>
     <string name="_2d_gravity">Gravidade 2D</string>
     <string name="_3d_gravity">Gravidade 3D</string>
+    <string name="touch_tests">TOUCH TESTS </string>
+    <string name="drawing_tests">DRAWING TESTS </string>
 </resources>

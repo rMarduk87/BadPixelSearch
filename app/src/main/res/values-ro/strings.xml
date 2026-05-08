@@ -74,8 +74,8 @@
     <string name="arrow">săgeată</string>
     <string name="question">întrebare</string>
     <string name="screen_info_title">Informații despre ecran</string>
-    <string name="add_language_to_app">Добавить язык в приложение</string>
-    <string name="message">Сообщение</string>
+    <string name="add_language_to_app">Adăugați limba în aplicație</string>
+    <string name="message">Mesaj</string>
     <string name="img">img</string>
     <string name="_1_mins">1m</string>
     <string name="_5_mins">5m</string>
@@ -243,4 +243,6 @@
     <string name="sensor_info_title">Lista senzorilor dispozitivului</string>
     <string name="_2d_gravity">Gravitație 2D</string>
     <string name="_3d_gravity">Gravitație 3D</string>
+    <string name="touch_tests">TOUCH TESTS </string>
+    <string name="drawing_tests">DRAWING TESTS </string>
 </resources>

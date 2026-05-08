@@ -242,5 +242,7 @@
     <string name="vendor">Fornitore:</string>
     <string name="sensor_info_title">Elenco dei sensori del dispositivo</string>
     <string name="_2d_gravity">Gravità 2D</string>
-    <string name="_3d_gravity">Garvità 3D</string>
+    <string name="_3d_gravity">Gravità 3D</string>
+    <string name="touch_tests">TOUCH TESTS </string>
+    <string name="drawing_tests">DRAWING TESTS </string>
 </resources>

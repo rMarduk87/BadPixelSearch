@@ -9,6 +9,7 @@ import android.app.AlertDialog
 import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.graphics.Point
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -16,7 +17,6 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.core.net.toUri
 import androidx.core.view.GravityCompat
-import rpt.tool.badpixelsearch.BadPixelSearchActivity
 import rpt.tool.badpixelsearch.BaseFragment
 import rpt.tool.badpixelsearch.GradientTestActivity
 import rpt.tool.badpixelsearch.NoiseSearchActivity
@@ -36,58 +36,82 @@ class MenuFragment :
 
     private val durationValue = 6000L
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         SharedPreferencesManager.firstRun = false
 
-        binding.include.openColorTestMenuBtn.setOnClickListener{
-            safeNavController?.safeNavigate(
-                MenuFragmentDirections.actionMenuFragmentToColorTestMenuFragment())
+        binding.openColorTest.setOnClickListener{
+            executeWithSound {
+                safeNavController?.safeNavigate(
+                    MenuFragmentDirections.actionMenuFragmentToColorTestMenuFragment())
+            }
         }
 
-        binding.include.openAnimationTestBtn.setOnClickListener{
-            safeNavController?.safeNavigate(
-                MenuFragmentDirections.actionMenuFragmentToAnimationTestMenuFragment())
+        binding.openAnimationTest.setOnClickListener{
+            executeWithSound {
+                safeNavController?.safeNavigate(
+                    MenuFragmentDirections
+                        .actionMenuFragmentToAnimationTestMenuFragment())
+            }
         }
 
-        binding.include.openCameraTests.setOnClickListener {
-            safeNavController?.safeNavigate(
-                MenuFragmentDirections.actionMenuFragmentToCameraTestMenuFragment()
-            )
+        binding.openCameraTest.setOnClickListener {
+            executeWithSound {
+                safeNavController?.safeNavigate(
+                    MenuFragmentDirections.actionMenuFragmentToCameraTestMenuFragment()
+                )
+            }
         }
 
-        binding.include.openFixPixelBtn.setOnClickListener {
-            safeNavController?.safeNavigate(
-                MenuFragmentDirections.actionMenuFragmentToFixTestMenuFragment()
-            )
+        binding.openFixPixels.setOnClickListener {
+            executeWithSound {
+                safeNavController?.safeNavigate(
+                    MenuFragmentDirections.actionMenuFragmentToFixTestMenuFragment()
+                )
+            }
         }
 
-        binding.include.openSystemFontBtn.setOnClickListener{
-            safeNavController?.safeNavigate(
-                MenuFragmentDirections.actionMenuFragmentToSystemFontMenuFragment())
+        binding.openSystemFontTest.setOnClickListener{
+            executeWithSound {
+                safeNavController?.safeNavigate(
+                    MenuFragmentDirections.actionMenuFragmentToSystemFontMenuFragment())
+            }
         }
 
-        binding.include.openRgbColorsBtn.setOnClickListener {
-            safeNavController?.safeNavigate(MenuFragmentDirections
-                .actionMenuFragmentToRgbColorMenuFragment())
+        binding.openRgbColorTests.setOnClickListener {
+            executeWithSound {
+                safeNavController?.safeNavigate(MenuFragmentDirections
+                    .actionMenuFragmentToRgbColorMenuFragment())
+            }
+        }
+
+        binding.openDrawingTest.setOnClickListener {
+            executeWithSound {
+                // Aggiungi qui la navigazione quando sarà pronta
+            }
+        }
+
+        binding.openTouchTest.setOnClickListener {
+            executeWithSound {
+                // Aggiungi qui la navigazione quando sarà pronta
+            }
         }
 
         val point = Point()
         requireActivity().windowManager.defaultDisplay.getSize(point)
-        val width = binding.include.logoAnimated.measuredWidth.toFloat()
+        val width = binding.logoAnimated.measuredWidth.toFloat()
 
         val animator1 = ObjectAnimator
-            .ofFloat(binding.include.logoAnimated,
+            .ofFloat(binding.logoAnimated,
                 "translationX", 0f, -(width - point.x)).apply {
-                    duration = durationValue
-                    repeatCount = 1
-                    repeatMode = ValueAnimator.REVERSE
+                duration = durationValue
+                repeatCount = 1
+                repeatMode = ValueAnimator.REVERSE
             }
 
         val animator2 = ObjectAnimator
-            .ofFloat(binding.include.logoAnimated,"translationX",
+            .ofFloat(binding.logoAnimated,"translationX",
                 0f, +(width - point.x)).apply {
                 duration = durationValue
                 repeatCount = 1
@@ -99,10 +123,30 @@ class MenuFragment :
         animatorSet.start()
 
         binding.btnOpenDrawer.setOnClickListener{
-            binding.drawerLayout.openDrawer(GravityCompat.START)
+            binding.drawerLayout.openDrawer(GravityCompat.END)
+        }
+
+        binding.sound.setOnClickListener {
+            SharedPreferencesManager.sound = !SharedPreferencesManager.sound
         }
 
         setupNavigationDrawer()
+    }
+
+    private fun executeWithSound(action: () -> Unit) {
+        if (SharedPreferencesManager.sound) {
+            try {
+                val mediaPlayer = MediaPlayer.create(requireContext(),
+                    R.raw.click_sound)
+                mediaPlayer?.setOnCompletionListener {
+                    it.release()
+                }
+                mediaPlayer?.start()
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }
+        action()
     }
 
     @SuppressLint("IntentReset")
@@ -140,7 +184,6 @@ class MenuFragment :
 
         binding.navigationView.setNavigationItemSelectedListener { menuItem ->
 
-
             when (menuItem.itemId) {
                 R.id.nav_faq -> {
                     safeNavController?.safeNavigate(
@@ -172,7 +215,7 @@ class MenuFragment :
                 }
             }
 
-            binding.drawerLayout.closeDrawer(GravityCompat.START)
+            binding.drawerLayout.closeDrawer(GravityCompat.END)
 
             true
         }
@@ -200,5 +243,5 @@ class MenuFragment :
         val alertDialog = alertDialogBuilder.create()
         alertDialog.show()
     }
-    
+
 }

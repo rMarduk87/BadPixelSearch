@@ -18,12 +18,12 @@
     <string name="send_req">SOLICITUD</string>
     <string name="choose_mail_app">Elegir aplicación de correo</string>
     <string name="to">rptechnologies.info@gmail.com</string>
-    <string name="automatic">Modalità automatica</string>
+    <string name="automatic">Modo automático</string>
     <string name="settings">CONFIGURACIÓN</string>
     <string name="settings_t">CONFIGURACIÓN</string>
     <string name="speed">Velocidad de desplazamiento</string>
     <string name="normal">Normal</string>
-    <string name="fast">Veloce</string>
+    <string name="fast">Rápido</string>
     <string name="help">Al activar el modo automático la aplicación se desplazará por los colores de prueba, para activarlo pulsa en el botón de la parte inferior, elige la velocidad de desplazamiento, vuelve a esta pantalla y desliza hacia la derecha para comenzar.</string>
     <string name="interval">Duración del modo automático</string>
     <string name="min">m</string>
@@ -243,4 +243,6 @@
     <string name="sensor_info_title">Lista de sensores del dispositivo</string>
     <string name="_2d_gravity">Gravedad 2D</string>
     <string name="_3d_gravity">Gravedad 3D</string>
+    <string name="touch_tests">TOUCH TESTS </string>
+    <string name="drawing_tests">DRAWING TESTS </string>
 </resources>
