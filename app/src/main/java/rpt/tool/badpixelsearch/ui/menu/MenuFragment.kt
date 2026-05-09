@@ -98,29 +98,32 @@ class MenuFragment :
             }
         }
 
-        val point = Point()
-        requireActivity().windowManager.defaultDisplay.getSize(point)
-        val width = binding.logoAnimated.measuredWidth.toFloat()
+        binding.logoAnimated.post {
+            val point = Point()
+            requireActivity().windowManager.defaultDisplay.getSize(point)
+            val iconWidth = binding.logoAnimated.width.toFloat()
+            val maxTranslation = (point.x - iconWidth) / 2f
 
-        val animator1 = ObjectAnimator
-            .ofFloat(binding.logoAnimated,
-                "translationX", 0f, -(width - point.x)).apply {
-                duration = durationValue
-                repeatCount = 1
-                repeatMode = ValueAnimator.REVERSE
-            }
+            val animator1 = ObjectAnimator
+                .ofFloat(binding.logoAnimated,
+                    "translationX", 0f, -maxTranslation).apply {
+                    duration = durationValue
+                    repeatCount = 1
+                    repeatMode = ValueAnimator.REVERSE
+                }
 
-        val animator2 = ObjectAnimator
-            .ofFloat(binding.logoAnimated,"translationX",
-                0f, +(width - point.x)).apply {
-                duration = durationValue
-                repeatCount = 1
-                repeatMode = ValueAnimator.REVERSE
-            }
+            val animator2 = ObjectAnimator
+                .ofFloat(binding.logoAnimated,"translationX",
+                    0f, maxTranslation).apply {
+                    duration = durationValue
+                    repeatCount = 1
+                    repeatMode = ValueAnimator.REVERSE
+                }
 
-        val animatorSet = AnimatorSet()
-        animatorSet.playSequentially(animator1, animator2)
-        animatorSet.start()
+            val animatorSet = AnimatorSet()
+            animatorSet.playSequentially(animator1, animator2)
+            animatorSet.start()
+        }
 
         binding.btnOpenDrawer.setOnClickListener{
             binding.drawerLayout.openDrawer(GravityCompat.END)

@@ -1,25 +1,31 @@
 package rpt.tool.badpixelsearch.ui.camera.menu
 
 import android.Manifest
-import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
 import android.animation.ValueAnimator
-import android.graphics.Point
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.View
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.camera.core.CameraSelector
 import androidx.camera.core.Preview
 import androidx.camera.lifecycle.ProcessCameraProvider
+import androidx.camera.view.PreviewView
 import androidx.core.content.ContextCompat
+import android.widget.LinearLayout
 import rpt.tool.badpixelsearch.BaseFragment
-import rpt.tool.badpixelsearch.databinding.FragmentMenuCameraBinding
+import rpt.tool.badpixelsearch.R
+import rpt.tool.badpixelsearch.databinding.TestMenuTwoBinding
+import rpt.tool.badpixelsearch.utils.log.e
+import rpt.tool.badpixelsearch.utils.managers.SharedPreferencesManager
+import rpt.tool.badpixelsearch.utils.navigation.safeNavController
 
 class CameraMenuFragment :
-    BaseFragment<FragmentMenuCameraBinding>(FragmentMenuCameraBinding::inflate) {
+    BaseFragment<TestMenuTwoBinding>(TestMenuTwoBinding::inflate) {
 
     private var canClick = true
-    private val durationValue = 6000L
+    private val PULSE_DURATION = 2500L
+    private var previewCamera: PreviewView? = null
 
     private val permissionLauncher =
         registerForActivityResult(ActivityResultContracts.RequestPermission()) { granted ->
@@ -28,56 +34,93 @@ class CameraMenuFragment :
             }
         }
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Chiedi permessi solo all'apertura
+        binding.menuTitle.text = requireContext().getString(R.string.camera_tests)
+        binding.iconAnimated.setImageResource(R.drawable.ic_camera)
+
+        binding.text1.text = requireContext().getString(R.string.camera1)
+        binding.text2.text = requireContext().getString(R.string.camera2)
+
+        setupDynamicCameraPreview()
+        setupNumbers()
+
+        ObjectAnimator.ofFloat(binding.iconAnimated, "alpha",
+            1f, 0f).apply {
+            duration = PULSE_DURATION
+            repeatCount = ValueAnimator.INFINITE
+            repeatMode = ValueAnimator.REVERSE
+            start()
+        }
+
         permissionLauncher.launch(Manifest.permission.CAMERA)
 
-        binding.openFrontCameraTest.setOnClickListener {
-            if(canClick){
-                showPreview()
-                startCamera(CameraSelector.DEFAULT_FRONT_CAMERA)
-
+        binding.option1.setOnClickListener {
+            executeWithSound {
+                if(canClick){
+                    binding.touch1.visibility = View.VISIBLE
+                    SharedPreferencesManager.cameraTest1 = true
+                    showPreview()
+                    startCamera(CameraSelector.DEFAULT_FRONT_CAMERA)
+                }
             }
         }
 
-        binding.openRearCameraTest.setOnClickListener {
-            if(canClick){
-                showPreview()
-                startCamera(CameraSelector.DEFAULT_BACK_CAMERA)
+        binding.option2.setOnClickListener {
+            executeWithSound {
+                if(canClick){
+                    binding.touch2.visibility = View.VISIBLE
+                    SharedPreferencesManager.cameraTest2 = true
+                    showPreview()
+                    startCamera(CameraSelector.DEFAULT_BACK_CAMERA)
+                }
             }
         }
 
-        val point = Point()
-        requireActivity().windowManager.defaultDisplay.getSize(point)
-        val width = binding.logoAnimated.measuredWidth.toFloat()
-
-        val animator1 = ObjectAnimator
-            .ofFloat(binding.logoAnimated,
-                "translationX", 0f, -(width - point.x)).apply {
-                duration = durationValue
-                repeatCount = 1
-                repeatMode = ValueAnimator.REVERSE
+        binding.btnBack.setOnClickListener {
+            try {
+                if(SharedPreferencesManager.sound){
+                    val mediaPlayer = MediaPlayer.create(requireContext(),
+                        R.raw.goodbye)
+                    mediaPlayer?.setOnCompletionListener { it.release() }
+                    mediaPlayer?.start()
+                }
+            } catch (e: Exception) {
+                e(Throwable(e),"Sound")
             }
+            safeNavController?.popBackStack()
+        }
+    }
 
-        val animator2 = ObjectAnimator
-            .ofFloat(binding.logoAnimated,"translationX",
-                0f, +(width - point.x)).apply {
-                duration = durationValue
-                repeatCount = 1
-                repeatMode = ValueAnimator.REVERSE
+    private fun setupDynamicCameraPreview() {
+        val context = requireContext()
+        previewCamera = PreviewView(context).apply {
+            visibility = View.GONE
+            layoutParams = LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                (300 * context.resources.displayMetrics.density).toInt()
+            ).apply {
+                setMargins(0, 0, 0, (20 * context.resources.displayMetrics.density).toInt())
             }
+        }
+        val container = binding.iconAnimated.parent as? LinearLayout
+        container?.addView(previewCamera, container.indexOfChild(binding.iconAnimated) + 1)
+    }
 
-        val animatorSet = AnimatorSet()
-        animatorSet.playSequentially(animator1, animator2)
-        animatorSet.start()
+    private fun setupNumbers() {
+        if (SharedPreferencesManager.cameraTest1) {
+            binding.touch1.visibility = View.VISIBLE
+        }
+        if (SharedPreferencesManager.cameraTest2) {
+            binding.touch2.visibility = View.VISIBLE
+        }
     }
 
     private fun showPreview() {
-        if (binding.previewCamera.visibility != View.VISIBLE) {
-            binding.previewCamera.visibility = View.VISIBLE
+        if (previewCamera?.visibility != View.VISIBLE) {
+            previewCamera?.visibility = View.VISIBLE
+            binding.iconAnimated.visibility = View.GONE
         }
     }
 
@@ -88,12 +131,25 @@ class CameraMenuFragment :
             val cameraProvider = cameraProviderFuture.get()
             val preview = Preview.Builder().build()
 
-            preview.setSurfaceProvider(binding.previewCamera.surfaceProvider)
+            preview.surfaceProvider = previewCamera?.surfaceProvider
 
             cameraProvider.unbindAll()
-            cameraProvider.bindToLifecycle(this, selector,
-                preview)
+            cameraProvider.bindToLifecycle(this, selector, preview)
 
         }, ContextCompat.getMainExecutor(requireContext()))
+    }
+
+    private fun executeWithSound(action: () -> Unit) {
+        if (SharedPreferencesManager.sound) {
+            try {
+                val mediaPlayer = MediaPlayer.create(requireContext(),
+                    R.raw.click_sound)
+                mediaPlayer?.setOnCompletionListener { it.release() }
+                mediaPlayer?.start()
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }
+        action()
     }
 }

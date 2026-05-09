@@ -1,90 +1,165 @@
 package rpt.tool.badpixelsearch.ui.color.menu
 
-import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
 import android.animation.ValueAnimator
 import android.content.Intent
-import android.graphics.Point
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.View
+import rpt.tool.badpixelsearch.R
 import rpt.tool.badpixelsearch.BadPixelSearchActivity
 import rpt.tool.badpixelsearch.BaseFragment
 import rpt.tool.badpixelsearch.GradientTestActivity
-import rpt.tool.badpixelsearch.databinding.FragmentMenuColorTestBinding
+import rpt.tool.badpixelsearch.databinding.TestsMenuSixBinding
+import rpt.tool.badpixelsearch.utils.log.e
 import rpt.tool.badpixelsearch.utils.managers.SharedPreferencesManager
 import rpt.tool.badpixelsearch.utils.navigation.safeNavController
 import rpt.tool.badpixelsearch.utils.navigation.safeNavigate
 
-class ColorTestMenuFragment: BaseFragment<FragmentMenuColorTestBinding>
-    (FragmentMenuColorTestBinding::inflate) {
+class ColorTestMenuFragment: BaseFragment<TestsMenuSixBinding>
+    (TestsMenuSixBinding::inflate) {
 
-    private val durationValue = 6000L
+    companion object {
+        private const val PULSE_DURATION = 2500L
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val point = Point()
-        requireActivity().windowManager.defaultDisplay.getSize(point)
-        val width = binding.logoAnimated.measuredWidth.toFloat()
+        binding.menuTitle.text = requireContext().getString(R.string.color_tests)
 
-        val animator1 = ObjectAnimator
-            .ofFloat(binding.logoAnimated,
-                "translationX", 0f, -(width - point.x)).apply {
-                duration = durationValue
-                repeatCount = 1
-                repeatMode = ValueAnimator.REVERSE
-            }
+        binding.iconAnimated.setImageResource(R.drawable.ic_color_tests)
 
-        val animator2 = ObjectAnimator
-            .ofFloat(binding.logoAnimated,"translationX",
-                0f, +(width - point.x)).apply {
-                duration = durationValue
-                repeatCount = 1
-                repeatMode = ValueAnimator.REVERSE
-            }
+        binding.text1.text = requireContext().getString(R.string.purity)
+        binding.text2.text = requireContext().getString(R.string.gradient)
+        binding.text3.text = requireContext().getString(R.string.scales)
+        binding.text4.text = requireContext().getString(R.string.shades)
+        binding.text5.text = requireContext().getString(R.string.gamma_test)
+        binding.text6.text = requireContext().getString(R.string.line_test)
 
-        val animatorSet = AnimatorSet()
-        animatorSet.playSequentially(animator1, animator2)
-        animatorSet.start()
+        setupNumbers()
 
-        binding.openPurityTest.setOnClickListener{
-            SharedPreferencesManager.typeMode = 0
-            startActivity(Intent(requireContext(),
-                BadPixelSearchActivity::class.java))
+        ObjectAnimator.ofFloat(binding.iconAnimated, "alpha", 1f,
+            0f).apply {
+            duration = PULSE_DURATION
+            repeatCount = ValueAnimator.INFINITE
+            repeatMode = ValueAnimator.REVERSE
+            start()
         }
 
-        binding.openGradientTest.setOnClickListener {
-            startActivity(
-                Intent(
-                    requireContext(),
-                    GradientTestActivity::class.java
+        binding.option1.setOnClickListener{
+            executeWithSound {
+                binding.touch1.visibility = View.VISIBLE
+                SharedPreferencesManager.colorTestPurity = true
+                SharedPreferencesManager.typeMode = 0
+                startActivity(Intent(requireContext(),
+                    BadPixelSearchActivity::class.java))
+            }
+        }
+
+        binding.option2.setOnClickListener {
+            executeWithSound {
+                binding.touch2.visibility = View.VISIBLE
+                SharedPreferencesManager.colorTestGradient = true
+                startActivity(
+                    Intent(
+                        requireContext(),
+                        GradientTestActivity::class.java
+                    )
                 )
-            )
+            }
         }
 
-        binding.openScalesTest.setOnClickListener {
-            safeNavController?.safeNavigate(ColorTestMenuFragmentDirections
-                .actionColorTestsMenuFragmentToColorScalesFragment())
+        binding.option3.setOnClickListener {
+            executeWithSound {
+                binding.touch3.visibility = View.VISIBLE
+                SharedPreferencesManager.colorTestScales = true
+                safeNavController?.safeNavigate(ColorTestMenuFragmentDirections
+                    .actionColorTestsMenuFragmentToColorScalesFragment())
+            }
         }
 
-        binding.openShadesTest.setOnClickListener {
-            safeNavController?.safeNavigate(
-                ColorTestMenuFragmentDirections
-                    .actionColorTestsMenuFragmentToColorShadeFragment()
-            )
+        binding.option4.setOnClickListener {
+            executeWithSound {
+                binding.touch4.visibility = View.VISIBLE
+                SharedPreferencesManager.colorTestShades = true
+                safeNavController?.safeNavigate(
+                    ColorTestMenuFragmentDirections
+                        .actionColorTestsMenuFragmentToColorShadeFragment()
+                )
+            }
         }
 
-        binding.openGammaTest.setOnClickListener {
-            safeNavController?.safeNavigate(
-                ColorTestMenuFragmentDirections
-                    .actionColorTestsMenuFragmentToGammaColorFragment())
+        binding.option5.setOnClickListener {
+            executeWithSound {
+                binding.touch5.visibility = View.VISIBLE
+                SharedPreferencesManager.colorTestGamma = true
+                safeNavController?.safeNavigate(
+                    ColorTestMenuFragmentDirections
+                        .actionColorTestsMenuFragmentToGammaColorFragment())
+            }
         }
 
-        binding.openLineTest.setOnClickListener {
-            safeNavController?.safeNavigate(
-                ColorTestMenuFragmentDirections
-                    .actionColorTestsMenuFragmentToColorLineTestFragment())
+        binding.option6.setOnClickListener {
+            executeWithSound {
+                binding.touch6.visibility = View.VISIBLE
+                SharedPreferencesManager.colorTestLine = true
+                safeNavController?.safeNavigate(
+                    ColorTestMenuFragmentDirections
+                        .actionColorTestsMenuFragmentToColorLineTestFragment())
+            }
         }
 
+        binding.btnBack.setOnClickListener {
+            try {
+                if(SharedPreferencesManager.sound){
+                    val mediaPlayer = MediaPlayer.create(requireContext(),
+                        R.raw.goodbye)
+                    mediaPlayer?.setOnCompletionListener { it.release() }
+                    mediaPlayer?.start()
+                }
+            } catch (e: Exception) {
+                e(Throwable(e),"Sound")
+            }
+            safeNavController?.popBackStack()
+        }
+
+    }
+
+    private fun setupNumbers() {
+        if (SharedPreferencesManager.colorTestPurity) {
+            binding.touch1.visibility = View.VISIBLE
+        }
+        if (SharedPreferencesManager.colorTestGradient) {
+            binding.touch2.visibility = View.VISIBLE
+        }
+        if (SharedPreferencesManager.colorTestScales) {
+            binding.touch3.visibility = View.VISIBLE
+        }
+        if (SharedPreferencesManager.colorTestShades) {
+            binding.touch4.visibility = View.VISIBLE
+        }
+        if (SharedPreferencesManager.colorTestGamma) {
+            binding.touch5.visibility = View.VISIBLE
+        }
+        if (SharedPreferencesManager.colorTestLine) {
+            binding.touch6.visibility = View.VISIBLE
+        }
+    }
+
+    private fun executeWithSound(action: () -> Unit) {
+        if (SharedPreferencesManager.sound) {
+            try {
+                val mediaPlayer = MediaPlayer.create(requireContext(),
+                    R.raw.click_sound)
+                mediaPlayer?.setOnCompletionListener {
+                    it.release()
+                }
+                mediaPlayer?.start()
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }
+        action()
     }
 }

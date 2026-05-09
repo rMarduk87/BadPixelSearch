@@ -1,94 +1,130 @@
 package rpt.tool.badpixelsearch.ui.fonts.menu
 
-import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
 import android.animation.ValueAnimator
-import android.content.Intent
-import android.graphics.Point
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.View
-import rpt.tool.badpixelsearch.BadPixelSearchActivity
 import rpt.tool.badpixelsearch.BaseFragment
-import rpt.tool.badpixelsearch.GradientTestActivity
-import rpt.tool.badpixelsearch.databinding.FragmentMenuColorTestBinding
-import rpt.tool.badpixelsearch.databinding.FragmentSystemFontMenuBinding
+import rpt.tool.badpixelsearch.R
+import rpt.tool.badpixelsearch.databinding.TestsMenuSixBinding
+import rpt.tool.badpixelsearch.utils.log.e
 import rpt.tool.badpixelsearch.utils.managers.SharedPreferencesManager
 import rpt.tool.badpixelsearch.utils.navigation.safeNavController
 import rpt.tool.badpixelsearch.utils.navigation.safeNavigate
 
-class SystemFontMenuFragment: BaseFragment<FragmentSystemFontMenuBinding>
-    (FragmentSystemFontMenuBinding::inflate) {
+class SystemFontMenuFragment: BaseFragment<TestsMenuSixBinding>
+    (TestsMenuSixBinding::inflate) {
 
-    private val durationValue = 6000L
+    private val PULSE_DURATION = 2500L
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val point = Point()
-        requireActivity().windowManager.defaultDisplay.getSize(point)
-        val width = binding.logoAnimated.measuredWidth.toFloat()
+        binding.menuTitle.text = requireContext().getString(R.string.system_fonts)
+        binding.iconAnimated.setImageResource(R.drawable.ic_system_fonts)
 
-        val animator1 = ObjectAnimator
-            .ofFloat(binding.logoAnimated,
-                "translationX", 0f, -(width - point.x)).apply {
-                duration = durationValue
-                repeatCount = 1
-                repeatMode = ValueAnimator.REVERSE
+        binding.text1.text = requireContext().getString(R.string.normal_fonts)
+        binding.text2.text = requireContext().getString(R.string.italic_fonts)
+        binding.text3.text = requireContext().getString(R.string.font_families)
+        binding.text4.text = requireContext().getString(R.string.reading_test)
+
+        // Hide unused options
+        binding.option5.visibility = View.GONE
+        binding.option6.visibility = View.GONE
+
+        setupNumbers()
+
+        ObjectAnimator.ofFloat(binding.iconAnimated, "alpha", 1f, 0f).apply {
+            duration = PULSE_DURATION
+            repeatCount = ValueAnimator.INFINITE
+            repeatMode = ValueAnimator.REVERSE
+            start()
+        }
+
+        binding.option1.setOnClickListener{
+            executeWithSound {
+                binding.touch1.visibility = View.VISIBLE
+                SharedPreferencesManager.fontTestNormal = true
+                SharedPreferencesManager.IsBold = false
+                safeNavController?.safeNavigate(
+                    SystemFontMenuFragmentDirections.
+                    actionSystemFontMenuFragmentToNormalFontFragment())
             }
+        }
 
-        val animator2 = ObjectAnimator
-            .ofFloat(binding.logoAnimated,"translationX",
-                0f, +(width - point.x)).apply {
-                duration = durationValue
-                repeatCount = 1
-                repeatMode = ValueAnimator.REVERSE
+        binding.option2.setOnClickListener {
+            executeWithSound {
+                binding.touch2.visibility = View.VISIBLE
+                SharedPreferencesManager.fontTestItalic = true
+                SharedPreferencesManager.IsBoldItalic = false
+                safeNavController?.safeNavigate(
+                    SystemFontMenuFragmentDirections.
+                    actionSystemFontMenuFragmentToItalicFontFragment()
+                )
             }
-
-        val animatorSet = AnimatorSet()
-        animatorSet.playSequentially(animator1, animator2)
-        animatorSet.start()
-
-        binding.openNormalFonts.setOnClickListener{
-            SharedPreferencesManager.IsBold = false
-            safeNavController?.safeNavigate(
-                SystemFontMenuFragmentDirections.
-                actionSystemFontMenuFragmentToNormalFontFragment())
         }
 
-        binding.openItalicFonts.setOnClickListener {
-            SharedPreferencesManager.IsBoldItalic = false
-            safeNavController?.safeNavigate(
-                SystemFontMenuFragmentDirections.
-                actionSystemFontMenuFragmentToItalicFontFragment()
-            )
+        binding.option3.setOnClickListener {
+            executeWithSound {
+                binding.touch3.visibility = View.VISIBLE
+                SharedPreferencesManager.fontTestFamilies = true
+                safeNavController?.safeNavigate(
+                    SystemFontMenuFragmentDirections
+                        .actionSystemFontMenuFragmentToFontFamiliesFragment())
+            }
         }
 
-        binding.openBoldFonts.setOnClickListener {
-            SharedPreferencesManager.IsBold = true
-            safeNavController?.safeNavigate(
-                SystemFontMenuFragmentDirections.
-                actionSystemFontMenuFragmentToNormalFontFragment())
+        binding.option4.setOnClickListener {
+            executeWithSound {
+                binding.touch4.visibility = View.VISIBLE
+                SharedPreferencesManager.fontTestReading = true
+                safeNavController?.safeNavigate(
+                    SystemFontMenuFragmentDirections.
+                    actionSystemFontMenuFragmentToReadingTestFragment()
+                )
+            }
         }
 
-        binding.openBoldItalicFonts.setOnClickListener {
-            SharedPreferencesManager.IsBoldItalic = true
-            safeNavController?.safeNavigate(
-                SystemFontMenuFragmentDirections.
-                actionSystemFontMenuFragmentToItalicFontFragment()
-            )
+        binding.btnBack.setOnClickListener {
+            try {
+                if(SharedPreferencesManager.sound){
+                    val mediaPlayer = MediaPlayer.create(requireContext(), R.raw.goodbye)
+                    mediaPlayer?.setOnCompletionListener { it.release() }
+                    mediaPlayer?.start()
+                }
+            } catch (e: Exception) {
+                e(Throwable(e),"Sound")
+            }
+            safeNavController?.popBackStack()
         }
+    }
 
-        binding.openFontFamilies.setOnClickListener {
-            safeNavController?.safeNavigate(
-                SystemFontMenuFragmentDirections
-                    .actionSystemFontMenuFragmentToFontFamiliesFragment())
+    private fun setupNumbers() {
+        if (SharedPreferencesManager.fontTestNormal) {
+            binding.touch1.visibility = View.VISIBLE
         }
+        if (SharedPreferencesManager.fontTestItalic) {
+            binding.touch2.visibility = View.VISIBLE
+        }
+        if (SharedPreferencesManager.fontTestFamilies) {
+            binding.touch3.visibility = View.VISIBLE
+        }
+        if (SharedPreferencesManager.fontTestReading) {
+            binding.touch4.visibility = View.VISIBLE
+        }
+    }
 
-        binding.openReadingTest.setOnClickListener {
-            safeNavController?.safeNavigate(
-                SystemFontMenuFragmentDirections.
-                actionSystemFontMenuFragmentToReadingTestFragment()
-            )
+    private fun executeWithSound(action: () -> Unit) {
+        if (SharedPreferencesManager.sound) {
+            try {
+                val mediaPlayer = MediaPlayer.create(requireContext(), R.raw.click_sound)
+                mediaPlayer?.setOnCompletionListener { it.release() }
+                mediaPlayer?.start()
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
         }
+        action()
     }
 }

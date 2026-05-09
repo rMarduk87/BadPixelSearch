@@ -93,7 +93,7 @@
         android:id="@+id/ColorTestsMenuFragment"
         android:name="rpt.tool.badpixelsearch.ui.color.menu.ColorTestMenuFragment"
         android:label="ColorTestsMenuFragment"
-        tools:layout="@layout/fragment_menu_color_test">
+        tools:layout="@layout/tests_menu_six">
         <action
             android:id="@+id/action_colorTestsMenuFragment_to_menuFragment"
             app:destination="@id/MenuFragment" />
@@ -114,7 +114,7 @@
         android:id="@+id/AnimationTestMenuFragment"
         android:name="rpt.tool.badpixelsearch.ui.animation.menu.AnimationMenuFragment"
         android:label="AnimationTestMenuFragment"
-        tools:layout="@layout/fragment_animation_menu">
+        tools:layout="@layout/tests_menu_six">
         <action
             android:id="@+id/action_animationMenuFragment_to_menuFragment"
             app:destination="@id/MenuFragment" />
@@ -135,7 +135,7 @@
         android:id="@+id/SystemFontMenuFragment"
         android:name="rpt.tool.badpixelsearch.ui.fonts.menu.SystemFontMenuFragment"
         android:label="SystemFontMenuFragment"
-        tools:layout="@layout/fragment_system_font_menu">
+        tools:layout="@layout/tests_menu_six">
         <action
             android:id="@+id/action_systemFontMenuFragment_to_menuFragment"
             app:destination="@id/MenuFragment" />
@@ -192,13 +192,13 @@
         android:id="@+id/CameraTestMenuFragment"
         android:name="rpt.tool.badpixelsearch.ui.camera.menu.CameraMenuFragment"
         android:label="CameraTestMenu"
-        tools:layout="@layout/fragment_menu_camera">
+        tools:layout="@layout/test_menu_two">
     </fragment>
     <fragment
         android:id="@+id/FixTestMenuFragment"
         android:name="rpt.tool.badpixelsearch.ui.fix.menu.FixPixelMenuFragment"
         android:label="FixTestMenuFragment"
-        tools:layout="@layout/fragment_fix_pixels_menu">
+        tools:layout="@layout/tests_menu_eight">
     </fragment>
     <fragment
         android:id="@+id/NormalFontFragment"
@@ -276,7 +276,7 @@
         android:id="@+id/RgbColorsMenuFragment"
         android:name="rpt.tool.badpixelsearch.ui.rgb.menu.RgbColorsMenuFragment"
         android:label="RgbColorsMenuFragment"
-        tools:layout="@layout/fragment_rgb_menu">
+        tools:layout="@layout/tests_menu_six">
         <action
             android:id="@+id/action_rgbColorsMenuFragment_to_rgbColorMixerFragment"
             app:destination="@id/RgbColorMixerFragment"/>
