@@ -46,7 +46,8 @@ class ScreenInfoFragment :
         val wm = requireContext().getSystemService(Context.WINDOW_SERVICE) as WindowManager
         val display = wm.defaultDisplay
 
-        binding.leftIconBlock.setOnClickListener{ finish() }
+        setupToolbar(binding.toolbar.btnBack, binding.toolbar.menuTitle, getString(R.string.screen_info_title))
+        binding.toolbar.btnShare.visibility = View.VISIBLE
 
         fullResolution = getScreenResolution().toNewLineString()
         currentResolution = getScreenResolution().toNewLineString()

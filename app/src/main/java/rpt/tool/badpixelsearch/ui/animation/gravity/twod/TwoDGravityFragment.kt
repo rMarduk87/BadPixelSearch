@@ -10,6 +10,6 @@ class TwoDGravityFragment :
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        setupToolbar(binding.toolbar.btnBack, binding.toolbar.menuTitle, getString(rpt.tool.badpixelsearch.R.string._2d_gravity))
     }
 }

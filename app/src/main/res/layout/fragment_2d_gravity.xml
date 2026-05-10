@@ -5,16 +5,9 @@
     android:layout_height="match_parent"
     android:background="@android:color/black">
 
-    <TextView
-        android:id="@+id/txtTitle"
-        android:layout_marginTop="@dimen/dp_22"
-        android:layout_width="match_parent"
-        android:layout_height="64dp"
-        android:text="@string/_2d_gravity"
-        android:textColor="@color/white"
-        android:textSize="26sp"
-        android:gravity="center"
-        android:fontFamily="sans-serif-medium" />
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_layout" />
 
     <rpt.tool.badpixelsearch.utils.view.physics.GravityBallView
        android:id="@+id/gravityView"

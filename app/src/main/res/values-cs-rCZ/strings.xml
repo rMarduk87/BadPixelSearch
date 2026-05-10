@@ -244,4 +244,6 @@
     <string name="_3d_gravity">3D Gravitace</string>
     <string name="touch_tests">TOUCH TESTS </string>
     <string name="drawing_tests">DRAWING TESTS </string>
+    <string name="_1">1</string>
+    <string name="v">V</string>
 </resources>

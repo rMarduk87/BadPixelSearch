@@ -25,7 +25,7 @@ class FixPixelMenuFragment: BaseFragment<TestsMenuEightBinding>
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.menuTitle.text = requireContext().getString(R.string.fix_tests)
+        setupToolbar(binding.toolbar.btnBack, binding.toolbar.menuTitle, getString(R.string.fix_tests))
         binding.iconAnimated.setImageResource(R.drawable.splash)
 
         binding.text1.text = requireContext().getString(R.string.bw_test)
@@ -134,19 +134,6 @@ class FixPixelMenuFragment: BaseFragment<TestsMenuEightBinding>
                     )
                 )
             }
-        }
-
-        binding.btnBack.setOnClickListener {
-            try {
-                if(SharedPreferencesManager.sound){
-                    val mediaPlayer = MediaPlayer.create(requireContext(), R.raw.goodbye)
-                    mediaPlayer?.setOnCompletionListener { it.release() }
-                    mediaPlayer?.start()
-                }
-            } catch (e: Exception) {
-                e(Throwable(e),"Sound")
-            }
-            safeNavController?.popBackStack()
         }
     }
 

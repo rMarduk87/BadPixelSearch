@@ -27,7 +27,8 @@ class SensorInfoFragment:
 
         binding.recyclerSensors.adapter = SensorAdapter(sensors)
 
-        binding.leftIconBlock.setOnClickListener{ finish() }
+        setupToolbar(binding.toolbar.btnBack, binding.toolbar.menuTitle, getString(rpt.tool.badpixelsearch.R.string.sensor_info_title))
+        binding.toolbar.btnShare.visibility = View.VISIBLE
 
     }
 

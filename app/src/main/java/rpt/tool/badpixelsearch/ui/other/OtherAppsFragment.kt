@@ -23,7 +23,7 @@ class OtherAppsFragment: BaseFragment<FragmentOtherAppsBinding>(FragmentOtherApp
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.leftIconBlock.setOnClickListener{ finish() }
+        setupToolbar(binding.toolbar.btnBack, binding.toolbar.menuTitle, getString(rpt.tool.badpixelsearch.R.string.other_apps))
 
         val appPongClock = OtherApps()
         appPongClock.name = "Pong Clock"

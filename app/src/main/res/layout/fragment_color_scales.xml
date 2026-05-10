@@ -7,16 +7,9 @@
     android:background="#000000"
     android:gravity="top">
 
-    <TextView
-        android:layout_marginTop="@dimen/dp_27"
-        android:id="@+id/txtTitle"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:gravity="center"
-        android:text="@string/_16_levels_of_white"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        android:background="#000000" />
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_layout" />
 
     <!-- Container dei livelli -->
     <LinearLayout

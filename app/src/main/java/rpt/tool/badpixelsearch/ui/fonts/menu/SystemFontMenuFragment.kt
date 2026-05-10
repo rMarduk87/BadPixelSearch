@@ -21,7 +21,7 @@ class SystemFontMenuFragment: BaseFragment<TestsMenuSixBinding>
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.menuTitle.text = requireContext().getString(R.string.system_fonts)
+        setupToolbar(binding.toolbar.btnBack, binding.toolbar.menuTitle, getString(R.string.system_fonts))
         binding.iconAnimated.setImageResource(R.drawable.ic_system_fonts)
 
         binding.text1.text = requireContext().getString(R.string.normal_fonts)
@@ -84,19 +84,6 @@ class SystemFontMenuFragment: BaseFragment<TestsMenuSixBinding>
                     actionSystemFontMenuFragmentToReadingTestFragment()
                 )
             }
-        }
-
-        binding.btnBack.setOnClickListener {
-            try {
-                if(SharedPreferencesManager.sound){
-                    val mediaPlayer = MediaPlayer.create(requireContext(), R.raw.goodbye)
-                    mediaPlayer?.setOnCompletionListener { it.release() }
-                    mediaPlayer?.start()
-                }
-            } catch (e: Exception) {
-                e(Throwable(e),"Sound")
-            }
-            safeNavController?.popBackStack()
         }
     }
 

@@ -31,13 +31,13 @@ class ColorGammaFragment :
         )
 
         // 3. Ensure the initial text is set (since the list was just created)
-        binding.txtTitle.text = baseColors[currentIndex].first
+        setupToolbar(binding.toolbar.btnBack, binding.toolbar.menuTitle, baseColors[currentIndex].first)
 
         createGammaBars(baseColors[currentIndex].second)
 
         binding.mainContainer.setOnClickListener {
             currentIndex = (currentIndex + 1) % baseColors.size
-            binding.txtTitle.text = baseColors[currentIndex].first
+            binding.toolbar.menuTitle.text = baseColors[currentIndex].first
             createGammaBars(baseColors[currentIndex].second)
         }
     }

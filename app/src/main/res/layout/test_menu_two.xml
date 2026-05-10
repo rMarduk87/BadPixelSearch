@@ -33,6 +33,7 @@
             android:id="@+id/menuTitle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:gravity="center_vertical"
             android:layout_weight="1"
             android:textColor="@color/white"
             android:textSize="20sp" />
@@ -74,7 +75,7 @@
                 android:textColor="#0A1828"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                android:text="1"
+                android:text="@string/_1"
                 />
 
             <TextView
@@ -93,7 +94,7 @@
                 android:layout_centerVertical="true"
                 android:background="@drawable/bg_circle"
                 android:gravity="center"
-                android:text="V"
+                android:text="@string/v"
                 android:textColor="#0A1828"
                 android:textSize="18sp"
                 android:textStyle="bold"
