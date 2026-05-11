@@ -96,6 +96,18 @@ class AppUtils {
         const val FIX_TEST_VER_LINE: String = "fix_test_ver_line"
         const val FIX_TEST_HOR_RECT: String = "fix_test_hor_rect"
         const val FIX_TEST_VER_RECT: String = "fix_test_ver_rect"
+        const val TOUCH_TEST_SINGLE: String = "touch_test_single"
+        const val TOUCH_TWO_TEST_SINGLE: String = "touch_two_test_single"
+        const val TOUCH_TEST_MULTI: String = "touch_test_multi"
+        const val TOUCH_TWO_TEST_MULTI: String = "touch_two_test_multi"
+        const val TOUCH_TEST_ZOOM: String = "touch_test_zoom"
+        const val TOUCH_TEST_RESPONSE: String = "touch_test_response"
+        const val DRAWING_NORMAL_TEST: String = "drawing_normal_test"
+        const val DRAWING_NORMAL_TWO_TEST: String = "drawing_normal_two_test"
+        const val DRAWING_FADING_TEST: String = "drawing_fading_test"
+        const val DRAWING_FADING_TWO_TEST: String = "drawing_fading_two_test"
+        const val DRAWING_STYLUS_TEST: String = "drawing_stylus_test"
+        const val DRAWING_COLOR_TEST: String = "drawing_color_test"
         const val FIX_TEST_FIX: String = "fix_test_fix"
     }
 }

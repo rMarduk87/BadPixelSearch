@@ -18,12 +18,7 @@ import android.widget.Toast
 import androidx.core.net.toUri
 import androidx.core.view.GravityCompat
 import rpt.tool.badpixelsearch.BaseFragment
-import rpt.tool.badpixelsearch.GradientTestActivity
-import rpt.tool.badpixelsearch.NoiseSearchActivity
-import rpt.tool.badpixelsearch.PixelTestActivity
 import rpt.tool.badpixelsearch.R
-import rpt.tool.badpixelsearch.ThreeDTestActivity
-import rpt.tool.badpixelsearch.TwoDTestActivity
 import rpt.tool.badpixelsearch.databinding.FragmentMenuBinding
 import rpt.tool.badpixelsearch.utils.managers.SharedPreferencesManager
 import rpt.tool.badpixelsearch.utils.navigation.safeNavController
@@ -88,13 +83,15 @@ class MenuFragment :
 
         binding.openDrawingTest.setOnClickListener {
             executeWithSound {
-                // Aggiungi qui la navigazione quando sarà pronta
+                safeNavController?.safeNavigate(MenuFragmentDirections.
+                actionMenuFragmentToDrawingMenuFragment())
             }
         }
 
         binding.openTouchTest.setOnClickListener {
             executeWithSound {
-                // Aggiungi qui la navigazione quando sarà pronta
+                safeNavController?.safeNavigate(
+                MenuFragmentDirections.actionMenuFragmentToTouchMenuFragment())
             }
         }
 

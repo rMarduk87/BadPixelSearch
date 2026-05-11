@@ -255,5 +255,11 @@
     <string name="touch_test_6">Response time</string>
     <string name="touch_tests_full">TOUCH TESTS</string>
     <string name="filled_0">Filled: 0%</string>
-    <string name="filled">Filled: %1$s%</string>
+    <string name="filled">Filled:</string>
+    <string name="drawing_test_1">Normal lines</string>
+    <string name="drawing_test_2">Normal lines 2</string>
+    <string name="drawing_test_3">Fading lines</string>
+    <string name="drawing_test_4">Fading lines 2</string>
+    <string name="drawing_test_5">Stylus lines</string>
+    <string name="drawing_test_6">Color lines</string>
 </resources>

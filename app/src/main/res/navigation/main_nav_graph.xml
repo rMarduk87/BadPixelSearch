@@ -43,6 +43,12 @@
         <action
             android:id="@+id/action_menuFragment_to_rgbColorMenuFragment"
             app:destination="@id/RgbColorsMenuFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_touchMenuFragment"
+            app:destination="@id/TouchMenuFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_drawingMenuFragment"
+            app:destination="@id/DrawingMenuFragment" />
     </fragment>
     <fragment
         android:id="@+id/FaqFragment"
@@ -369,5 +375,37 @@
         android:name="rpt.tool.badpixelsearch.ui.fix.bars.PixelTestFragment"
         android:label="PixelTestFragment"
         tools:layout="@layout/fragment_pixel_test" />
+
+    <fragment
+        android:id="@+id/TouchMenuFragment"
+        android:name="rpt.tool.badpixelsearch.ui.touch.menu.TouchTestMenuFragment"
+        android:label="TouchMenuFragment"
+        tools:layout="@layout/tests_menu_six">
+        <action
+            android:id="@+id/action_touchMenuFragment_to_singleTouchFragment"
+            app:destination="@id/SingleTouchFragment"/>
+        <action
+            android:id="@+id/action_touchMenuFragment_to_singleTouchTwoFragment"
+            app:destination="@id/SingleTouchTwoFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/SingleTouchFragment"
+        android:name="rpt.tool.badpixelsearch.ui.touch.single.SingleTouchTestFragment"
+        android:label="SingleTouchFragment"
+        tools:layout="@layout/fragment_single_touch_test">
+    </fragment>
+    <fragment
+        android:id="@+id/SingleTouchTwoFragment"
+        android:name="rpt.tool.badpixelsearch.ui.touch.single.SingleTouchTwoTestFragment"
+        android:label="SingleTouchTwoFragment"
+        tools:layout="@layout/fragment_single_touch_two_test">
+    </fragment>
+
+    <fragment
+        android:id="@+id/DrawingMenuFragment"
+        android:name="rpt.tool.badpixelsearch.ui.drawing.menu.DrawingTestMenuFragment"
+        android:label="DrawingMenuFragment"
+        tools:layout="@layout/tests_menu_six">
+    </fragment>
 
 </navigation>

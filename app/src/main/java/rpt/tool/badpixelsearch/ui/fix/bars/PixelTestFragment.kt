@@ -21,8 +21,6 @@ class PixelTestFragment : BaseFragment<FragmentPixelTestBinding>(FragmentPixelTe
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        setupToolbar(binding.toolbar.btnBack, binding.toolbar.menuTitle, getString(R.string.fix_tests))
-
         val window = requireActivity().window
         val windowInsetsController = WindowCompat.getInsetsController(window, window.decorView)
         windowInsetsController.systemBarsBehavior = WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
@@ -48,7 +46,8 @@ class PixelTestFragment : BaseFragment<FragmentPixelTestBinding>(FragmentPixelTe
             -0x100, -0x7f7f80, -0x1, -0x1000000, -0x74baed
         )
         private val random = Random()
-        private val barWidth = if (SharedPreferencesManager.typeMode == 3 || SharedPreferencesManager.typeMode == 4) 2 else 8
+        private val barWidth = if (SharedPreferencesManager.typeMode == 3 ||
+            SharedPreferencesManager.typeMode == 4) 2 else 8
         private val updateInterval = (if (SharedPreferencesManager.velocity == 0) 50 else 25).toLong()
         private var running = true
 

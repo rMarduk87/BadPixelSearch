@@ -188,4 +188,53 @@ object SharedPreferencesManager {
     var fixTestFix: Boolean
         get() = sharedPreferences.getBoolean(AppUtils.FIX_TEST_FIX, false)
         set(value) = sharedPreferences.edit() { putBoolean(AppUtils.FIX_TEST_FIX, value) }
+
+    var singleTouch: Boolean
+        get() = sharedPreferences.getBoolean(AppUtils.TOUCH_TEST_SINGLE, false)
+        set(value) = sharedPreferences.edit() { putBoolean(AppUtils.TOUCH_TEST_SINGLE, value) }
+
+    var singleTouchTwo: Boolean
+        get() = sharedPreferences.getBoolean(AppUtils.TOUCH_TWO_TEST_SINGLE, false)
+        set(value) = sharedPreferences.edit() { putBoolean(AppUtils.TOUCH_TWO_TEST_SINGLE, value) }
+
+    var multiTouch: Boolean
+        get() = sharedPreferences.getBoolean(AppUtils.TOUCH_TEST_MULTI, false)
+        set(value) = sharedPreferences.edit() { putBoolean(AppUtils.TOUCH_TEST_MULTI, value) }
+
+    var multiTouchTwo: Boolean
+        get() = sharedPreferences.getBoolean(AppUtils.TOUCH_TWO_TEST_MULTI, false)
+        set(value) = sharedPreferences.edit() { putBoolean(AppUtils.TOUCH_TWO_TEST_MULTI, value) }
+
+    var zoom: Boolean
+        get() = sharedPreferences.getBoolean(AppUtils.TOUCH_TEST_ZOOM, false)
+        set(value) = sharedPreferences.edit() { putBoolean(AppUtils.TOUCH_TEST_ZOOM, value) }
+
+    var responseTime: Boolean
+        get() = sharedPreferences.getBoolean(AppUtils.TOUCH_TEST_RESPONSE, false)
+        set(value) = sharedPreferences.edit() { putBoolean(AppUtils.TOUCH_TEST_RESPONSE, value) }
+
+    var normalLines: Boolean
+        get() = sharedPreferences.getBoolean(AppUtils.DRAWING_NORMAL_TEST, false)
+        set(value) = sharedPreferences.edit() { putBoolean(AppUtils.DRAWING_NORMAL_TEST, value) }
+
+    var normalLinesTwo: Boolean
+        get() = sharedPreferences.getBoolean(AppUtils.DRAWING_NORMAL_TWO_TEST, false)
+        set(value) = sharedPreferences.edit() { putBoolean(AppUtils.DRAWING_NORMAL_TWO_TEST, value) }
+
+    var fadingLines: Boolean
+        get() = sharedPreferences.getBoolean(AppUtils.DRAWING_FADING_TEST, false)
+        set(value) = sharedPreferences.edit() { putBoolean(AppUtils.DRAWING_FADING_TEST, value) }
+
+    var fadingLinesTwo: Boolean
+        get() = sharedPreferences.getBoolean(AppUtils.DRAWING_FADING_TWO_TEST, false)
+        set(value) = sharedPreferences.edit() { putBoolean(AppUtils.DRAWING_FADING_TWO_TEST, value) }
+
+    var stylusLines: Boolean
+        get() = sharedPreferences.getBoolean(AppUtils.DRAWING_STYLUS_TEST, false)
+        set(value) = sharedPreferences.edit() { putBoolean(AppUtils.DRAWING_STYLUS_TEST, value) }
+
+    var colorLines: Boolean
+        get() = sharedPreferences.getBoolean(AppUtils.DRAWING_COLOR_TEST, false)
+        set(value) = sharedPreferences.edit() { putBoolean(AppUtils.DRAWING_COLOR_TEST, value) }
+
 }

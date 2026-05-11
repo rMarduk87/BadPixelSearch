@@ -21,8 +21,8 @@ class SplashScreenActivity : AppCompatActivity() {
     private val timeoutHandler = Handler()
 
     companion object {
-        const val SHOW: Long = 475
-        const val PULSE_DURATION = 2500L
+        const val SHOW: Long = 1375
+        const val PULSE_DURATION = 2000L
     }
 
     @SuppressLint("ObsoleteSdkInt")

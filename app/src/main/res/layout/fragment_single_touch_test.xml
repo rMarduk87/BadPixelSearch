@@ -9,12 +9,9 @@
         android:id="@+id/toolbar"
         layout="@layout/toolbar_layout" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+    <rpt.tool.badpixelsearch.utils.view.drawing.DrawGridView
+        android:id="@+id/drawGridView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:clipToPadding="false"
-        android:overScrollMode="never"
-        android:padding="2dp" />
+        android:layout_height="match_parent" />
 
 </LinearLayout>

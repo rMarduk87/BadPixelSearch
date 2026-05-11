@@ -2,15 +2,12 @@ package rpt.tool.badpixelsearch.ui.color.menu
 
 import android.animation.ObjectAnimator
 import android.animation.ValueAnimator
-import android.content.Intent
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.View
 import rpt.tool.badpixelsearch.R
-import rpt.tool.badpixelsearch.BadPixelSearchActivity
 import rpt.tool.badpixelsearch.BaseFragment
 import rpt.tool.badpixelsearch.databinding.TestsMenuSixBinding
-import rpt.tool.badpixelsearch.utils.log.e
 import rpt.tool.badpixelsearch.utils.managers.SharedPreferencesManager
 import rpt.tool.badpixelsearch.utils.navigation.safeNavController
 import rpt.tool.badpixelsearch.utils.navigation.safeNavigate

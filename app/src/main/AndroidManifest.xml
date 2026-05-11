@@ -31,18 +31,6 @@
         tools:ignore="RtlEnabled,UnusedAttribute"
         tools:targetApi="31">
         <activity
-            android:name=".BadPixelSearchActivity"
-            android:configChanges="orientation"
-            android:exported="false"
-            android:screenOrientation="portrait"
-            tools:ignore="DiscouragedApi,LockedOrientationActivity" />
-        <activity
-            android:name=".PixelTestActivity"
-            android:configChanges="orientation"
-            android:exported="false"
-            android:screenOrientation="portrait"
-            tools:ignore="DiscouragedApi,LockedOrientationActivity" />
-        <activity
             android:name=".SplashScreenActivity"
             android:configChanges="orientation"
             android:exported="true"
@@ -54,12 +42,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".FixPixelActivity"
-            android:configChanges="orientation"
-            android:exported="false"
-            android:screenOrientation="portrait"
-            tools:ignore="DiscouragedApi,LockedOrientationActivity" />
         <activity
             android:name=".MainActivity"
             android:configChanges="orientation"

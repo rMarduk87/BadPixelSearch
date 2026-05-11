@@ -26,7 +26,6 @@ class NoiseSearchFragment : BaseFragment<FragmentNoiseSearchBinding>(FragmentNoi
         super.onViewCreated(view, savedInstanceState)
 
         useColor = SharedPreferencesManager.typeNoiseColored
-        setupToolbar(binding.toolbar.btnBack, binding.toolbar.menuTitle, getString(if (useColor) R.string.snow else R.string.noise_test))
 
         // Hide system bars for the test
         val window = requireActivity().window

@@ -15,7 +15,8 @@ import rpt.tool.badpixelsearch.databinding.FragmentGradientTestBinding
 import rpt.tool.badpixelsearch.utils.navigation.safeNavController
 import kotlin.math.abs
 
-class GradientTestFragment : BaseFragment<FragmentGradientTestBinding>(FragmentGradientTestBinding::inflate) {
+class GradientTestFragment :
+    BaseFragment<FragmentGradientTestBinding>(FragmentGradientTestBinding::inflate) {
 
     private var i = 1
 
@@ -28,14 +29,16 @@ class GradientTestFragment : BaseFragment<FragmentGradientTestBinding>(FragmentG
         // Hide system bars for the test
         val window = requireActivity().window
         val windowInsetsController = WindowCompat.getInsetsController(window, window.decorView)
-        windowInsetsController.systemBarsBehavior = WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
+        windowInsetsController.systemBarsBehavior =
+            WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
         windowInsetsController.hide(WindowInsetsCompat.Type.systemBars())
 
         binding.mainBG.setOnClickListener {
             scrolling()
         }
 
-        val gestureDetector = GestureDetector(requireContext(), RptDetectGesture())
+        val gestureDetector = GestureDetector(requireContext(),
+            RptDetectGesture())
         binding.mainBG.setOnTouchListener { _, event ->
             gestureDetector.onTouchEvent(event)
             true
@@ -60,7 +63,6 @@ class GradientTestFragment : BaseFragment<FragmentGradientTestBinding>(FragmentG
     @SuppressLint("UseCompatLoadingForDrawables")
     private fun modify(gradient: Int, text: String) {
         binding.mainBG.background = resources.getDrawable(gradient, null)
-        binding.lblColor.text = text
         binding.toolbar.menuTitle.text = text
     }
 
@@ -105,7 +107,8 @@ class GradientTestFragment : BaseFragment<FragmentGradientTestBinding>(FragmentG
                 i++
                 changeGradient()
                 return true
-            } else if (e2.y - e1.y > swipeMinDistance && abs(velocityY) > swipeThresholdVelocity) {
+            } else if (e2.y - e1.y > swipeMinDistance && abs(velocityY) >
+                swipeThresholdVelocity) {
                 i--
                 changeGradient()
                 return true

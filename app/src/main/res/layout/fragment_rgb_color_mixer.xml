@@ -8,7 +8,7 @@
 
     <include
         android:id="@+id/toolbar"
-        layout="@layout/toolbar_layout" />
+        layout="@layout/toolbar_transparent_layout" />
 
     <FrameLayout
         android:layout_width="match_parent"

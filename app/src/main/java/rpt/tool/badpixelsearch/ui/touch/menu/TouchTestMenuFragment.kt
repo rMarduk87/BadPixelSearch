@@ -51,9 +51,8 @@ class TouchTestMenuFragment :
             executeWithSound {
                 binding.touch1.visibility = View.VISIBLE
                 SharedPreferencesManager.singleTouch = true
-                safeNavController?.safeNavigate(
-                    AnimationMenuFragmentDirections
-                        .actionAnimationMenuFragmentToTwoDTestFragment()
+                safeNavController?.safeNavigate(TouchTestMenuFragmentDirections.
+                actionTouchMenuFragmentToSingleTouchFragment()
                 )
             }
         }
@@ -63,8 +62,8 @@ class TouchTestMenuFragment :
                 binding.touch2.visibility = View.VISIBLE
                 SharedPreferencesManager.singleTouchTwo = true
                 safeNavController?.safeNavigate(
-                    AnimationMenuFragmentDirections
-                        .actionAnimationMenuFragmentToThreeDTestFragment()
+                    TouchTestMenuFragmentDirections
+                        .actionTouchMenuFragmentToSingleTouchTwoFragment()
                 )
             }
         }

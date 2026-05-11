@@ -48,7 +48,6 @@ class FixPixelFragment : BaseFragment<FragmentFixPixelBinding>(FragmentFixPixelB
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        setupToolbar(binding.toolbar.btnBack, binding.toolbar.menuTitle, "Fix Pixel")
         mVisible = true
 
         binding.frameFix.setOnClickListener {

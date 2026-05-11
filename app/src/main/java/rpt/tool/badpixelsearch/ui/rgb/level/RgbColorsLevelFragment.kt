@@ -15,7 +15,8 @@ import rpt.tool.badpixelsearch.R
 import rpt.tool.badpixelsearch.databinding.FragmentRgbColorsLevelBinding
 import rpt.tool.badpixelsearch.utils.managers.SharedPreferencesManager
 
-class RgbColorsLevelFragment : BaseFragment<FragmentRgbColorsLevelBinding>(FragmentRgbColorsLevelBinding::inflate) {
+class RgbColorsLevelFragment :
+    BaseFragment<FragmentRgbColorsLevelBinding>(FragmentRgbColorsLevelBinding::inflate) {
 
     private var r = 128
     private var g = 0

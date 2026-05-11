@@ -19,7 +19,8 @@ import rpt.tool.badpixelsearch.utils.navigation.safeNavController
 import rpt.tool.badpixelsearch.utils.navigation.safeNavigate
 import kotlin.math.abs
 
-class BadPixelSearchFragment : BaseFragment<FragmentBadPixelSearchBinding>(FragmentBadPixelSearchBinding::inflate) {
+class BadPixelSearchFragment :
+    BaseFragment<FragmentBadPixelSearchBinding>(FragmentBadPixelSearchBinding::inflate) {
 
     private var finalizer: Runnable? = null
     private val timeoutHandler = Handler(Looper.getMainLooper())
@@ -72,7 +73,9 @@ class BadPixelSearchFragment : BaseFragment<FragmentBadPixelSearchBinding>(Fragm
                 changeColor()
             }
             2 -> { // modalità FixPixel
-                safeNavController?.safeNavigate(BadPixelSearchFragmentDirections.actionBadPixelSearchFragmentToFixPixelFragment())
+                safeNavController?.safeNavigate(
+                    BadPixelSearchFragmentDirections
+                        .actionBadPixelSearchFragmentToFixPixelFragment())
             }
             else -> { // modalità automatica
                 isRunning = !isRunning
@@ -151,8 +154,10 @@ class BadPixelSearchFragment : BaseFragment<FragmentBadPixelSearchBinding>(Fragm
         ): Boolean {
             if (e1 == null) return false
 
-            val horizontalSwipe = abs(e1.x - e2.x) > swipeMinDistance && abs(velocityX) > swipeThresholdVelocity
-            val verticalSwipe = abs(e1.y - e2.y) > swipeMinDistance && abs(velocityY) > swipeThresholdVelocity
+            val horizontalSwipe = abs(e1.x - e2.x) > swipeMinDistance && abs(velocityX) >
+                    swipeThresholdVelocity
+            val verticalSwipe = abs(e1.y - e2.y) > swipeMinDistance && abs(velocityY) >
+                    swipeThresholdVelocity
 
             if (horizontalSwipe || verticalSwipe) {
                 val increase = ( (e1.x - e2.x > 0) || (e1.y - e2.y > 0) )
@@ -161,7 +166,9 @@ class BadPixelSearchFragment : BaseFragment<FragmentBadPixelSearchBinding>(Fragm
                         if (increase) i++ else i--
                         changeColor()
                     }
-                    2 -> safeNavController?.safeNavigate(BadPixelSearchFragmentDirections.actionBadPixelSearchFragmentToFixPixelFragment())
+                    2 -> safeNavController?.safeNavigate(
+                        BadPixelSearchFragmentDirections
+                            .actionBadPixelSearchFragmentToFixPixelFragment())
                     else -> {
                         isRunning = increase
                         automatic()

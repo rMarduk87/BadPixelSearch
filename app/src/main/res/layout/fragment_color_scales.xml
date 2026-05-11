@@ -9,7 +9,7 @@
 
     <include
         android:id="@+id/toolbar"
-        layout="@layout/toolbar_layout" />
+        layout="@layout/toolbar_transparent_layout" />
 
     <!-- Container dei livelli -->
     <LinearLayout

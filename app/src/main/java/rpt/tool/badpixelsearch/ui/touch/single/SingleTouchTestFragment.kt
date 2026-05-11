@@ -2,22 +2,19 @@ package rpt.tool.badpixelsearch.ui.touch.single
 
 import android.os.Bundle
 import android.view.View
-import androidx.recyclerview.widget.GridLayoutManager
 import rpt.tool.badpixelsearch.BaseFragment
 import rpt.tool.badpixelsearch.R
 import rpt.tool.badpixelsearch.databinding.FragmentSingleTouchTestBinding
-import rpt.tool.badpixelsearch.utils.view.adapters.GridAdapter
+import rpt.tool.badpixelsearch.utils.managers.SharedPreferencesManager
 import java.util.Locale
 
 class SingleTouchTestFragment:
     BaseFragment<FragmentSingleTouchTestBinding>(FragmentSingleTouchTestBinding::inflate) {
 
-    private val columns = 10
-    private val rows = 40
-    private val totalSquares = columns * rows
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
 
         setupToolbar(
             binding.toolbar.btnBack,
@@ -25,21 +22,19 @@ class SingleTouchTestFragment:
             getString(R.string.filled_0)
         )
 
-        binding.recyclerView.layoutManager = GridLayoutManager(requireContext(),
-            columns)
+        binding.drawGridView.columns = 10
+        binding.drawGridView.rows = 20
 
-        val adapter = GridAdapter(totalSquares) { filledCount ->
-            val percentage = (filledCount.toDouble() / totalSquares.toDouble()) * 100
-
-            val formattedPercentage = String.format(
-                Locale.getDefault(), "%.2f",
-                percentage
-            )
-
-            binding.toolbar.menuTitle.text =
-                getString(R.string.filled, formattedPercentage)
+        binding.drawGridView.onProgressChanged = { filledCount, totalCount ->
+            val percentage = (filledCount.toDouble() / totalCount.toDouble()) * 100
+            val formattedPercentage = String.format(Locale.getDefault(), "%.2f",
+                percentage)
+            binding.toolbar.menuTitle.text = buildString {
+                append(getString(R.string.filled))
+                append(" ")
+                append(formattedPercentage)
+                append("%")
+            }
         }
-
-        binding.recyclerView.adapter = adapter
     }
 }
