@@ -1,22 +1,21 @@
-package rpt.tool.badpixelsearch
-
+package rpt.tool.badpixelsearch.ui.animation.threed
 
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
-import rpt.tool.badpixelsearch.databinding.ActivityThreeDtestBinding
+import android.view.View
+import rpt.tool.badpixelsearch.BaseFragment
+import rpt.tool.badpixelsearch.R
+import rpt.tool.badpixelsearch.databinding.FragmentThreeDTestBinding
 
-
-class ThreeDTestActivity : AppCompatActivity() {
+class ThreeDTestFragment : BaseFragment<FragmentThreeDTestBinding>(FragmentThreeDTestBinding::inflate) {
 
     private val handler = Handler(Looper.getMainLooper())
     private var lastFrameCount = 0
-    private lateinit var binding: ActivityThreeDtestBinding
 
     private val fpsUpdater = object : Runnable {
         override fun run() {
+            if (view == null) return
             val renderer = binding.glView.renderer
             val fps = renderer.frameCount - lastFrameCount
             lastFrameCount = renderer.frameCount
@@ -29,14 +28,10 @@ class ThreeDTestActivity : AppCompatActivity() {
         }
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        binding = ActivityThreeDtestBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        setupToolbar(binding.toolbar.btnBack, binding.toolbar.menuTitle, getString(R.string.threed))
         handler.post(fpsUpdater)
-
     }
 
     override fun onPause() {
@@ -49,5 +44,8 @@ class ThreeDTestActivity : AppCompatActivity() {
         binding.glView.onResume()
     }
 
-
+    override fun onDestroyView() {
+        super.onDestroyView()
+        handler.removeCallbacks(fpsUpdater)
+    }
 }

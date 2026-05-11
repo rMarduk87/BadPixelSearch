@@ -9,7 +9,6 @@ import android.view.View
 import rpt.tool.badpixelsearch.R
 import rpt.tool.badpixelsearch.BadPixelSearchActivity
 import rpt.tool.badpixelsearch.BaseFragment
-import rpt.tool.badpixelsearch.GradientTestActivity
 import rpt.tool.badpixelsearch.databinding.TestsMenuSixBinding
 import rpt.tool.badpixelsearch.utils.log.e
 import rpt.tool.badpixelsearch.utils.managers.SharedPreferencesManager
@@ -52,8 +51,10 @@ class ColorTestMenuFragment: BaseFragment<TestsMenuSixBinding>
                 binding.touch1.visibility = View.VISIBLE
                 SharedPreferencesManager.colorTestPurity = true
                 SharedPreferencesManager.typeMode = 0
-                startActivity(Intent(requireContext(),
-                    BadPixelSearchActivity::class.java))
+                safeNavController?.safeNavigate(
+                    ColorTestMenuFragmentDirections
+                        .actionColorTestsMenuFragmentToBadPixelSearchFragment()
+                )
             }
         }
 
@@ -61,11 +62,9 @@ class ColorTestMenuFragment: BaseFragment<TestsMenuSixBinding>
             executeWithSound {
                 binding.touch2.visibility = View.VISIBLE
                 SharedPreferencesManager.colorTestGradient = true
-                startActivity(
-                    Intent(
-                        requireContext(),
-                        GradientTestActivity::class.java
-                    )
+                safeNavController?.safeNavigate(
+                    ColorTestMenuFragmentDirections
+                        .actionColorTestsMenuFragmentToGradientTestFragment()
                 )
             }
         }

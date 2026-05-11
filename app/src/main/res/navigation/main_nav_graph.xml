@@ -109,6 +109,12 @@
         <action
             android:id="@+id/action_colorTestsMenuFragment_to_colorLineTestFragment"
             app:destination="@id/ColorLineTestFragment" />
+        <action
+            android:id="@+id/action_colorTestsMenuFragment_to_gradientTestFragment"
+            app:destination="@id/GradientTestFragment" />
+        <action
+            android:id="@+id/action_colorTestsMenuFragment_to_badPixelSearchFragment"
+            app:destination="@id/BadPixelSearchFragment" />
     </fragment>
     <fragment
         android:id="@+id/AnimationTestMenuFragment"
@@ -130,6 +136,12 @@
         <action
             android:id="@+id/action_animationMenuFragment_to_rotationFragment"
             app:destination="@id/RotationFragment" />
+        <action
+            android:id="@+id/action_animationMenuFragment_to_twoDTestFragment"
+            app:destination="@id/TwoDTestFragment" />
+        <action
+            android:id="@+id/action_animationMenuFragment_to_threeDTestFragment"
+            app:destination="@id/ThreeDTestFragment" />
     </fragment>
     <fragment
         android:id="@+id/SystemFontMenuFragment"
@@ -199,6 +211,18 @@
         android:name="rpt.tool.badpixelsearch.ui.fix.menu.FixPixelMenuFragment"
         android:label="FixTestMenuFragment"
         tools:layout="@layout/tests_menu_eight">
+        <action
+            android:id="@+id/action_fixTestMenuFragment_to_noiseSearchFragment"
+            app:destination="@id/NoiseSearchFragment" />
+        <action
+            android:id="@+id/action_fixTestMenuFragment_to_badPixelSearchFragment"
+            app:destination="@id/BadPixelSearchFragment" />
+        <action
+            android:id="@+id/action_fixTestMenuFragment_to_pixelTestFragment"
+            app:destination="@id/PixelTestFragment" />
+        <action
+            android:id="@+id/action_fixTestMenuFragment_to_fixPixelFragment"
+            app:destination="@id/FixPixelFragment" />
     </fragment>
     <fragment
         android:id="@+id/NormalFontFragment"
@@ -280,6 +304,9 @@
         <action
             android:id="@+id/action_rgbColorsMenuFragment_to_rgbColorMixerFragment"
             app:destination="@id/RgbColorMixerFragment"/>
+        <action
+            android:id="@+id/action_rgbColorsMenuFragment_to_rgbColorsLevelFragment"
+            app:destination="@id/RgbColorsLevelFragment"/>
     </fragment>
     <fragment
         android:id="@+id/RgbColorMixerFragment"
@@ -290,5 +317,57 @@
             android:id="@+id/action_rgbColorMixerFragment_to_rgbColorsMenuFragment"
             app:destination="@id/RgbColorsMenuFragment"/>
     </fragment>
+
+    <fragment
+        android:id="@+id/GradientTestFragment"
+        android:name="rpt.tool.badpixelsearch.ui.color.gradient.GradientTestFragment"
+        android:label="GradientTestFragment"
+        tools:layout="@layout/fragment_gradient_test" />
+
+    <fragment
+        android:id="@+id/NoiseSearchFragment"
+        android:name="rpt.tool.badpixelsearch.ui.fix.noise.NoiseSearchFragment"
+        android:label="NoiseSearchFragment"
+        tools:layout="@layout/fragment_noise_search" />
+
+    <fragment
+        android:id="@+id/RgbColorsLevelFragment"
+        android:name="rpt.tool.badpixelsearch.ui.rgb.level.RgbColorsLevelFragment"
+        android:label="RgbColorsLevelFragment"
+        tools:layout="@layout/fragment_rgb_colors_level" />
+
+    <fragment
+        android:id="@+id/TwoDTestFragment"
+        android:name="rpt.tool.badpixelsearch.ui.animation.twod.TwoDTestFragment"
+        android:label="TwoDTestFragment"
+        tools:layout="@layout/fragment_two_d_test" />
+
+    <fragment
+        android:id="@+id/ThreeDTestFragment"
+        android:name="rpt.tool.badpixelsearch.ui.animation.threed.ThreeDTestFragment"
+        android:label="ThreeDTestFragment"
+        tools:layout="@layout/fragment_three_d_test" />
+
+    <fragment
+        android:id="@+id/BadPixelSearchFragment"
+        android:name="rpt.tool.badpixelsearch.ui.color.purity.BadPixelSearchFragment"
+        android:label="BadPixelSearchFragment"
+        tools:layout="@layout/fragment_bad_pixel_search">
+        <action
+            android:id="@+id/action_badPixelSearchFragment_to_fixPixelFragment"
+            app:destination="@id/FixPixelFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/FixPixelFragment"
+        android:name="rpt.tool.badpixelsearch.ui.fix.pixel.FixPixelFragment"
+        android:label="FixPixelFragment"
+        tools:layout="@layout/fragment_fix_pixel" />
+
+    <fragment
+        android:id="@+id/PixelTestFragment"
+        android:name="rpt.tool.badpixelsearch.ui.fix.bars.PixelTestFragment"
+        android:label="PixelTestFragment"
+        tools:layout="@layout/fragment_pixel_test" />
 
 </navigation>

@@ -30,23 +30,23 @@ class PixelTestActivity : AppCompatActivity() {
         SurfaceView(context), SurfaceHolder.Callback {
         private val paint = Paint()
         private val colors = intArrayOf(
-            -0x10000,  // Rosso
-            -0xff0100,  // Verde
-            -0xffff01,  // Blu
-            -0xff0001,  // Ciano
-            -0xff01,  // Viola
-            -0x100,  // Giallo
-            -0x7f7f80,  // Grigio
-            -0x1,  // Bianco
-            -0x1000000,  // Nero
-            -0x74baed // Marrone
+            -0x10000,
+            -0xff0100,
+            -0xffff01,
+            -0xff0001,
+            -0xff01,
+            -0x100,
+            -0x7f7f80,
+            -0x1,
+            -0x1000000,
+            -0x74baed
         )
         private val random = Random()
         private val barWidth =
             if(SharedPreferencesManager.typeMode == 3 || SharedPreferencesManager.typeMode == 4) 2
             else 8
         private val updateInterval = (if (SharedPreferencesManager.velocity == 0) 50 else 25)
-            .toLong() // Intervallo di aggiornamento in millisecondi
+            .toLong()
         private var running = true
 
         init {
@@ -95,7 +95,7 @@ class PixelTestActivity : AppCompatActivity() {
                 while (running) {
                     drawPattern()
                     try {
-                        Thread.sleep(updateInterval.toLong())
+                        Thread.sleep(updateInterval)
                     } catch (e: InterruptedException) {
                         e.printStackTrace()
                     }

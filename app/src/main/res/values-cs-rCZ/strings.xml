@@ -246,4 +246,14 @@
     <string name="drawing_tests">DRAWING TESTS </string>
     <string name="_1">1</string>
     <string name="v">V</string>
+    <string name="drawing_test_full">DRAWING TESTS</string>
+    <string name="touch_test_1">Single touch</string>
+    <string name="touch_test_2">Single touch 2</string>
+    <string name="touch_test_3">Multi touch</string>
+    <string name="touch_test_4">Multi touch 2</string>
+    <string name="touch_test_5">Zoom and rotate</string>
+    <string name="touch_test_6">Response time</string>
+    <string name="touch_tests_full">TOUCH TESTS</string>
+    <string name="filled_0">Filled: 0%</string>
+    <string name="filled">Filled: %1$s%</string>
 </resources>

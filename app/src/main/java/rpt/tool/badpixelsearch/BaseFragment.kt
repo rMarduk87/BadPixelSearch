@@ -16,7 +16,7 @@ import rpt.tool.badpixelsearch.utils.navigation.safeNavController
 
 abstract class BaseFragment<VB : ViewBinding>(private val inflate: Inflate<VB>) : Fragment() {
 
-    private var _binding: VB? = null
+    var _binding: VB? = null
     protected val binding get() = _binding!!
 
 

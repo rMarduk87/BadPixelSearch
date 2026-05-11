@@ -31,22 +31,6 @@
         tools:ignore="RtlEnabled,UnusedAttribute"
         tools:targetApi="31">
         <activity
-            android:name=".RgbColorsLevelActivity"
-            android:exported="false" />
-        <activity
-            android:name=".TwoDTestActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ThreeDTestActivity"
-            android:exported="false"
-            android:screenOrientation="fullSensor" />
-        <activity
-            android:name=".GradientTestActivity"
-            android:exported="false" />
-        <activity
-            android:name=".NoiseSearchActivity"
-            android:exported="false" />
-        <activity
             android:name=".BadPixelSearchActivity"
             android:configChanges="orientation"
             android:exported="false"

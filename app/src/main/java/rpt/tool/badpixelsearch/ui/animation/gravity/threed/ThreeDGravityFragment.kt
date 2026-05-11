@@ -19,6 +19,12 @@ class ThreeDGravityFragment :
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        setupToolbar(
+            binding.toolbar.btnBack,
+            binding.toolbar.menuTitle,
+            getString(rpt.tool.badpixelsearch.R.string._3d_gravity)
+        )
+
         sensorManager =
             requireContext().getSystemService(Context.SENSOR_SERVICE) as SensorManager
     }

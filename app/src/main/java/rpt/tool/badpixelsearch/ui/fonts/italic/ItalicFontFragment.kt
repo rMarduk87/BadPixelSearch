@@ -51,6 +51,12 @@ class ItalicFontFragment :
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        setupToolbar(
+            binding.toolbar.btnBack,
+            binding.toolbar.menuTitle,
+            getString(colorsText[colorIndex])
+        )
+
         findAllTextViews(view)
 
         val initial = colors[0]
@@ -90,6 +96,6 @@ class ItalicFontFragment :
         textLines.forEach { it.setTextColor(newColor) }
 
         val text = colorsText[colorIndex]
-        binding.txtSelected.text = resources.getString(text)
+        binding.toolbar.menuTitle.text = resources.getString(text)
     }
 }

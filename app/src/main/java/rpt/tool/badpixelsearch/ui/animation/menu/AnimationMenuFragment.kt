@@ -8,8 +8,6 @@ import android.os.Bundle
 import android.view.View
 import rpt.tool.badpixelsearch.R
 import rpt.tool.badpixelsearch.BaseFragment
-import rpt.tool.badpixelsearch.ThreeDTestActivity
-import rpt.tool.badpixelsearch.TwoDTestActivity
 import rpt.tool.badpixelsearch.databinding.TestsMenuSixBinding
 import rpt.tool.badpixelsearch.utils.log.e
 import rpt.tool.badpixelsearch.utils.managers.SharedPreferencesManager
@@ -20,7 +18,7 @@ class AnimationMenuFragment: BaseFragment<TestsMenuSixBinding>
     (TestsMenuSixBinding::inflate) {
 
     companion object {
-        private const val PULSE_DURATION = 2500L
+        const val PULSE_DURATION = 2500L
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -51,11 +49,9 @@ class AnimationMenuFragment: BaseFragment<TestsMenuSixBinding>
             executeWithSound {
                 binding.touch1.visibility = View.VISIBLE
                 SharedPreferencesManager.animTest2D = true
-                startActivity(
-                    Intent(
-                        requireContext(),
-                        TwoDTestActivity::class.java
-                    )
+                safeNavController?.safeNavigate(
+                    AnimationMenuFragmentDirections
+                        .actionAnimationMenuFragmentToTwoDTestFragment()
                 )
             }
         }
@@ -64,8 +60,10 @@ class AnimationMenuFragment: BaseFragment<TestsMenuSixBinding>
             executeWithSound {
                 binding.touch2.visibility = View.VISIBLE
                 SharedPreferencesManager.animTest3D = true
-                startActivity(Intent(requireContext(),
-                    ThreeDTestActivity::class.java))
+                safeNavController?.safeNavigate(
+                    AnimationMenuFragmentDirections
+                        .actionAnimationMenuFragmentToThreeDTestFragment()
+                )
             }
         }
 

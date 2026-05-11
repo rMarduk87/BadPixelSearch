@@ -5,9 +5,7 @@ import android.animation.ValueAnimator
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.view.animation.LinearInterpolator
 import android.widget.TextView
 import rpt.tool.badpixelsearch.BaseFragment
@@ -38,21 +36,19 @@ class RotationFragment : BaseFragment<FragmentRotationBinding>(FragmentRotationB
         }
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        return inflater.inflate(R.layout.fragment_rotation, container,
-            false)
-    }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        square1 = view.findViewById(R.id.square1)
-        square2 = view.findViewById(R.id.square2)
-        square3 = view.findViewById(R.id.square3)
-        txtRotation = view.findViewById(R.id.txtRotation)
+        setupToolbar(
+            binding.toolbar.btnBack,
+            binding.toolbar.menuTitle,
+            getString(R.string.rotation)
+        )
+
+        square1 = binding.square1
+        square2 = binding.square2
+        square3 = binding.square3
+        txtRotation = binding.txtRotation
 
         startRotation(square1, 2000)
         startRotation(square2, 1600)

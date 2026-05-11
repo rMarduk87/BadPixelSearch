@@ -1,25 +1,21 @@
-package rpt.tool.badpixelsearch
+package rpt.tool.badpixelsearch.ui.animation.twod
 
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import rpt.tool.badpixelsearch.databinding.ActivityTwoDtestBinding
+import android.view.View
+import rpt.tool.badpixelsearch.BaseFragment
+import rpt.tool.badpixelsearch.R
+import rpt.tool.badpixelsearch.databinding.FragmentTwoDTestBinding
 
-class TwoDTestActivity : AppCompatActivity() {
-
-    private lateinit var binding: ActivityTwoDtestBinding
+class TwoDTestFragment : BaseFragment<FragmentTwoDTestBinding>(FragmentTwoDTestBinding::inflate) {
 
     private val handler = Handler(Looper.getMainLooper())
     private var lastFrameCount = 0
 
-    private var lastDrawTime = 0L
-
     private val runnable = object : Runnable {
         override fun run() {
+            if (view == null) return
 
             // FPS
             val fps = binding.bouncingView.frameCount - lastFrameCount
@@ -30,7 +26,6 @@ class TwoDTestActivity : AppCompatActivity() {
                 append(fps.toString())
             }
 
-
             // CPU Benchmark
             val cpuLoad = binding.bouncingView.cpuLoad
             binding.txtCpu.text = buildString {
@@ -40,7 +35,7 @@ class TwoDTestActivity : AppCompatActivity() {
                 append(" %")
             }
 
-            // GPU Benchmark (basato su tempo di rendering)
+            // GPU Benchmark
             binding.txtGpu.text = buildString {
                 append(getString(R.string.gpu_load))
                 append(" ")
@@ -52,17 +47,14 @@ class TwoDTestActivity : AppCompatActivity() {
         }
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-        binding = ActivityTwoDtestBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        setupToolbar(binding.toolbar.btnBack, binding.toolbar.menuTitle, getString(R.string.two))
         handler.post(runnable)
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
+    override fun onDestroyView() {
+        super.onDestroyView()
         handler.removeCallbacks(runnable)
     }
 }

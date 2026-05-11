@@ -5,6 +5,10 @@
     android:layout_height="match_parent"
     android:background="#000000">
 
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_layout" />
+
     <TextView
         android:id="@+id/txtMovingBars"
         android:layout_width="wrap_content"
@@ -12,7 +16,8 @@
         android:text="@string/display_fps_0"
         android:textSize="14sp"
         android:textColor="#FFFFFF"
-        android:layout_marginTop="70dp"
+        android:layout_below="@id/toolbar"
+        android:layout_marginTop="16dp"
         android:layout_centerHorizontal="true"
         android:paddingLeft="8dp"
         android:paddingRight="8dp"

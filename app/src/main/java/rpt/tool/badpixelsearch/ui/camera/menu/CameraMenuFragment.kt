@@ -3,7 +3,6 @@ package rpt.tool.badpixelsearch.ui.camera.menu
 import android.Manifest
 import android.animation.ObjectAnimator
 import android.animation.ValueAnimator
-import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.View
 import androidx.activity.result.contract.ActivityResultContracts
@@ -16,9 +15,8 @@ import android.widget.LinearLayout
 import rpt.tool.badpixelsearch.BaseFragment
 import rpt.tool.badpixelsearch.R
 import rpt.tool.badpixelsearch.databinding.TestMenuTwoBinding
-import rpt.tool.badpixelsearch.utils.log.e
 import rpt.tool.badpixelsearch.utils.managers.SharedPreferencesManager
-import rpt.tool.badpixelsearch.utils.navigation.safeNavController
+import android.media.MediaPlayer
 
 class CameraMenuFragment :
     BaseFragment<TestMenuTwoBinding>(TestMenuTwoBinding::inflate) {
@@ -37,7 +35,12 @@ class CameraMenuFragment :
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.menuTitle.text = requireContext().getString(R.string.camera_tests)
+        setupToolbar(
+            binding.toolbar.btnBack,
+            binding.toolbar.menuTitle,
+            getString(R.string.camera_tests)
+        )
+
         binding.iconAnimated.setImageResource(R.drawable.ic_camera)
 
         binding.text1.text = requireContext().getString(R.string.camera1)
@@ -76,20 +79,6 @@ class CameraMenuFragment :
                     startCamera(CameraSelector.DEFAULT_BACK_CAMERA)
                 }
             }
-        }
-
-        binding.btnBack.setOnClickListener {
-            try {
-                if(SharedPreferencesManager.sound){
-                    val mediaPlayer = MediaPlayer.create(requireContext(),
-                        R.raw.goodbye)
-                    mediaPlayer?.setOnCompletionListener { it.release() }
-                    mediaPlayer?.start()
-                }
-            } catch (e: Exception) {
-                e(Throwable(e),"Sound")
-            }
-            safeNavController?.popBackStack()
         }
     }
 

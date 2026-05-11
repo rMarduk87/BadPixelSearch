@@ -8,7 +8,6 @@ import android.os.Bundle
 import android.view.View
 import rpt.tool.badpixelsearch.BaseFragment
 import rpt.tool.badpixelsearch.R
-import rpt.tool.badpixelsearch.RgbColorsLevelActivity
 import rpt.tool.badpixelsearch.databinding.TestsMenuSixBinding
 import rpt.tool.badpixelsearch.utils.log.e
 import rpt.tool.badpixelsearch.utils.managers.SharedPreferencesManager
@@ -47,11 +46,9 @@ class RgbColorsMenuFragment :
                 binding.touch1.visibility = View.VISIBLE
                 SharedPreferencesManager.rgbTestRed = true
                 SharedPreferencesManager.rgbOption = 0
-                startActivity(
-                    Intent(
-                        requireContext(),
-                        RgbColorsLevelActivity::class.java
-                    )
+                safeNavController?.safeNavigate(
+                    RgbColorsMenuFragmentDirections
+                        .actionRgbColorsMenuFragmentToRgbColorsLevelFragment()
                 )
             }
         }
@@ -61,8 +58,10 @@ class RgbColorsMenuFragment :
                 binding.touch2.visibility = View.VISIBLE
                 SharedPreferencesManager.rgbTestGreen = true
                 SharedPreferencesManager.rgbOption = 1
-                startActivity(Intent(requireContext(),
-                    RgbColorsLevelActivity::class.java))
+                safeNavController?.safeNavigate(
+                    RgbColorsMenuFragmentDirections
+                        .actionRgbColorsMenuFragmentToRgbColorsLevelFragment()
+                )
             }
         }
 
@@ -71,8 +70,10 @@ class RgbColorsMenuFragment :
                 binding.touch3.visibility = View.VISIBLE
                 SharedPreferencesManager.rgbTestBlue = true
                 SharedPreferencesManager.rgbOption = 2
-                startActivity(Intent(requireContext(),
-                    RgbColorsLevelActivity::class.java))
+                safeNavController?.safeNavigate(
+                    RgbColorsMenuFragmentDirections
+                        .actionRgbColorsMenuFragmentToRgbColorsLevelFragment()
+                )
             }
         }
 
@@ -81,8 +82,10 @@ class RgbColorsMenuFragment :
                 binding.touch4.visibility = View.VISIBLE
                 SharedPreferencesManager.rgbTestGray = true
                 SharedPreferencesManager.rgbOption = 3
-                startActivity(Intent(requireContext(),
-                    RgbColorsLevelActivity::class.java))
+                safeNavController?.safeNavigate(
+                    RgbColorsMenuFragmentDirections
+                        .actionRgbColorsMenuFragmentToRgbColorsLevelFragment()
+                )
             }
         }
 
@@ -91,8 +94,10 @@ class RgbColorsMenuFragment :
                 binding.touch5.visibility = View.VISIBLE
                 SharedPreferencesManager.rgbTestAll = true
                 SharedPreferencesManager.rgbOption = 4
-                startActivity(Intent(requireContext(),
-                    RgbColorsLevelActivity::class.java))
+                safeNavController?.safeNavigate(
+                    RgbColorsMenuFragmentDirections
+                        .actionRgbColorsMenuFragmentToRgbColorsLevelFragment()
+                )
             }
         }
 

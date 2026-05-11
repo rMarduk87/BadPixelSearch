@@ -39,6 +39,12 @@ class FontFamiliesFragment :
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        setupToolbar(
+            binding.toolbar.btnBack,
+            binding.toolbar.menuTitle,
+            getString(colorsText[colorIndex])
+        )
+
         findAllTextViews()
 
         applyColor(colors[0])
@@ -69,7 +75,7 @@ class FontFamiliesFragment :
 
         if (view is TextView) {
             val id = view.id
-            if (id != R.id.txtSelected && id !in titleIds) {
+            if (id != R.id.txtSelected && id !in titleIds && id != R.id.menuTitle) {
                 textLines.add(view)
             }
         }
@@ -87,7 +93,7 @@ class FontFamiliesFragment :
 
         applyColor(newColor)
 
-        binding.txtSelected.text = getString(colorsText[colorIndex])
+        binding.toolbar.menuTitle.text = getString(colorsText[colorIndex])
     }
 
     private fun applyColor(color: Int) {

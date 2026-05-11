@@ -9,13 +9,13 @@ import android.view.View
 import rpt.tool.badpixelsearch.BadPixelSearchActivity
 import rpt.tool.badpixelsearch.BaseFragment
 import rpt.tool.badpixelsearch.FixPixelActivity
-import rpt.tool.badpixelsearch.NoiseSearchActivity
 import rpt.tool.badpixelsearch.PixelTestActivity
 import rpt.tool.badpixelsearch.R
 import rpt.tool.badpixelsearch.databinding.TestsMenuEightBinding
 import rpt.tool.badpixelsearch.utils.log.e
 import rpt.tool.badpixelsearch.utils.managers.SharedPreferencesManager
 import rpt.tool.badpixelsearch.utils.navigation.safeNavController
+import rpt.tool.badpixelsearch.utils.navigation.safeNavigate
 
 class FixPixelMenuFragment: BaseFragment<TestsMenuEightBinding>
     (TestsMenuEightBinding::inflate) {
@@ -52,8 +52,10 @@ class FixPixelMenuFragment: BaseFragment<TestsMenuEightBinding>
                 binding.touch1.visibility = View.VISIBLE
                 SharedPreferencesManager.fixTestBW = true
                 SharedPreferencesManager.typeMode = 1
-                startActivity(Intent(requireContext(),
-                    BadPixelSearchActivity::class.java))
+                safeNavController?.safeNavigate(
+                    FixPixelMenuFragmentDirections
+                        .actionFixTestMenuFragmentToBadPixelSearchFragment()
+                )
             }
         }
 
@@ -63,8 +65,10 @@ class FixPixelMenuFragment: BaseFragment<TestsMenuEightBinding>
                 SharedPreferencesManager.fixTestNoise = true
                 SharedPreferencesManager.typeMode = 2
                 SharedPreferencesManager.typeNoiseColored = false
-                startActivity(Intent(requireContext(),
-                    NoiseSearchActivity::class.java))
+                safeNavController?.safeNavigate(
+                    FixPixelMenuFragmentDirections
+                        .actionFixTestMenuFragmentToNoiseSearchFragment()
+                )
             }
         }
 
@@ -74,8 +78,10 @@ class FixPixelMenuFragment: BaseFragment<TestsMenuEightBinding>
                 SharedPreferencesManager.fixTestSnow = true
                 SharedPreferencesManager.typeMode = 2
                 SharedPreferencesManager.typeNoiseColored = true
-                startActivity(Intent(requireContext(),
-                    NoiseSearchActivity::class.java))
+                safeNavController?.safeNavigate(
+                    FixPixelMenuFragmentDirections
+                        .actionFixTestMenuFragmentToNoiseSearchFragment()
+                )
             }
         }
 
@@ -85,8 +91,10 @@ class FixPixelMenuFragment: BaseFragment<TestsMenuEightBinding>
                 SharedPreferencesManager.fixTestHorLine = true
                 SharedPreferencesManager.typeMode = 3
                 SharedPreferencesManager.isVertical = false
-                startActivity(Intent(requireContext(),
-                    PixelTestActivity::class.java))
+                safeNavController?.safeNavigate(
+                    FixPixelMenuFragmentDirections
+                        .actionFixTestMenuFragmentToPixelTestFragment()
+                )
             }
         }
 
@@ -96,8 +104,10 @@ class FixPixelMenuFragment: BaseFragment<TestsMenuEightBinding>
                 SharedPreferencesManager.fixTestVerLine = true
                 SharedPreferencesManager.typeMode = 4
                 SharedPreferencesManager.isVertical = true
-                startActivity(Intent(requireContext(),
-                    PixelTestActivity::class.java))
+                safeNavController?.safeNavigate(
+                    FixPixelMenuFragmentDirections
+                        .actionFixTestMenuFragmentToPixelTestFragment()
+                )
             }
         }
 
@@ -107,8 +117,10 @@ class FixPixelMenuFragment: BaseFragment<TestsMenuEightBinding>
                 SharedPreferencesManager.fixTestHorRect = true
                 SharedPreferencesManager.typeMode = 5
                 SharedPreferencesManager.isVertical = false
-                startActivity(Intent(requireContext(),
-                    PixelTestActivity::class.java))
+                safeNavController?.safeNavigate(
+                    FixPixelMenuFragmentDirections
+                        .actionFixTestMenuFragmentToPixelTestFragment()
+                )
             }
         }
 
@@ -118,8 +130,10 @@ class FixPixelMenuFragment: BaseFragment<TestsMenuEightBinding>
                 SharedPreferencesManager.fixTestVerRect = true
                 SharedPreferencesManager.typeMode = 6
                 SharedPreferencesManager.isVertical = true
-                startActivity(Intent(requireContext(),
-                    PixelTestActivity::class.java))
+                safeNavController?.safeNavigate(
+                    FixPixelMenuFragmentDirections
+                        .actionFixTestMenuFragmentToPixelTestFragment()
+                )
             }
         }
 
@@ -127,11 +141,9 @@ class FixPixelMenuFragment: BaseFragment<TestsMenuEightBinding>
             executeWithSound {
                 binding.touch8.visibility = View.VISIBLE
                 SharedPreferencesManager.fixTestFix = true
-                startActivity(
-                    Intent(
-                        requireContext(),
-                        FixPixelActivity::class.java
-                    )
+                safeNavController?.safeNavigate(
+                    FixPixelMenuFragmentDirections
+                        .actionFixTestMenuFragmentToFixPixelFragment()
                 )
             }
         }
