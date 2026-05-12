@@ -262,4 +262,8 @@
     <string name="drawing_test_4">Fading lines 2</string>
     <string name="drawing_test_5">Stylus lines</string>
     <string name="drawing_test_6">Color lines</string>
+    <string name="touch_the_screen">Touch the screen</string>
+    <string name="fingers_0">Fingers: 0</string>
+    <string name="fingers">"Fingers: "</string>
+    <string name="quick_taps">Quick taps</string>
 </resources>
