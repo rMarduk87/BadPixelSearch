@@ -15,7 +15,8 @@ import rpt.tool.badpixelsearch.MainActivity
 import rpt.tool.badpixelsearch.databinding.FragmentDeviceInfoBinding
 
 
-class DeviceInfoFragment : BaseFragment<FragmentDeviceInfoBinding>(FragmentDeviceInfoBinding::inflate) {
+class DeviceInfoFragment :
+    BaseFragment<FragmentDeviceInfoBinding>(FragmentDeviceInfoBinding::inflate) {
 
     private var model = ""
     private var manufacturer = ""

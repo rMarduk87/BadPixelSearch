@@ -8,7 +8,6 @@ import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
-import android.graphics.Path
 import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
@@ -18,77 +17,64 @@ class DrawingView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : View(context, attrs, defStyleAttr) {
 
-    private val SIZE_SMALL = 30f
-    private val SIZE_LARGE = 80f
+    private val RADIUS_SMALL = 15f
+    private val RADIUS_LARGE = 40f
 
     private val paint = Paint().apply {
         color = Color.BLUE
         isAntiAlias = true
-        style = Paint.Style.STROKE
-        strokeJoin = Paint.Join.ROUND
-        strokeCap = Paint.Cap.ROUND
+        style = Paint.Style.FILL
     }
 
-    private var paths = mutableListOf<Path>()
-    private var currentPath = Path()
+    private data class DrawnCircle(val x: Float, val y: Float, val radius: Float)
+
+    private val circles = mutableListOf<DrawnCircle>()
+
     private var fadeAnimator: ValueAnimator? = null
     private var currentAlpha = 255
 
-    init {
-        updatePaintSettings()
-    }
-
-    private fun updatePaintSettings() {
-        val option = SharedPreferencesManager.drawingOption
-
-        paint.strokeWidth = when (option) {
-            0, 2 -> SIZE_SMALL
-            1, 3 -> SIZE_LARGE
-            else -> SIZE_SMALL
-        }
-
-        paint.alpha = 255
-        currentAlpha = 255
-    }
-
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
+
         paint.alpha = currentAlpha
 
-        for (path in paths) {
-            canvas.drawPath(path, paint)
+        for (circle in circles) {
+            canvas.drawCircle(circle.x, circle.y, circle.radius, paint)
         }
-        canvas.drawPath(currentPath, paint)
     }
 
     @SuppressLint("ClickableViewAccessibility")
     override fun onTouchEvent(event: MotionEvent): Boolean {
-        val x = event.x
-        val y = event.y
+        val option = SharedPreferencesManager.drawingOption
+        val currentRadius = if (option == 1 || option == 3) RADIUS_LARGE else RADIUS_SMALL
 
-        when (event.action) {
+        when (event.actionMasked) {
             MotionEvent.ACTION_DOWN -> {
                 fadeAnimator?.cancel()
-                updatePaintSettings()
+                currentAlpha = 255
 
-                currentPath.reset()
-                currentPath.moveTo(x, y)
-                currentPath.lineTo(x + 0.1f, y)
+                circles.add(DrawnCircle(event.x, event.y, currentRadius))
                 invalidate()
             }
+
             MotionEvent.ACTION_MOVE -> {
-                currentPath.lineTo(x, y)
+
+                val historySize = event.historySize
+                for (i in 0 until historySize) {
+                    circles.add(DrawnCircle(
+                        event.getHistoricalX(i),
+                        event.getHistoricalY(i),
+                        currentRadius
+                    ))
+                }
+                circles.add(DrawnCircle(event.x, event.y, currentRadius))
                 invalidate()
             }
-            MotionEvent.ACTION_UP -> {
-                paths.add(currentPath)
-                currentPath = Path()
 
-                val option = SharedPreferencesManager.drawingOption
+            MotionEvent.ACTION_UP -> {
                 if (option == 2 || option == 3) {
                     startFadeOutAnimation()
                 }
-                invalidate()
             }
         }
         return true
@@ -103,7 +89,7 @@ class DrawingView @JvmOverloads constructor(
             }
             addListener(object : AnimatorListenerAdapter() {
                 override fun onAnimationEnd(animation: Animator) {
-                    paths.clear()
+                    circles.clear()
                     currentAlpha = 255
                     invalidate()
                 }

@@ -470,7 +470,7 @@
     </fragment>
     <fragment
         android:id="@+id/StylusLinesFragment"
-        android:name="rpt.tool.badpixelsearch.ui.drawing.stylus.StylusLInesTestFragment"
+        android:name="rpt.tool.badpixelsearch.ui.drawing.stylus.StylusTestFragment"
         android:label="StylusLinesFragment"
         tools:layout="@layout/fragment_stylus_test">
     </fragment>

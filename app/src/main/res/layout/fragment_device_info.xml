@@ -1,22 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black">
+    android:background="@color/black"
+    android:orientation="vertical">
 
     <include
         android:id="@+id/toolbar"
-        layout="@layout/toolbar_layout" />
+        layout="@layout/toolbar_transparent_layout" />
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="match_parent"
         android:clipToPadding="false"
-        android:padding="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar">
+        android:padding="16dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -29,107 +28,198 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-                <TextView style="@style/InfoLabel" android:text="@string/model" />
-                <TextView android:id="@+id/textView2" style="@style/InfoValue" tools:text="sdk_gphone64_arm64" />
+
+                <TextView
+                    style="@style/InfoLabel"
+                    android:text="@string/model" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    style="@style/InfoValue"
+                    tools:text="sdk_gphone64_arm64" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-                <TextView style="@style/InfoLabel" android:text="@string/manufacturer" />
-                <TextView android:id="@+id/textView22" style="@style/InfoValue" tools:text="Google" />
+
+                <TextView
+                    style="@style/InfoLabel"
+                    android:text="@string/manufacturer" />
+
+                <TextView
+                    android:id="@+id/textView22"
+                    style="@style/InfoValue"
+                    tools:text="Google" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-                <TextView style="@style/InfoLabel" android:text="@string/productor" />
-                <TextView android:id="@+id/textView32" style="@style/InfoValue" tools:text="Sdk_gphone64_arm64" />
+
+                <TextView
+                    style="@style/InfoLabel"
+                    android:text="@string/productor" />
+
+                <TextView
+                    android:id="@+id/textView32"
+                    style="@style/InfoValue"
+                    tools:text="Sdk_gphone64_arm64" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-                <TextView style="@style/InfoLabel" android:text="@string/device" />
-                <TextView android:id="@+id/textView42" style="@style/InfoValue" tools:text="Emu64a" />
+
+                <TextView
+                    style="@style/InfoLabel"
+                    android:text="@string/device" />
+
+                <TextView
+                    android:id="@+id/textView42"
+                    style="@style/InfoValue"
+                    tools:text="Emu64a" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-                <TextView style="@style/InfoLabel" android:text="@string/brand" />
-                <TextView android:id="@+id/textView52" style="@style/InfoValue" tools:text="Google" />
+
+                <TextView
+                    style="@style/InfoLabel"
+                    android:text="@string/brand" />
+
+                <TextView
+                    android:id="@+id/textView52"
+                    style="@style/InfoValue"
+                    tools:text="Google" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-                <TextView style="@style/InfoLabel" android:text="@string/board" />
-                <TextView android:id="@+id/textView62" style="@style/InfoValue" tools:text="Goldfish_arm64" />
+
+                <TextView
+                    style="@style/InfoLabel"
+                    android:text="@string/board" />
+
+                <TextView
+                    android:id="@+id/textView62"
+                    style="@style/InfoValue"
+                    tools:text="Goldfish_arm64" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-                <TextView style="@style/InfoLabel" android:text="@string/hardware" />
-                <TextView android:id="@+id/textView72" style="@style/InfoValue" tools:text="Ranchu" />
+
+                <TextView
+                    style="@style/InfoLabel"
+                    android:text="@string/hardware" />
+
+                <TextView
+                    android:id="@+id/textView72"
+                    style="@style/InfoValue"
+                    tools:text="Ranchu" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-                <TextView style="@style/InfoLabel" android:text="@string/architecture" />
-                <TextView android:id="@+id/textView82" style="@style/InfoValue" tools:text="arm64-v8a" />
+
+                <TextView
+                    style="@style/InfoLabel"
+                    android:text="@string/architecture" />
+
+                <TextView
+                    android:id="@+id/textView82"
+                    style="@style/InfoValue"
+                    tools:text="arm64-v8a" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-                <TextView style="@style/InfoLabel" android:text="@string/cpu" />
-                <TextView android:id="@+id/textView92" style="@style/InfoValue" tools:text="arm64-v8a" />
+
+                <TextView
+                    style="@style/InfoLabel"
+                    android:text="@string/cpu" />
+
+                <TextView
+                    android:id="@+id/textView92"
+                    style="@style/InfoValue"
+                    tools:text="arm64-v8a" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-                <TextView style="@style/InfoLabel" android:text="@string/device_id" />
-                <TextView android:id="@+id/textView102" style="@style/InfoValue" tools:text="044b156a78fb2013" />
+
+                <TextView
+                    style="@style/InfoLabel"
+                    android:text="@string/device_id" />
+
+                <TextView
+                    android:id="@+id/textView102"
+                    style="@style/InfoValue"
+                    tools:text="044b156a78fb2013" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-                <TextView style="@style/InfoLabel" android:text="@string/display" />
-                <TextView android:id="@+id/textView112" style="@style/InfoValue" tools:text="BE4B.251210.005" />
+
+                <TextView
+                    style="@style/InfoLabel"
+                    android:text="@string/display" />
+
+                <TextView
+                    android:id="@+id/textView112"
+                    style="@style/InfoValue"
+                    tools:text="BE4B.251210.005" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-                <TextView style="@style/InfoLabel" android:text="@string/android" />
-                <TextView android:id="@+id/textView122" style="@style/InfoValue" tools:text="Version 16" />
+
+                <TextView
+                    style="@style/InfoLabel"
+                    android:text="@string/android" />
+
+                <TextView
+                    android:id="@+id/textView122"
+                    style="@style/InfoValue"
+                    tools:text="Version 16" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-                <TextView style="@style/InfoLabel" android:text="@string/sdk" />
-                <TextView android:id="@+id/textView132" style="@style/InfoValue" tools:text="Version 36" />
+
+                <TextView
+                    style="@style/InfoLabel"
+                    android:text="@string/sdk" />
+
+                <TextView
+                    android:id="@+id/textView132"
+                    style="@style/InfoValue"
+                    tools:text="Version 36" />
             </LinearLayout>
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

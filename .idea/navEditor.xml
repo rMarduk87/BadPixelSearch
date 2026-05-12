@@ -239,6 +239,18 @@
                       </LayoutPositions>
                     </value>
                   </entry>
+                  <entry key="DrawingCanvasFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="12" />
+                            <option name="y" value="12" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="DrawingMenuFragment">
                     <value>
                       <LayoutPositions>
@@ -255,22 +267,7 @@
                                 <LayoutPositions />
                               </value>
                             </entry>
-                            <entry key="action_drawingMenuFragment_to_fadingLinesFragment">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
-                            <entry key="action_drawingMenuFragment_to_fadingLinesTwoFragment">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
-                            <entry key="action_drawingMenuFragment_to_normalsLinesFragment">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
-                            <entry key="action_drawingMenuFragment_to_normalsLinesTwoFragment">
+                            <entry key="action_drawingMenuFragment_to_drawingCanvasFragment">
                               <value>
                                 <LayoutPositions />
                               </value>
@@ -281,30 +278,6 @@
                               </value>
                             </entry>
                           </map>
-                        </option>
-                      </LayoutPositions>
-                    </value>
-                  </entry>
-                  <entry key="FadingLinesFragment">
-                    <value>
-                      <LayoutPositions>
-                        <option name="myPosition">
-                          <Point>
-                            <option name="x" value="256" />
-                            <option name="y" value="12" />
-                          </Point>
-                        </option>
-                      </LayoutPositions>
-                    </value>
-                  </entry>
-                  <entry key="FadingLinesTwoFragment">
-                    <value>
-                      <LayoutPositions>
-                        <option name="myPosition">
-                          <Point>
-                            <option name="x" value="500" />
-                            <option name="y" value="12" />
-                          </Point>
                         </option>
                       </LayoutPositions>
                     </value>
@@ -625,30 +598,6 @@
                               </value>
                             </entry>
                           </map>
-                        </option>
-                      </LayoutPositions>
-                    </value>
-                  </entry>
-                  <entry key="NormalLinesFragment">
-                    <value>
-                      <LayoutPositions>
-                        <option name="myPosition">
-                          <Point>
-                            <option name="x" value="256" />
-                            <option name="y" value="12" />
-                          </Point>
-                        </option>
-                      </LayoutPositions>
-                    </value>
-                  </entry>
-                  <entry key="NormalLinesTwoFragment">
-                    <value>
-                      <LayoutPositions>
-                        <option name="myPosition">
-                          <Point>
-                            <option name="x" value="12" />
-                            <option name="y" value="368" />
-                          </Point>
                         </option>
                       </LayoutPositions>
                     </value>

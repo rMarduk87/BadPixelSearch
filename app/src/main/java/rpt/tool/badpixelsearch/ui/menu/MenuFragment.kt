@@ -229,24 +229,27 @@ class MenuFragment :
     private fun showContactsDialog() {
         val li = LayoutInflater.from(requireContext())
         val promptsView = li.inflate(R.layout.sender_dialog, null)
-        val alertDialogBuilder = AlertDialog.Builder(requireContext())
-        alertDialogBuilder.setView(promptsView)
+        
+        val alertDialog = AlertDialog.Builder(requireContext(), R.style.alert_dialog)
+            .setView(promptsView)
+            .setPositiveButton(getString(R.string.send_req)) { _, _ ->
+                val userInputTextSub: EditText = promptsView.findViewById(R.id.txtSub)
+                val userInputTxtMsg: EditText = promptsView.findViewById(R.id.txtMsg)
+                val inputText = userInputTextSub.text.toString()
+                val inputTextMsg = userInputTxtMsg.text.toString()
+                sendMail(requireActivity(),
+                    arrayOf(resources.getString(R.string.to)), inputText,
+                    inputTextMsg)
+                userInputTxtMsg.text.clear()
+            }
+            .setNegativeButton(getString(R.string.button_close_fix)) { dialog, _ -> dialog.cancel() }
+            .create()
 
-        val userInputTextSub: EditText = promptsView.findViewById(R.id.txtSub)
-        val userInputTxtMsg: EditText = promptsView.findViewById(R.id.txtMsg)
-
-
-        alertDialogBuilder.setPositiveButton("OK") { _, _ ->
-            val inputText = userInputTextSub.text.toString()
-            val inputTextMsg = userInputTxtMsg.text.toString()
-            sendMail(requireActivity(),
-                arrayOf(resources.getString(R.string.to)), inputText,
-                inputTextMsg)
-            userInputTxtMsg.text.clear() }
-            .setNegativeButton("Cancel") { dialog, _ -> dialog.cancel() }
-
-        val alertDialog = alertDialogBuilder.create()
         alertDialog.show()
+        
+        // Style buttons after show
+        alertDialog.getButton(AlertDialog.BUTTON_POSITIVE)?.setTextColor(resources.getColor(R.color.white_blueish))
+        alertDialog.getButton(AlertDialog.BUTTON_NEGATIVE)?.setTextColor(resources.getColor(R.color.light_gray))
     }
 
 }

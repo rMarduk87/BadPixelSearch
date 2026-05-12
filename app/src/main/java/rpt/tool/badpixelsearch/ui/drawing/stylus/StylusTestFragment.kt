@@ -6,7 +6,7 @@ import rpt.tool.badpixelsearch.BaseFragment
 import rpt.tool.badpixelsearch.R
 import rpt.tool.badpixelsearch.databinding.FragmentStylusTestBinding
 
-class StylusLInesTestFragment :
+class StylusTestFragment :
     BaseFragment<FragmentStylusTestBinding>(FragmentStylusTestBinding::inflate) {
 
     private var filledCount = 0
@@ -42,6 +42,8 @@ class StylusLInesTestFragment :
     }
 
     private fun updateTitle() {
+        if (filledCount == 0) return
+
         binding.toolbar.menuTitle.text = if (filledCount == total) {
             getString(R.string.test_completed)
         } else {
