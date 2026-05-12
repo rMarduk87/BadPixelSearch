@@ -44,7 +44,7 @@ class ResponseTimeTestFragment : BaseFragment<FragmentResponseTimeTestBinding>(
             when (action) {
                 MotionEvent.ACTION_DOWN, MotionEvent.ACTION_POINTER_DOWN -> {
                     val latenza = SystemClock.uptimeMillis() - event.eventTime
-                    val testoLatenza = if (latenza > 100) ">100ms" else "${latenza}ms"
+                    val testoLatenza = if (latenza > 100) getString(R.string.more_than_100ms) else getString(R.string.ms_format, latenza)
 
                     binding.toolbar.menuTitle.text = testoLatenza
 
@@ -92,7 +92,7 @@ class ResponseTimeTestFragment : BaseFragment<FragmentResponseTimeTestBinding>(
                         binding.mainLayout.removeView(circleView)
                     }
                     pointerCircleMap.clear()
-                    binding.toolbar.menuTitle.text = "0 ms"
+                    binding.toolbar.menuTitle.text = getString(R.string.zero_ms)
                 }
             }
             true

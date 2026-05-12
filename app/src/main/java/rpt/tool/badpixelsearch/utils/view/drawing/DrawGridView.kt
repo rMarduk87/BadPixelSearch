@@ -9,7 +9,8 @@ import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
 import kotlin.math.min
-import androidx.core.graphics.toColorInt
+import androidx.core.content.ContextCompat
+import rpt.tool.badpixelsearch.R
 
 class DrawGridView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
@@ -24,10 +25,12 @@ class DrawGridView @JvmOverloads constructor(
 
     private var gridState = Array(columns) { BooleanArray(rows) }
 
-    private val paintDark = Paint(Paint.ANTI_ALIAS_FLAG).apply { color =
-        "#0B132B".toColorInt() }
-    private val paintLight = Paint(Paint.ANTI_ALIAS_FLAG).apply { color =
-        "#2A52BE".toColorInt() }
+    private val paintDark = Paint(Paint.ANTI_ALIAS_FLAG).apply {
+        color = ContextCompat.getColor(context, R.color.navy_darkest)
+    }
+    private val paintLight = Paint(Paint.ANTI_ALIAS_FLAG).apply {
+        color = ContextCompat.getColor(context, R.color.blue_cerulean)
+    }
     private val rect = RectF()
     private val padding = 4f
     private val cornerRadius = 8f

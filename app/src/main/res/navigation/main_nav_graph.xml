@@ -49,6 +49,9 @@
         <action
             android:id="@+id/action_menuFragment_to_drawingMenuFragment"
             app:destination="@id/DrawingMenuFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_multiTestFragment"
+            app:destination="@id/MultiTestFragment" />
     </fragment>
     <fragment
         android:id="@+id/FaqFragment"
@@ -442,6 +445,40 @@
         android:name="rpt.tool.badpixelsearch.ui.drawing.menu.DrawingTestMenuFragment"
         android:label="DrawingMenuFragment"
         tools:layout="@layout/tests_menu_six">
+        <action
+            android:id="@+id/action_drawingMenuFragment_to_colorLinesFragment"
+            app:destination="@id/ColorLinesTestFragment"/>
+        <action
+            android:id="@+id/action_drawingMenuFragment_to_drawingCanvasFragment"
+            app:destination="@id/DrawingCanvasFragment"/>
+        <action
+            android:id="@+id/action_drawingMenuFragment_to_stylusLinesFragment"
+            app:destination="@id/StylusLinesFragment"/>
+
+    </fragment>
+    <fragment
+        android:id="@+id/ColorLinesTestFragment"
+        android:name="rpt.tool.badpixelsearch.ui.drawing.color.DrawingColorLinesTestFragment"
+        android:label="ColorLinesTestFragment"
+        tools:layout="@layout/fragment_drawing_color_lines_test">
+    </fragment>
+    <fragment
+        android:id="@+id/DrawingCanvasFragment"
+        android:name="rpt.tool.badpixelsearch.ui.drawing.canvas.DrawingCanvasTestFragment"
+        android:label="DrawingCanvasFragment"
+        tools:layout="@layout/fragment_drawing_canvas_test">
+    </fragment>
+    <fragment
+        android:id="@+id/StylusLinesFragment"
+        android:name="rpt.tool.badpixelsearch.ui.drawing.stylus.StylusLInesTestFragment"
+        android:label="StylusLinesFragment"
+        tools:layout="@layout/fragment_stylus_test">
+    </fragment>
+    <fragment
+        android:id="@+id/MultiTestFragment"
+        android:name="rpt.tool.badpixelsearch.ui.multi.MultiTestFragment"
+        android:label="MultiTestFragment"
+        tools:layout="@layout/fragment_multi_test">
     </fragment>
 
 </navigation>

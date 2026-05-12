@@ -3,7 +3,7 @@
     android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000">
+    android:background="@color/black">
 
     <include
         android:id="@+id/toolbar"
@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:text="@string/fps_0"
         android:textSize="18sp"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/white"
         android:layout_below="@id/toolbar"
         android:layout_marginTop="16dp"
         android:layout_centerHorizontal="true"/>
@@ -32,14 +32,14 @@
             android:id="@+id/square1"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:background="#a2b6cc"/>
+            android:background="@color/blue_pale_1"/>
 
         <View
             android:id="@+id/square2"
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_marginTop="50dp"
-            android:background="#7595b9"
+            android:background="@color/blue_pale_2"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"/>
 
@@ -48,7 +48,7 @@
             android:layout_marginTop="50dp"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:background="#466d98"/>
+            android:background="@color/blue_pale_3"/>
 
     </LinearLayout>
 

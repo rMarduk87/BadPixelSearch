@@ -109,5 +109,6 @@ class AppUtils {
         const val DRAWING_STYLUS_TEST: String = "drawing_stylus_test"
         const val DRAWING_COLOR_TEST: String = "drawing_color_test"
         const val FIX_TEST_FIX: String = "fix_test_fix"
+        const val DRAWING_OPTION: String = "drawing_option"
     }
 }

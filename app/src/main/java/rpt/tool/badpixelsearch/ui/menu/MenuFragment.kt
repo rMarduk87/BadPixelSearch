@@ -131,6 +131,11 @@ class MenuFragment :
         }
 
         setupNavigationDrawer()
+
+        binding.multi.setOnClickListener {
+            safeNavController?.safeNavigate(MenuFragmentDirections.
+            actionMenuFragmentToMultiTestFragment())
+        }
     }
 
     private fun executeWithSound(action: () -> Unit) {

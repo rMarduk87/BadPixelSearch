@@ -266,4 +266,8 @@
     <string name="fingers_0">Fingers: 0</string>
     <string name="fingers">"Fingers: "</string>
     <string name="quick_taps">Quick taps</string>
+    <string name="fill_all">Fill in all holes</string>
+    <string name="test_completed">Test Completed</string>
+    <string name="hole_filled">hole filled</string>
+    <string name="gray_lines">Gray lines</string>
 </resources>

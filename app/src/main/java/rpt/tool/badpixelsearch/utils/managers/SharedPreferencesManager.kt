@@ -237,4 +237,8 @@ object SharedPreferencesManager {
         get() = sharedPreferences.getBoolean(AppUtils.DRAWING_COLOR_TEST, false)
         set(value) = sharedPreferences.edit() { putBoolean(AppUtils.DRAWING_COLOR_TEST, value) }
 
+    var drawingOption: Int
+        get() = sharedPreferences.getInt(AppUtils.DRAWING_OPTION, 0)
+        set(value) = sharedPreferences.edit() { putInt(AppUtils.DRAWING_OPTION, value) }
+
 }

@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/navy_midnight">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_transparent_layout" />
+
+    <GridLayout
+        android:id="@+id/grid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:columnCount="2"
+        android:rowCount="3"
+        android:gravity="center">
+
+        <!-- 6 cerchi -->
+        <include layout="@layout/item_circle"/>
+        <include layout="@layout/item_circle"/>
+        <include layout="@layout/item_circle"/>
+        <include layout="@layout/item_circle"/>
+        <include layout="@layout/item_circle"/>
+        <include layout="@layout/item_circle"/>
+
+    </GridLayout>
+
+</FrameLayout>

@@ -3,7 +3,7 @@
     android:id="@+id/frame_fix"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0099cc"
+    android:background="@color/holo_blue"
     android:keepScreenOn="true">
 
     <LinearLayout
@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center_horizontal"
-        android:background="#80000000"
+        android:background="@color/black_alpha_50"
         android:orientation="horizontal">
 
         <Button

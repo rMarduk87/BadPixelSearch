@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#002668">
+    android:background="@color/deep_blue">
 
     <include
         android:id="@+id/toolbar"
@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:text="@string/fps_0"
             android:textSize="18sp"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/white"
             android:textStyle="bold" />
 
         <TextView
@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:text="@string/cpu_0"
             android:textSize="16sp"
-            android:textColor="#FFFFFF" />
+            android:textColor="@color/white" />
 
         <TextView
             android:id="@+id/txtGpu"
@@ -39,7 +39,7 @@
             android:layout_height="wrap_content"
             android:text="@string/gpu_load_0"
             android:textSize="16sp"
-            android:textColor="#FFFFFF" />
+            android:textColor="@color/white" />
 
     </LinearLayout>
 
@@ -48,6 +48,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/infoPanel"
-        android:background="#002668"/>
+        android:background="@color/deep_blue"/>
 
 </RelativeLayout>

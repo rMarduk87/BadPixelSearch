@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0A1828"
+    android:background="@color/navy_dark"
     android:orientation="vertical">
 
     <include
@@ -31,7 +31,7 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_marginBottom="16dp"
-            android:background="#1A2B42"
+            android:background="@color/navy_medium"
             android:clickable="true"
             android:focusable="true"
             android:padding="16dp">
@@ -43,7 +43,7 @@
                 android:layout_centerVertical="true"
                 android:background="@drawable/bg_circle"
                 android:gravity="center"
-                android:textColor="#0A1828"
+                android:textColor="@color/navy_dark"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:text="@string/_1"
@@ -54,7 +54,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/white"
                 android:textSize="18sp" />
 
             <TextView
@@ -66,7 +66,7 @@
                 android:background="@drawable/bg_circle"
                 android:gravity="center"
                 android:text="@string/v"
-                android:textColor="#0A1828"
+                android:textColor="@color/navy_dark"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:visibility="invisible" />
@@ -77,7 +77,7 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_marginBottom="16dp"
-            android:background="#1A2B42"
+            android:background="@color/navy_medium"
             android:clickable="true"
             android:focusable="true"
             android:padding="16dp">
@@ -89,10 +89,10 @@
                 android:layout_centerVertical="true"
                 android:background="@drawable/bg_circle"
                 android:gravity="center"
-                android:textColor="#0A1828"
+                android:textColor="@color/navy_dark"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                android:text="2"
+                android:text="@string/_2"
                 />
 
             <TextView
@@ -100,7 +100,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/white"
                 android:textSize="18sp" />
 
             <TextView
@@ -111,8 +111,8 @@
                 android:layout_centerVertical="true"
                 android:background="@drawable/bg_circle"
                 android:gravity="center"
-                android:text="V"
-                android:textColor="#0A1828"
+                android:text="@string/v"
+                android:textColor="@color/navy_dark"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:visibility="invisible" />

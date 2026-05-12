@@ -9,7 +9,8 @@ import android.graphics.RectF
 import android.graphics.Shader
 import android.util.AttributeSet
 import android.view.View
-import androidx.core.graphics.toColorInt
+import androidx.core.content.ContextCompat
+import rpt.tool.badpixelsearch.R
 import kotlin.math.sin
 
 class Gravity3DBallView @JvmOverloads constructor(
@@ -25,13 +26,15 @@ class Gravity3DBallView @JvmOverloads constructor(
     private val bounce = 0.86f
     private val frameDelay = 16L
 
-    private val gridColor = "#262640".toColorInt()
-    private val ballColor = "#52638d".toColorInt()
+    private val gridColor by lazy { ContextCompat.getColor(context, R.color.navy_grid) }
+    private val ballColor by lazy { ContextCompat.getColor(context, R.color.blue_ball) }
 
-    private val gridPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
-        color = gridColor
-        strokeWidth = 3f
-        style = Paint.Style.STROKE
+    private val gridPaint by lazy {
+        Paint(Paint.ANTI_ALIAS_FLAG).apply {
+            color = gridColor
+            strokeWidth = 3f
+            style = Paint.Style.STROKE
+        }
     }
 
     private val ballPaint = Paint(Paint.ANTI_ALIAS_FLAG)

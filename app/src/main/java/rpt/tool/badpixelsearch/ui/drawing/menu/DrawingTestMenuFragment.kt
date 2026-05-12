@@ -49,9 +49,10 @@ class DrawingTestMenuFragment : BaseFragment<TestsMenuSixBinding>(TestsMenuSixBi
             executeWithSound {
                 binding.touch1.visibility = View.VISIBLE
                 SharedPreferencesManager.normalLines = true
+                SharedPreferencesManager.drawingOption = 0
                 safeNavController?.safeNavigate(
-                    AnimationMenuFragmentDirections
-                        .actionAnimationMenuFragmentToTwoDTestFragment()
+                    DrawingTestMenuFragmentDirections
+                        .actionDrawingMenuFragmentToDrawingCanvasFragment()
                 )
             }
         }
@@ -60,9 +61,10 @@ class DrawingTestMenuFragment : BaseFragment<TestsMenuSixBinding>(TestsMenuSixBi
             executeWithSound {
                 binding.touch2.visibility = View.VISIBLE
                 SharedPreferencesManager.normalLinesTwo = true
+                SharedPreferencesManager.drawingOption = 1
                 safeNavController?.safeNavigate(
-                    AnimationMenuFragmentDirections
-                        .actionAnimationMenuFragmentToThreeDTestFragment()
+                    DrawingTestMenuFragmentDirections
+                        .actionDrawingMenuFragmentToDrawingCanvasFragment()
                 )
             }
         }
@@ -71,9 +73,10 @@ class DrawingTestMenuFragment : BaseFragment<TestsMenuSixBinding>(TestsMenuSixBi
             executeWithSound {
                 binding.touch3.visibility = View.VISIBLE
                 SharedPreferencesManager.fadingLines = true
+                SharedPreferencesManager.drawingOption = 2
                 safeNavController?.safeNavigate(
-                    AnimationMenuFragmentDirections
-                        .actionAnimationMenuFragmentTo2dGravityFragment()
+                    DrawingTestMenuFragmentDirections
+                        .actionDrawingMenuFragmentToDrawingCanvasFragment()
                 )
             }
         }
@@ -82,9 +85,10 @@ class DrawingTestMenuFragment : BaseFragment<TestsMenuSixBinding>(TestsMenuSixBi
             executeWithSound {
                 binding.touch4.visibility = View.VISIBLE
                 SharedPreferencesManager.fadingLinesTwo = true
+                SharedPreferencesManager.drawingOption = 3
                 safeNavController?.safeNavigate(
-                    AnimationMenuFragmentDirections
-                        .actionAnimationMenuFragmentTo3dGravityFragment())
+                    DrawingTestMenuFragmentDirections
+                        .actionDrawingMenuFragmentToDrawingCanvasFragment())
             }
         }
 
@@ -93,8 +97,8 @@ class DrawingTestMenuFragment : BaseFragment<TestsMenuSixBinding>(TestsMenuSixBi
                 binding.touch5.visibility = View.VISIBLE
                 SharedPreferencesManager.stylusLines = true
                 safeNavController?.safeNavigate(
-                    AnimationMenuFragmentDirections
-                        .actionAnimationMenuFragmentToMovingBarsFragment())
+                    DrawingTestMenuFragmentDirections
+                        .actionDrawingMenuFragmentToStylusLinesFragment())
             }
         }
 
@@ -103,8 +107,8 @@ class DrawingTestMenuFragment : BaseFragment<TestsMenuSixBinding>(TestsMenuSixBi
                 binding.touch6.visibility = View.VISIBLE
                 SharedPreferencesManager.colorLines = true
                 safeNavController?.safeNavigate(
-                    AnimationMenuFragmentDirections
-                        .actionAnimationMenuFragmentToRotationFragment())
+                    DrawingTestMenuFragmentDirections
+                        .actionDrawingMenuFragmentToColorLinesFragment())
             }
         }
 

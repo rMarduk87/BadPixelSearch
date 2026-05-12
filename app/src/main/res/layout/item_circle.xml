@@ -1,0 +1,21 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="140dp"
+    android:layout_height="140dp"
+    android:layout_margin="24dp">
+
+    <View
+        android:id="@+id/bigCircle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/circle_empty"/>
+
+    <View
+        android:id="@+id/smallCircle"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center"
+        android:background="@drawable/circle_small"
+        android:clickable="true"
+        android:focusable="true"/>
+
+</FrameLayout>

@@ -26,14 +26,14 @@ class OtherAppsFragment: BaseFragment<FragmentOtherAppsBinding>(FragmentOtherApp
         setupToolbar(binding.toolbar.btnBack, binding.toolbar.menuTitle, getString(rpt.tool.badpixelsearch.R.string.other_apps))
 
         val appPongClock = OtherApps()
-        appPongClock.name = "Pong Clock"
+        appPongClock.name = getString(rpt.tool.badpixelsearch.R.string.app_pong_clock_name)
         appPongClock.id = "0"
-        appPongClock.link = "https://play.google.com/store/apps/details?id=rpt.tool.pongclock"
+        appPongClock.link = getString(rpt.tool.badpixelsearch.R.string.app_pong_clock_link)
 
         val appMarimoCare = OtherApps()
-        appMarimoCare.name = "Marimo Care"
+        appMarimoCare.name = getString(rpt.tool.badpixelsearch.R.string.app_marimo_care_name)
         appMarimoCare.id = "1"
-        appMarimoCare.link = "https://play.google.com/store/apps/details?id=rpt.tool.marimocare"
+        appMarimoCare.link = getString(rpt.tool.badpixelsearch.R.string.app_marimo_care_link)
 
         other.add(appPongClock)
         other.add(appMarimoCare)

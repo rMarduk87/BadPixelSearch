@@ -1,11 +1,11 @@
 package rpt.tool.badpixelsearch.ui.fonts.normal
 
-import android.graphics.Color
 import android.graphics.Typeface
 import android.os.Bundle
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import rpt.tool.badpixelsearch.BaseFragment
 import rpt.tool.badpixelsearch.R
 import rpt.tool.badpixelsearch.databinding.FragmentNormalFontBinding
@@ -14,16 +14,18 @@ import rpt.tool.badpixelsearch.utils.managers.SharedPreferencesManager
 class NormalFontFragment :
     BaseFragment<FragmentNormalFontBinding>(FragmentNormalFontBinding::inflate) {
 
-    private val colors = listOf(
-        Color.GRAY,
-        Color.WHITE,
-        Color.RED,
-        Color.GREEN,
-        Color.BLUE,
-        Color.MAGENTA,
-        Color.CYAN,
-        Color.YELLOW
-    )
+    private val colors by lazy {
+        listOf(
+            ContextCompat.getColor(requireContext(), R.color.gray),
+            ContextCompat.getColor(requireContext(), R.color.white),
+            ContextCompat.getColor(requireContext(), R.color.red),
+            ContextCompat.getColor(requireContext(), R.color.green),
+            ContextCompat.getColor(requireContext(), R.color.blue),
+            ContextCompat.getColor(requireContext(), R.color.magenta),
+            ContextCompat.getColor(requireContext(), R.color.cyan),
+            ContextCompat.getColor(requireContext(), R.color.yellow)
+        )
+    }
 
     private val colorsText = listOf(
         R.string.gray_text,

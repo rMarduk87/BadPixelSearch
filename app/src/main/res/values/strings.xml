@@ -219,6 +219,18 @@
     <string name="g">G:</string>
     <string name="b">B:</string>
     <string name="l">L:</string>
+    <string name="r_format" translatable="false">R: %1$d</string>
+    <string name="g_format" translatable="false">G: %1$d</string>
+    <string name="b_format" translatable="false">B: %1$d</string>
+    <string name="l_format" translatable="false">L: %1$d</string>
+    <string name="ms_format" translatable="false">%1$d ms</string>
+    <string name="more_than_100ms" translatable="false">&gt;100ms</string>
+    <string name="zero_ms" translatable="false">0 ms</string>
+    <string name="touch_coordinates" translatable="false">%1$d, %2$d</string>
+    <string name="app_pong_clock_name" translatable="false">Pong Clock</string>
+    <string name="app_pong_clock_link" translatable="false">https://play.google.com/store/apps/details?id=rpt.tool.pongclock</string>
+    <string name="app_marimo_care_name" translatable="false">Marimo Care</string>
+    <string name="app_marimo_care_link" translatable="false">https://play.google.com/store/apps/details?id=rpt.tool.marimocare</string>
     <string name="green_level_act">Green Level</string>
     <string name="blue_level_act">Blue Level</string>
     <string name="gray_level_act">Gray Level</string>
@@ -245,8 +257,15 @@
     <string name="_3d_gravity">3D Gravity</string>
     <string name="touch_tests">TOUCH TESTS </string>
     <string name="drawing_tests">DRAWING TESTS </string>
-    <string name="_1">1</string>
-    <string name="v">V</string>
+    <string name="_1" translatable="false">1</string>
+    <string name="_2" translatable="false">2</string>
+    <string name="_3" translatable="false">3</string>
+    <string name="_4" translatable="false">4</string>
+    <string name="_5" translatable="false">5</string>
+    <string name="_6" translatable="false">6</string>
+    <string name="_7" translatable="false">7</string>
+    <string name="_8" translatable="false">8</string>
+    <string name="v" translatable="false">V</string>
     <string name="drawing_test_full">DRAWING TESTS</string>
     <string name="touch_test_1">Single touch</string>
     <string name="touch_test_2">Single touch 2</string>
@@ -267,4 +286,18 @@
     <string name="fingers_0">Fingers: 0</string>
     <string name="fingers">"Fingers: "</string>
     <string name="quick_taps">Quick taps</string>
+    <string name="fill_all">Fill in all holes</string>
+    <string name="test_completed">Test Completed</string>
+    <string name="hole_filled">hole filled</string>
+    <string name="gray_lines">Gray lines</string>
+    <string-array name="color_lines">
+        <item>Gray lines</item>
+        <item>Yellow lines</item>
+        <item>Cyan lines</item>
+        <item>Magenta lines</item>
+        <item>Red lines</item>
+        <item>Blue lines</item>
+        <item>Green lines</item>
+        <item>White lines</item>
+    </string-array>
 </resources>

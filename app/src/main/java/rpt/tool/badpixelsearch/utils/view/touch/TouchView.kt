@@ -8,7 +8,9 @@ import android.graphics.Paint
 import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
-import androidx.core.graphics.toColorInt
+
+import androidx.core.content.ContextCompat
+import rpt.tool.badpixelsearch.R
 
 class TouchView @JvmOverloads constructor(
     context: Context,
@@ -22,21 +24,21 @@ class TouchView @JvmOverloads constructor(
 
     // 🔵 linea sottile stile debug
     private val linePaint = Paint().apply {
-        color = "#60A5FA".toColorInt()
+        color = ContextCompat.getColor(context, R.color.blue_debug)
         strokeWidth = 1.5f
         isAntiAlias = true
     }
 
     // 🔵 cerchio principale
     private val fillPaint = Paint().apply {
-        color = "#60649e".toColorInt()
+        color = ContextCompat.getColor(context, R.color.blue_main_touch)
         alpha = 220
         isAntiAlias = true
     }
 
     // 🔵 glow esterno
     private val glowPaint = Paint().apply {
-        color = "#3B82F6".toColorInt()
+        color = ContextCompat.getColor(context, R.color.blue_glow)
         alpha = 80
         isAntiAlias = true
         maskFilter = android.graphics.BlurMaskFilter(25f, android.graphics.BlurMaskFilter.Blur.NORMAL)
@@ -44,7 +46,7 @@ class TouchView @JvmOverloads constructor(
 
     // 🔵 bordo sottile
     private val strokePaint = Paint().apply {
-        color = "#BFDBFE".toColorInt()
+        color = ContextCompat.getColor(context, R.color.blue_border)
         style = Paint.Style.STROKE
         strokeWidth = 2f
         isAntiAlias = true
@@ -52,7 +54,7 @@ class TouchView @JvmOverloads constructor(
 
     // ✍️ testo stile HUD
     private val textPaint = Paint().apply {
-        color = "#FDE047".toColorInt()
+        color = ContextCompat.getColor(context, R.color.yellow_hud)
         textSize = 34f
         textAlign = Paint.Align.CENTER
         isAntiAlias = true
@@ -125,7 +127,7 @@ class TouchView @JvmOverloads constructor(
             canvas.drawCircle(x, y, radius, strokePaint)
 
             // ✍️ coordinate
-            val text = "${x.toInt()}, ${y.toInt()}"
+            val text = context.getString(R.string.touch_coordinates, x.toInt(), y.toInt())
             canvas.drawText(text, x, y - radius - 20f, textPaint)
         }
     }
