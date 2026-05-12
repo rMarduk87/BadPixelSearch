@@ -1,6 +1,7 @@
 package rpt.tool.badpixelsearch.ui.touch.zoom
 
 import android.annotation.SuppressLint
+import android.opengl.GLSurfaceView
 import android.os.Bundle
 import android.view.ScaleGestureDetector
 import android.view.View
@@ -16,7 +17,7 @@ class ZoomAndRotateTestFragment : BaseFragment<FragmentZoomAndRotateTestBinding>
     private lateinit var renderer: CubeTouchRenderer
     private lateinit var scaleGestureDetector: ScaleGestureDetector
 
-    private var scaleFactor = 1.0f
+    private var scaleFactor = 1f
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -29,10 +30,23 @@ class ZoomAndRotateTestFragment : BaseFragment<FragmentZoomAndRotateTestBinding>
 
         renderer = CubeTouchRenderer()
 
-        binding.glSurfaceView.setEGLContextClientVersion(2)
-        binding.glSurfaceView.setRenderer(renderer)
+        binding.glSurfaceView.apply {
+            setEGLContextClientVersion(2)
+            setRenderer(renderer)
+            renderMode = GLSurfaceView.RENDERMODE_CONTINUOUSLY
+        }
 
         setupTouch()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        binding.glSurfaceView.onResume()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        binding.glSurfaceView.onPause()
     }
 
     @SuppressLint("ClickableViewAccessibility")
@@ -41,7 +55,7 @@ class ZoomAndRotateTestFragment : BaseFragment<FragmentZoomAndRotateTestBinding>
             object : ScaleGestureDetector.SimpleOnScaleGestureListener() {
                 override fun onScale(detector: ScaleGestureDetector): Boolean {
                     scaleFactor *= detector.scaleFactor
-                    scaleFactor = scaleFactor.coerceIn(0.5f, 3.0f)
+                    scaleFactor = scaleFactor.coerceIn(0.5f, 3f)
                     renderer.setScale(scaleFactor)
                     return true
                 }

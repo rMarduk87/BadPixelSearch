@@ -3,11 +3,12 @@ package rpt.tool.badpixelsearch.ui.touch.time
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.os.SystemClock
+import android.util.TypedValue
+import android.view.Gravity
 import android.view.MotionEvent
 import android.view.View
+import android.widget.FrameLayout
 import android.widget.ImageView
-import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.core.content.ContextCompat
 import rpt.tool.badpixelsearch.BaseFragment
 import rpt.tool.badpixelsearch.R
 import rpt.tool.badpixelsearch.databinding.FragmentResponseTimeTestBinding
@@ -17,8 +18,7 @@ class ResponseTimeTestFragment : BaseFragment<FragmentResponseTimeTestBinding>(
 ) {
 
     private val pointerCircleMap = mutableMapOf<Int, View>()
-    private var circleWidth = 0
-    private var circleHeight = 0
+    private var circleSizePx = 0
 
     @SuppressLint("ClickableViewAccessibility")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -30,10 +30,12 @@ class ResponseTimeTestFragment : BaseFragment<FragmentResponseTimeTestBinding>(
             getString(R.string.quick_taps)
         )
 
-        val circleDrawable = ContextCompat.getDrawable(requireContext(),
-            R.drawable.circle_feedback)
-        circleWidth = circleDrawable?.intrinsicWidth ?: 0
-        circleHeight = circleDrawable?.intrinsicHeight ?: 0
+        circleSizePx = TypedValue.applyDimension(
+            TypedValue.COMPLEX_UNIT_DIP,
+            120f,
+            resources.displayMetrics
+        ).toInt()
+
         binding.mainLayout.setOnTouchListener { _, event ->
             val action = event.actionMasked
             val pointerIndex = event.actionIndex
@@ -44,14 +46,25 @@ class ResponseTimeTestFragment : BaseFragment<FragmentResponseTimeTestBinding>(
                     val latenza = SystemClock.uptimeMillis() - event.eventTime
                     val testoLatenza = if (latenza > 100) ">100ms" else "${latenza}ms"
 
+                    binding.toolbar.menuTitle.text = testoLatenza
+
                     val x = event.getX(pointerIndex)
                     val y = event.getY(pointerIndex)
-                    val circle = createCircleView(x, y)
+
+                    val circle = createCircleView()
+
+                    val posX = x - (circleSizePx / 2f)
+                    val posY = y - (circleSizePx / 2f)
+
                     binding.mainLayout.addView(circle)
 
-                    pointerCircleMap[pointerId] = circle
+                    val params = circle.layoutParams as FrameLayout.LayoutParams
+                    params.gravity = Gravity.TOP or Gravity.START
+                    params.leftMargin = posX.toInt()
+                    params.topMargin = posY.toInt()
+                    circle.layoutParams = params
 
-                    updateTitle(testoLatenza)
+                    pointerCircleMap[pointerId] = circle
                 }
                 MotionEvent.ACTION_MOVE -> {
 
@@ -59,8 +72,13 @@ class ResponseTimeTestFragment : BaseFragment<FragmentResponseTimeTestBinding>(
                         val id = event.getPointerId(i)
                         val circleView = pointerCircleMap[id]
                         circleView?.let {
-                            it.translationX = event.getX(i) - circleWidth / 2
-                            it.translationY = event.getY(i) - circleHeight / 2
+                            val newX = event.getX(i) - (circleSizePx / 2f)
+                            val newY = event.getY(i) - (circleSizePx / 2f)
+
+                            val params = it.layoutParams as FrameLayout.LayoutParams
+                            params.leftMargin = newX.toInt()
+                            params.topMargin = newY.toInt()
+                            it.layoutParams = params
                         }
                     }
                 }
@@ -68,37 +86,28 @@ class ResponseTimeTestFragment : BaseFragment<FragmentResponseTimeTestBinding>(
                     pointerCircleMap.remove(pointerId)?.let {
                         binding.mainLayout.removeView(it)
                     }
-                    updateTitle( null)
                 }
                 MotionEvent.ACTION_UP, MotionEvent.ACTION_CANCEL -> {
                     for (circleView in pointerCircleMap.values) {
                         binding.mainLayout.removeView(circleView)
                     }
                     pointerCircleMap.clear()
-                    binding.toolbar.menuTitle.text = getString(R.string.quick_taps)
+                    binding.toolbar.menuTitle.text = "0 ms"
                 }
             }
             true
         }
     }
-    private fun createCircleView(x: Float, y: Float): View {
+
+    private fun createCircleView(): ImageView {
         val circleView = ImageView(requireContext())
         circleView.setImageResource(R.drawable.circle_feedback)
 
-        val layoutParams = ConstraintLayout.LayoutParams(
-            ConstraintLayout.LayoutParams.WRAP_CONTENT,
-            ConstraintLayout.LayoutParams.WRAP_CONTENT
-        )
+        val layoutParams = FrameLayout.LayoutParams(circleSizePx, circleSizePx)
+
+        layoutParams.gravity = Gravity.TOP or Gravity.START
         circleView.layoutParams = layoutParams
-        circleView.translationX = x - circleWidth / 2
-        circleView.translationY = y - circleHeight / 2
 
         return circleView
-    }
-
-    private fun updateTitle(text: String?) {
-        if (text != null) {
-            binding.toolbar.menuTitle.text = text
-        }
     }
 }

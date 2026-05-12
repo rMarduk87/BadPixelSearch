@@ -73,8 +73,8 @@ class TouchTestMenuFragment :
                 binding.touch3.visibility = View.VISIBLE
                 SharedPreferencesManager.multiTouch = true
                 safeNavController?.safeNavigate(
-                    AnimationMenuFragmentDirections
-                        .actionAnimationMenuFragmentTo2dGravityFragment()
+                    TouchTestMenuFragmentDirections
+                        .actionTouchMenuFragmentToMultiTouchFragment()
                 )
             }
         }
@@ -84,8 +84,8 @@ class TouchTestMenuFragment :
                 binding.touch4.visibility = View.VISIBLE
                 SharedPreferencesManager.multiTouchTwo = true
                 safeNavController?.safeNavigate(
-                    AnimationMenuFragmentDirections
-                        .actionAnimationMenuFragmentTo3dGravityFragment())
+                    TouchTestMenuFragmentDirections
+                        .actionTouchMenuFragmentToMultiTouchTwoFragment())
             }
         }
 
@@ -94,8 +94,8 @@ class TouchTestMenuFragment :
                 binding.touch5.visibility = View.VISIBLE
                 SharedPreferencesManager.zoom = true
                 safeNavController?.safeNavigate(
-                    AnimationMenuFragmentDirections
-                        .actionAnimationMenuFragmentToMovingBarsFragment())
+                    TouchTestMenuFragmentDirections
+                        .actionTouchMenuFragmentToZoomAndRotateFragment())
             }
         }
 
@@ -104,8 +104,8 @@ class TouchTestMenuFragment :
                 binding.touch6.visibility = View.VISIBLE
                 SharedPreferencesManager.responseTime = true
                 safeNavController?.safeNavigate(
-                    AnimationMenuFragmentDirections
-                        .actionAnimationMenuFragmentToRotationFragment())
+                    TouchTestMenuFragmentDirections
+                        .actionTouchMenuFragmentToResponseTimeFragment())
             }
         }
 

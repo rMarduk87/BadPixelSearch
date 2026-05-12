@@ -319,36 +319,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77f83ee0-a6c7-4100-b36d-12571e602f78" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/rpt/tool/badpixelsearch/utils/view/threed/Cube.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/rpt/tool/badpixelsearch/utils/view/threed/CubeTouchRenderer.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/rpt/tool/badpixelsearch/utils/view/touch/TouchView.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/circle_feedback.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.4.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.4.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.4.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.4.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.4.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.4.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/navEditor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/navEditor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/planningMode.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/planningMode.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/rpt/tool/badpixelsearch/ui/touch/multi/MultiTouchTestFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/rpt/tool/badpixelsearch/ui/touch/multi/MultiTouchTestFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/rpt/tool/badpixelsearch/BaseFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/rpt/tool/badpixelsearch/BaseFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/rpt/tool/badpixelsearch/ui/touch/menu/TouchTestMenuFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/rpt/tool/badpixelsearch/ui/touch/menu/TouchTestMenuFragment.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/rpt/tool/badpixelsearch/ui/touch/multi/MultiTouchTwoTestFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/rpt/tool/badpixelsearch/ui/touch/multi/MultiTouchTwoTestFragment.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/rpt/tool/badpixelsearch/ui/touch/time/ResponseTimeTestFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/rpt/tool/badpixelsearch/ui/touch/time/ResponseTimeTestFragment.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/rpt/tool/badpixelsearch/ui/touch/zoom/ZoomAndRotateTestFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/rpt/tool/badpixelsearch/ui/touch/zoom/ZoomAndRotateTestFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_multi_touch_test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_multi_touch_test.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_multi_touch_two_test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_multi_touch_two_test.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/rpt/tool/badpixelsearch/utils/view/threed/Cube.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/rpt/tool/badpixelsearch/utils/view/threed/Cube.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/rpt/tool/badpixelsearch/utils/view/threed/CubeTouchRenderer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/rpt/tool/badpixelsearch/utils/view/threed/CubeTouchRenderer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/rpt/tool/badpixelsearch/utils/view/touch/TouchView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/rpt/tool/badpixelsearch/utils/view/touch/TouchView.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/circle_feedback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/circle_feedback.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_response_time_test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_response_time_test.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_zoom_and_rotate_test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_zoom_and_rotate_test.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-ar/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-ar/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-cs-rCZ/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-cs-rCZ/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-es/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-es/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-hi/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-hi/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-id/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-id/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-it/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-it/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-ja/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-ja/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-kk-rkZ/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-kk-rkZ/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-ko/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-ko/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-pt-rBR/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-pt-rBR/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-pt/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-pt/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-ro/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-ro/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-ru/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-ru/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-tr/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-tr/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/navigation/main_nav_graph.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/navigation/main_nav_graph.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -358,7 +349,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[LocalEmulator::path=C:\Users\Riccardo.Pezzolati\.android\avd\Medium_Tablet_2.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[LocalEmulator::path=/Users/marduk87/.android/avd/Pixel_9_Pro.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />

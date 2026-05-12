@@ -387,6 +387,18 @@
         <action
             android:id="@+id/action_touchMenuFragment_to_singleTouchTwoFragment"
             app:destination="@id/SingleTouchTwoFragment"/>
+        <action
+            android:id="@+id/action_touchMenuFragment_to_multiTouchFragment"
+            app:destination="@id/MultiTouchFragment"/>
+        <action
+            android:id="@+id/action_touchMenuFragment_to_multiTouchTwoFragment"
+            app:destination="@id/MultiTouchTwoFragment"/>
+        <action
+            android:id="@+id/action_touchMenuFragment_to_zoomAndRotateFragment"
+            app:destination="@id/ZoomAndRotateFragment"/>
+        <action
+            android:id="@+id/action_touchMenuFragment_to_responseTimeFragment"
+            app:destination="@id/ResponseTimeFragment"/>
     </fragment>
     <fragment
         android:id="@+id/SingleTouchFragment"
@@ -399,6 +411,30 @@
         android:name="rpt.tool.badpixelsearch.ui.touch.single.SingleTouchTwoTestFragment"
         android:label="SingleTouchTwoFragment"
         tools:layout="@layout/fragment_single_touch_two_test">
+    </fragment>
+    <fragment
+        android:id="@+id/MultiTouchFragment"
+        android:name="rpt.tool.badpixelsearch.ui.touch.multi.MultiTouchTestFragment"
+        android:label="MultiTouchFragment"
+        tools:layout="@layout/fragment_multi_touch_test">
+    </fragment>
+    <fragment
+        android:id="@+id/MultiTouchTwoFragment"
+        android:name="rpt.tool.badpixelsearch.ui.touch.multi.MultiTouchTwoTestFragment"
+        android:label="MultiTouchTwoFragment"
+        tools:layout="@layout/fragment_multi_touch_two_test">
+    </fragment>
+    <fragment
+        android:id="@+id/ZoomAndRotateFragment"
+        android:name="rpt.tool.badpixelsearch.ui.touch.zoom.ZoomAndRotateTestFragment"
+        android:label="ZoomAndRotateFragment"
+        tools:layout="@layout/fragment_zoom_and_rotate_test">
+    </fragment>
+    <fragment
+        android:id="@+id/ResponseTimeFragment"
+        android:name="rpt.tool.badpixelsearch.ui.touch.time.ResponseTimeTestFragment"
+        android:label="ResponseTimeFragment"
+        tools:layout="@layout/fragment_response_time_test">
     </fragment>
 
     <fragment

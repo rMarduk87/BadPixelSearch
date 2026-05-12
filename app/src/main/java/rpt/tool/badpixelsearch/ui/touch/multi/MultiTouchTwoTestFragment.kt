@@ -18,6 +18,14 @@ class MultiTouchTwoTestFragment :
             getString(R.string.touch_the_screen)
         )
 
+        binding.toolbar.root.post {
+            val loc = IntArray(2)
+            binding.toolbar.root.getLocationOnScreen(loc)
+
+            val bottom = loc[1] + binding.toolbar.root.height
+            binding.touchView.topExclusion = bottom.toFloat()
+        }
+
         binding.touchView.onFingerChange = { count ->
             binding.toolbar.menuTitle.text = buildString {
                 append(getString(R.string.fingers))

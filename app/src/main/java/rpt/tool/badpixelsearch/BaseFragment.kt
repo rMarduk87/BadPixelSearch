@@ -39,7 +39,8 @@ abstract class BaseFragment<VB : ViewBinding>(private val inflate: Inflate<VB>) 
         btnBack.setOnClickListener {
             try {
                 if (SharedPreferencesManager.sound) {
-                    val mediaPlayer = MediaPlayer.create(requireContext(), R.raw.goodbye)
+                    val mediaPlayer = MediaPlayer.create(requireContext(),
+                        R.raw.goodbye)
                     mediaPlayer?.setOnCompletionListener { it.release() }
                     mediaPlayer?.start()
                 }
