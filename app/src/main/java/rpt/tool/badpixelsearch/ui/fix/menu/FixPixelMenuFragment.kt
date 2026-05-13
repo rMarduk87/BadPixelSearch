@@ -2,8 +2,10 @@ package rpt.tool.badpixelsearch.ui.fix.menu
 
 import android.animation.ObjectAnimator
 import android.animation.ValueAnimator
+import android.app.AlertDialog
 import android.media.MediaPlayer
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
 import rpt.tool.badpixelsearch.BaseFragment
 import rpt.tool.badpixelsearch.R
@@ -22,6 +24,8 @@ class FixPixelMenuFragment: BaseFragment<TestsMenuEightBinding>
 
         setupToolbar(binding.toolbar.btnBack, binding.toolbar.menuTitle, getString(R.string.fix_tests))
         binding.iconAnimated.setImageResource(R.drawable.splash)
+
+        binding.toolbar.btnInfo.visibility = View.VISIBLE
 
         binding.text1.text = requireContext().getString(R.string.bw_test)
         binding.text2.text = requireContext().getString(R.string.noise_test)
@@ -142,6 +146,26 @@ class FixPixelMenuFragment: BaseFragment<TestsMenuEightBinding>
                 )
             }
         }
+
+        binding.toolbar.btnInfo.setOnClickListener {
+            showInfoDialog()
+        }
+    }
+
+    private fun showInfoDialog() {
+        val li = LayoutInflater.from(requireContext())
+        val promptsView = li.inflate(R.layout.dialog_fix_pixel_info, null)
+
+        val alertDialog = AlertDialog.Builder(requireContext(),
+            R.style.alert_dialog)
+            .setView(promptsView)
+            .create()
+
+        promptsView.findViewById<View>(R.id.btnClose).setOnClickListener {
+            alertDialog.dismiss()
+        }
+
+        alertDialog.show()
     }
 
     private fun setupNumbers() {

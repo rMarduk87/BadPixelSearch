@@ -43,4 +43,16 @@
         android:visibility="invisible"
         app:tint="@color/white"
         android:contentDescription="@string/img" />
+
+    <ImageView
+        android:id="@+id/btnInfo"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@android:drawable/ic_dialog_info"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="invisible"
+        app:tint="@color/white"
+        android:contentDescription="@string/img" />
 </LinearLayout>
