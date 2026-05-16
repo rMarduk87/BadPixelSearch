@@ -36,6 +36,16 @@ abstract class BaseFragment<VB : ViewBinding>(private val inflate: Inflate<VB>) 
 
     protected fun setupToolbar(btnBack: View, menuTitle: TextView? = null, title: String? = null) {
         title?.let { menuTitle?.text = it }
+        
+        // Find the topBar container to adjust its margin if needed
+        val topBar = (btnBack.parent as? View)?.let { parent ->
+            if (parent.id == R.id.topBar) parent else {
+                (parent.parent as? View)?.takeIf { it.id == R.id.topBar }
+            }
+        }
+
+        topBar?.let { checkAndAdjustToolbar(it) }
+
         btnBack.setOnClickListener {
             try {
                 if (SharedPreferencesManager.sound) {
@@ -48,6 +58,19 @@ abstract class BaseFragment<VB : ViewBinding>(private val inflate: Inflate<VB>) 
                 e(Throwable(e), "Sound")
             }
             safeNavController?.popBackStack()
+        }
+    }
+
+    protected fun checkAndAdjustToolbar(toolbar: View) {
+        toolbar.post {
+            val hasNotch = rpt.tool.badpixelsearch.utils.AppUtils.hasNotchOrFrontCamera(requireContext(), activity?.window)
+            val params = toolbar.layoutParams as? ViewGroup.MarginLayoutParams
+            params?.let {
+                val density = resources.displayMetrics.density
+                // If there's a notch, use standard 56dp offset. Otherwise, move to top (0dp).
+                it.topMargin = if (hasNotch) (56 * density).toInt() else 0
+                toolbar.layoutParams = it
+            }
         }
     }
 

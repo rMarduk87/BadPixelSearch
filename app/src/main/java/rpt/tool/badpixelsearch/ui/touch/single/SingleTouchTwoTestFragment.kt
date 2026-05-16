@@ -23,8 +23,8 @@ class SingleTouchTwoTestFragment :
             getString(R.string.filled_0)
         )
 
-        binding.drawGridView.columns = 20
-        binding.drawGridView.rows = 40
+        binding.drawGridView.columns = resources.getInteger(R.integer.single_touch_2_columns)
+        binding.drawGridView.rows = resources.getInteger(R.integer.single_touch_2_rows)
 
         binding.drawGridView.onProgressChanged = { filledCount, totalCount ->
             val percentage = (filledCount.toDouble() / totalCount.toDouble()) * 100

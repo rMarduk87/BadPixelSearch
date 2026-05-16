@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/navy_dark"
@@ -10,113 +9,125 @@
         android:id="@+id/toolbar"
         layout="@layout/toolbar_layout" />
 
-    <!-- Contenitore per il resto del layout (mantiene il padding originale) -->
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:paddingHorizontal="16dp"
-        android:paddingBottom="16dp">
+        android:fillViewport="true">
 
-        <ImageView
-            android:id="@+id/icon_animated"
-            android:contentDescription="@string/img"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_gravity="center"
-            android:layout_marginBottom="40dp" />
-
-        <RelativeLayout
-            android:id="@+id/option1"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_marginBottom="16dp"
-            android:background="@color/navy_medium"
-            android:clickable="true"
-            android:focusable="true"
-            android:padding="16dp">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingBottom="16dp">
 
-            <TextView
-                android:id="@+id/number1"
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:layout_centerVertical="true"
-                android:background="@drawable/bg_circle"
-                android:gravity="center"
-                android:textColor="@color/navy_dark"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:text="@string/_1"
-                />
+            <ImageView
+                android:id="@+id/icon_animated"
+                android:contentDescription="@string/img"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="40dp" />
 
-            <TextView
-                android:id="@+id/text1"
-                android:layout_width="wrap_content"
+            <GridLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:textColor="@color/white"
-                android:textSize="18sp" />
+                android:columnCount="@integer/submenu_column_count">
 
-            <TextView
-                android:id="@+id/touch1"
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:background="@drawable/bg_circle"
-                android:gravity="center"
-                android:text="@string/v"
-                android:textColor="@color/navy_dark"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:visibility="invisible" />
-        </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/option1"
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:background="@color/navy_medium"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="16dp">
 
-        <RelativeLayout
-            android:id="@+id/option2"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_marginBottom="16dp"
-            android:background="@color/navy_medium"
-            android:clickable="true"
-            android:focusable="true"
-            android:padding="16dp">
+                    <TextView
+                        android:id="@+id/number1"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/bg_circle"
+                        android:gravity="center"
+                        android:text="@string/_1"
+                        android:textColor="@color/navy_dark"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/number2"
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:layout_centerVertical="true"
-                android:background="@drawable/bg_circle"
-                android:gravity="center"
-                android:textColor="@color/navy_dark"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:text="@string/_2"
-                />
+                    <TextView
+                        android:id="@+id/text1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
 
-            <TextView
-                android:id="@+id/text2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:textColor="@color/white"
-                android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/touch1"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/bg_circle"
+                        android:gravity="center"
+                        android:text="@string/v"
+                        android:textColor="@color/navy_dark"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:visibility="invisible" />
+                </RelativeLayout>
 
-            <TextView
-                android:id="@+id/touch2"
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:background="@drawable/bg_circle"
-                android:gravity="center"
-                android:text="@string/v"
-                android:textColor="@color/navy_dark"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:visibility="invisible" />
-        </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/option2"
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:background="@color/navy_medium"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="16dp">
 
-    </LinearLayout>
+                    <TextView
+                        android:id="@+id/number2"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/bg_circle"
+                        android:gravity="center"
+                        android:text="@string/_2"
+                        android:textColor="@color/navy_dark"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/text2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/touch2"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/bg_circle"
+                        android:gravity="center"
+                        android:text="@string/v"
+                        android:textColor="@color/navy_dark"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+
+            </GridLayout>
+
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

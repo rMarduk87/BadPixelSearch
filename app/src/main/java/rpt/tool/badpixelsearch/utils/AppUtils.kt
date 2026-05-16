@@ -1,6 +1,10 @@
 package rpt.tool.badpixelsearch.utils
 
 import android.content.Context
+import android.hardware.camera2.CameraCharacteristics
+import android.hardware.camera2.CameraManager
+import android.os.Build
+import android.view.Window
 import rpt.tool.badpixelsearch.R
 import rpt.tool.badpixelsearch.utils.extensions.roundToString
 
@@ -110,5 +114,16 @@ class AppUtils {
         const val DRAWING_COLOR_TEST: String = "drawing_color_test"
         const val FIX_TEST_FIX: String = "fix_test_fix"
         const val DRAWING_OPTION: String = "drawing_option"
+
+        fun hasNotchOrFrontCamera(context: Context, window: Window?): Boolean {
+            // Check for display cutout (notch/punch hole) which is what matters for UI overlap
+            val hasNotch = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+                window?.decorView?.rootWindowInsets?.displayCutout != null
+            } else false
+
+            // We only care about front camera if it's embedded in the screen (cutout).
+            // Many tablets have cameras in the bezel where they don't interfere.
+            return hasNotch
+        }
     }
 }

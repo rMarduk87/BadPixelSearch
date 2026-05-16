@@ -78,6 +78,29 @@ class ScreenInfoFragment :
         binding.textView112.text = wideColorGamut
         binding.textView122.text = hdrScreen
         binding.textView132.text = pixelFormat
+
+        binding.toolbar.btnShare.setOnClickListener {
+            val infoList = listOf(
+                getString(R.string.full_resolution) to fullResolution,
+                getString(R.string.current_resolution) to currentResolution,
+                getString(R.string.visual_resolution) to visualResolution,
+                getString(R.string.screen_scale) to screenScale,
+                getString(R.string.pixel_density) to pixelDensity,
+                getString(R.string.screen_size) to screenSize,
+                getString(R.string.refresh_rate) to refreshRate,
+                getString(R.string.screen_type) to screenType,
+                getString(R.string.aspect_ratio) to aspectRatio,
+                getString(R.string.screen_brightness) to screenBrightness,
+                getString(R.string.wide_color_gamut) to wideColorGamut,
+                getString(R.string.hdr_screen) to hdrScreen,
+                getString(R.string.pixel_format) to pixelFormat
+            )
+            rpt.tool.badpixelsearch.utils.PdfUtils.shareInfoAsPdf(
+                requireContext(),
+                getString(R.string.screen_info_title),
+                infoList
+            )
+        }
     }
 
     private fun finish() {

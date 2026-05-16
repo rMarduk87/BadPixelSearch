@@ -35,6 +35,7 @@ class MenuFragment :
         super.onViewCreated(view, savedInstanceState)
 
         SharedPreferencesManager.firstRun = false
+        checkAndAdjustToolbar(binding.topBar)
 
         binding.openColorTest.setOnClickListener{
             executeWithSound {

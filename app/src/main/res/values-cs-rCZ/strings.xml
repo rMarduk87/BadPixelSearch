@@ -208,7 +208,7 @@
     <string name="blue_level">ÚROVEŇ MODRÉ</string>
     <string name="gray_level">ÚROVEŇ ŠEDÉ</string>
     <string name="color_all">VŠECHNY BARVY</string>
-    <string name="color_mixer">MÍCHAČ BAREV</string>
+    <string name="color_mixer">Míchač Barev</string>
     <string name="red_level_act">Úroveň červené</string>
     <string name="r_128">R: 128</string>
     <string name="g_0">G: 0</string>
@@ -270,4 +270,6 @@
     <string name="test_completed">Test Completed</string>
     <string name="hole_filled">hole filled</string>
     <string name="gray_lines">Gray lines</string>
+    <string name="app_log_viewer_pro">Log Viewer Pro</string>
+    <string name="app_log_viewer_pro_link">https://play.google.com/store/apps/details?id=rpt.tool.logviewer_aprifilelogetxt</string>
 </resources>

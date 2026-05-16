@@ -76,6 +76,8 @@ class OtherAppsAdapter(
 
         if (`val`.toInt() == 0) drawable = R.drawable.ic_pong_clock
         else if (`val`.toInt() == 1) drawable = R.drawable.ic_marimo_care
+        else if (`val`.toInt() == 2) drawable = R.drawable.ic_log_viewer_pro
+
 
         return drawable
     }

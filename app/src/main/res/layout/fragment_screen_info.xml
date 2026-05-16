@@ -17,118 +17,144 @@
         android:clipToPadding="false"
         android:padding="16dp">
 
-        <LinearLayout
+        <GridLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/bg_info_card"
-            android:orientation="vertical"
-            android:padding="16dp">
+            android:padding="16dp"
+            android:columnCount="@integer/info_grid_column_count">
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="8dp"
                 android:orientation="horizontal">
                 <TextView style="@style/InfoLabel" android:text="@string/full_resolution" />
                 <TextView android:id="@+id/textView2" style="@style/InfoValue" tools:text="1080 x 2400" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="8dp"
                 android:orientation="horizontal">
                 <TextView style="@style/InfoLabel" android:text="@string/current_resolution" />
                 <TextView android:id="@+id/textView22" style="@style/InfoValue" tools:text="1080 x 2400" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="8dp"
                 android:orientation="horizontal">
                 <TextView style="@style/InfoLabel" android:text="@string/visual_resolution" />
                 <TextView android:id="@+id/textView32" style="@style/InfoValue" tools:text="1080 x 2400" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="8dp"
                 android:orientation="horizontal">
                 <TextView style="@style/InfoLabel" android:text="@string/screen_scale" />
                 <TextView android:id="@+id/textView42" style="@style/InfoValue" tools:text="2.625" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="8dp"
                 android:orientation="horizontal">
                 <TextView style="@style/InfoLabel" android:text="@string/pixel_density" />
                 <TextView android:id="@+id/textView52" style="@style/InfoValue" tools:text="420 dpi" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="8dp"
                 android:orientation="horizontal">
                 <TextView style="@style/InfoLabel" android:text="@string/screen_size" />
                 <TextView android:id="@+id/textView62" style="@style/InfoValue" tools:text="6.67 inches" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="8dp"
                 android:orientation="horizontal">
                 <TextView style="@style/InfoLabel" android:text="@string/refresh_rate" />
                 <TextView android:id="@+id/textView72" style="@style/InfoValue" tools:text="120 Hz" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="8dp"
                 android:orientation="horizontal">
                 <TextView style="@style/InfoLabel" android:text="@string/screen_type" />
                 <TextView android:id="@+id/textView82" style="@style/InfoValue" tools:text="OLED" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="8dp"
                 android:orientation="horizontal">
                 <TextView style="@style/InfoLabel" android:text="@string/aspect_ratio" />
                 <TextView android:id="@+id/textView92" style="@style/InfoValue" tools:text="20:9" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="8dp"
                 android:orientation="horizontal">
                 <TextView style="@style/InfoLabel" android:text="@string/screen_brightness" />
                 <TextView android:id="@+id/textView102" style="@style/InfoValue" tools:text="Auto" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="8dp"
                 android:orientation="horizontal">
                 <TextView style="@style/InfoLabel" android:text="@string/wide_color_gamut" />
                 <TextView android:id="@+id/textView112" style="@style/InfoValue" tools:text="Yes" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="8dp"
                 android:orientation="horizontal">
                 <TextView style="@style/InfoLabel" android:text="@string/hdr_screen" />
                 <TextView android:id="@+id/textView122" style="@style/InfoValue" tools:text="Yes (HDR10+)" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="8dp"
                 android:orientation="horizontal">
                 <TextView style="@style/InfoLabel" android:text="@string/pixel_format" />
                 <TextView android:id="@+id/textView132" style="@style/InfoValue" tools:text="RGBA_8888" />
             </LinearLayout>
 
-        </LinearLayout>
+        </GridLayout>
     </androidx.core.widget.NestedScrollView>
 
 </LinearLayout>

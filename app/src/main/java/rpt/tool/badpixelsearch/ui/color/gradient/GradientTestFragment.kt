@@ -13,6 +13,8 @@ import rpt.tool.badpixelsearch.BaseFragment
 import rpt.tool.badpixelsearch.R
 import rpt.tool.badpixelsearch.databinding.FragmentGradientTestBinding
 import rpt.tool.badpixelsearch.utils.navigation.safeNavController
+import java.util.Locale
+import java.util.Locale.getDefault
 import kotlin.math.abs
 
 class GradientTestFragment :
@@ -73,13 +75,21 @@ class GradientTestFragment :
         }
         if (i < 1) i = 7
         when (i) {
-            1 -> modify(R.drawable.white_gradient, getString(R.string.white))
-            2 -> modify(R.drawable.red_gradient, getString(R.string.red))
-            3 -> modify(R.drawable.green_gradient, getString(R.string.green))
-            4 -> modify(R.drawable.blue_gradient, getString(R.string.blue))
-            5 -> modify(R.drawable.magenta_gradient, getString(R.string.magenta))
-            6 -> modify(R.drawable.cyan_gradient, getString(R.string.cyan))
-            7 -> modify(R.drawable.yellow_gradient, getString(R.string.yellow))
+            1 -> modify(R.drawable.white_gradient,
+                getString(R.string.white).uppercase(getDefault())
+            )
+            2 -> modify(R.drawable.red_gradient,
+                getString(R.string.red).uppercase(getDefault()))
+            3 -> modify(R.drawable.green_gradient,
+                getString(R.string.green).uppercase(getDefault()))
+            4 -> modify(R.drawable.blue_gradient,
+                getString(R.string.blue).uppercase(getDefault()))
+            5 -> modify(R.drawable.magenta_gradient,
+                getString(R.string.magenta).uppercase(getDefault()))
+            6 -> modify(R.drawable.cyan_gradient,
+                getString(R.string.cyan).uppercase(getDefault()))
+            7 -> modify(R.drawable.yellow_gradient,
+                getString(R.string.yellow))
         }
     }
 

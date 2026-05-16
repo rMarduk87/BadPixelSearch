@@ -35,8 +35,15 @@ class OtherAppsFragment: BaseFragment<FragmentOtherAppsBinding>(FragmentOtherApp
         appMarimoCare.id = "1"
         appMarimoCare.link = getString(rpt.tool.badpixelsearch.R.string.app_marimo_care_link)
 
+        val appLogViewerPro = OtherApps()
+        appLogViewerPro.name = getString(rpt.tool.badpixelsearch.R.string.app_log_viewer_pro)
+        appLogViewerPro.id = "2"
+        appLogViewerPro.link = getString(rpt.tool.badpixelsearch
+            .R.string.app_log_viewer_pro_link)
+
         other.add(appPongClock)
         other.add(appMarimoCare)
+        other.add(appLogViewerPro)
 
         binding.otherAppsRecyclerView.isNestedScrollingEnabled = false
 

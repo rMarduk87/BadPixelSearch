@@ -22,7 +22,8 @@ class RgbColorMixerFragment:
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        setupToolbar(binding.toolbar.btnBack, binding.toolbar.menuTitle, getString(rpt.tool.badpixelsearch.R.string.color_mixer))
+        setupToolbar(binding.toolbar.btnBack, binding.toolbar.menuTitle,
+            getString(R.string.color_mixer))
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
             binding.cardMixer.setRenderEffect(

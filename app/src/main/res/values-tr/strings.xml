@@ -209,7 +209,7 @@
     <string name="blue_level">MAVİ SEVİYESİ</string>
     <string name="gray_level">GRİ SEVİYESİ</string>
     <string name="color_all">TÜM RENKLER</string>
-    <string name="color_mixer">RENK KARIŞTIRICI</string>
+    <string name="color_mixer">Renk Karıştırıcı</string>
     <string name="red_level_act">Kırmızı Seviyesi</string>
     <string name="r_128">R: 128</string>
     <string name="g_0">G: 0</string>
@@ -271,4 +271,6 @@
     <string name="test_completed">Test Completed</string>
     <string name="hole_filled">hole filled</string>
     <string name="gray_lines">Gray lines</string>
+    <string name="app_log_viewer_pro">Log Viewer Pro</string>
+    <string name="app_log_viewer_pro_link">https://play.google.com/store/apps/details?id=rpt.tool.logviewer_aprifilelogetxt</string>
 </resources>

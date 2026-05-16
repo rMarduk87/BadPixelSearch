@@ -8,7 +8,10 @@ import android.hardware.SensorManager
 import android.os.Bundle
 import android.view.View
 import rpt.tool.badpixelsearch.BaseFragment
+import rpt.tool.badpixelsearch.R
 import rpt.tool.badpixelsearch.databinding.FragmentThreedGravityBinding
+import java.util.Locale
+import java.util.Locale.getDefault
 
 class ThreeDGravityFragment :
     BaseFragment<FragmentThreedGravityBinding>(FragmentThreedGravityBinding::inflate),
@@ -22,7 +25,7 @@ class ThreeDGravityFragment :
         setupToolbar(
             binding.toolbar.btnBack,
             binding.toolbar.menuTitle,
-            getString(rpt.tool.badpixelsearch.R.string._3d_gravity)
+            getString(R.string._3d_gravity).uppercase(getDefault())
         )
 
         sensorManager =

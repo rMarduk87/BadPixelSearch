@@ -13,6 +13,8 @@ import rpt.tool.badpixelsearch.utils.log.e
 import rpt.tool.badpixelsearch.utils.managers.SharedPreferencesManager
 import rpt.tool.badpixelsearch.utils.navigation.safeNavController
 import rpt.tool.badpixelsearch.utils.navigation.safeNavigate
+import java.util.Locale
+import java.util.Locale.getDefault
 
 class RgbColorsMenuFragment :
     BaseFragment<TestsMenuSixBinding>(TestsMenuSixBinding::inflate) {
@@ -22,7 +24,9 @@ class RgbColorsMenuFragment :
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        setupToolbar(binding.toolbar.btnBack, binding.toolbar.menuTitle, getString(R.string.rgb_test))
+        setupToolbar(binding.toolbar.btnBack, binding.toolbar.menuTitle,
+            getString(R.string.rgb_test).uppercase(getDefault())
+        )
         binding.iconAnimated.setImageResource(R.drawable.splash)
 
         binding.text1.text = requireContext().getString(R.string.red_level)

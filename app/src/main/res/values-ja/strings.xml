@@ -271,4 +271,6 @@
     <string name="test_completed">Test Completed</string>
     <string name="hole_filled">hole filled</string>
     <string name="gray_lines">Gray lines</string>
+    <string name="app_log_viewer_pro">Log Viewer Pro</string>
+    <string name="app_log_viewer_pro_link">https://play.google.com/store/apps/details?id=rpt.tool.logviewer_aprifilelogetxt</string>
 </resources>
