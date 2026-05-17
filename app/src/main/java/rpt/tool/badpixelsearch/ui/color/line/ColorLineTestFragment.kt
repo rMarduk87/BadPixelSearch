@@ -25,6 +25,7 @@ class ColorLineTestFragment :
     private var index = 0
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
         names = listOf(
             requireContext().resources.getString(R.string.white_lines),
@@ -34,6 +35,8 @@ class ColorLineTestFragment :
             requireContext().resources.getString(R.string.magenta_lines),
             requireContext().resources.getString(R.string.cyan_lines),
             requireContext().resources.getString(R.string.yellow_lines))
+
+        setupToolbar(binding.toolbar.btnBack, binding.toolbar.menuTitle, names[index])
 
         applyColor()
 
@@ -46,6 +49,6 @@ class ColorLineTestFragment :
     private fun applyColor() {
         val c = colors[index]
         binding.gridView.gridColor = c
-        binding.txtColorName.text = names[index]
+        binding.toolbar.menuTitle.text = names[index]
     }
 }

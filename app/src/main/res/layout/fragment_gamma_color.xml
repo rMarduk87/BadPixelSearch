@@ -5,20 +5,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center_horizontal"
-    android:background="#333333">
+    android:background="@color/dark_gray">
 
-    <TextView
-        android:layout_marginTop="@dimen/dp_21"
-        android:id="@+id/txtTitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/gray"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:padding="16dp"
-        android:textColor="@android:color/white"
-        android:background="#333333"/>
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_transparent_layout" />
 
     <LinearLayout
         android:id="@+id/gammaContainer"

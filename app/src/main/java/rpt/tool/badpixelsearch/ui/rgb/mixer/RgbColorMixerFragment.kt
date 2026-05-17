@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.SeekBar
 import rpt.tool.badpixelsearch.BaseFragment
+import rpt.tool.badpixelsearch.R
 import rpt.tool.badpixelsearch.databinding.FragmentRgbColorMixerBinding
 
 class RgbColorMixerFragment:
@@ -20,6 +21,9 @@ class RgbColorMixerFragment:
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        setupToolbar(binding.toolbar.btnBack, binding.toolbar.menuTitle,
+            getString(R.string.color_mixer))
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
             binding.cardMixer.setRenderEffect(
@@ -40,7 +44,7 @@ class RgbColorMixerFragment:
         binding.seekR.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(sb: SeekBar?, value: Int, fromUser: Boolean) {
                 r = value
-                binding.lblR.text = "R: $value"
+                binding.lblR.text = getString(R.string.r_format, value)
                 updateAllBars()
             }
             override fun onStartTrackingTouch(p0: SeekBar?) {}
@@ -50,7 +54,7 @@ class RgbColorMixerFragment:
         binding.seekG.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(sb: SeekBar?, value: Int, fromUser: Boolean) {
                 g = value
-                binding.lblG.text = "G: $value"
+                binding.lblG.text = getString(R.string.g_format, value)
                 updateAllBars()
             }
             override fun onStartTrackingTouch(p0: SeekBar?) {}
@@ -60,7 +64,7 @@ class RgbColorMixerFragment:
         binding.seekB.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(sb: SeekBar?, value: Int, fromUser: Boolean) {
                 b = value
-                binding.lblB.text = "B: $value"
+                binding.lblB.text = getString(R.string.b_format, value)
                 updateAllBars()
             }
             override fun onStartTrackingTouch(p0: SeekBar?) {}
@@ -70,7 +74,7 @@ class RgbColorMixerFragment:
         binding.seekL.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(sb: SeekBar?, value: Int, fromUser: Boolean) {
                 l = value
-                binding.lblL.text = "L: $value"
+                binding.lblL.text = getString(R.string.l_format, value)
                 updateAllBars()
             }
             override fun onStartTrackingTouch(p0: SeekBar?) {}

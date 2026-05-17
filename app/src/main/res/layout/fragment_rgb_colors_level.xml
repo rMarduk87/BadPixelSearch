@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_transparent_layout" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardMixer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="25dp"
+        app:cardUseCompatPadding="true"
+        app:cardBackgroundColor="#AA1A1A1A"
+        app:strokeColor="#0AA0FF"
+        app:strokeWidth="4dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <!-- R -->
+            <TextView
+                android:id="@+id/lblR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/r_128"
+                android:textColor="#72757d"/>
+
+            <SeekBar
+                android:id="@+id/seekR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="255"
+                android:progress="128"
+                android:thumb="@drawable/white_thumb"
+                android:progressDrawable="@drawable/seek_round"/>
+
+            <!-- G -->
+            <TextView
+                android:id="@+id/lblG"
+                android:layout_marginTop="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/g_0"
+                android:textColor="#72757d"/>
+
+            <SeekBar
+                android:id="@+id/seekG"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="255"
+                android:thumb="@drawable/white_thumb"
+                android:progressDrawable="@drawable/seek_round"/>
+
+            <!-- B -->
+            <TextView
+                android:id="@+id/lblB"
+                android:layout_marginTop="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/b_0"
+                android:textColor="#72757d"/>
+
+            <SeekBar
+                android:id="@+id/seekB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="255"
+                android:thumb="@drawable/white_thumb"
+                android:progressDrawable="@drawable/seek_round"/>
+
+            <!-- L -->
+            <TextView
+                android:id="@+id/lblL"
+                android:layout_marginTop="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/l_102"
+                android:textColor="#72757d"/>
+
+            <SeekBar
+                android:id="@+id/seekL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="255"
+                android:progress="102"
+                android:thumb="@drawable/white_thumb"
+                android:progressDrawable="@drawable/seek_round"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

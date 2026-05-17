@@ -23,20 +23,27 @@ class OtherAppsFragment: BaseFragment<FragmentOtherAppsBinding>(FragmentOtherApp
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.leftIconBlock.setOnClickListener{ finish() }
+        setupToolbar(binding.toolbar.btnBack, binding.toolbar.menuTitle, getString(rpt.tool.badpixelsearch.R.string.other_apps))
 
         val appPongClock = OtherApps()
-        appPongClock.name = "Pong Clock"
+        appPongClock.name = getString(rpt.tool.badpixelsearch.R.string.app_pong_clock_name)
         appPongClock.id = "0"
-        appPongClock.link = "https://play.google.com/store/apps/details?id=rpt.tool.pongclock"
+        appPongClock.link = getString(rpt.tool.badpixelsearch.R.string.app_pong_clock_link)
 
         val appMarimoCare = OtherApps()
-        appMarimoCare.name = "Marimo Care"
+        appMarimoCare.name = getString(rpt.tool.badpixelsearch.R.string.app_marimo_care_name)
         appMarimoCare.id = "1"
-        appMarimoCare.link = "https://play.google.com/store/apps/details?id=rpt.tool.marimocare"
+        appMarimoCare.link = getString(rpt.tool.badpixelsearch.R.string.app_marimo_care_link)
+
+        val appLogViewerPro = OtherApps()
+        appLogViewerPro.name = getString(rpt.tool.badpixelsearch.R.string.app_log_viewer_pro)
+        appLogViewerPro.id = "2"
+        appLogViewerPro.link = getString(rpt.tool.badpixelsearch
+            .R.string.app_log_viewer_pro_link)
 
         other.add(appPongClock)
         other.add(appMarimoCare)
+        other.add(appLogViewerPro)
 
         binding.otherAppsRecyclerView.isNestedScrollingEnabled = false
 

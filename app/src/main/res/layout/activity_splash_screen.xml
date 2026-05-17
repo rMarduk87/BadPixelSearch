@@ -5,10 +5,11 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ic_background_search"
+    android:background="#0A1828"
     tools:context=".SplashScreenActivity">
 
     <ImageView
+        android:id="@+id/icon"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:contentDescription="@string/background"

@@ -24,6 +24,11 @@
                                 <LayoutPositions />
                               </value>
                             </entry>
+                            <entry key="action_animationMenuFragment_to_3dGravityFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
                             <entry key="action_animationMenuFragment_to_menuFragment">
                               <value>
                                 <LayoutPositions />
@@ -35,6 +40,37 @@
                               </value>
                             </entry>
                             <entry key="action_animationMenuFragment_to_rotationFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_animationMenuFragment_to_threeDTestFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_animationMenuFragment_to_twoDTestFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="BadPixelSearchFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="500" />
+                            <option name="y" value="368" />
+                          </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_badPixelSearchFragment_to_fixPixelFragment">
                               <value>
                                 <LayoutPositions />
                               </value>
@@ -73,6 +109,18 @@
                               </value>
                             </entry>
                           </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="ColorLinesTestFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="256" />
+                            <option name="y" value="12" />
+                          </Point>
                         </option>
                       </LayoutPositions>
                     </value>
@@ -130,6 +178,11 @@
                         </option>
                         <option name="myPositions">
                           <map>
+                            <entry key="action_colorTestsMenuFragment_to_badPixelSearchFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
                             <entry key="action_colorTestsMenuFragment_to_colorLineTestFragment">
                               <value>
                                 <LayoutPositions />
@@ -146,6 +199,11 @@
                               </value>
                             </entry>
                             <entry key="action_colorTestsMenuFragment_to_gammaColorFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_colorTestsMenuFragment_to_gradientTestFragment">
                               <value>
                                 <LayoutPositions />
                               </value>
@@ -181,6 +239,49 @@
                       </LayoutPositions>
                     </value>
                   </entry>
+                  <entry key="DrawingCanvasFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="12" />
+                            <option name="y" value="12" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="DrawingMenuFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="-23" />
+                            <option name="y" value="-290" />
+                          </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_drawingMenuFragment_to_colorLinesFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_drawingMenuFragment_to_drawingCanvasFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_drawingMenuFragment_to_stylusLinesFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="FaqFragment">
                     <value>
                       <LayoutPositions>
@@ -202,6 +303,18 @@
                       </LayoutPositions>
                     </value>
                   </entry>
+                  <entry key="FixPixelFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="744" />
+                            <option name="y" value="368" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="FixTestMenuFragment">
                     <value>
                       <LayoutPositions>
@@ -210,6 +323,30 @@
                             <option name="x" value="12" />
                             <option name="y" value="12" />
                           </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_fixTestMenuFragment_to_badPixelSearchFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_fixTestMenuFragment_to_fixPixelFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_fixTestMenuFragment_to_noiseSearchFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_fixTestMenuFragment_to_pixelTestFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
                         </option>
                       </LayoutPositions>
                     </value>
@@ -256,6 +393,18 @@
                       </LayoutPositions>
                     </value>
                   </entry>
+                  <entry key="GradientTestFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="12" />
+                            <option name="y" value="12" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="ItalicFontFragment">
                     <value>
                       <LayoutPositions>
@@ -282,8 +431,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="-157" />
-                            <option name="y" value="-108" />
+                            <option name="x" value="-352" />
+                            <option name="y" value="-154" />
                           </Point>
                         </option>
                         <option name="myPositions">
@@ -308,12 +457,22 @@
                                 <LayoutPositions />
                               </value>
                             </entry>
+                            <entry key="action_menuFragment_to_drawingMenuFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
                             <entry key="action_menuFragment_to_faqFragment">
                               <value>
                                 <LayoutPositions />
                               </value>
                             </entry>
                             <entry key="action_menuFragment_to_fixTestMenuFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_menuFragment_to_multiTestFragment">
                               <value>
                                 <LayoutPositions />
                               </value>
@@ -343,6 +502,11 @@
                                 <LayoutPositions />
                               </value>
                             </entry>
+                            <entry key="action_menuFragment_to_touchMenuFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
                           </map>
                         </option>
                       </LayoutPositions>
@@ -365,6 +529,54 @@
                               </value>
                             </entry>
                           </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="MultiTestFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="12" />
+                            <option name="y" value="12" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="MultiTouchFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="12" />
+                            <option name="y" value="368" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="MultiTouchTwoFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="12" />
+                            <option name="y" value="368" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="NoiseSearchFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="256" />
+                            <option name="y" value="12" />
+                          </Point>
                         </option>
                       </LayoutPositions>
                     </value>
@@ -411,6 +623,18 @@
                       </LayoutPositions>
                     </value>
                   </entry>
+                  <entry key="PixelTestFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="256" />
+                            <option name="y" value="368" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="ReadingTestFragment">
                     <value>
                       <LayoutPositions>
@@ -428,6 +652,18 @@
                               </value>
                             </entry>
                           </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="ResponseTimeFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="256" />
+                            <option name="y" value="368" />
+                          </Point>
                         </option>
                       </LayoutPositions>
                     </value>
@@ -453,6 +689,18 @@
                       </LayoutPositions>
                     </value>
                   </entry>
+                  <entry key="RgbColorsLevelFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="500" />
+                            <option name="y" value="12" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="RgbColorsMenuFragment">
                     <value>
                       <LayoutPositions>
@@ -465,6 +713,11 @@
                         <option name="myPositions">
                           <map>
                             <entry key="action_rgbColorsMenuFragment_to_rgbColorMixerFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_rgbColorsMenuFragment_to_rgbColorsLevelFragment">
                               <value>
                                 <LayoutPositions />
                               </value>
@@ -537,6 +790,42 @@
                       </LayoutPositions>
                     </value>
                   </entry>
+                  <entry key="SingleTouchFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="-799" />
+                            <option name="y" value="-180" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="SingleTouchTwoFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="256" />
+                            <option name="y" value="368" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="StylusLinesFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="12" />
+                            <option name="y" value="12" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="SystemFontMenuFragment">
                     <value>
                       <LayoutPositions>
@@ -599,6 +888,64 @@
                       </LayoutPositions>
                     </value>
                   </entry>
+                  <entry key="ThreeDTestFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="12" />
+                            <option name="y" value="368" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="TouchMenuFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="-856" />
+                            <option name="y" value="244" />
+                          </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_touchMenuFragment_to_multiTouchFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_touchMenuFragment_to_multiTouchTwoFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_touchMenuFragment_to_responseTimeFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_touchMenuFragment_to_singleTouchFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_touchMenuFragment_to_singleTouchTwoFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                            <entry key="action_touchMenuFragment_to_zoomAndRotateFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="TwoDGravityFragment">
                     <value>
                       <LayoutPositions>
@@ -616,6 +963,30 @@
                               </value>
                             </entry>
                           </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="TwoDTestFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="744" />
+                            <option name="y" value="12" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="ZoomAndRotateFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="-446" />
+                            <option name="y" value="255" />
+                          </Point>
                         </option>
                       </LayoutPositions>
                     </value>

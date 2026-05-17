@@ -31,39 +31,10 @@
         tools:ignore="RtlEnabled,UnusedAttribute"
         tools:targetApi="31">
         <activity
-            android:name=".RgbColorsLevelActivity"
-            android:exported="false" />
-        <activity
-            android:name=".TwoDTestActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ThreeDTestActivity"
-            android:exported="false"
-            android:screenOrientation="fullSensor" />
-        <activity
-            android:name=".GradientTestActivity"
-            android:exported="false" />
-        <activity
-            android:name=".NoiseSearchActivity"
-            android:exported="false" />
-        <activity
-            android:name=".BadPixelSearchActivity"
-            android:configChanges="orientation"
-            android:exported="false"
-            android:screenOrientation="portrait"
-            tools:ignore="DiscouragedApi,LockedOrientationActivity" />
-        <activity
-            android:name=".PixelTestActivity"
-            android:configChanges="orientation"
-            android:exported="false"
-            android:screenOrientation="portrait"
-            tools:ignore="DiscouragedApi,LockedOrientationActivity" />
-        <activity
             android:name=".SplashScreenActivity"
-            android:configChanges="orientation"
+            android:configChanges="screenSize|screenLayout|keyboardHidden"
             android:exported="true"
-            android:screenOrientation="portrait"
-            tools:ignore="DiscouragedApi,LockedOrientationActivity">
+            tools:ignore="DiscouragedApi">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -71,17 +42,20 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".FixPixelActivity"
-            android:configChanges="orientation"
-            android:exported="false"
-            android:screenOrientation="portrait"
-            tools:ignore="DiscouragedApi,LockedOrientationActivity" />
-        <activity
             android:name=".MainActivity"
-            android:configChanges="orientation"
+            android:configChanges="screenSize|screenLayout|keyboardHidden"
             android:exported="true"
-            android:screenOrientation="portrait"
-            tools:ignore="DiscouragedApi,LockedOrientationActivity" />
+            tools:ignore="DiscouragedApi" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
     </application>
 
 </manifest>

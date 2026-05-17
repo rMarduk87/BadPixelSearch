@@ -5,55 +5,11 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ic_background_search">
+    android:background="@color/navy_dark">
 
-    <androidx.appcompat.widget.Toolbar
+    <include
         android:id="@+id/toolbar"
-        style="@style/toolbar"
-        app:contentInsetStart="0dp"
-        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
-
-        <RelativeLayout
-            android:layout_marginTop="@dimen/dp_30"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <LinearLayout
-                android:id="@+id/left_icon_block"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingStart="@dimen/dp_3"
-                android:layout_centerVertical="true"
-                android:layout_alignParentStart="true"
-                tools:ignore="RtlSymmetry">
-
-                <ImageView
-                    android:id="@+id/btn_back"
-                    android:layout_width="@dimen/dp_20"
-                    android:layout_height="@dimen/dp_20"
-                    android:contentDescription="@string/img"
-                    android:src="@drawable/ic_back"
-                    app:tint="@color/white"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:orientation="vertical">
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/lbl_toolbar_title"
-                    style="@style/toolbar_main_title"
-                    android:text="@string/other_apps" />
-
-            </LinearLayout>
-
-
-        </RelativeLayout>
-
-    </androidx.appcompat.widget.Toolbar>
+        layout="@layout/toolbar_layout" />
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/nestedScrollView"

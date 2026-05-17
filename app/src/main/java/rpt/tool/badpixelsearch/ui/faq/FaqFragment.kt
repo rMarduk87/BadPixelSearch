@@ -24,7 +24,7 @@ class FaqFragment : BaseFragment<FragmentFaqBinding>(FragmentFaqBinding::inflate
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.leftIconBlock.setOnClickListener{ finish() }
+        setupToolbar(binding.toolbar.btnBack, binding.toolbar.menuTitle, getString(R.string.faq))
 
         setFAQData()
         loadFAQData()

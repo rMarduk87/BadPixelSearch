@@ -9,6 +9,7 @@ import android.app.AlertDialog
 import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.graphics.Point
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -16,14 +17,8 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.core.net.toUri
 import androidx.core.view.GravityCompat
-import rpt.tool.badpixelsearch.BadPixelSearchActivity
 import rpt.tool.badpixelsearch.BaseFragment
-import rpt.tool.badpixelsearch.GradientTestActivity
-import rpt.tool.badpixelsearch.NoiseSearchActivity
-import rpt.tool.badpixelsearch.PixelTestActivity
 import rpt.tool.badpixelsearch.R
-import rpt.tool.badpixelsearch.ThreeDTestActivity
-import rpt.tool.badpixelsearch.TwoDTestActivity
 import rpt.tool.badpixelsearch.databinding.FragmentMenuBinding
 import rpt.tool.badpixelsearch.utils.managers.SharedPreferencesManager
 import rpt.tool.badpixelsearch.utils.navigation.safeNavController
@@ -36,73 +31,128 @@ class MenuFragment :
 
     private val durationValue = 6000L
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         SharedPreferencesManager.firstRun = false
+        checkAndAdjustToolbar(binding.topBar)
 
-        binding.include.openColorTestMenuBtn.setOnClickListener{
-            safeNavController?.safeNavigate(
-                MenuFragmentDirections.actionMenuFragmentToColorTestMenuFragment())
+        binding.openColorTest.setOnClickListener{
+            executeWithSound {
+                safeNavController?.safeNavigate(
+                    MenuFragmentDirections.actionMenuFragmentToColorTestMenuFragment())
+            }
         }
 
-        binding.include.openAnimationTestBtn.setOnClickListener{
-            safeNavController?.safeNavigate(
-                MenuFragmentDirections.actionMenuFragmentToAnimationTestMenuFragment())
+        binding.openAnimationTest.setOnClickListener{
+            executeWithSound {
+                safeNavController?.safeNavigate(
+                    MenuFragmentDirections
+                        .actionMenuFragmentToAnimationTestMenuFragment())
+            }
         }
 
-        binding.include.openCameraTests.setOnClickListener {
-            safeNavController?.safeNavigate(
-                MenuFragmentDirections.actionMenuFragmentToCameraTestMenuFragment()
-            )
+        binding.openCameraTest.setOnClickListener {
+            executeWithSound {
+                safeNavController?.safeNavigate(
+                    MenuFragmentDirections.actionMenuFragmentToCameraTestMenuFragment()
+                )
+            }
         }
 
-        binding.include.openFixPixelBtn.setOnClickListener {
-            safeNavController?.safeNavigate(
-                MenuFragmentDirections.actionMenuFragmentToFixTestMenuFragment()
-            )
+        binding.openFixPixels.setOnClickListener {
+            executeWithSound {
+                safeNavController?.safeNavigate(
+                    MenuFragmentDirections.actionMenuFragmentToFixTestMenuFragment()
+                )
+            }
         }
 
-        binding.include.openSystemFontBtn.setOnClickListener{
-            safeNavController?.safeNavigate(
-                MenuFragmentDirections.actionMenuFragmentToSystemFontMenuFragment())
+        binding.openSystemFontTest.setOnClickListener{
+            executeWithSound {
+                safeNavController?.safeNavigate(
+                    MenuFragmentDirections.actionMenuFragmentToSystemFontMenuFragment())
+            }
         }
 
-        binding.include.openRgbColorsBtn.setOnClickListener {
-            safeNavController?.safeNavigate(MenuFragmentDirections
-                .actionMenuFragmentToRgbColorMenuFragment())
+        binding.openRgbColorTests.setOnClickListener {
+            executeWithSound {
+                safeNavController?.safeNavigate(MenuFragmentDirections
+                    .actionMenuFragmentToRgbColorMenuFragment())
+            }
         }
 
-        val point = Point()
-        requireActivity().windowManager.defaultDisplay.getSize(point)
-        val width = binding.include.logoAnimated.measuredWidth.toFloat()
+        binding.openDrawingTest.setOnClickListener {
+            executeWithSound {
+                safeNavController?.safeNavigate(MenuFragmentDirections.
+                actionMenuFragmentToDrawingMenuFragment())
+            }
+        }
 
-        val animator1 = ObjectAnimator
-            .ofFloat(binding.include.logoAnimated,
-                "translationX", 0f, -(width - point.x)).apply {
+        binding.openTouchTest.setOnClickListener {
+            executeWithSound {
+                safeNavController?.safeNavigate(
+                MenuFragmentDirections.actionMenuFragmentToTouchMenuFragment())
+            }
+        }
+
+        binding.logoAnimated.post {
+            val point = Point()
+            requireActivity().windowManager.defaultDisplay.getSize(point)
+            val iconWidth = binding.logoAnimated.width.toFloat()
+            val maxTranslation = (point.x - iconWidth) / 2f
+
+            val animator1 = ObjectAnimator
+                .ofFloat(binding.logoAnimated,
+                    "translationX", 0f, -maxTranslation).apply {
                     duration = durationValue
                     repeatCount = 1
                     repeatMode = ValueAnimator.REVERSE
-            }
+                }
 
-        val animator2 = ObjectAnimator
-            .ofFloat(binding.include.logoAnimated,"translationX",
-                0f, +(width - point.x)).apply {
-                duration = durationValue
-                repeatCount = 1
-                repeatMode = ValueAnimator.REVERSE
-            }
+            val animator2 = ObjectAnimator
+                .ofFloat(binding.logoAnimated,"translationX",
+                    0f, maxTranslation).apply {
+                    duration = durationValue
+                    repeatCount = 1
+                    repeatMode = ValueAnimator.REVERSE
+                }
 
-        val animatorSet = AnimatorSet()
-        animatorSet.playSequentially(animator1, animator2)
-        animatorSet.start()
+            val animatorSet = AnimatorSet()
+            animatorSet.playSequentially(animator1, animator2)
+            animatorSet.start()
+        }
 
         binding.btnOpenDrawer.setOnClickListener{
-            binding.drawerLayout.openDrawer(GravityCompat.START)
+            binding.drawerLayout.openDrawer(GravityCompat.END)
+        }
+
+        binding.sound.setOnClickListener {
+            SharedPreferencesManager.sound = !SharedPreferencesManager.sound
         }
 
         setupNavigationDrawer()
+
+        binding.multi.setOnClickListener {
+            safeNavController?.safeNavigate(MenuFragmentDirections.
+            actionMenuFragmentToMultiTestFragment())
+        }
+    }
+
+    private fun executeWithSound(action: () -> Unit) {
+        if (SharedPreferencesManager.sound) {
+            try {
+                val mediaPlayer = MediaPlayer.create(requireContext(),
+                    R.raw.click_sound)
+                mediaPlayer?.setOnCompletionListener {
+                    it.release()
+                }
+                mediaPlayer?.start()
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }
+        action()
     }
 
     @SuppressLint("IntentReset")
@@ -140,7 +190,6 @@ class MenuFragment :
 
         binding.navigationView.setNavigationItemSelectedListener { menuItem ->
 
-
             when (menuItem.itemId) {
                 R.id.nav_faq -> {
                     safeNavController?.safeNavigate(
@@ -172,7 +221,7 @@ class MenuFragment :
                 }
             }
 
-            binding.drawerLayout.closeDrawer(GravityCompat.START)
+            binding.drawerLayout.closeDrawer(GravityCompat.END)
 
             true
         }
@@ -181,24 +230,27 @@ class MenuFragment :
     private fun showContactsDialog() {
         val li = LayoutInflater.from(requireContext())
         val promptsView = li.inflate(R.layout.sender_dialog, null)
-        val alertDialogBuilder = AlertDialog.Builder(requireContext())
-        alertDialogBuilder.setView(promptsView)
+        
+        val alertDialog = AlertDialog.Builder(requireContext(), R.style.alert_dialog)
+            .setView(promptsView)
+            .setPositiveButton(getString(R.string.send_req)) { _, _ ->
+                val userInputTextSub: EditText = promptsView.findViewById(R.id.txtSub)
+                val userInputTxtMsg: EditText = promptsView.findViewById(R.id.txtMsg)
+                val inputText = userInputTextSub.text.toString()
+                val inputTextMsg = userInputTxtMsg.text.toString()
+                sendMail(requireActivity(),
+                    arrayOf(resources.getString(R.string.to)), inputText,
+                    inputTextMsg)
+                userInputTxtMsg.text.clear()
+            }
+            .setNegativeButton(getString(R.string.button_close_fix)) { dialog, _ -> dialog.cancel() }
+            .create()
 
-        val userInputTextSub: EditText = promptsView.findViewById(R.id.txtSub)
-        val userInputTxtMsg: EditText = promptsView.findViewById(R.id.txtMsg)
-
-
-        alertDialogBuilder.setPositiveButton("OK") { _, _ ->
-            val inputText = userInputTextSub.text.toString()
-            val inputTextMsg = userInputTxtMsg.text.toString()
-            sendMail(requireActivity(),
-                arrayOf(resources.getString(R.string.to)), inputText,
-                inputTextMsg)
-            userInputTxtMsg.text.clear() }
-            .setNegativeButton("Cancel") { dialog, _ -> dialog.cancel() }
-
-        val alertDialog = alertDialogBuilder.create()
         alertDialog.show()
+        
+        // Style buttons after show
+        alertDialog.getButton(AlertDialog.BUTTON_POSITIVE)?.setTextColor(resources.getColor(R.color.white_blueish))
+        alertDialog.getButton(AlertDialog.BUTTON_NEGATIVE)?.setTextColor(resources.getColor(R.color.light_gray))
     }
-    
+
 }

@@ -107,7 +107,7 @@
     <string name="sdk">SDK</string>
     <string name="answer">Risposta</string>
     <string name="green_screen">Schermo verde</string>
-    <string name="gradient">Gradiente</string>
+    <string name="gradient">GRADIENTE</string>
     <string name="white">Bianco</string>
     <string name="red">Rosso</string>
     <string name="green">Verde</string>
@@ -209,7 +209,7 @@
     <string name="blue_level">LIVELLO BLU</string>
     <string name="gray_level">LIVELLO GRIGIO</string>
     <string name="color_all">TUTTI I COLORI</string>
-    <string name="color_mixer">MIX COLORI</string>
+    <string name="color_mixer">Mix Colori</string>
     <string name="red_level_act">Livello Rosso</string>
     <string name="r_128">R: 128</string>
     <string name="g_0">G: 0</string>
@@ -242,5 +242,35 @@
     <string name="vendor">Fornitore:</string>
     <string name="sensor_info_title">Elenco dei sensori del dispositivo</string>
     <string name="_2d_gravity">Gravità 2D</string>
-    <string name="_3d_gravity">Garvità 3D</string>
+    <string name="_3d_gravity">Gravità 3D</string>
+    <string name="touch_tests">TOUCH TESTS </string>
+    <string name="drawing_tests">DRAWING TESTS </string>
+    <string name="_1">1</string>
+    <string name="v">V</string>
+    <string name="drawing_test_full">DRAWING TESTS</string>
+    <string name="touch_test_1">Single touch</string>
+    <string name="touch_test_2">Single touch 2</string>
+    <string name="touch_test_3">Multi touch</string>
+    <string name="touch_test_4">Multi touch 2</string>
+    <string name="touch_test_5">Zoom and rotate</string>
+    <string name="touch_test_6">Response time</string>
+    <string name="touch_tests_full">TOUCH TESTS</string>
+    <string name="filled_0">Filled: 0%</string>
+    <string name="filled">Filled:</string>
+    <string name="drawing_test_1">Normal lines</string>
+    <string name="drawing_test_2">Normal lines 2</string>
+    <string name="drawing_test_3">Fading lines</string>
+    <string name="drawing_test_4">Fading lines 2</string>
+    <string name="drawing_test_5">Stylus lines</string>
+    <string name="drawing_test_6">Color lines</string>
+    <string name="touch_the_screen">Touch the screen</string>
+    <string name="fingers_0">Fingers: 0</string>
+    <string name="fingers">"Fingers: "</string>
+    <string name="quick_taps">Quick taps</string>
+    <string name="fill_all">Fill in all holes</string>
+    <string name="test_completed">Test Completed</string>
+    <string name="hole_filled">hole filled</string>
+    <string name="gray_lines">Gray lines</string>
+    <string name="app_log_viewer_pro">Log Viewer Pro</string>
+    <string name="app_log_viewer_pro_link">https://play.google.com/store/apps/details?id=rpt.tool.logviewer_aprifilelogetxt</string>
 </resources>

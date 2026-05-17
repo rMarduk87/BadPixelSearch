@@ -25,10 +25,8 @@ class SensorAdapter(
 
     override fun onBindViewHolder(holder: SensorViewHolder, position: Int) {
         val sensor = sensors[position]
-        holder.name.text = holder.itemView.context.getString(R.string.sensor_name) + " " +
-                sensor.name
-        holder.vendor.text = holder.itemView.context.getString(R.string.vendor) + " " +
-                sensor.vendor
+        holder.name.text = sensor.name
+        holder.vendor.text = sensor.vendor
     }
 
     override fun getItemCount(): Int = sensors.size
