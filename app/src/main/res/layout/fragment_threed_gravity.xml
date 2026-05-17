@@ -4,21 +4,15 @@
     android:layout_height="match_parent"
     android:background="#000000">
 
-    <!-- Titolo -->
-    <TextView
-        android:id="@+id/txtTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/_3d_gravity"
-        android:textColor="#FFFFFF"
-        android:textSize="22sp"
-        android:layout_gravity="top|center_horizontal"
-        android:layout_marginTop="@dimen/dp_34" />
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_transparent_layout" />
 
     <!-- Simulazione -->
     <rpt.tool.badpixelsearch.utils.view.physics.Gravity3DBallView
         android:id="@+id/gravityView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_marginTop="104dp" />
 
 </FrameLayout>

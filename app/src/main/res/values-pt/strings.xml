@@ -18,12 +18,12 @@
     <string name="send_req">PEDIDO</string>
     <string name="choose_mail_app">Escolha o aplicativo Mail</string>
     <string name="to">rptechnologies.info@gmail.com</string>
-    <string name="automatic">Moda automática</string>
+    <string name="automatic">Modo automático</string>
     <string name="settings">CONFIGURAÇÕES</string>
     <string name="settings_t">CONFIGURAÇÕES</string>
     <string name="speed">Velocidade de rolagem</string>
     <string name="normal">Normal</string>
-    <string name="fast">Veloce</string>
+    <string name="fast">Rápido</string>
     <string name="help">Ao ativar o modo automático o aplicativo irá rolar pelas cores de teste, para ativá-lo clique no botão na parte inferior, escolha a velocidade de rolagem, retorne a esta tela e deslize para a direita para iniciar.</string>
     <string name="interval">Duração do modo automático</string>
     <string name="min">m</string>
@@ -107,7 +107,7 @@
     <string name="sdk">SDK</string>
     <string name="answer">Resposta</string>
     <string name="green_screen">Tela verde</string>
-    <string name="gradient">Gradiente</string>
+    <string name="gradient">GRADIENTE</string>
     <string name="white">Branco</string>
     <string name="red">Vermelho</string>
     <string name="green">Verde</string>
@@ -209,7 +209,7 @@
     <string name="blue_level">NÍVEL DE AZUL</string>
     <string name="gray_level">NÍVEL DE CINZA</string>
     <string name="color_all">TODAS AS CORES</string>
-    <string name="color_mixer">MISTURA DE CORES</string>
+    <string name="color_mixer">Mistura de Cores</string>
     <string name="red_level_act">Nível de Vermelho</string>
     <string name="r_128">R: 128</string>
     <string name="g_0">G: 0</string>
@@ -243,4 +243,34 @@
     <string name="sensor_info_title">Lista de sensores do dispositivo</string>
     <string name="_2d_gravity">Gravidade 2D</string>
     <string name="_3d_gravity">Gravidade 3D</string>
+    <string name="touch_tests">TOUCH TESTS </string>
+    <string name="drawing_tests">DRAWING TESTS </string>
+    <string name="_1">1</string>
+    <string name="v">V</string>
+    <string name="drawing_test_full">DRAWING TESTS</string>
+    <string name="touch_test_1">Single touch</string>
+    <string name="touch_test_2">Single touch 2</string>
+    <string name="touch_test_3">Multi touch</string>
+    <string name="touch_test_4">Multi touch 2</string>
+    <string name="touch_test_5">Zoom and rotate</string>
+    <string name="touch_test_6">Response time</string>
+    <string name="touch_tests_full">TOUCH TESTS</string>
+    <string name="filled_0">Filled: 0%</string>
+    <string name="filled">Filled:</string>
+    <string name="drawing_test_1">Normal lines</string>
+    <string name="drawing_test_2">Normal lines 2</string>
+    <string name="drawing_test_3">Fading lines</string>
+    <string name="drawing_test_4">Fading lines 2</string>
+    <string name="drawing_test_5">Stylus lines</string>
+    <string name="drawing_test_6">Color lines</string>
+    <string name="touch_the_screen">Touch the screen</string>
+    <string name="fingers_0">Fingers: 0</string>
+    <string name="fingers">"Fingers: "</string>
+    <string name="quick_taps">Quick taps</string>
+    <string name="fill_all">Fill in all holes</string>
+    <string name="test_completed">Test Completed</string>
+    <string name="hole_filled">hole filled</string>
+    <string name="gray_lines">Gray lines</string>
+    <string name="app_log_viewer_pro">Log Viewer Pro</string>
+    <string name="app_log_viewer_pro_link">https://play.google.com/store/apps/details?id=rpt.tool.logviewer_aprifilelogetxt</string>
 </resources>

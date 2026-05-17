@@ -15,7 +15,8 @@ import rpt.tool.badpixelsearch.MainActivity
 import rpt.tool.badpixelsearch.databinding.FragmentDeviceInfoBinding
 
 
-class DeviceInfoFragment : BaseFragment<FragmentDeviceInfoBinding>(FragmentDeviceInfoBinding::inflate) {
+class DeviceInfoFragment :
+    BaseFragment<FragmentDeviceInfoBinding>(FragmentDeviceInfoBinding::inflate) {
 
     private var model = ""
     private var manufacturer = ""
@@ -36,7 +37,8 @@ class DeviceInfoFragment : BaseFragment<FragmentDeviceInfoBinding>(FragmentDevic
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.leftIconBlock.setOnClickListener{ finish() }
+        setupToolbar(binding.toolbar.btnBack, binding.toolbar.menuTitle, getString(rpt.tool.badpixelsearch.R.string.device_info_title))
+        binding.toolbar.btnShare.visibility = View.VISIBLE
 
         model = Build.MODEL
         manufacturer = Build.MANUFACTURER
@@ -66,6 +68,29 @@ class DeviceInfoFragment : BaseFragment<FragmentDeviceInfoBinding>(FragmentDevic
         binding.textView112.text = this.display
         binding.textView122.text = android
         binding.textView132.text = sdk
+
+        binding.toolbar.btnShare.setOnClickListener {
+            val infoList = listOf(
+                getString(rpt.tool.badpixelsearch.R.string.model) to model,
+                getString(rpt.tool.badpixelsearch.R.string.manufacturer) to manufacturer,
+                getString(rpt.tool.badpixelsearch.R.string.productor) to product,
+                getString(rpt.tool.badpixelsearch.R.string.device) to device,
+                getString(rpt.tool.badpixelsearch.R.string.brand) to brand,
+                getString(rpt.tool.badpixelsearch.R.string.board) to board,
+                getString(rpt.tool.badpixelsearch.R.string.hardware) to hardware,
+                getString(rpt.tool.badpixelsearch.R.string.architecture) to architecture,
+                getString(rpt.tool.badpixelsearch.R.string.cpu) to cpuABI,
+                getString(rpt.tool.badpixelsearch.R.string.device_id) to deviceID,
+                getString(rpt.tool.badpixelsearch.R.string.display) to display,
+                getString(rpt.tool.badpixelsearch.R.string.android) to android,
+                getString(rpt.tool.badpixelsearch.R.string.sdk) to sdk
+            )
+            rpt.tool.badpixelsearch.utils.PdfUtils.shareInfoAsPdf(
+                requireContext(),
+                getString(rpt.tool.badpixelsearch.R.string.device_info_title),
+                infoList
+            )
+        }
     }
 
     private fun finish() {

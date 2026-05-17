@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_info_card"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/dialogTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="@string/screen_info_title"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold|italic" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textOne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_square_dark"
+                android:padding="12dp"
+                android:text="@string/walkthrough_text_one"
+                android:textColor="@color/white_blueish"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textTwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_square_dark"
+                android:padding="12dp"
+                android:text="@string/walkthrough_text_two"
+                android:textColor="@color/white_blueish"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textThree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_square_dark"
+                android:padding="12dp"
+                android:text="@string/walkthrough_text_three"
+                android:textColor="@color/white_blueish"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textFour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_square_dark"
+                android:padding="12dp"
+                android:text="@string/walkthrough_text_four"
+                android:textColor="@color/white_blueish"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnClose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/blue_cerulean"
+        android:text="@string/button_close_fix"
+        android:textColor="@color/white" />
+
+</LinearLayout>

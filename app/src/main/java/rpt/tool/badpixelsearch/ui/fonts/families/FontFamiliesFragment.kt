@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
 import rpt.tool.badpixelsearch.BaseFragment
 import rpt.tool.badpixelsearch.R
@@ -15,10 +16,18 @@ import rpt.tool.badpixelsearch.utils.managers.SharedPreferencesManager
 class FontFamiliesFragment :
     BaseFragment<FragmentFontFamiliesBinding>(FragmentFontFamiliesBinding::inflate) {
 
-    private val colors = listOf(
-        Color.GRAY, Color.WHITE, Color.RED, Color.GREEN,
-        Color.BLUE, Color.MAGENTA, Color.CYAN, Color.YELLOW
-    )
+    private val colors by lazy {
+        listOf(
+            ContextCompat.getColor(requireContext(), R.color.gray),
+            ContextCompat.getColor(requireContext(), R.color.white),
+            ContextCompat.getColor(requireContext(), R.color.red),
+            ContextCompat.getColor(requireContext(), R.color.green),
+            ContextCompat.getColor(requireContext(), R.color.blue),
+            ContextCompat.getColor(requireContext(), R.color.magenta),
+            ContextCompat.getColor(requireContext(), R.color.cyan),
+            ContextCompat.getColor(requireContext(), R.color.yellow)
+        )
+    }
 
     private val colorsText = listOf(
         R.string.gray_text, R.string.white_text, R.string.red_text,
@@ -28,7 +37,7 @@ class FontFamiliesFragment :
 
     private var colorIndex = 0
     private var fontIndex = 0
-    private var currentColor: Int = Color.GRAY
+    private var currentColor: Int = Color.GRAY // Temporary, will be set in onViewCreated
 
     private val titleIds = setOf(
         R.id.title_xsmall, R.id.title_small, R.id.title_medium, R.id.title_large
@@ -38,6 +47,14 @@ class FontFamiliesFragment :
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        currentColor = colors[0]
+
+        setupToolbar(
+            binding.toolbar.btnBack,
+            binding.toolbar.menuTitle,
+            getString(colorsText[colorIndex])
+        )
 
         findAllTextViews()
 
@@ -69,7 +86,7 @@ class FontFamiliesFragment :
 
         if (view is TextView) {
             val id = view.id
-            if (id != R.id.txtSelected && id !in titleIds) {
+            if (id != R.id.txtSelected && id !in titleIds && id != R.id.menuTitle) {
                 textLines.add(view)
             }
         }
@@ -87,7 +104,7 @@ class FontFamiliesFragment :
 
         applyColor(newColor)
 
-        binding.txtSelected.text = getString(colorsText[colorIndex])
+        binding.toolbar.menuTitle.text = getString(colorsText[colorIndex])
     }
 
     private fun applyColor(color: Int) {

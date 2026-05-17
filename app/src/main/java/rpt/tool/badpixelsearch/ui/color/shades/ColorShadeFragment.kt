@@ -42,6 +42,8 @@ class ColorShadeFragment :
             requireContext().resources.getString(R.string.cyan),
             requireContext().resources.getString(R.string.yellow))
 
+        setupToolbar(binding.toolbar.btnBack, binding.toolbar.menuTitle)
+
         setupBoxes()
         applyColor()
 
@@ -107,12 +109,15 @@ class ColorShadeFragment :
             )
         }
 
-        binding.txtTitle.text = buildString {
+        binding.toolbar.menuTitle.text = buildString {
             append(getString(R.string._16_shades_of))
             append(" ")
             append(name)
         }
-        binding.txtTitle.setTextColor(
+        binding.toolbar.menuTitle.setTextColor(
+            if (isColorDark(currentColor)) Color.WHITE else Color.BLACK
+        )
+        binding.toolbar.btnBack.setColorFilter(
             if (isColorDark(currentColor)) Color.WHITE else Color.BLACK
         )
     }

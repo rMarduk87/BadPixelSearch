@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="menu_column_count">4</integer>
+    <integer name="submenu_column_count">2</integer>
+    <integer name="single_touch_1_columns">20</integer>
+    <integer name="single_touch_1_rows">10</integer>
+    <integer name="single_touch_2_columns">40</integer>
+    <integer name="single_touch_2_rows">20</integer>
+</resources>

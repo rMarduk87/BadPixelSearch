@@ -42,15 +42,11 @@ class ColorScalesFragment:
 
         generateLevels()
 
+        setupToolbar(binding.toolbar.btnBack, binding.toolbar.menuTitle)
+
         binding.mainLayout.setOnClickListener {
             currentColorIndex = (currentColorIndex + 1) % colorModes.size
             updateColors()
-        }
-
-        ViewCompat.setOnApplyWindowInsetsListener(binding.txtTitle) { v, insets ->
-            val topInset = insets.getInsets(WindowInsetsCompat.Type.systemBars()).top
-            v.setPadding(0, topInset, 0, 0)
-            insets
         }
 
     }
@@ -93,7 +89,7 @@ class ColorScalesFragment:
             else -> Triple(255, 255, 255)
         }
 
-        binding.txtTitle.text = buildString {
+        binding.toolbar.menuTitle.text = buildString {
             append(getString(R.string._16_levels_of))
             append(" ")
             append(names[currentColorIndex])

@@ -8,6 +8,8 @@ import android.widget.TextView
 import rpt.tool.badpixelsearch.BaseFragment
 import rpt.tool.badpixelsearch.R
 import rpt.tool.badpixelsearch.databinding.FragmentGammaColorBinding
+import java.util.Locale
+import java.util.Locale.getDefault
 import kotlin.math.pow
 
 class ColorGammaFragment :
@@ -21,23 +23,23 @@ class ColorGammaFragment :
         super.onViewCreated(view, savedInstanceState)
 
         baseColors = listOf(
-            Pair(getString(R.string.gray), Color.GRAY),
-            Pair(getString(R.string.red), Color.RED),
-            Pair(getString(R.string.green), Color.GREEN),
-            Pair(getString(R.string.blue), Color.BLUE),
-            Pair(getString(R.string.magenta), Color.MAGENTA),
-            Pair(getString(R.string.cyan), Color.CYAN),
-            Pair(getString(R.string.yellow), Color.YELLOW)
+            Pair(getString(R.string.gray).uppercase(getDefault()), Color.GRAY),
+            Pair(getString(R.string.red).uppercase(getDefault()), Color.RED),
+            Pair(getString(R.string.green).uppercase(getDefault()), Color.GREEN),
+            Pair(getString(R.string.blue).uppercase(getDefault()), Color.BLUE),
+            Pair(getString(R.string.magenta).uppercase(getDefault()), Color.MAGENTA),
+            Pair(getString(R.string.cyan).uppercase(getDefault()), Color.CYAN),
+            Pair(getString(R.string.yellow).uppercase(getDefault()), Color.YELLOW)
         )
 
-        // 3. Ensure the initial text is set (since the list was just created)
-        binding.txtTitle.text = baseColors[currentIndex].first
+        setupToolbar(binding.toolbar.btnBack, binding.toolbar.menuTitle,
+            baseColors[currentIndex].first)
 
         createGammaBars(baseColors[currentIndex].second)
 
         binding.mainContainer.setOnClickListener {
             currentIndex = (currentIndex + 1) % baseColors.size
-            binding.txtTitle.text = baseColors[currentIndex].first
+            binding.toolbar.menuTitle.text = baseColors[currentIndex].first
             createGammaBars(baseColors[currentIndex].second)
         }
     }

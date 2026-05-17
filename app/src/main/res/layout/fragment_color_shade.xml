@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-android:id="@+id/mainContainer"
-android:orientation="vertical"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:padding="12dp">
-
-<TextView
-    android:layout_marginTop="@dimen/dp_18"
-    android:id="@+id/txtTitle"
-    android:text="@string/_16_shades"
-    android:textSize="24sp"
-    android:textStyle="bold"
-    android:gravity="center"
-    android:padding="10dp"
+    android:id="@+id/mainContainer"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content" />
+    android:layout_height="match_parent">
 
-<LinearLayout
-    android:id="@+id/boxContainer"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical" />
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_transparent_layout" />
+
+    <LinearLayout
+        android:id="@+id/boxContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="12dp" />
 
 </LinearLayout>
