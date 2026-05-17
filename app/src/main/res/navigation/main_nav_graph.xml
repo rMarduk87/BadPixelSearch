@@ -213,7 +213,7 @@
         android:id="@+id/CameraTestMenuFragment"
         android:name="rpt.tool.badpixelsearch.ui.camera.menu.CameraMenuFragment"
         android:label="CameraTestMenu"
-        tools:layout="@layout/test_menu_two">
+        tools:layout="@layout/tests_menu_two">
     </fragment>
     <fragment
         android:id="@+id/FixTestMenuFragment"

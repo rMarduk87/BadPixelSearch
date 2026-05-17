@@ -14,12 +14,12 @@ import androidx.core.content.ContextCompat
 import android.widget.LinearLayout
 import rpt.tool.badpixelsearch.BaseFragment
 import rpt.tool.badpixelsearch.R
-import rpt.tool.badpixelsearch.databinding.TestMenuTwoBinding
+import rpt.tool.badpixelsearch.databinding.TestsMenuTwoBinding
 import rpt.tool.badpixelsearch.utils.managers.SharedPreferencesManager
 import android.media.MediaPlayer
 
 class CameraMenuFragment :
-    BaseFragment<TestMenuTwoBinding>(TestMenuTwoBinding::inflate) {
+    BaseFragment<TestsMenuTwoBinding>(TestsMenuTwoBinding::inflate) {
 
     private var canClick = true
     private val PULSE_DURATION = 2500L
