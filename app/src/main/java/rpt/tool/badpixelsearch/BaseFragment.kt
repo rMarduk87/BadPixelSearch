@@ -1,11 +1,15 @@
 package rpt.tool.badpixelsearch
 
 import android.media.MediaPlayer
+import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.WindowManager
 import android.widget.TextView
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
 import rpt.tool.badpixelsearch.utils.Inflate
@@ -37,14 +41,18 @@ abstract class BaseFragment<VB : ViewBinding>(private val inflate: Inflate<VB>) 
     protected fun setupToolbar(btnBack: View, menuTitle: TextView? = null, title: String? = null) {
         title?.let { menuTitle?.text = it }
         
-        // Find the topBar container to adjust its margin if needed
-        val topBar = (btnBack.parent as? View)?.let { parent ->
-            if (parent.id == R.id.topBar) parent else {
-                (parent.parent as? View)?.takeIf { it.id == R.id.topBar }
+        // Ensure the window allows drawing in the cutout area
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+            activity?.window?.attributes?.let { attrs ->
+                if (attrs.layoutInDisplayCutoutMode != WindowManager.LayoutParams.LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES) {
+                    attrs.layoutInDisplayCutoutMode = WindowManager.LayoutParams.LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES
+                    activity?.window?.attributes = attrs
+                }
             }
         }
 
-        topBar?.let { checkAndAdjustToolbar(it) }
+        val toolbar = btnBack.parent as? View
+        toolbar?.let { checkAndAdjustToolbar(it) }
 
         btnBack.setOnClickListener {
             try {
@@ -62,16 +70,54 @@ abstract class BaseFragment<VB : ViewBinding>(private val inflate: Inflate<VB>) 
     }
 
     protected fun checkAndAdjustToolbar(toolbar: View) {
-        toolbar.post {
-            val hasNotch = rpt.tool.badpixelsearch.utils.AppUtils.hasNotchOrFrontCamera(requireContext(), activity?.window)
-            val params = toolbar.layoutParams as? ViewGroup.MarginLayoutParams
-            params?.let {
-                val density = resources.displayMetrics.density
-                // If there's a notch, use standard 56dp offset. Otherwise, move to top (0dp).
-                it.topMargin = if (hasNotch) (56 * density).toInt() else 0
-                toolbar.layoutParams = it
+        val updatePosition = { insets: WindowInsetsCompat? ->
+            val activity = activity
+            if (activity != null) {
+                val usedInsets = insets ?: ViewCompat.getRootWindowInsets(activity.window.decorView)
+                
+                val cutoutTop = usedInsets?.displayCutout?.safeInsetTop ?: 0
+                val systemBarsTop = usedInsets?.getInsetsIgnoringVisibility(WindowInsetsCompat.Type.systemBars())?.top ?: 0
+                
+                var offset = maxOf(cutoutTop, systemBarsTop)
+                
+                if (offset <= 0) {
+                    val resourceId = resources.getIdentifier("status_bar_height", "dimen", "android")
+                    if (resourceId > 0) {
+                        offset = resources.getDimensionPixelSize(resourceId)
+                    }
+                }
+
+                if (offset > 0) {
+                    // Apply padding to the fragment's root content layout.
+                    // This moves EVERYTHING (toolbar and all other views) down together.
+                    val root = binding.root
+                    val targetView = if (root is androidx.drawerlayout.widget.DrawerLayout) {
+                        root.getChildAt(0)
+                    } else {
+                        root
+                    }
+
+                    if (targetView != null && targetView.paddingTop != offset) {
+                        targetView.setPadding(targetView.paddingLeft, offset, targetView.paddingRight, targetView.paddingBottom)
+                    }
+
+                    // Reset any direct modifications to the toolbar view itself
+                    toolbar.translationY = 0f
+                    val tParams = toolbar.layoutParams as? ViewGroup.MarginLayoutParams
+                    if (tParams != null && tParams.topMargin != 0) {
+                        tParams.topMargin = 0
+                        toolbar.layoutParams = tParams
+                    }
+                }
             }
         }
+
+        ViewCompat.setOnApplyWindowInsetsListener(toolbar) { _, insets ->
+            updatePosition(insets)
+            insets
+        }
+
+        toolbar.post { updatePosition(null) }
     }
 
 }
