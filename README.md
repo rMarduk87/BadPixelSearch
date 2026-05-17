@@ -1,60 +1,76 @@
-# BadPixelSearch
+# 📱 BadPixelSearch
 
-App to check for dead pixels with 8 color, black and white screens
+[<img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="Get it on Google Play" height="60">](https://play.google.com/store/apps/details?id=rpt.tool.badpixelsearch)
 
-# Screeanshot
+A comprehensive Android utility to check your device's screen for **dead**, **stuck**, or **defective** pixels. Along with pixel diagnostics, the app includes several other screen tests, such as drawing capabilities, touch screen verification, and system font checks.
 
+---
 
-<img width="420" alt="5" src="https://github.com/rMarduk87/BadPixelSearch/assets/30796324/175bb45d-07ce-4bfe-ae26-379fedf2584a">
-<img width="409" alt="6" src="https://github.com/rMarduk87/BadPixelSearch/assets/30796324/c60bf71a-f360-4292-955e-75fcc82969ed">
-<img width="421" alt="7" src="https://github.com/rMarduk87/BadPixelSearch/assets/30796324/43376080-bd63-4ce7-be06-948bdf176b43">
-<img width="415" alt="8" src="https://github.com/rMarduk87/BadPixelSearch/assets/30796324/0d7b631c-f46c-4624-b66d-5b93f71b950b">
-<img width="415" height="956" alt="1" src="https://github.com/user-attachments/assets/b4e22724-19ed-4c95-ac5d-8926abe1795c" />
-<img width="421" height="943" alt="2" src="https://github.com/user-attachments/assets/3c63c12c-b197-40dd-b889-e4d86f75e56d" />
-<img width="430" height="945" alt="3" src="https://github.com/user-attachments/assets/64b422dd-d1b1-4f19-9e8b-8c917ce20952" />
-<img width="431" height="937" alt="4" src="https://github.com/user-attachments/assets/f124d0e5-80ee-4ae6-a643-a9b667a71ceb" />
+## ✨ Features
 
+* **Dead Pixel Detection:** Reveal stuck (always on) or dead (always off) pixels.
+* **Color Spectrum Test:** Cycles through 8 primary and secondary colors (Black, Red, Green, Blue, Cyan, Magenta, Yellow, White).
+* **Touch Screen Test:** Verify touch accuracy and digitizer health.
+* **Drawing Test:** Check for dead touch zones by drawing across the screen.
+* **System Font Check:** Preview how various system fonts render on your display.
 
+---
 
+## 📸 Screenshots
 
-# Bad Pixel Search
+<details>
+  <summary><b>Click to expand screenshots</b></summary>
+  <br>
+  <div align="center">
+    <img width="250" alt="App Screenshot 1" src="https://github.com/user-attachments/assets/bfca6411-1e91-48b1-abfd-4089698c82da" />
+    <img width="250" alt="App Screenshot 2" src="https://github.com/user-attachments/assets/5cd1d290-87f4-41f0-ab19-b112ac4d1787" />
+    <img width="250" alt="App Screenshot 3" src="https://github.com/user-attachments/assets/3c63c12c-b197-40dd-b889-e4d86f75e56d" />
+    <br>
+    <img width="250" alt="App Screenshot 4" src="https://github.com/user-attachments/assets/64b422dd-d1b1-4f19-9e8b-8c917ce20952" />
+    <img width="250" alt="App Screenshot 5" src="https://github.com/user-attachments/assets/f124d0e5-80ee-4ae6-a643-a9b667a71ceb" />
+    <br>
+    <img width="300" alt="Landscape 1" src="https://github.com/rMarduk87/BadPixelSearch/assets/30796324/175bb45d-07ce-4bfe-ae26-379fedf2584a">
+    <img width="300" alt="Landscape 2" src="https://github.com/rMarduk87/BadPixelSearch/assets/30796324/c60bf71a-f360-4292-955e-75fcc82969ed">
+    <img width="300" alt="Landscape 3" src="https://github.com/rMarduk87/BadPixelSearch/assets/30796324/43376080-bd63-4ce7-be06-948bdf176b43">
+  </div>
+</details>
 
-Bad Pixel — application for check of the screen on existence of «Bad pixels».
+---
 
-Bad pixels (BadPixels) — simple application for check of the screen on existence of so-called «Dead pixels». Bad pixels, and the also defective pixels call defect of the electronic device which is perceiving or reproducing the image and having pixel structure. Is more <a href="https://en.wikipedia.org/wiki/Defective_pixel">detailed</a>
+## 📖 What is a Defective Pixel?
 
-This application allows to reveal 2 types of beaten pixels — permanently the burning pixels and permanently not burning pixels. Check is made on 8 flowers:
+A [defective pixel](https://en.wikipedia.org/wiki/Defective_pixel) is a screen flaw where a pixel fails to display the correct color output. This application helps you identify two main types:
+1. **Hot/Stuck Pixels:** Pixels that are permanently lit up (usually showing red, green, blue, or white).
+2. **Dead Pixels:** Pixels that do not light up at all, appearing as permanent black dots.
 
-black,
-red,
-green,
-blue,
-cyan,
-magenta,
-yellow,
-white the RGB, CMYK color spaces and white color.
-INSTRUCTION:
+For more detailed technical information, refer to the [ISO 13406-2 standard](https://en.wikipedia.org/wiki/ISO_13406-2).
 
-Carefully wipe the screen of phone or a pad a soft rag, or a napkin from dirt, dust, spots of fat and other pollution;
-Start application;
-Simply swipe left or right to go to the next color or previous color;
-On every color you watch closely a screen monochromaticism in all points. By normal operation on all flowers all pixels of the screen shall be one color. If color of pixel differs on any color, this pixel beaten means.
-For obtaining more detailed information address to the <a href="https://en.wikipedia.org/wiki/ISO_13406-2">ISO_13406-2</a> standard.
+---
 
-# Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+## 🛠️ How to Use
 
-Please make sure to update tests as appropriate
+1. Carefully wipe your phone or tablet screen with a soft, microfiber cloth to remove dirt, dust, and fingerprints (these can easily be mistaken for dead pixels).
+2. Launch the application.
+3. Swipe left or right to navigate to the next or previous color.
+4. Watch the screen closely on every color. Under normal conditions, the entire screen should be perfectly monochromatic. If a specific point differs in color from the rest of the screen, you have found a defective pixel.
 
-## License
-[GPL-3.0]
+---
 
-## Credits
-Icons was downloaded from [Flaticon](https://www.flaticon.com) and [Freepik](https://www.freepik.com)
+## 🤝 Contributing
 
-Animation was downloaded from [LottieFiles](https://lottiefiles.com)
+Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change. 
 
-## Download
-[<img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png"
-      alt="Get it on Google Play"
-      height="80">](https://play.google.com/store/apps/details?id=rpt.tool.badpixelsearch)
+Please make sure to update tests as appropriate.
+
+---
+
+## 📜 License
+
+This project is licensed under the **[GPL-3.0]** License.
+
+---
+
+## ✨ Credits
+
+* **Icons:** Downloaded from [Flaticon](https://www.flaticon.com) and [Freepik](https://www.freepik.com).
+* **Animations:** Downloaded from [LottieFiles](https://lottiefiles.com).
