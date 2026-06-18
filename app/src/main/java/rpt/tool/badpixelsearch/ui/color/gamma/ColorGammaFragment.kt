@@ -13,7 +13,7 @@ import java.util.Locale.getDefault
 import kotlin.math.pow
 
 class ColorGammaFragment :
-    BaseFragment<FragmentGammaColorBinding>(FragmentGammaColorBinding::inflate) {
+    BaseFragment<FragmentGammaColorBinding>(FragmentGammaColorBinding::inflate,false) {
 
     private lateinit var baseColors: List<Pair<String, Int>>
 

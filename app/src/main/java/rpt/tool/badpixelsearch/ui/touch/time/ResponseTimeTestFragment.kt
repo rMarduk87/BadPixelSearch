@@ -14,7 +14,7 @@ import rpt.tool.badpixelsearch.R
 import rpt.tool.badpixelsearch.databinding.FragmentResponseTimeTestBinding
 
 class ResponseTimeTestFragment : BaseFragment<FragmentResponseTimeTestBinding>(
-    FragmentResponseTimeTestBinding::inflate
+    FragmentResponseTimeTestBinding::inflate,false
 ) {
 
     private val pointerCircleMap = mutableMapOf<Int, View>()

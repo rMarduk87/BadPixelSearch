@@ -11,7 +11,7 @@ import rpt.tool.badpixelsearch.databinding.FragmentZoomAndRotateTestBinding
 import rpt.tool.badpixelsearch.utils.view.threed.CubeTouchRenderer
 
 class ZoomAndRotateTestFragment : BaseFragment<FragmentZoomAndRotateTestBinding>(
-    FragmentZoomAndRotateTestBinding::inflate
+    FragmentZoomAndRotateTestBinding::inflate,false
 ) {
 
     private lateinit var renderer: CubeTouchRenderer

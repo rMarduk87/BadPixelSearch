@@ -12,7 +12,7 @@ import rpt.tool.badpixelsearch.databinding.FragmentNormalFontBinding
 import rpt.tool.badpixelsearch.utils.managers.SharedPreferencesManager
 
 class NormalFontFragment :
-    BaseFragment<FragmentNormalFontBinding>(FragmentNormalFontBinding::inflate) {
+    BaseFragment<FragmentNormalFontBinding>(FragmentNormalFontBinding::inflate,false) {
 
     private val colors by lazy {
         listOf(

@@ -10,10 +10,10 @@ import rpt.tool.badpixelsearch.R
 import rpt.tool.badpixelsearch.databinding.TestsMenuSixBinding
 import rpt.tool.badpixelsearch.ui.animation.menu.AnimationMenuFragmentDirections
 import rpt.tool.badpixelsearch.utils.managers.SharedPreferencesManager
-import rpt.tool.badpixelsearch.utils.navigation.safeNavController
-import rpt.tool.badpixelsearch.utils.navigation.safeNavigate
+import rpt.com.base.navigation.safeNavController
+import rpt.com.base.navigation.safeNavigate
 
-class DrawingTestMenuFragment : BaseFragment<TestsMenuSixBinding>(TestsMenuSixBinding::inflate) {
+class DrawingTestMenuFragment : BaseFragment<TestsMenuSixBinding>(TestsMenuSixBinding::inflate,false) {
 
     companion object {
         const val PULSE_DURATION = 2500L
@@ -50,7 +50,7 @@ class DrawingTestMenuFragment : BaseFragment<TestsMenuSixBinding>(TestsMenuSixBi
                 binding.touch1.visibility = View.VISIBLE
                 SharedPreferencesManager.normalLines = true
                 SharedPreferencesManager.drawingOption = 0
-                safeNavController?.safeNavigate(
+                safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(
                     DrawingTestMenuFragmentDirections
                         .actionDrawingMenuFragmentToDrawingCanvasFragment()
                 )
@@ -62,7 +62,7 @@ class DrawingTestMenuFragment : BaseFragment<TestsMenuSixBinding>(TestsMenuSixBi
                 binding.touch2.visibility = View.VISIBLE
                 SharedPreferencesManager.normalLinesTwo = true
                 SharedPreferencesManager.drawingOption = 1
-                safeNavController?.safeNavigate(
+                safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(
                     DrawingTestMenuFragmentDirections
                         .actionDrawingMenuFragmentToDrawingCanvasFragment()
                 )
@@ -74,7 +74,7 @@ class DrawingTestMenuFragment : BaseFragment<TestsMenuSixBinding>(TestsMenuSixBi
                 binding.touch3.visibility = View.VISIBLE
                 SharedPreferencesManager.fadingLines = true
                 SharedPreferencesManager.drawingOption = 2
-                safeNavController?.safeNavigate(
+                safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(
                     DrawingTestMenuFragmentDirections
                         .actionDrawingMenuFragmentToDrawingCanvasFragment()
                 )
@@ -86,7 +86,7 @@ class DrawingTestMenuFragment : BaseFragment<TestsMenuSixBinding>(TestsMenuSixBi
                 binding.touch4.visibility = View.VISIBLE
                 SharedPreferencesManager.fadingLinesTwo = true
                 SharedPreferencesManager.drawingOption = 3
-                safeNavController?.safeNavigate(
+                safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(
                     DrawingTestMenuFragmentDirections
                         .actionDrawingMenuFragmentToDrawingCanvasFragment())
             }
@@ -96,7 +96,7 @@ class DrawingTestMenuFragment : BaseFragment<TestsMenuSixBinding>(TestsMenuSixBi
             executeWithSound {
                 binding.touch5.visibility = View.VISIBLE
                 SharedPreferencesManager.stylusLines = true
-                safeNavController?.safeNavigate(
+                safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(
                     DrawingTestMenuFragmentDirections
                         .actionDrawingMenuFragmentToStylusLinesFragment())
             }
@@ -106,7 +106,7 @@ class DrawingTestMenuFragment : BaseFragment<TestsMenuSixBinding>(TestsMenuSixBi
             executeWithSound {
                 binding.touch6.visibility = View.VISIBLE
                 SharedPreferencesManager.colorLines = true
-                safeNavController?.safeNavigate(
+                safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(
                     DrawingTestMenuFragmentDirections
                         .actionDrawingMenuFragmentToColorLinesFragment())
             }

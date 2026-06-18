@@ -9,7 +9,7 @@ import rpt.tool.badpixelsearch.databinding.FragmentAnimationBarsBinding
 import rpt.tool.badpixelsearch.utils.view.bars.MovingBarsView
 
 class MovingBarsFragment : BaseFragment<FragmentAnimationBarsBinding>
-    (FragmentAnimationBarsBinding::inflate) {
+    (FragmentAnimationBarsBinding::inflate,false) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

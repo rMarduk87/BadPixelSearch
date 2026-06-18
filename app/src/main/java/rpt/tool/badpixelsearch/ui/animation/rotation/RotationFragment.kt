@@ -12,7 +12,7 @@ import rpt.tool.badpixelsearch.BaseFragment
 import rpt.tool.badpixelsearch.R
 import rpt.tool.badpixelsearch.databinding.FragmentRotationBinding
 
-class RotationFragment : BaseFragment<FragmentRotationBinding>(FragmentRotationBinding::inflate) {
+class RotationFragment : BaseFragment<FragmentRotationBinding>(FragmentRotationBinding::inflate,false) {
     private lateinit var square1: View
     private lateinit var square2: View
     private lateinit var square3: View

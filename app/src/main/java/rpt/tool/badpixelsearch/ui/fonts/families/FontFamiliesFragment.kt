@@ -14,7 +14,7 @@ import rpt.tool.badpixelsearch.databinding.FragmentFontFamiliesBinding
 import rpt.tool.badpixelsearch.utils.managers.SharedPreferencesManager
 
 class FontFamiliesFragment :
-    BaseFragment<FragmentFontFamiliesBinding>(FragmentFontFamiliesBinding::inflate) {
+    BaseFragment<FragmentFontFamiliesBinding>(FragmentFontFamiliesBinding::inflate,false) {
 
     private val colors by lazy {
         listOf(

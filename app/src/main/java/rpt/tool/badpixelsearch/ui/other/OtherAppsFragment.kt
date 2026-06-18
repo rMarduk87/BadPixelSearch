@@ -8,14 +8,15 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import rpt.tool.badpixelsearch.BaseFragment
 import rpt.tool.badpixelsearch.databinding.FragmentOtherAppsBinding
 import rpt.tool.badpixelsearch.utils.data.OtherApps
-import rpt.tool.badpixelsearch.utils.log.i
-import rpt.tool.badpixelsearch.utils.log.e
 import rpt.tool.badpixelsearch.utils.view.adapters.OtherAppsAdapter
 import androidx.core.net.toUri
-import rpt.tool.badpixelsearch.utils.navigation.safeNavController
-import rpt.tool.badpixelsearch.utils.navigation.safeNavigate
+import rpt.com.base.log.e
+import rpt.com.base.log.i
+import rpt.com.base.navigation.safeNavController
+import rpt.com.base.navigation.safeNavigate
+import rpt.tool.badpixelsearch.R
 
-class OtherAppsFragment: BaseFragment<FragmentOtherAppsBinding>(FragmentOtherAppsBinding::inflate) {
+class OtherAppsFragment: BaseFragment<FragmentOtherAppsBinding>(FragmentOtherAppsBinding::inflate,false) {
 
     var other: ArrayList<OtherApps> = ArrayList()
     var adapter: OtherAppsAdapter? = null
@@ -93,7 +94,7 @@ class OtherAppsFragment: BaseFragment<FragmentOtherAppsBinding>(FragmentOtherApp
     }
 
     private fun finish() {
-        safeNavController?.safeNavigate(OtherAppsFragmentDirections
+        safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(OtherAppsFragmentDirections
             .actionOtherAppsFragmentToMenuFragment())
     }
 }

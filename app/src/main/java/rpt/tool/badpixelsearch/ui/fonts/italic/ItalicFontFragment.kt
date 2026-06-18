@@ -13,7 +13,7 @@ import rpt.tool.badpixelsearch.utils.managers.SharedPreferencesManager
 import kotlin.collections.forEach
 
 class ItalicFontFragment :
-    BaseFragment<FragmentItalicFontBinding>(FragmentItalicFontBinding::inflate) {
+    BaseFragment<FragmentItalicFontBinding>(FragmentItalicFontBinding::inflate,false) {
 
     private val colors by lazy {
         listOf(

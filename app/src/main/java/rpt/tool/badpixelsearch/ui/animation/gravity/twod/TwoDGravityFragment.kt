@@ -9,7 +9,7 @@ import java.util.Locale
 import java.util.Locale.getDefault
 
 class TwoDGravityFragment :
-    BaseFragment<Fragment2dGravityBinding>(Fragment2dGravityBinding::inflate) {
+    BaseFragment<Fragment2dGravityBinding>(Fragment2dGravityBinding::inflate,false) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

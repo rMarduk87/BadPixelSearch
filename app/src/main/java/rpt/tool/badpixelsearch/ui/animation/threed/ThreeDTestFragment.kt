@@ -8,7 +8,7 @@ import rpt.tool.badpixelsearch.BaseFragment
 import rpt.tool.badpixelsearch.R
 import rpt.tool.badpixelsearch.databinding.FragmentThreeDTestBinding
 
-class ThreeDTestFragment : BaseFragment<FragmentThreeDTestBinding>(FragmentThreeDTestBinding::inflate) {
+class ThreeDTestFragment : BaseFragment<FragmentThreeDTestBinding>(FragmentThreeDTestBinding::inflate,false) {
 
     private val handler = Handler(Looper.getMainLooper())
     private var lastFrameCount = 0

@@ -12,7 +12,7 @@ import rpt.tool.badpixelsearch.R
 import rpt.tool.badpixelsearch.databinding.FragmentMultiTouchTestBinding
 
 class MultiTouchTestFragment :
-    BaseFragment<FragmentMultiTouchTestBinding>(FragmentMultiTouchTestBinding::inflate) {
+    BaseFragment<FragmentMultiTouchTestBinding>(FragmentMultiTouchTestBinding::inflate,false) {
 
     private val pointerCircleMap = mutableMapOf<Int, View>()
     private var circleWidth = 0

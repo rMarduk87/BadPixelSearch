@@ -7,7 +7,7 @@ import rpt.tool.badpixelsearch.R
 import rpt.tool.badpixelsearch.databinding.FragmentMultiTouchTwoTestBinding
 
 class MultiTouchTwoTestFragment :
-    BaseFragment<FragmentMultiTouchTwoTestBinding>(FragmentMultiTouchTwoTestBinding::inflate) {
+    BaseFragment<FragmentMultiTouchTwoTestBinding>(FragmentMultiTouchTwoTestBinding::inflate,false) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

@@ -14,7 +14,7 @@ import rpt.tool.badpixelsearch.databinding.FragmentSensorInfoBinding
 import rpt.tool.badpixelsearch.utils.view.adapters.SensorAdapter
 
 class SensorInfoFragment:
-    BaseFragment<FragmentSensorInfoBinding>(FragmentSensorInfoBinding::inflate) {
+    BaseFragment<FragmentSensorInfoBinding>(FragmentSensorInfoBinding::inflate,false) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

@@ -12,7 +12,7 @@ import rpt.tool.badpixelsearch.R
 import rpt.tool.badpixelsearch.databinding.FragmentRgbColorMixerBinding
 
 class RgbColorMixerFragment:
-    BaseFragment<FragmentRgbColorMixerBinding>(FragmentRgbColorMixerBinding::inflate) {
+    BaseFragment<FragmentRgbColorMixerBinding>(FragmentRgbColorMixerBinding::inflate,false) {
 
     private var r = 128
     private var g = 128

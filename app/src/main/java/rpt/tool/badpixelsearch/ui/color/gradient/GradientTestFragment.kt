@@ -12,13 +12,13 @@ import androidx.core.view.WindowInsetsControllerCompat
 import rpt.tool.badpixelsearch.BaseFragment
 import rpt.tool.badpixelsearch.R
 import rpt.tool.badpixelsearch.databinding.FragmentGradientTestBinding
-import rpt.tool.badpixelsearch.utils.navigation.safeNavController
-import java.util.Locale
+import rpt.com.base.navigation.safeNavController
+import rpt.com.base.navigation.safeNavigate
 import java.util.Locale.getDefault
 import kotlin.math.abs
 
 class GradientTestFragment :
-    BaseFragment<FragmentGradientTestBinding>(FragmentGradientTestBinding::inflate) {
+    BaseFragment<FragmentGradientTestBinding>(FragmentGradientTestBinding::inflate,false) {
 
     private var i = 1
 
@@ -70,7 +70,7 @@ class GradientTestFragment :
 
     private fun changeGradient() {
         if (i > 7) {
-            safeNavController?.popBackStack()
+            safeNavController(R.id.main_activity_nav_host_fragment)?.popBackStack()
             return
         }
         if (i < 1) i = 7

@@ -21,7 +21,7 @@ import kotlin.math.sqrt
 
 @Suppress("DEPRECATION")
 class ScreenInfoFragment :
-    BaseFragment<FragmentScreenInfoBinding>(FragmentScreenInfoBinding::inflate) {
+    BaseFragment<FragmentScreenInfoBinding>(FragmentScreenInfoBinding::inflate,false) {
 
     private var fullResolution = ""
     private var currentResolution = ""

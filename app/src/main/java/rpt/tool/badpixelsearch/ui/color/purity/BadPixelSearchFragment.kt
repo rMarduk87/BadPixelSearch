@@ -15,12 +15,12 @@ import rpt.tool.badpixelsearch.BaseFragment
 import rpt.tool.badpixelsearch.R
 import rpt.tool.badpixelsearch.databinding.FragmentBadPixelSearchBinding
 import rpt.tool.badpixelsearch.utils.managers.SharedPreferencesManager
-import rpt.tool.badpixelsearch.utils.navigation.safeNavController
-import rpt.tool.badpixelsearch.utils.navigation.safeNavigate
+import rpt.com.base.navigation.safeNavController
+import rpt.com.base.navigation.safeNavigate
 import kotlin.math.abs
 
 class BadPixelSearchFragment :
-    BaseFragment<FragmentBadPixelSearchBinding>(FragmentBadPixelSearchBinding::inflate) {
+    BaseFragment<FragmentBadPixelSearchBinding>(FragmentBadPixelSearchBinding::inflate,false) {
 
     private var finalizer: Runnable? = null
     private val timeoutHandler = Handler(Looper.getMainLooper())
@@ -73,7 +73,7 @@ class BadPixelSearchFragment :
                 changeColor()
             }
             2 -> { // modalità FixPixel
-                safeNavController?.safeNavigate(
+                safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(
                     BadPixelSearchFragmentDirections
                         .actionBadPixelSearchFragmentToFixPixelFragment())
             }
@@ -166,7 +166,7 @@ class BadPixelSearchFragment :
                         if (increase) i++ else i--
                         changeColor()
                     }
-                    2 -> safeNavController?.safeNavigate(
+                    2 -> safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(
                         BadPixelSearchFragmentDirections
                             .actionBadPixelSearchFragmentToFixPixelFragment())
                     else -> {

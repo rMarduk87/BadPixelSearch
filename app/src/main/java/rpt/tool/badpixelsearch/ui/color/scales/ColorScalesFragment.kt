@@ -12,7 +12,7 @@ import rpt.tool.badpixelsearch.R
 import rpt.tool.badpixelsearch.databinding.FragmentColorScalesBinding
 
 class ColorScalesFragment:
-    BaseFragment<FragmentColorScalesBinding>(FragmentColorScalesBinding::inflate) {
+    BaseFragment<FragmentColorScalesBinding>(FragmentColorScalesBinding::inflate,false) {
 
     private lateinit var names: List<String>
     private val percentages = listOf(
