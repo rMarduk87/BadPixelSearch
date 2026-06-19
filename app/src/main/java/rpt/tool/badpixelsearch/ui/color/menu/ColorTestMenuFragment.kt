@@ -7,13 +7,13 @@ import android.os.Bundle
 import android.view.View
 import rpt.tool.badpixelsearch.R
 import rpt.tool.badpixelsearch.BaseFragment
-import rpt.tool.badpixelsearch.databinding.TestsMenuSixBinding
+import rpt.tool.badpixelsearch.databinding.TestsMenuEightBinding
 import rpt.tool.badpixelsearch.utils.managers.SharedPreferencesManager
-import rpt.tool.badpixelsearch.utils.navigation.safeNavController
-import rpt.tool.badpixelsearch.utils.navigation.safeNavigate
+import rpt.com.base.navigation.safeNavController
+import rpt.com.base.navigation.safeNavigate
 
-class ColorTestMenuFragment: BaseFragment<TestsMenuSixBinding>
-    (TestsMenuSixBinding::inflate) {
+class ColorTestMenuFragment: BaseFragment<TestsMenuEightBinding>
+    (TestsMenuEightBinding::inflate,false) {
 
     companion object {
         private const val PULSE_DURATION = 2500L
@@ -32,6 +32,8 @@ class ColorTestMenuFragment: BaseFragment<TestsMenuSixBinding>
         binding.text4.text = requireContext().getString(R.string.shades)
         binding.text5.text = requireContext().getString(R.string.gamma_test)
         binding.text6.text = requireContext().getString(R.string.line_test)
+        binding.text7.text = requireContext().getString(R.string.dead_pixel_test)
+        binding.option8.visibility = View.GONE
 
         setupNumbers()
 
@@ -48,7 +50,7 @@ class ColorTestMenuFragment: BaseFragment<TestsMenuSixBinding>
                 binding.touch1.visibility = View.VISIBLE
                 SharedPreferencesManager.colorTestPurity = true
                 SharedPreferencesManager.typeMode = 0
-                safeNavController?.safeNavigate(
+                safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(
                     ColorTestMenuFragmentDirections
                         .actionColorTestsMenuFragmentToBadPixelSearchFragment()
                 )
@@ -59,7 +61,7 @@ class ColorTestMenuFragment: BaseFragment<TestsMenuSixBinding>
             executeWithSound {
                 binding.touch2.visibility = View.VISIBLE
                 SharedPreferencesManager.colorTestGradient = true
-                safeNavController?.safeNavigate(
+                safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(
                     ColorTestMenuFragmentDirections
                         .actionColorTestsMenuFragmentToGradientTestFragment()
                 )
@@ -70,7 +72,7 @@ class ColorTestMenuFragment: BaseFragment<TestsMenuSixBinding>
             executeWithSound {
                 binding.touch3.visibility = View.VISIBLE
                 SharedPreferencesManager.colorTestScales = true
-                safeNavController?.safeNavigate(ColorTestMenuFragmentDirections
+                safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(ColorTestMenuFragmentDirections
                     .actionColorTestsMenuFragmentToColorScalesFragment())
             }
         }
@@ -79,7 +81,7 @@ class ColorTestMenuFragment: BaseFragment<TestsMenuSixBinding>
             executeWithSound {
                 binding.touch4.visibility = View.VISIBLE
                 SharedPreferencesManager.colorTestShades = true
-                safeNavController?.safeNavigate(
+                safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(
                     ColorTestMenuFragmentDirections
                         .actionColorTestsMenuFragmentToColorShadeFragment()
                 )
@@ -90,7 +92,7 @@ class ColorTestMenuFragment: BaseFragment<TestsMenuSixBinding>
             executeWithSound {
                 binding.touch5.visibility = View.VISIBLE
                 SharedPreferencesManager.colorTestGamma = true
-                safeNavController?.safeNavigate(
+                safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(
                     ColorTestMenuFragmentDirections
                         .actionColorTestsMenuFragmentToGammaColorFragment())
             }
@@ -100,9 +102,21 @@ class ColorTestMenuFragment: BaseFragment<TestsMenuSixBinding>
             executeWithSound {
                 binding.touch6.visibility = View.VISIBLE
                 SharedPreferencesManager.colorTestLine = true
-                safeNavController?.safeNavigate(
+                safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(
                     ColorTestMenuFragmentDirections
                         .actionColorTestsMenuFragmentToColorLineTestFragment())
+            }
+        }
+
+        binding.option7.setOnClickListener {
+            executeWithSound {
+                binding.touch7.visibility = View.VISIBLE
+                SharedPreferencesManager.colorTestDeadPixel = true
+                SharedPreferencesManager.typeMode = 2
+                safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(
+                    ColorTestMenuFragmentDirections
+                        .actionColorTestsMenuFragmentToBadPixelSearchFragment()
+                )
             }
         }
 
@@ -126,6 +140,9 @@ class ColorTestMenuFragment: BaseFragment<TestsMenuSixBinding>
         }
         if (SharedPreferencesManager.colorTestLine) {
             binding.touch6.visibility = View.VISIBLE
+        }
+        if (SharedPreferencesManager.colorTestDeadPixel) {
+            binding.touch7.visibility = View.VISIBLE
         }
     }
 

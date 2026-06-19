@@ -10,13 +10,14 @@ import android.view.View
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
+import rpt.com.base.navigation.safeNavController
 import rpt.tool.badpixelsearch.BaseFragment
+import rpt.tool.badpixelsearch.R
 import rpt.tool.badpixelsearch.databinding.FragmentFixPixelBinding
 import rpt.tool.badpixelsearch.utils.managers.SharedPreferencesManager
-import rpt.tool.badpixelsearch.utils.navigation.safeNavController
 import java.util.*
 
-class FixPixelFragment : BaseFragment<FragmentFixPixelBinding>(FragmentFixPixelBinding::inflate) {
+class FixPixelFragment : BaseFragment<FragmentFixPixelBinding>(FragmentFixPixelBinding::inflate,false) {
 
     private var fixCancelled = false
     private var fixDelay = 100
@@ -70,7 +71,7 @@ class FixPixelFragment : BaseFragment<FragmentFixPixelBinding>(FragmentFixPixelB
 
         binding.BtnCloseFix.setOnClickListener {
             fixCancelled = true
-            safeNavController?.popBackStack()
+            safeNavController(R.id.main_activity_nav_host_fragment)?.popBackStack()
         }
 
         fixDelay = SharedPreferencesManager.delay

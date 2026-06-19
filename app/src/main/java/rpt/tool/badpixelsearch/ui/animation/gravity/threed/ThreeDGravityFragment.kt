@@ -14,7 +14,7 @@ import java.util.Locale
 import java.util.Locale.getDefault
 
 class ThreeDGravityFragment :
-    BaseFragment<FragmentThreedGravityBinding>(FragmentThreedGravityBinding::inflate),
+    BaseFragment<FragmentThreedGravityBinding>(FragmentThreedGravityBinding::inflate,false),
     SensorEventListener {
 
     private lateinit var sensorManager: SensorManager

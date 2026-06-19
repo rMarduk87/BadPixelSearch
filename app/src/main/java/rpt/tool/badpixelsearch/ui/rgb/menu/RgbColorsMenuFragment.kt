@@ -2,22 +2,19 @@ package rpt.tool.badpixelsearch.ui.rgb.menu
 
 import android.animation.ObjectAnimator
 import android.animation.ValueAnimator
-import android.content.Intent
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.View
 import rpt.tool.badpixelsearch.BaseFragment
 import rpt.tool.badpixelsearch.R
 import rpt.tool.badpixelsearch.databinding.TestsMenuSixBinding
-import rpt.tool.badpixelsearch.utils.log.e
 import rpt.tool.badpixelsearch.utils.managers.SharedPreferencesManager
-import rpt.tool.badpixelsearch.utils.navigation.safeNavController
-import rpt.tool.badpixelsearch.utils.navigation.safeNavigate
-import java.util.Locale
+import rpt.com.base.navigation.safeNavController
+import rpt.com.base.navigation.safeNavigate
 import java.util.Locale.getDefault
 
 class RgbColorsMenuFragment :
-    BaseFragment<TestsMenuSixBinding>(TestsMenuSixBinding::inflate) {
+    BaseFragment<TestsMenuSixBinding>(TestsMenuSixBinding::inflate,false) {
 
     private val PULSE_DURATION = 2500L
 
@@ -50,7 +47,7 @@ class RgbColorsMenuFragment :
                 binding.touch1.visibility = View.VISIBLE
                 SharedPreferencesManager.rgbTestRed = true
                 SharedPreferencesManager.rgbOption = 0
-                safeNavController?.safeNavigate(
+                safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(
                     RgbColorsMenuFragmentDirections
                         .actionRgbColorsMenuFragmentToRgbColorsLevelFragment()
                 )
@@ -62,7 +59,7 @@ class RgbColorsMenuFragment :
                 binding.touch2.visibility = View.VISIBLE
                 SharedPreferencesManager.rgbTestGreen = true
                 SharedPreferencesManager.rgbOption = 1
-                safeNavController?.safeNavigate(
+                safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(
                     RgbColorsMenuFragmentDirections
                         .actionRgbColorsMenuFragmentToRgbColorsLevelFragment()
                 )
@@ -74,7 +71,7 @@ class RgbColorsMenuFragment :
                 binding.touch3.visibility = View.VISIBLE
                 SharedPreferencesManager.rgbTestBlue = true
                 SharedPreferencesManager.rgbOption = 2
-                safeNavController?.safeNavigate(
+                safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(
                     RgbColorsMenuFragmentDirections
                         .actionRgbColorsMenuFragmentToRgbColorsLevelFragment()
                 )
@@ -86,7 +83,7 @@ class RgbColorsMenuFragment :
                 binding.touch4.visibility = View.VISIBLE
                 SharedPreferencesManager.rgbTestGray = true
                 SharedPreferencesManager.rgbOption = 3
-                safeNavController?.safeNavigate(
+                safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(
                     RgbColorsMenuFragmentDirections
                         .actionRgbColorsMenuFragmentToRgbColorsLevelFragment()
                 )
@@ -98,7 +95,7 @@ class RgbColorsMenuFragment :
                 binding.touch5.visibility = View.VISIBLE
                 SharedPreferencesManager.rgbTestAll = true
                 SharedPreferencesManager.rgbOption = 4
-                safeNavController?.safeNavigate(
+                safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(
                     RgbColorsMenuFragmentDirections
                         .actionRgbColorsMenuFragmentToRgbColorsLevelFragment()
                 )
@@ -109,7 +106,7 @@ class RgbColorsMenuFragment :
             executeWithSound {
                 binding.touch6.visibility = View.VISIBLE
                 SharedPreferencesManager.rgbTestMixer = true
-                safeNavController?.safeNavigate(RgbColorsMenuFragmentDirections
+                safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(RgbColorsMenuFragmentDirections
                     .actionRgbColorsMenuFragmentToRgbColorMixerFragment())
             }
         }

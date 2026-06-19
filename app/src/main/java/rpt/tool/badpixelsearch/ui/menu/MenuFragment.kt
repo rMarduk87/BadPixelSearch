@@ -21,13 +21,13 @@ import rpt.tool.badpixelsearch.BaseFragment
 import rpt.tool.badpixelsearch.R
 import rpt.tool.badpixelsearch.databinding.FragmentMenuBinding
 import rpt.tool.badpixelsearch.utils.managers.SharedPreferencesManager
-import rpt.tool.badpixelsearch.utils.navigation.safeNavController
-import rpt.tool.badpixelsearch.utils.navigation.safeNavigate
+import rpt.com.base.navigation.safeNavController
+import rpt.com.base.navigation.safeNavigate
 
 
 @Suppress("DEPRECATION")
 class MenuFragment :
-    BaseFragment<FragmentMenuBinding>(FragmentMenuBinding::inflate){
+    BaseFragment<FragmentMenuBinding>(FragmentMenuBinding::inflate,false){
 
     private val durationValue = 6000L
 
@@ -39,14 +39,14 @@ class MenuFragment :
 
         binding.openColorTest.setOnClickListener{
             executeWithSound {
-                safeNavController?.safeNavigate(
+                safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(
                     MenuFragmentDirections.actionMenuFragmentToColorTestMenuFragment())
             }
         }
 
         binding.openAnimationTest.setOnClickListener{
             executeWithSound {
-                safeNavController?.safeNavigate(
+                safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(
                     MenuFragmentDirections
                         .actionMenuFragmentToAnimationTestMenuFragment())
             }
@@ -54,7 +54,7 @@ class MenuFragment :
 
         binding.openCameraTest.setOnClickListener {
             executeWithSound {
-                safeNavController?.safeNavigate(
+                safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(
                     MenuFragmentDirections.actionMenuFragmentToCameraTestMenuFragment()
                 )
             }
@@ -62,7 +62,7 @@ class MenuFragment :
 
         binding.openFixPixels.setOnClickListener {
             executeWithSound {
-                safeNavController?.safeNavigate(
+                safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(
                     MenuFragmentDirections.actionMenuFragmentToFixTestMenuFragment()
                 )
             }
@@ -70,28 +70,28 @@ class MenuFragment :
 
         binding.openSystemFontTest.setOnClickListener{
             executeWithSound {
-                safeNavController?.safeNavigate(
+                safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(
                     MenuFragmentDirections.actionMenuFragmentToSystemFontMenuFragment())
             }
         }
 
         binding.openRgbColorTests.setOnClickListener {
             executeWithSound {
-                safeNavController?.safeNavigate(MenuFragmentDirections
+                safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(MenuFragmentDirections
                     .actionMenuFragmentToRgbColorMenuFragment())
             }
         }
 
         binding.openDrawingTest.setOnClickListener {
             executeWithSound {
-                safeNavController?.safeNavigate(MenuFragmentDirections.
+                safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(MenuFragmentDirections.
                 actionMenuFragmentToDrawingMenuFragment())
             }
         }
 
         binding.openTouchTest.setOnClickListener {
             executeWithSound {
-                safeNavController?.safeNavigate(
+                safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(
                 MenuFragmentDirections.actionMenuFragmentToTouchMenuFragment())
             }
         }
@@ -134,7 +134,7 @@ class MenuFragment :
         setupNavigationDrawer()
 
         binding.multi.setOnClickListener {
-            safeNavController?.safeNavigate(MenuFragmentDirections.
+            safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(MenuFragmentDirections.
             actionMenuFragmentToMultiTestFragment())
         }
     }
@@ -192,27 +192,27 @@ class MenuFragment :
 
             when (menuItem.itemId) {
                 R.id.nav_faq -> {
-                    safeNavController?.safeNavigate(
+                    safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(
                         MenuFragmentDirections.actionMenuFragmentToFaqFragment()
                     )
                 }
                 R.id.nav_other_app -> {
-                    safeNavController?.safeNavigate(
+                    safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(
                         MenuFragmentDirections.actionMenuFragmentToOtherAppsFragment()
                     )
                 }
                 R.id.nav_device_info -> {
-                    safeNavController?.safeNavigate(
+                    safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(
                         MenuFragmentDirections.actionMenuFragmentToDeviceInfoFragment()
                     )
                 }
                 R.id.nav_screen_sensor -> {
-                    safeNavController?.safeNavigate(
+                    safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(
                         MenuFragmentDirections.actionMenuFragmentToSensorInfoFragment()
                     )
                 }
                 R.id.nav_screen_info -> {
-                    safeNavController?.safeNavigate(
+                    safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(
                         MenuFragmentDirections.actionMenuFragmentToScreenInfoFragment()
                     )
                 }

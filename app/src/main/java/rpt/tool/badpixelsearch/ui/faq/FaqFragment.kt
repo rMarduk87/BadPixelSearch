@@ -15,7 +15,7 @@ import rpt.tool.badpixelsearch.databinding.FragmentFaqBinding
 import rpt.tool.badpixelsearch.utils.data.model.faq.FAQModel
 import rpt.tool.badpixelsearch.utils.view.custom.animation.AnimationUtils
 
-class FaqFragment : BaseFragment<FragmentFaqBinding>(FragmentFaqBinding::inflate) {
+class FaqFragment : BaseFragment<FragmentFaqBinding>(FragmentFaqBinding::inflate,false) {
 
     private var lstFaq: MutableList<FAQModel> = arrayListOf()
     private var answerBlockLst: MutableList<LinearLayout> = arrayListOf()

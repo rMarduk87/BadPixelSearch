@@ -9,7 +9,7 @@ import rpt.tool.badpixelsearch.utils.managers.SharedPreferencesManager
 import java.util.Locale
 
 class SingleTouchTestFragment:
-    BaseFragment<FragmentSingleTouchTestBinding>(FragmentSingleTouchTestBinding::inflate) {
+    BaseFragment<FragmentSingleTouchTestBinding>(FragmentSingleTouchTestBinding::inflate,false) {
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

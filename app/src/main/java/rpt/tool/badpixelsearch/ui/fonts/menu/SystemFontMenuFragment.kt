@@ -8,13 +8,12 @@ import android.view.View
 import rpt.tool.badpixelsearch.BaseFragment
 import rpt.tool.badpixelsearch.R
 import rpt.tool.badpixelsearch.databinding.TestsMenuSixBinding
-import rpt.tool.badpixelsearch.utils.log.e
 import rpt.tool.badpixelsearch.utils.managers.SharedPreferencesManager
-import rpt.tool.badpixelsearch.utils.navigation.safeNavController
-import rpt.tool.badpixelsearch.utils.navigation.safeNavigate
+import rpt.com.base.navigation.safeNavController
+import rpt.com.base.navigation.safeNavigate
 
 class SystemFontMenuFragment: BaseFragment<TestsMenuSixBinding>
-    (TestsMenuSixBinding::inflate) {
+    (TestsMenuSixBinding::inflate,false) {
 
     private val PULSE_DURATION = 2500L
 
@@ -47,7 +46,7 @@ class SystemFontMenuFragment: BaseFragment<TestsMenuSixBinding>
                 binding.touch1.visibility = View.VISIBLE
                 SharedPreferencesManager.fontTestNormal = true
                 SharedPreferencesManager.IsBold = false
-                safeNavController?.safeNavigate(
+                safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(
                     SystemFontMenuFragmentDirections.
                     actionSystemFontMenuFragmentToNormalFontFragment())
             }
@@ -58,7 +57,7 @@ class SystemFontMenuFragment: BaseFragment<TestsMenuSixBinding>
                 binding.touch2.visibility = View.VISIBLE
                 SharedPreferencesManager.fontTestItalic = true
                 SharedPreferencesManager.IsBoldItalic = false
-                safeNavController?.safeNavigate(
+                safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(
                     SystemFontMenuFragmentDirections.
                     actionSystemFontMenuFragmentToItalicFontFragment()
                 )
@@ -69,7 +68,7 @@ class SystemFontMenuFragment: BaseFragment<TestsMenuSixBinding>
             executeWithSound {
                 binding.touch3.visibility = View.VISIBLE
                 SharedPreferencesManager.fontTestFamilies = true
-                safeNavController?.safeNavigate(
+                safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(
                     SystemFontMenuFragmentDirections
                         .actionSystemFontMenuFragmentToFontFamiliesFragment())
             }
@@ -79,7 +78,7 @@ class SystemFontMenuFragment: BaseFragment<TestsMenuSixBinding>
             executeWithSound {
                 binding.touch4.visibility = View.VISIBLE
                 SharedPreferencesManager.fontTestReading = true
-                safeNavController?.safeNavigate(
+                safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(
                     SystemFontMenuFragmentDirections.
                     actionSystemFontMenuFragmentToReadingTestFragment()
                 )

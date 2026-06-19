@@ -9,7 +9,7 @@ import rpt.tool.badpixelsearch.utils.managers.SharedPreferencesManager
 
 
 class DrawingCanvasTestFragment : BaseFragment<FragmentDrawingCanvasTestBinding>(
-    FragmentDrawingCanvasTestBinding::inflate
+    FragmentDrawingCanvasTestBinding::inflate,false
 ) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

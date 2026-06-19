@@ -9,7 +9,7 @@ import rpt.tool.badpixelsearch.BaseFragment
 import rpt.tool.badpixelsearch.R
 import rpt.tool.badpixelsearch.databinding.FragmentMultiTestBinding
 
-class MultiTestFragment: BaseFragment<FragmentMultiTestBinding>(FragmentMultiTestBinding::inflate) {
+class MultiTestFragment: BaseFragment<FragmentMultiTestBinding>(FragmentMultiTestBinding::inflate,false) {
 
     private var currentState = 0
 

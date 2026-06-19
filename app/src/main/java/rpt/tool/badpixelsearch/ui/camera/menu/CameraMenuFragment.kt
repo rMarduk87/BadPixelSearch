@@ -19,7 +19,7 @@ import rpt.tool.badpixelsearch.utils.managers.SharedPreferencesManager
 import android.media.MediaPlayer
 
 class CameraMenuFragment :
-    BaseFragment<TestsMenuTwoBinding>(TestsMenuTwoBinding::inflate) {
+    BaseFragment<TestsMenuTwoBinding>(TestsMenuTwoBinding::inflate,false) {
 
     private var canClick = true
     private val PULSE_DURATION = 2500L

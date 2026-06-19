@@ -14,7 +14,7 @@ import rpt.tool.badpixelsearch.databinding.FragmentNoiseSearchBinding
 import rpt.tool.badpixelsearch.utils.managers.SharedPreferencesManager
 import java.util.*
 
-class NoiseSearchFragment : BaseFragment<FragmentNoiseSearchBinding>(FragmentNoiseSearchBinding::inflate) {
+class NoiseSearchFragment : BaseFragment<FragmentNoiseSearchBinding>(FragmentNoiseSearchBinding::inflate,false) {
 
     private var timer: Timer? = null
     private val random: Random = Random()

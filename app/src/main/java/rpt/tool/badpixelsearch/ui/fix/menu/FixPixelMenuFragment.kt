@@ -11,11 +11,11 @@ import rpt.tool.badpixelsearch.BaseFragment
 import rpt.tool.badpixelsearch.R
 import rpt.tool.badpixelsearch.databinding.TestsMenuEightBinding
 import rpt.tool.badpixelsearch.utils.managers.SharedPreferencesManager
-import rpt.tool.badpixelsearch.utils.navigation.safeNavController
-import rpt.tool.badpixelsearch.utils.navigation.safeNavigate
+import rpt.com.base.navigation.safeNavController
+import rpt.com.base.navigation.safeNavigate
 
 class FixPixelMenuFragment: BaseFragment<TestsMenuEightBinding>
-    (TestsMenuEightBinding::inflate) {
+    (TestsMenuEightBinding::inflate,false) {
 
     private val PULSE_DURATION = 2500L
 
@@ -51,7 +51,7 @@ class FixPixelMenuFragment: BaseFragment<TestsMenuEightBinding>
                 binding.touch1.visibility = View.VISIBLE
                 SharedPreferencesManager.fixTestBW = true
                 SharedPreferencesManager.typeMode = 1
-                safeNavController?.safeNavigate(
+                safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(
                     FixPixelMenuFragmentDirections
                         .actionFixTestMenuFragmentToBadPixelSearchFragment()
                 )
@@ -64,7 +64,7 @@ class FixPixelMenuFragment: BaseFragment<TestsMenuEightBinding>
                 SharedPreferencesManager.fixTestNoise = true
                 SharedPreferencesManager.typeMode = 2
                 SharedPreferencesManager.typeNoiseColored = false
-                safeNavController?.safeNavigate(
+                safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(
                     FixPixelMenuFragmentDirections
                         .actionFixTestMenuFragmentToNoiseSearchFragment()
                 )
@@ -77,7 +77,7 @@ class FixPixelMenuFragment: BaseFragment<TestsMenuEightBinding>
                 SharedPreferencesManager.fixTestSnow = true
                 SharedPreferencesManager.typeMode = 2
                 SharedPreferencesManager.typeNoiseColored = true
-                safeNavController?.safeNavigate(
+                safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(
                     FixPixelMenuFragmentDirections
                         .actionFixTestMenuFragmentToNoiseSearchFragment()
                 )
@@ -90,7 +90,7 @@ class FixPixelMenuFragment: BaseFragment<TestsMenuEightBinding>
                 SharedPreferencesManager.fixTestHorLine = true
                 SharedPreferencesManager.typeMode = 3
                 SharedPreferencesManager.isVertical = false
-                safeNavController?.safeNavigate(
+                safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(
                     FixPixelMenuFragmentDirections
                         .actionFixTestMenuFragmentToPixelTestFragment()
                 )
@@ -103,7 +103,7 @@ class FixPixelMenuFragment: BaseFragment<TestsMenuEightBinding>
                 SharedPreferencesManager.fixTestVerLine = true
                 SharedPreferencesManager.typeMode = 4
                 SharedPreferencesManager.isVertical = true
-                safeNavController?.safeNavigate(
+                safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(
                     FixPixelMenuFragmentDirections
                         .actionFixTestMenuFragmentToPixelTestFragment()
                 )
@@ -116,7 +116,7 @@ class FixPixelMenuFragment: BaseFragment<TestsMenuEightBinding>
                 SharedPreferencesManager.fixTestHorRect = true
                 SharedPreferencesManager.typeMode = 5
                 SharedPreferencesManager.isVertical = false
-                safeNavController?.safeNavigate(
+                safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(
                     FixPixelMenuFragmentDirections
                         .actionFixTestMenuFragmentToPixelTestFragment()
                 )
@@ -129,7 +129,7 @@ class FixPixelMenuFragment: BaseFragment<TestsMenuEightBinding>
                 SharedPreferencesManager.fixTestVerRect = true
                 SharedPreferencesManager.typeMode = 6
                 SharedPreferencesManager.isVertical = true
-                safeNavController?.safeNavigate(
+                safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(
                     FixPixelMenuFragmentDirections
                         .actionFixTestMenuFragmentToPixelTestFragment()
                 )
@@ -140,7 +140,7 @@ class FixPixelMenuFragment: BaseFragment<TestsMenuEightBinding>
             executeWithSound {
                 binding.touch8.visibility = View.VISIBLE
                 SharedPreferencesManager.fixTestFix = true
-                safeNavController?.safeNavigate(
+                safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(
                     FixPixelMenuFragmentDirections
                         .actionFixTestMenuFragmentToFixPixelFragment()
                 )

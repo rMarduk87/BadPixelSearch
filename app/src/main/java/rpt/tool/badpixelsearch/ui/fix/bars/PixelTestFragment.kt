@@ -16,7 +16,7 @@ import rpt.tool.badpixelsearch.databinding.FragmentPixelTestBinding
 import rpt.tool.badpixelsearch.utils.managers.SharedPreferencesManager
 import java.util.*
 
-class PixelTestFragment : BaseFragment<FragmentPixelTestBinding>(FragmentPixelTestBinding::inflate) {
+class PixelTestFragment : BaseFragment<FragmentPixelTestBinding>(FragmentPixelTestBinding::inflate,false) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

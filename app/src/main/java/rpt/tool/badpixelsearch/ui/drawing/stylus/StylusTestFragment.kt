@@ -7,7 +7,7 @@ import rpt.tool.badpixelsearch.R
 import rpt.tool.badpixelsearch.databinding.FragmentStylusTestBinding
 
 class StylusTestFragment :
-    BaseFragment<FragmentStylusTestBinding>(FragmentStylusTestBinding::inflate) {
+    BaseFragment<FragmentStylusTestBinding>(FragmentStylusTestBinding::inflate,false) {
 
     private var filledCount = 0
     private val total = 6

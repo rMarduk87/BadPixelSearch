@@ -10,7 +10,7 @@ import java.util.Locale
 
 
 class SingleTouchTwoTestFragment :
-    BaseFragment<FragmentSingleTouchTwoTestBinding>(FragmentSingleTouchTwoTestBinding::inflate) {
+    BaseFragment<FragmentSingleTouchTwoTestBinding>(FragmentSingleTouchTwoTestBinding::inflate,false) {
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

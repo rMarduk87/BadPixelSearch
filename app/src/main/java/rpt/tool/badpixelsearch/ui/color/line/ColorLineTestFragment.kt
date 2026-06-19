@@ -8,7 +8,7 @@ import rpt.tool.badpixelsearch.R
 import rpt.tool.badpixelsearch.databinding.FragmentColorLineTestBinding
 
 class ColorLineTestFragment :
-    BaseFragment<FragmentColorLineTestBinding>(FragmentColorLineTestBinding::inflate) {
+    BaseFragment<FragmentColorLineTestBinding>(FragmentColorLineTestBinding::inflate,false) {
 
     private val colors = listOf(
         Color.WHITE,

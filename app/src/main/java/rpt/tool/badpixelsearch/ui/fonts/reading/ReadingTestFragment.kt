@@ -7,7 +7,7 @@ import rpt.tool.badpixelsearch.R
 import rpt.tool.badpixelsearch.databinding.FragmentReadingTestBinding
 
 class ReadingTestFragment :
-    BaseFragment<FragmentReadingTestBinding>(FragmentReadingTestBinding::inflate) {
+    BaseFragment<FragmentReadingTestBinding>(FragmentReadingTestBinding::inflate,false) {
 
     var index = 0
 

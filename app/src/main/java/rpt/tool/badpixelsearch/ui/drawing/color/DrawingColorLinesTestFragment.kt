@@ -8,7 +8,7 @@ import rpt.tool.badpixelsearch.R
 import rpt.tool.badpixelsearch.databinding.FragmentDrawingColorLinesTestBinding
 
 class DrawingColorLinesTestFragment : BaseFragment<FragmentDrawingColorLinesTestBinding>(
-    FragmentDrawingColorLinesTestBinding::inflate
+    FragmentDrawingColorLinesTestBinding::inflate,false
 ) {
 
     private val colors by lazy {

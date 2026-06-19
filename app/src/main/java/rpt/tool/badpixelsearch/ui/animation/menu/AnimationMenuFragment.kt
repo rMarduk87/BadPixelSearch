@@ -2,20 +2,18 @@ package rpt.tool.badpixelsearch.ui.animation.menu
 
 import android.animation.ObjectAnimator
 import android.animation.ValueAnimator
-import android.content.Intent
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.View
+import rpt.com.base.navigation.safeNavController
+import rpt.com.base.navigation.safeNavigate
 import rpt.tool.badpixelsearch.R
 import rpt.tool.badpixelsearch.BaseFragment
 import rpt.tool.badpixelsearch.databinding.TestsMenuSixBinding
-import rpt.tool.badpixelsearch.utils.log.e
 import rpt.tool.badpixelsearch.utils.managers.SharedPreferencesManager
-import rpt.tool.badpixelsearch.utils.navigation.safeNavController
-import rpt.tool.badpixelsearch.utils.navigation.safeNavigate
 
 class AnimationMenuFragment: BaseFragment<TestsMenuSixBinding>
-    (TestsMenuSixBinding::inflate) {
+    (TestsMenuSixBinding::inflate,false) {
 
     companion object {
         const val PULSE_DURATION = 2500L
@@ -49,7 +47,7 @@ class AnimationMenuFragment: BaseFragment<TestsMenuSixBinding>
             executeWithSound {
                 binding.touch1.visibility = View.VISIBLE
                 SharedPreferencesManager.animTest2D = true
-                safeNavController?.safeNavigate(
+                safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(
                     AnimationMenuFragmentDirections
                         .actionAnimationMenuFragmentToTwoDTestFragment()
                 )
@@ -60,7 +58,7 @@ class AnimationMenuFragment: BaseFragment<TestsMenuSixBinding>
             executeWithSound {
                 binding.touch2.visibility = View.VISIBLE
                 SharedPreferencesManager.animTest3D = true
-                safeNavController?.safeNavigate(
+                safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(
                     AnimationMenuFragmentDirections
                         .actionAnimationMenuFragmentToThreeDTestFragment()
                 )
@@ -71,7 +69,7 @@ class AnimationMenuFragment: BaseFragment<TestsMenuSixBinding>
             executeWithSound {
                 binding.touch3.visibility = View.VISIBLE
                 SharedPreferencesManager.animTest2DGravity = true
-                safeNavController?.safeNavigate(
+                safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(
                     AnimationMenuFragmentDirections
                         .actionAnimationMenuFragmentTo2dGravityFragment()
                 )
@@ -82,7 +80,7 @@ class AnimationMenuFragment: BaseFragment<TestsMenuSixBinding>
             executeWithSound {
                 binding.touch4.visibility = View.VISIBLE
                 SharedPreferencesManager.animTest3DGravity = true
-                safeNavController?.safeNavigate(
+                safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(
                     AnimationMenuFragmentDirections
                         .actionAnimationMenuFragmentTo3dGravityFragment())
             }
@@ -92,7 +90,7 @@ class AnimationMenuFragment: BaseFragment<TestsMenuSixBinding>
             executeWithSound {
                 binding.touch5.visibility = View.VISIBLE
                 SharedPreferencesManager.animTestMovingBars = true
-                safeNavController?.safeNavigate(
+                safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(
                     AnimationMenuFragmentDirections
                         .actionAnimationMenuFragmentToMovingBarsFragment())
             }
@@ -102,7 +100,7 @@ class AnimationMenuFragment: BaseFragment<TestsMenuSixBinding>
             executeWithSound {
                 binding.touch6.visibility = View.VISIBLE
                 SharedPreferencesManager.animTestRotation = true
-                safeNavController?.safeNavigate(
+                safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(
                     AnimationMenuFragmentDirections
                         .actionAnimationMenuFragmentToRotationFragment())
             }

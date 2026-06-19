@@ -11,11 +11,11 @@ import rpt.tool.badpixelsearch.databinding.TestsMenuSixBinding
 import rpt.tool.badpixelsearch.ui.animation.menu.AnimationMenuFragment
 import rpt.tool.badpixelsearch.ui.animation.menu.AnimationMenuFragmentDirections
 import rpt.tool.badpixelsearch.utils.managers.SharedPreferencesManager
-import rpt.tool.badpixelsearch.utils.navigation.safeNavController
-import rpt.tool.badpixelsearch.utils.navigation.safeNavigate
+import rpt.com.base.navigation.safeNavController
+import rpt.com.base.navigation.safeNavigate
 
 class TouchTestMenuFragment :
-    BaseFragment<TestsMenuSixBinding>(TestsMenuSixBinding::inflate) {
+    BaseFragment<TestsMenuSixBinding>(TestsMenuSixBinding::inflate,false) {
 
     companion object {
         const val PULSE_DURATION = 2500L
@@ -51,7 +51,7 @@ class TouchTestMenuFragment :
             executeWithSound {
                 binding.touch1.visibility = View.VISIBLE
                 SharedPreferencesManager.singleTouch = true
-                safeNavController?.safeNavigate(TouchTestMenuFragmentDirections.
+                safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(TouchTestMenuFragmentDirections.
                 actionTouchMenuFragmentToSingleTouchFragment()
                 )
             }
@@ -61,7 +61,7 @@ class TouchTestMenuFragment :
             executeWithSound {
                 binding.touch2.visibility = View.VISIBLE
                 SharedPreferencesManager.singleTouchTwo = true
-                safeNavController?.safeNavigate(
+                safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(
                     TouchTestMenuFragmentDirections
                         .actionTouchMenuFragmentToSingleTouchTwoFragment()
                 )
@@ -72,7 +72,7 @@ class TouchTestMenuFragment :
             executeWithSound {
                 binding.touch3.visibility = View.VISIBLE
                 SharedPreferencesManager.multiTouch = true
-                safeNavController?.safeNavigate(
+                safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(
                     TouchTestMenuFragmentDirections
                         .actionTouchMenuFragmentToMultiTouchFragment()
                 )
@@ -83,7 +83,7 @@ class TouchTestMenuFragment :
             executeWithSound {
                 binding.touch4.visibility = View.VISIBLE
                 SharedPreferencesManager.multiTouchTwo = true
-                safeNavController?.safeNavigate(
+                safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(
                     TouchTestMenuFragmentDirections
                         .actionTouchMenuFragmentToMultiTouchTwoFragment())
             }
@@ -93,7 +93,7 @@ class TouchTestMenuFragment :
             executeWithSound {
                 binding.touch5.visibility = View.VISIBLE
                 SharedPreferencesManager.zoom = true
-                safeNavController?.safeNavigate(
+                safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(
                     TouchTestMenuFragmentDirections
                         .actionTouchMenuFragmentToZoomAndRotateFragment())
             }
@@ -103,7 +103,7 @@ class TouchTestMenuFragment :
             executeWithSound {
                 binding.touch6.visibility = View.VISIBLE
                 SharedPreferencesManager.responseTime = true
-                safeNavController?.safeNavigate(
+                safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(
                     TouchTestMenuFragmentDirections
                         .actionTouchMenuFragmentToResponseTimeFragment())
             }

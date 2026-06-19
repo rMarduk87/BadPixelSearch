@@ -10,7 +10,7 @@ import rpt.tool.badpixelsearch.R
 import rpt.tool.badpixelsearch.databinding.FragmentColorShadeBinding
 
 class ColorShadeFragment :
-    BaseFragment<FragmentColorShadeBinding>(FragmentColorShadeBinding::inflate) {
+    BaseFragment<FragmentColorShadeBinding>(FragmentColorShadeBinding::inflate,false) {
 
     private val colorList = listOf(
         Color.GRAY,

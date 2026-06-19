@@ -70,6 +70,7 @@ class AppUtils {
         const val COLOR_TEST_SHADES: String = "color_test_shades"
         const val COLOR_TEST_GAMMA: String = "color_test_gamma"
         const val COLOR_TEST_LINE: String = "color_test_line"
+        const val COLOR_TEST_DEAD_PIXEL: String = "color_test_dead_pixel"
 
         const val ANIM_TEST_2D: String = "anim_test_2d"
         const val ANIM_TEST_3D: String = "anim_test_3d"
