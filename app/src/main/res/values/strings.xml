@@ -149,6 +149,7 @@
     <string name="shades">SHADES</string>
     <string name="gamma_test">GAMMA TEST</string>
     <string name="line_test">LINE TEST</string>
+    <string name="dead_pixel_test">DEAD PIXEL TEST</string>
     <string name="normal_fonts">NORMAL FONTS</string>
     <string name="italic_fonts">ITALIC FONTS</string>
     <string name="bold_fonts">BOLD FONTS</string>

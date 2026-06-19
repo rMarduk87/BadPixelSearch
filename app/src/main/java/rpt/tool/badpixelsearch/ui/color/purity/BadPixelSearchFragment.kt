@@ -33,7 +33,13 @@ class BadPixelSearchFragment :
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         
-        setupToolbar(binding.toolbar.btnBack, binding.toolbar.menuTitle, getString(R.string.purity))
+        val title = when (SharedPreferencesManager.typeMode) {
+            0 -> getString(R.string.purity)
+            1 -> getString(R.string.bw_test)
+            2 -> getString(R.string.dead_pixel_test)
+            else -> getString(R.string.purity)
+        }
+        setupToolbar(binding.toolbar.btnBack, binding.toolbar.menuTitle, title)
 
         val window = requireActivity().window
         val windowInsetsController = WindowCompat.getInsetsController(window, window.decorView)
@@ -126,6 +132,21 @@ class BadPixelSearchFragment :
                     1 -> binding.mainBG.setBackgroundColor(resources.getColor(R.color.black))
                     2 -> {
                         binding.mainBG.setBackgroundColor(resources.getColor(R.color.white))
+                        isRunning = count <= interval && SharedPreferencesManager.mode == 1
+                    }
+                }
+            }
+            2 -> {
+                if (i > 5) i = 0
+                if (i < 0) i = 5
+                when (i) {
+                    0 -> start()
+                    1 -> binding.mainBG.setBackgroundColor(resources.getColor(R.color.black))
+                    2 -> binding.mainBG.setBackgroundColor(resources.getColor(R.color.white))
+                    3 -> binding.mainBG.setBackgroundColor(resources.getColor(R.color.red))
+                    4 -> binding.mainBG.setBackgroundColor(resources.getColor(R.color.green))
+                    5 -> {
+                        binding.mainBG.setBackgroundColor(resources.getColor(R.color.blue))
                         isRunning = count <= interval && SharedPreferencesManager.mode == 1
                     }
                 }

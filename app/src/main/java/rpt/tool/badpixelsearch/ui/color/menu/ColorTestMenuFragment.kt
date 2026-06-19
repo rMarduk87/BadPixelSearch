@@ -7,13 +7,13 @@ import android.os.Bundle
 import android.view.View
 import rpt.tool.badpixelsearch.R
 import rpt.tool.badpixelsearch.BaseFragment
-import rpt.tool.badpixelsearch.databinding.TestsMenuSixBinding
+import rpt.tool.badpixelsearch.databinding.TestsMenuEightBinding
 import rpt.tool.badpixelsearch.utils.managers.SharedPreferencesManager
 import rpt.com.base.navigation.safeNavController
 import rpt.com.base.navigation.safeNavigate
 
-class ColorTestMenuFragment: BaseFragment<TestsMenuSixBinding>
-    (TestsMenuSixBinding::inflate,false) {
+class ColorTestMenuFragment: BaseFragment<TestsMenuEightBinding>
+    (TestsMenuEightBinding::inflate,false) {
 
     companion object {
         private const val PULSE_DURATION = 2500L
@@ -32,6 +32,8 @@ class ColorTestMenuFragment: BaseFragment<TestsMenuSixBinding>
         binding.text4.text = requireContext().getString(R.string.shades)
         binding.text5.text = requireContext().getString(R.string.gamma_test)
         binding.text6.text = requireContext().getString(R.string.line_test)
+        binding.text7.text = requireContext().getString(R.string.dead_pixel_test)
+        binding.option8.visibility = View.GONE
 
         setupNumbers()
 
@@ -106,6 +108,18 @@ class ColorTestMenuFragment: BaseFragment<TestsMenuSixBinding>
             }
         }
 
+        binding.option7.setOnClickListener {
+            executeWithSound {
+                binding.touch7.visibility = View.VISIBLE
+                SharedPreferencesManager.colorTestDeadPixel = true
+                SharedPreferencesManager.typeMode = 2
+                safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(
+                    ColorTestMenuFragmentDirections
+                        .actionColorTestsMenuFragmentToBadPixelSearchFragment()
+                )
+            }
+        }
+
     }
 
     private fun setupNumbers() {
@@ -126,6 +140,9 @@ class ColorTestMenuFragment: BaseFragment<TestsMenuSixBinding>
         }
         if (SharedPreferencesManager.colorTestLine) {
             binding.touch6.visibility = View.VISIBLE
+        }
+        if (SharedPreferencesManager.colorTestDeadPixel) {
+            binding.touch7.visibility = View.VISIBLE
         }
     }
 

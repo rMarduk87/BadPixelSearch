@@ -149,6 +149,7 @@
     <string name="shades">SOMBRAS</string>
     <string name="gamma_test">PRUEBA GAMMA</string>
     <string name="line_test">PRUEBA DE LÍNEA</string>
+    <string name="dead_pixel_test">PRUEBA DE PÍXELES MUERTOS</string>
     <string name="normal_fonts">FUENTES NORMALES</string>
     <string name="italic_fonts">FUENTES EN CURSIVA</string>
     <string name="bold_fonts">FUENTES EN NEGRITA</string>

@@ -85,6 +85,10 @@ object SharedPreferencesManager {
         get() = sharedPreferences.getBoolean(AppUtils.COLOR_TEST_LINE, false)
         set(value) = sharedPreferences.edit() { putBoolean(AppUtils.COLOR_TEST_LINE, value) }
 
+    var colorTestDeadPixel: Boolean
+        get() = sharedPreferences.getBoolean(AppUtils.COLOR_TEST_DEAD_PIXEL, false)
+        set(value) = sharedPreferences.edit() { putBoolean(AppUtils.COLOR_TEST_DEAD_PIXEL, value) }
+
     var animTest2D: Boolean
         get() = sharedPreferences.getBoolean(AppUtils.ANIM_TEST_2D, false)
         set(value) = sharedPreferences.edit() { putBoolean(AppUtils.ANIM_TEST_2D, value) }

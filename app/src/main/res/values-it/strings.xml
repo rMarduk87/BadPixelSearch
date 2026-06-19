@@ -149,6 +149,7 @@
     <string name="shades">TONALITÀ</string>
     <string name="gamma_test">TEST GAMMA</string>
     <string name="line_test">TEST LINEA</string>
+    <string name="dead_pixel_test">TEST PIXEL MORTI</string>
     <string name="normal_fonts">NORMALE</string>
     <string name="italic_fonts">CORSIVO</string>
     <string name="bold_fonts">GRASSETTO</string>
