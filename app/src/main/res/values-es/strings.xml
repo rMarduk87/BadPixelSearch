@@ -249,29 +249,41 @@
     <string name="_1">1</string>
     <string name="v">V</string>
     <string name="drawing_test_full">DRAWING TESTS</string>
-    <string name="touch_test_1">Single touch</string>
-    <string name="touch_test_2">Single touch 2</string>
-    <string name="touch_test_3">Multi touch</string>
-    <string name="touch_test_4">Multi touch 2</string>
-    <string name="touch_test_5">Zoom and rotate</string>
-    <string name="touch_test_6">Response time</string>
-    <string name="touch_tests_full">TOUCH TESTS</string>
-    <string name="filled_0">Filled: 0%</string>
-    <string name="filled">Filled:</string>
-    <string name="drawing_test_1">Normal lines</string>
-    <string name="drawing_test_2">Normal lines 2</string>
-    <string name="drawing_test_3">Fading lines</string>
-    <string name="drawing_test_4">Fading lines 2</string>
-    <string name="drawing_test_5">Stylus lines</string>
-    <string name="drawing_test_6">Color lines</string>
-    <string name="touch_the_screen">Touch the screen</string>
-    <string name="fingers_0">Fingers: 0</string>
-    <string name="fingers">"Fingers: "</string>
-    <string name="quick_taps">Quick taps</string>
-    <string name="fill_all">Fill in all holes</string>
-    <string name="test_completed">Test Completed</string>
-    <string name="hole_filled">hole filled</string>
-    <string name="gray_lines">Gray lines</string>
+    <string name="touch_test_1">Toque único</string>
+    <string name="touch_test_2">Toque único 2</string>
+    <string name="touch_test_3">Multitoque</string>
+    <string name="touch_test_4">Multitoque 2</string>
+    <string name="touch_test_5">Zoom y rotación</string>
+    <string name="touch_test_6">Tiempo de respuesta</string>
+    <string name="touch_tests_full">PRUEBAS TÁCTILES</string>
+    <string name="filled_0">Rellenado: 0%</string>
+    <string name="filled">Rellenado:</string>
+    <string name="drawing_test_1">Líneas normales</string>
+    <string name="drawing_test_2">Líneas normales 2</string>
+    <string name="drawing_test_3">Líneas que se desvanecen</string>
+    <string name="drawing_test_4">Líneas que se desvanecen 2</string>
+    <string name="drawing_test_5">Líneas de lápiz óptico</string>
+    <string name="drawing_test_6">Líneas de color</string>
+    <string name="touch_the_screen">Toque la pantalla</string>
+    <string name="fingers_0">Dedos: 0</string>
+    <string name="fingers">"Dedos: "</string>
+    <string name="quick_taps">Toques rápidos</string>
+    <string name="fill_all">Rellenar todos los huecos</string>
+    <string name="test_completed">Prueba completada</string>
+    <string name="hole_filled">hueco rellenado</string>
+    <string name="gray_lines">Líneas grises</string>
     <string name="app_log_viewer_pro">Log Viewer Pro</string>
     <string name="app_log_viewer_pro_link">https://play.google.com/store/apps/details?id=rpt.tool.logviewer_aprifilelogetxt</string>
+    <string name="app_hybrid_walk">Hybrid Walk</string>
+    <string name="app_hybrid_walk_link">https://play.google.com/store/apps/details?id=rpt.tool.hybridwalk</string>
+    <string-array name="color_lines">
+        <item>Líneas grises</item>
+        <item>Líneas amarillas</item>
+        <item>Líneas cian</item>
+        <item>Líneas magenta</item>
+        <item>Líneas rojas</item>
+        <item>Líneas azules</item>
+        <item>Líneas verdes</item>
+        <item>Líneas blancas</item>
+    </string-array>
 </resources>

@@ -42,13 +42,21 @@ class OtherAppsFragment: BaseFragment<FragmentOtherAppsBinding>(FragmentOtherApp
         appLogViewerPro.link = getString(rpt.tool.badpixelsearch
             .R.string.app_log_viewer_pro_link)
 
+        val appHybridWalk = OtherApps()
+        appLogViewerPro.name = getString(rpt.tool.badpixelsearch.R.string.app_hybrid_walk)
+        appLogViewerPro.id = "3"
+        appLogViewerPro.link = getString(rpt.tool.badpixelsearch
+            .R.string.app_hybrid_walk_link)
+
         other.add(appPongClock)
         other.add(appMarimoCare)
         other.add(appLogViewerPro)
+        other.add(appHybridWalk)
 
         binding.otherAppsRecyclerView.isNestedScrollingEnabled = false
 
-        adapter = OtherAppsAdapter(requireActivity(), other, object : OtherAppsAdapter.CallBack {
+        adapter = OtherAppsAdapter(requireActivity(), other,
+            object : OtherAppsAdapter.CallBack {
 
             override fun onClickSelect(other: OtherApps, position: Int) {
                 try {
@@ -94,7 +102,8 @@ class OtherAppsFragment: BaseFragment<FragmentOtherAppsBinding>(FragmentOtherApp
     }
 
     private fun finish() {
-        safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(OtherAppsFragmentDirections
+        safeNavController(R.id.main_activity_nav_host_fragment)
+            ?.safeNavigate(OtherAppsFragmentDirections
             .actionOtherAppsFragmentToMenuFragment())
     }
 }
