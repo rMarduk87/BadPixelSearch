@@ -1,5 +1,8 @@
 # 📱 BadPixelSearch
 
+<img width="1024" height="500" alt="create-a-clean-modern" src="https://github.com/user-attachments/assets/4de5308c-b4a6-44d3-8228-ef537682186a" />
+
+
 [<img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="Get it on Google Play" height="60">](https://play.google.com/store/apps/details?id=rpt.tool.badpixelsearch)
 
 A comprehensive Android utility to check your device's screen for **dead**, **stuck**, or **defective** pixels. Along with pixel diagnostics, the app includes several other screen tests, such as drawing capabilities, touch screen verification, and system font checks.
