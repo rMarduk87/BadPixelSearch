@@ -42,7 +42,8 @@ class RotationFragment : BaseFragment<FragmentRotationBinding>(FragmentRotationB
         setupToolbar(
             binding.toolbar.btnBack,
             binding.toolbar.menuTitle,
-            getString(R.string.rotation)
+            getString(R.string.rotation),
+            trackTestCompletion = true
         )
 
         square1 = binding.square1

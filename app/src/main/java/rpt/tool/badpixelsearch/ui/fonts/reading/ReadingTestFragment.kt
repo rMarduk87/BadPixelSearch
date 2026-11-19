@@ -14,7 +14,8 @@ class ReadingTestFragment :
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        setupToolbar(binding.toolbar.btnBack, binding.toolbar.menuTitle, getString(R.string.reading_test))
+        setupToolbar(binding.toolbar.btnBack, binding.toolbar.menuTitle, getString(R.string.reading_test),
+            trackTestCompletion = true)
 
         setSize(binding,R.string.xsmall,12f)
 

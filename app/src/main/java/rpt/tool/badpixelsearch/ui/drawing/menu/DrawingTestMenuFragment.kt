@@ -24,7 +24,7 @@ class DrawingTestMenuFragment : BaseFragment<TestsMenuSixBinding>(TestsMenuSixBi
 
 
         setupToolbar(binding.toolbar.btnBack, binding.toolbar.menuTitle,
-            getString(R.string.drawing_test_full))
+            getString(R.string.drawing_test_full),trackTestCompletion = true)
 
         binding.iconAnimated.setImageResource(R.drawable.ic_drawing_tests)
 

@@ -25,7 +25,7 @@ class ZoomAndRotateTestFragment : BaseFragment<FragmentZoomAndRotateTestBinding>
         setupToolbar(
             binding.toolbar.btnBack,
             binding.toolbar.menuTitle,
-            getString(R.string.touch_test_5)
+            getString(R.string.touch_test_5),trackTestCompletion = true
         )
 
         renderer = CubeTouchRenderer()

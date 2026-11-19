@@ -53,7 +53,8 @@ class FontFamiliesFragment :
         setupToolbar(
             binding.toolbar.btnBack,
             binding.toolbar.menuTitle,
-            getString(colorsText[colorIndex])
+            getString(colorsText[colorIndex]),
+            trackTestCompletion = true
         )
 
         findAllTextViews()

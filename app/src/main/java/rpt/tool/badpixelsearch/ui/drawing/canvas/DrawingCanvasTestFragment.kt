@@ -16,7 +16,7 @@ class DrawingCanvasTestFragment : BaseFragment<FragmentDrawingCanvasTestBinding>
         super.onViewCreated(view, savedInstanceState)
 
         setupToolbar(binding.toolbar.btnBack, binding.toolbar.menuTitle,
-            getTitleFromShared())
+            getTitleFromShared(),trackTestCompletion = true)
     }
 
     private fun getTitleFromShared(): String {

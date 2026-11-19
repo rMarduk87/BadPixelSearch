@@ -36,7 +36,8 @@ class ColorLineTestFragment :
             requireContext().resources.getString(R.string.cyan_lines),
             requireContext().resources.getString(R.string.yellow_lines))
 
-        setupToolbar(binding.toolbar.btnBack, binding.toolbar.menuTitle, names[index])
+        setupToolbar(binding.toolbar.btnBack, binding.toolbar.menuTitle, names[index],
+            trackTestCompletion = true)
 
         applyColor()
 

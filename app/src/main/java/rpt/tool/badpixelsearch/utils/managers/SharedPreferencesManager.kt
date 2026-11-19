@@ -245,4 +245,12 @@ object SharedPreferencesManager {
         get() = sharedPreferences.getInt(AppUtils.DRAWING_OPTION, 0)
         set(value) = sharedPreferences.edit() { putInt(AppUtils.DRAWING_OPTION, value) }
 
+    var completedTests: Int
+        get() = sharedPreferences.getInt(AppUtils.KEY_COMPLETED_TESTS, 0)
+        set(value) = sharedPreferences.edit() { putInt(AppUtils.KEY_COMPLETED_TESTS, value) }
+
+    var lastPromptMs: Long
+        get() = sharedPreferences.getLong(AppUtils.KEY_LAST_PROMPT_MS, 0L)
+        set(value) = sharedPreferences.edit() { putLong(AppUtils.KEY_LAST_PROMPT_MS, value) }
+
 }

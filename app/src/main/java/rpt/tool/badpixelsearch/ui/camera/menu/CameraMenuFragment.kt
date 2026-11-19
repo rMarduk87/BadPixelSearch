@@ -38,7 +38,8 @@ class CameraMenuFragment :
         setupToolbar(
             binding.toolbar.btnBack,
             binding.toolbar.menuTitle,
-            getString(R.string.camera_tests)
+            getString(R.string.camera_tests),
+            trackTestCompletion = true
         )
 
         binding.iconAnimated.setImageResource(R.drawable.ic_camera)

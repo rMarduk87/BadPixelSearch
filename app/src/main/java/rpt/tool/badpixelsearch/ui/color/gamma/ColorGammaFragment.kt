@@ -33,7 +33,7 @@ class ColorGammaFragment :
         )
 
         setupToolbar(binding.toolbar.btnBack, binding.toolbar.menuTitle,
-            baseColors[currentIndex].first)
+            baseColors[currentIndex].first,trackTestCompletion = true)
 
         createGammaBars(baseColors[currentIndex].second)
 
