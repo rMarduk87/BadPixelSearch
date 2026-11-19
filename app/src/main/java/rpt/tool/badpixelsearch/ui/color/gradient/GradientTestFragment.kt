@@ -26,7 +26,7 @@ class GradientTestFragment :
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        setupToolbar(binding.toolbar.btnBack, binding.toolbar.menuTitle, getString(R.string.gradient))
+        setupToolbar(binding.toolbar.btnBack, binding.toolbar.menuTitle, getString(R.string.gradient),trackTestCompletion = true)
 
         // Hide system bars for the test
         val window = requireActivity().window

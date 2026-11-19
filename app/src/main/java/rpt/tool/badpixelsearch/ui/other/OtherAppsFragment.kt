@@ -48,7 +48,8 @@ class OtherAppsFragment: BaseFragment<FragmentOtherAppsBinding>(FragmentOtherApp
 
         binding.otherAppsRecyclerView.isNestedScrollingEnabled = false
 
-        adapter = OtherAppsAdapter(requireActivity(), other, object : OtherAppsAdapter.CallBack {
+        adapter = OtherAppsAdapter(requireActivity(), other,
+            object : OtherAppsAdapter.CallBack {
 
             override fun onClickSelect(other: OtherApps, position: Int) {
                 try {
@@ -94,7 +95,8 @@ class OtherAppsFragment: BaseFragment<FragmentOtherAppsBinding>(FragmentOtherApp
     }
 
     private fun finish() {
-        safeNavController(R.id.main_activity_nav_host_fragment)?.safeNavigate(OtherAppsFragmentDirections
+        safeNavController(R.id.main_activity_nav_host_fragment)
+            ?.safeNavigate(OtherAppsFragmentDirections
             .actionOtherAppsFragmentToMenuFragment())
     }
 }

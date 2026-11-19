@@ -18,7 +18,7 @@ class StylusTestFragment :
         setupToolbar(
             binding.toolbar.btnBack,
             binding.toolbar.menuTitle,
-            getString(R.string.fill_all)
+            getString(R.string.fill_all),trackTestCompletion = true
         )
 
         for (i in 0 until binding.grid.childCount) {

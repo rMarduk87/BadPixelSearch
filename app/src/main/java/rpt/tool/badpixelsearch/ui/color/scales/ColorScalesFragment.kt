@@ -42,7 +42,7 @@ class ColorScalesFragment:
 
         generateLevels()
 
-        setupToolbar(binding.toolbar.btnBack, binding.toolbar.menuTitle)
+        setupToolbar(binding.toolbar.btnBack, binding.toolbar.menuTitle,trackTestCompletion = true)
 
         binding.mainLayout.setOnClickListener {
             currentColorIndex = (currentColorIndex + 1) % colorModes.size

@@ -14,7 +14,8 @@ class TwoDGravityFragment :
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupToolbar(binding.toolbar.btnBack, binding.toolbar.menuTitle,
-            getString(R.string._2d_gravity).uppercase(getDefault())
+            getString(R.string._2d_gravity).uppercase(getDefault()),
+                    trackTestCompletion = true
         )
     }
 }

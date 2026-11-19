@@ -27,7 +27,7 @@ class ResponseTimeTestFragment : BaseFragment<FragmentResponseTimeTestBinding>(
         setupToolbar(
             binding.toolbar.btnBack,
             binding.toolbar.menuTitle,
-            getString(R.string.quick_taps)
+            getString(R.string.quick_taps),trackTestCompletion = true
         )
 
         circleSizePx = TypedValue.applyDimension(

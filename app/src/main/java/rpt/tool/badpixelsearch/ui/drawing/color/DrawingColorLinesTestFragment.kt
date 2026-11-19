@@ -31,7 +31,7 @@ class DrawingColorLinesTestFragment : BaseFragment<FragmentDrawingColorLinesTest
         super.onViewCreated(view, savedInstanceState)
 
         setupToolbar(binding.toolbar.btnBack, binding.toolbar.menuTitle,
-            getString(rpt.tool.badpixelsearch.R.string.gray_lines))
+            getString(rpt.tool.badpixelsearch.R.string.gray_lines),trackTestCompletion = true)
 
         binding.toolbar.btnPlus.visibility = View.VISIBLE
 

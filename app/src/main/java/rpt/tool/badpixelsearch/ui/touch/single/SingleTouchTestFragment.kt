@@ -19,7 +19,7 @@ class SingleTouchTestFragment:
         setupToolbar(
             binding.toolbar.btnBack,
             binding.toolbar.menuTitle,
-            getString(R.string.filled_0)
+            getString(R.string.filled_0),trackTestCompletion = true
         )
 
         binding.drawGridView.columns = resources.getInteger(R.integer.single_touch_1_columns)

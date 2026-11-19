@@ -42,7 +42,7 @@ class ColorShadeFragment :
             requireContext().resources.getString(R.string.cyan),
             requireContext().resources.getString(R.string.yellow))
 
-        setupToolbar(binding.toolbar.btnBack, binding.toolbar.menuTitle)
+        setupToolbar(binding.toolbar.btnBack, binding.toolbar.menuTitle,trackTestCompletion = true)
 
         setupBoxes()
         applyColor()

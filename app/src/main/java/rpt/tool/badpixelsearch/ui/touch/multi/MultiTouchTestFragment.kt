@@ -25,7 +25,7 @@ class MultiTouchTestFragment :
         setupToolbar(
             binding.toolbar.btnBack,
             binding.toolbar.menuTitle,
-            getString(R.string.touch_the_screen)
+            getString(R.string.touch_the_screen),trackTestCompletion = true
         )
 
         val circleDrawable = ContextCompat.getDrawable(requireContext(),

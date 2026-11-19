@@ -39,7 +39,8 @@ class BadPixelSearchFragment :
             2 -> getString(R.string.dead_pixel_test)
             else -> getString(R.string.purity)
         }
-        setupToolbar(binding.toolbar.btnBack, binding.toolbar.menuTitle, title)
+        setupToolbar(binding.toolbar.btnBack, binding.toolbar.menuTitle, title,
+            trackTestCompletion = true)
 
         val window = requireActivity().window
         val windowInsetsController = WindowCompat.getInsetsController(window, window.decorView)
