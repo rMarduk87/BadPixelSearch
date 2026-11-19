@@ -30,7 +30,8 @@ class ThreeDTestFragment : BaseFragment<FragmentThreeDTestBinding>(FragmentThree
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        setupToolbar(binding.toolbar.btnBack, binding.toolbar.menuTitle, getString(R.string.threed))
+        setupToolbar(binding.toolbar.btnBack, binding.toolbar.menuTitle, getString(R.string.threed),
+            trackTestCompletion = true)
         handler.post(fpsUpdater)
     }
 

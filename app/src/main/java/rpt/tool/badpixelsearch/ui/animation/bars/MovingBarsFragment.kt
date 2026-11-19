@@ -17,7 +17,8 @@ class MovingBarsFragment : BaseFragment<FragmentAnimationBarsBinding>
         setupToolbar(
             binding.toolbar.btnBack,
             binding.toolbar.menuTitle,
-            getString(R.string.moving_bars)
+            getString(R.string.moving_bars),
+            trackTestCompletion = true
         )
 
         val barsView = MovingBarsView(requireContext()).apply {

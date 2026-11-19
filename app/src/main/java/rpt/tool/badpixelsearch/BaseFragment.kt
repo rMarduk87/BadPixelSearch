@@ -3,16 +3,21 @@ package rpt.tool.badpixelsearch
 import android.annotation.SuppressLint
 import android.media.MediaPlayer
 import android.os.Build
+import android.os.Bundle
+import android.os.SystemClock
 import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
 import android.widget.TextView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.lifecycle.lifecycleScope
 import androidx.viewbinding.ViewBinding
+import kotlinx.coroutines.launch
 import rpt.com.base.Inflate
 import rpt.com.base.log.e
 import rpt.com.base.navigation.safeNavController
+import rpt.tool.badpixelsearch.utils.managers.ReviewPromptManager
 import rpt.tool.badpixelsearch.utils.managers.SharedPreferencesManager
 import rpt.com.base.BaseFragment as CoreBaseFragment
 
@@ -21,15 +26,29 @@ abstract class BaseFragment<VB : ViewBinding>(
     hideBars: Boolean = false
 ) : CoreBaseFragment<VB>(inflate, hideBars) {
 
+    private var screenOpenedAtMs: Long = 0L
 
-    protected fun setupToolbar(btnBack: View, menuTitle: TextView? = null, title: String? = null) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        screenOpenedAtMs = SystemClock.elapsedRealtime()
+    }
+
+    protected fun setupToolbar(
+        btnBack: View,
+        menuTitle: TextView? = null,
+        title: String? = null,
+        trackTestCompletion: Boolean = false,
+        minTestDurationMs: Long = 3_500L
+    ) {
         title?.let { menuTitle?.text = it }
 
         // Ensure the window allows drawing in the cutout area
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
             activity?.window?.attributes?.let { attrs ->
-                if (attrs.layoutInDisplayCutoutMode != WindowManager.LayoutParams.LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES) {
-                    attrs.layoutInDisplayCutoutMode = WindowManager.LayoutParams.LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES
+                if (attrs.layoutInDisplayCutoutMode !=
+                    WindowManager.LayoutParams.LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES) {
+                    attrs.layoutInDisplayCutoutMode =
+                        WindowManager.LayoutParams.LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES
                     activity?.window?.attributes = attrs
                 }
             }
@@ -39,15 +58,26 @@ abstract class BaseFragment<VB : ViewBinding>(
         toolbar?.let { checkAndAdjustToolbar(it) }
 
         btnBack.setOnClickListener {
+            val hostActivity = requireActivity()
+            val elapsedMs = SystemClock.elapsedRealtime() - screenOpenedAtMs
+
             try {
                 if (SharedPreferencesManager.sound) {
-                    val mediaPlayer = MediaPlayer.create(requireContext(), R.raw.goodbye)
+                    val mediaPlayer = MediaPlayer.create(requireContext(),
+                        R.raw.goodbye)
                     mediaPlayer?.setOnCompletionListener { it.release() }
                     mediaPlayer?.start()
                 }
             } catch (e: Exception) {
                 e(Throwable(e), "Sound")
             }
+
+            if (trackTestCompletion && elapsedMs >= minTestDurationMs) {
+                hostActivity.lifecycleScope.launch {
+                    ReviewPromptManager.onTestCompleted(hostActivity)
+                }
+            }
+
             safeNavController(R.id.main_activity_nav_host_fragment)?.popBackStack()
         }
     }

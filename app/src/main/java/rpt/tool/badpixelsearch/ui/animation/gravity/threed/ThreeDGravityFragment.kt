@@ -25,7 +25,8 @@ class ThreeDGravityFragment :
         setupToolbar(
             binding.toolbar.btnBack,
             binding.toolbar.menuTitle,
-            getString(R.string._3d_gravity).uppercase(getDefault())
+            getString(R.string._3d_gravity).uppercase(getDefault()),
+            trackTestCompletion = true
         )
 
         sensorManager =

@@ -49,7 +49,8 @@ class TwoDTestFragment : BaseFragment<FragmentTwoDTestBinding>(FragmentTwoDTestB
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        setupToolbar(binding.toolbar.btnBack, binding.toolbar.menuTitle, getString(R.string.two))
+        setupToolbar(binding.toolbar.btnBack, binding.toolbar.menuTitle, getString(R.string.two),
+            trackTestCompletion = true)
         handler.post(runnable)
     }
 
